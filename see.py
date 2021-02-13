@@ -1,27 +1,28 @@
-""" Module to see all of the database """
-
-import sqlite3
-from colr import color
-import fire
+from mysql.connector import connect, Error
+import click
 
 
 def see():
     try:
-        conn = sqlite3.connect('notes.db')
+        conn = connect(
+                host="localhost",
+                user="mic",
+                password="xxxx",
+                database="notes")
         cur = conn.cursor()
-        query = """ SELECT * FROM notes """
-        cur.execute(query)
+        query = 'SELECT * FROM notes'
+        cur.execute(query,)
         records = cur.fetchall()
         for row in records:
-            print(color(' [0] ID » ', fore='#524656'), color(str(row[0]), fore='#e5ddcb'))
-            print(color(' [1] TITLE » ', fore='#524656'), color(str(row[1]), fore='#e5ddcb'))
-            print(color(' [2] KEYWORD 1 » ', fore='#524656'), color(str(row[2]), fore='#e5ddcb'))
-            print(color(' [3] KEYWORD 2 » ', fore='#524656'), color(str(row[3]), fore='#e5ddcb'))
-            print(color(' [4] KEYWORD 3 » ', fore='#524656'), color(str(row[4]), fore='#e5ddcb'))
-            print(color(' [5] NOTE : ', fore='#524656'), color(str(row[5]), fore='#eb7b59'))
-            print(color(' [6] TIME » ', fore='#524656'), color(str(row[6]), fore='#e5ddcb'))
+            print(click.style('[0] ID » ', fg='cyan', bold=True), click.style(str(row[0]), fg='magenta', bold=True))
+            print(click.style('[1] TITLE » ', fg='cyan', bold=True), click.style(str(row[1]), fg='magenta', bold=True))
+            print(click.style('[2] KEYWORD 1 » ', fg='cyan', bold=True), click.style(str(row[2]), fg='magenta', bold=True))
+            print(click.style('[3] KEYWORD 2 » ', fg='cyan', bold=True), click.style(str(row[3]), fg='magenta', bold=True))
+            print(click.style('[4] KEYWORD 3 » ', fg='cyan', bold=True), click.style(str(row[4]), fg='magenta', bold=True))
+            print(click.style('[5] NOTE : ', fg='cyan', bold=True), click.style(str(row[5]), fg='red', bold=True))
+            print(click.style('[6] TIME » ', fg='cyan', bold=True), click.style(str(row[6]), fg='magenta', bold=True))
             print('\n')
-    except sqlite3.Error as e:
+    except Error as e:
         print("Error while connecting to db", e)
     finally:
         if(conn):
@@ -29,4 +30,4 @@ def see():
 
 
 if __name__ == '__main__':
-    fire.Fire(see)
+    see()

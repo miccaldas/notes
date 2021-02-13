@@ -1,25 +1,28 @@
 """ Module to update notes to database """
 import time
-import sqlite3
+from mysql.connector import connect, Error
 import click
-from colr import color
 
 
 def update():
-    coluna = input(color(' Column? » ', fore='#cf4647'))
-    ident = input(color(' ID? » ', fore='#cf4647'))
-    print(color(' Write your update', fore='#cf4647'))
+    coluna = input(click.style(' Column? » ', fg='magenta', bold=True))
+    ident = input(click.style(' ID? » ', fg='magenta', bold=True))
+    print(click.style(' Write your update', fg='magenta', bold=True))
     time.sleep(0.3)
     update = click.edit()
+    vari = [coluna, update, ident]
 
     try:
-        conn = sqlite3.connect('notes.db')
+        conn = connect(
+                host="localhost",
+                user="mic",
+                password="xxxx",
+                database="notes")
         cur = conn.cursor()
-        query = " UPDATE notes SET " + coluna + " = " + update + " WHERE ntid = " + ident
-        print(query)
-        cur.execute(query)
+        query = """ UPDATE notes SET %s = %s WHERE id = %s """
+        cur.execute(query, vari)
         conn.commit()
-    except sqlite3.Error as e:
+    except Error as e:
         print("Error while connecting to db", e)
     finally:
         if(conn):

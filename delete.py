@@ -1,20 +1,24 @@
 """ Module to update notes to database """
 
-import sqlite3
-from colr import color
+from mysql.connector import connect, Error
+import click
 
 
 def delete():
-    ident = input(color(' ID to delete? » ', fore='#cf4647'))
+    ident = input(click.style(' ID to delete? » ', fg='magenta', bold=True))
 
     try:
-        conn = sqlite3.connect('notes.db')
+        conn = connect(
+                        host="localhost",
+                        user="mic",
+                        password="xxxx",
+                        database="notes")
         cur = conn.cursor()
-        query = " DELETE FROM notes WHERE ntid = " + ident
+        query = " DELETE FROM notes WHERE id = " + ident
         cur.execute(query)
         conn.commit()
 
-    except sqlite3.Error as e:
+    except Error as e:
         print("Error while connecting to db", e)
     finally:
         if(conn):

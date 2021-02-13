@@ -1,31 +1,31 @@
 """ Module to insert notes to database """
+from mysql.connector import connect, Error
 import time
-import sqlite3
 import click
-from colr import color
 import fire
 
 
 def add():
-    titulo = input(color(' Title? » ', fore='#cf4647'))
-    kwd1 = input(color(' Choose a keyword » ', fore='#cf4647'))
-    kwd2 = input(color(' Choose another ... » ', fore='#cf4647'))
-    kwd3 = input(color(' And another... » ', fore='#cf4647'))
-    print(color(' Write the note.', fore='#cf4647'))
+    titulo = input(click.style(' Title? » ', fg='magenta', bold=True))
+    kwd1 = input(click.style(' Choose a keyword » ', fg='magenta', bold=True))
+    kwd2 = input(click.style(' Choose another ... » ', fg='magenta', bold=True))
+    kwd3 = input(click.style(' And another... » ', fg='magenta', bold=True))
+    print(click.style(' Write the note.', fg='magenta', bold=True))
     time.sleep(0.2)
-    nota = click.edit(editor='vim').rstrip()
-    # Na apresentação da db, havia uma linha vazia entre os campos note e time. rstrip elimina essa linha.
-
+    nota = click.edit().rstrip()
     answers = [titulo, kwd1, kwd2, kwd3, nota]
-
+    # Na apresentação da db, havia uma linha vazia entre os campos note e time. rstrip elimina essa linha.
     try:
-        conn = sqlite3.connect('notes.db')
+        conn = connect(
+                host="localhost",
+                user="mic",
+                password="xxxx",
+                database="notes")
         cur = conn.cursor()
-        query = """ INSERT INTO notes (title, k1, k2, k3, note) VALUES (?, ?, ?, ?, ?) """
+        query = """ INSERT INTO notes (title, k1, k2, k3, note) VALUES (%s, %s, %s, %s, %s) """
         cur.execute(query, answers)
         conn.commit()
-
-    except sqlite3.Error as e:
+    except Error as e:
         print("Error while connecting to db", e)
     finally:
         if(conn):

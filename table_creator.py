@@ -1,6 +1,6 @@
 """ This module creates a SQLite database and defines and uploads a new table for said database"""
+from mysql.connector import connect, Error
 import collections
-import sqlite3
 from colr import color
 from icecream import ic
 import re
@@ -12,15 +12,14 @@ def create_db():
     """Where we use the database name to create one."""
 
     try:
-        conn = sqlite3.connect(db_name)
-        cur = conn.cursor()
-        ic("Database created and Successfully Connected to SQLite")
-        sqlite_select_Query = "select sqlite_version();"
-        cur.execute(sqlite_select_Query)
-        record = cur.fetchall()
-        ic("SQLite Database Version is: ", record)
+        conn = connect(
+            host="localhost",
+            user="mic",
+            password="xxxx",
+            database="notes")
+        ic("Database created and Successfully Connected to MySQL")
         conn.commit()
-    except sqlite3.Error as e:
+    except Error as e:
         ic("Error while connecting to db", e)
     finally:
         if(conn):
@@ -76,12 +75,16 @@ def collect_data():
     query = 'CREATE TABLE ' + table_name + '(' + cor4 + ')'
 
     try:
-        conn = sqlite3.connect(db_name)
+        conn = connect(
+            host="localhost",
+            user="mic",
+            password="xxxx",
+            database="notes")
         cur = conn.cursor()
         cur.execute(query)
         conn.commit()
 
-    except sqlite3.Error as e:
+    except Error as e:
         print("Error while connecting to db", e)
     finally:
         if(conn):
