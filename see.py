@@ -1,8 +1,10 @@
+""" Module that prints the content of the databse."""
 from mysql.connector import connect, Error
-import click
+from colr import color
 
 
 def see():
+    """ Connect to db, get all the lines and present it with colr."""
     try:
         conn = connect(
                 host="localhost",
@@ -14,13 +16,13 @@ def see():
         cur.execute(query,)
         records = cur.fetchall()
         for row in records:
-            print(click.style('[0] ID » ', fg='cyan', bold=True), click.style(str(row[0]), fg='magenta', bold=True))
-            print(click.style('[1] TITLE » ', fg='cyan', bold=True), click.style(str(row[1]), fg='magenta', bold=True))
-            print(click.style('[2] KEYWORD 1 » ', fg='cyan', bold=True), click.style(str(row[2]), fg='magenta', bold=True))
-            print(click.style('[3] KEYWORD 2 » ', fg='cyan', bold=True), click.style(str(row[3]), fg='magenta', bold=True))
-            print(click.style('[4] KEYWORD 3 » ', fg='cyan', bold=True), click.style(str(row[4]), fg='magenta', bold=True))
-            print(click.style('[5] NOTE : ', fg='cyan', bold=True), click.style(str(row[5]), fg='red', bold=True))
-            print(click.style('[6] TIME » ', fg='cyan', bold=True), click.style(str(row[6]), fg='magenta', bold=True))
+            print(color('[0] ID » ', fore='#4c873a'), color(str(row[0]), fore='#fffb96'))
+            print(color('[1] TITLE » ', fore='#4c873a'), color(str(row[1]), fore='#fffb96'))
+            print(color('[2] KEYWORD 1 » ', fore='#4c873a'), color(str(row[2]), fore='#fffb96'))
+            print(color('[3] KEYWORD 2 » ', fore='#4c873a'), color(str(row[3]), fore='#fffb96'))
+            print(color('[4] KEYWORD 3 » ', fore='#4c873a'), color(str(row[4]), fore='#fffb96'))
+            print(color('[5] NOTE : ', fore='#4c873a'), color(str(row[5]), fore='#ff6969'))
+            print(color('[6] TIME » ', fore='#4c873a'), color(str(row[6]), fore='#fffb96'))
             print('\n')
     except Error as e:
         print("Error while connecting to db", e)

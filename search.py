@@ -1,12 +1,12 @@
 """ Module to see all of the database """
 from mysql.connector import connect, Error
-import click
+from colr import color
 import fire
 
 
 def search():
     try:
-        busca = input(click.style(' What are you searching for? ', fg='magenta', bold=True))
+        busca = input(color(' What are you searching for? ', fore='#40afb8'))
         conn = connect(
             host="localhost",
             user="mic",
@@ -17,13 +17,13 @@ def search():
         cur.execute(query)
         records = cur.fetchall()
         for row in records:
-            print(click.style(' [0] ID » ', fg='cyan', bold=True), click.style(str(row[0]), fg='blue', bold=True))
-            print(click.style(' [1] TITLE » ', fg='cyan', bold=True), click.style(str(row[1]), fg='blue', bold=True))
-            print(click.style(' [2] KEYWORD 1 » ', fg='cyan', bold=True), click.style(str(row[2]), fg='blue', bold=True))
-            print(click.style(' [3] KEYWORD 2 » ', fg='cyan', bold=True), click.style(str(row[3]), fg='blue', bold=True))
-            print(click.style(' [4] KEYWORD 3 » ', fg='cyan', bold=True), click.style(str(row[4]), fg='blue', bold=True))
-            print(click.style(' [5] NOTE » ', fg='cyan', bold=True), click.style(str(row[5]), fg='blue', bold=True))
-            print(click.style(' [6] TIME » ', fg='cyan', bold=True), click.style(str(row[6]), fg='blue', bold=True))
+            print(color(' [0] ID » ', fore='#40afb8'), color(str(row[0]), fore='#eadcc8'))
+            print(color(' [1] TITLE » ', fore='#40afb8'), color(str(row[1]), fore='#eadcc8'))
+            print(color(' [2] KEYWORD 1 » ', fore='#40afb8'), color(str(row[2]), fore='#eadcc8'))
+            print(color(' [3] KEYWORD 2 » ', fore='#40afb8'), color(str(row[3]), fore='#eadcc8'))
+            print(color(' [4] KEYWORD 3 » ', fore='#40afb8'), color(str(row[4]), fore='#eadcc8'))
+            print(color(' [5] NOTE » ', fore='#40afb8'), color(str(row[5]), fore='#ffbca5'))
+            print(color(' [6] TIME » ', fore='#40afb8'), color(str(row[6]), fore='#eadcc8'))
             print('\n')
     except Error as e:
         print("Error while connecting to db", e)
