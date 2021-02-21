@@ -14,7 +14,7 @@ def delete():
                         password="xxxx",
                         database="notes")
         cur = conn.cursor()
-        query = " DELETE FROM notes WHERE id = " + ident
+        query = " DELETE FROM notes WHERE ntid = " + ident
         cur.execute(query)
         conn.commit()
 
