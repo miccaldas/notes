@@ -13,7 +13,7 @@ resposta = questionary.select(
     choices=[
         'Add a Note',
         'Search for a Note',
-        'See Notes',
+        'See Notes ',
         'Update a Note',
         'Delete a Note',
         'Exit'
