@@ -23,7 +23,7 @@ if resposta == 'Add a Note':
     add()
 if resposta == 'Search for a Note':
     search()
-if resposta == 'See Notes':
+if resposta == 'See Notes ':
     see()
 if resposta == 'Update a Note':
     update()
