@@ -22,7 +22,8 @@ def see():
             print(color('[3] KEYWORD 2 » ', fore='#4c873a'), color(str(row[3]), fore='#fffb96'))
             print(color('[4] KEYWORD 3 » ', fore='#4c873a'), color(str(row[4]), fore='#fffb96'))
             print(color('[5] NOTE : ', fore='#4c873a'), color(str(row[5]), fore='#ff6969'))
-            print(color('[6] TIME » ', fore='#4c873a'), color(str(row[6]), fore='#fffb96'))
+            print(color('[6] URL » ', fore='#4c873a'), color(str(row[6]), fore='#fffb96'))
+            print(color('[7] TIME » ', fore='#4c873a'), color(str(row[7]), fore='#fffb96'))
             print('\n')
     except Error as e:
         print("Error while connecting to db", e)
