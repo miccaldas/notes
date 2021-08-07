@@ -6,28 +6,35 @@ from delete import delete
 from search import search
 from update import update
 from see import see
+from loguru import logger
+
+
+fmt = "{time} - {name} - {level} - {message}"
+logger.add("spam.log", level="DEBUG", format=fmt)
+logger.add(sys.stderr, level="ERROR", format=fmt)
 
 
 resposta = questionary.select(
-    'What do you want to do?',
+    "What do you want to do?",
     choices=[
-        'Add a Note',
-        'Search for a Note',
-        'See Notes ',
-        'Update a Note',
-        'Delete a Note',
-        'Exit'
-            ]).ask()
+        "Add a Note",
+        "Search for a Note",
+        "See Notes ",
+        "Update a Note",
+        "Delete a Note",
+        "Exit",
+    ],
+).ask()
 
-if resposta == 'Add a Note':
+if resposta == "Add a Note":
     add()
-if resposta == 'Search for a Note':
+if resposta == "Search for a Note":
     search()
-if resposta == 'See Notes ':
+if resposta == "See Notes ":
     see()
-if resposta == 'Update a Note':
+if resposta == "Update a Note":
     update()
-if resposta == 'Delete a Note':
+if resposta == "Delete a Note":
     delete()
-if resposta == 'Exit':
+if resposta == "Exit":
     sys.exit()

@@ -5,44 +5,40 @@ from colr import color
 from icecream import ic
 import re
 
-db_name = input(color('What name do you want for the database? ', fore='#585a47'))
+db_name = input(color("What name do you want for the database? ", fore="#585a47"))
 
 
 def create_db():
     """Where we use the database name to create one."""
 
     try:
-        conn = connect(
-            host="localhost",
-            user="mic",
-            password="xxxx",
-            database="notes")
+        conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
         ic("Database created and Successfully Connected to MySQL")
         conn.commit()
     except Error as e:
         ic("Error while connecting to db", e)
     finally:
-        if(conn):
+        if conn:
             conn.close()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     create_db()
 
 
 def collect_data():
-    """ Here we ask the user the information needed to create a table, then we process the output until is fit to be a SQL query, and uploaded it to the db"""
+    """Here we ask the user the information needed to create a table, then we process the output until is fit to be a SQL query, and uploaded it to the db"""
 
     a = collections.OrderedDict()
-    table_name = input(color('What name do you want for the table? ', fore='#585a47'))
-    col_num = int(input(color('How many columns will you need? ', fore='#ff6f69')))
+    table_name = input(color("What name do you want for the table? ", fore="#585a47"))
+    col_num = int(input(color("How many columns will you need? ", fore="#ff6f69")))
     for y in range(col_num):
-        col_name = input(color('What is the name of your column? ', fore='#ff6f69'))
+        col_name = input(color("What is the name of your column? ", fore="#ff6f69"))
         key = col_name
         a.setdefault(key, [])
-        att_num = int(input(color('How many attributes will you need? ', fore='#ff6f69')))
+        att_num = int(input(color("How many attributes will you need? ", fore="#ff6f69")))
         for x in range(att_num):
-            att_name = input(color('What is the name of your attribute? ', fore='#ff6f69'))
+            att_name = input(color("What is the name of your attribute? ", fore="#ff6f69"))
             a[key].append(att_name)
 
     new = []
@@ -55,31 +51,27 @@ def collect_data():
         print(new)
         d = str(c[1])
         print(d)
-        e = d.replace(',', '')
+        e = d.replace(",", "")
         print(e)
         new.append(e)
     print(new)
     corda = str(new)
     cor1 = corda.translate({ord(i): None for i in '[]""'})
     cor2 = cor1.translate({ord(i): None for i in "'"})
-    sub = ','
+    sub = ","
     matches = re.finditer(sub, cor2)
     matches_positions = [match.start() for match in matches]
     oc = matches_positions
     oc1 = oc[0::2]
-    print('oc1 = ', oc1)
+    print("oc1 = ", oc1)
     cor3 = list(cor2)
     for idx in oc1:
-        cor3[idx] = ''
-    cor4 = ''.join(cor3)
-    query = 'CREATE TABLE ' + table_name + '(' + cor4 + ')'
+        cor3[idx] = ""
+    cor4 = "".join(cor3)
+    query = "CREATE TABLE " + table_name + "(" + cor4 + ")"
 
     try:
-        conn = connect(
-            host="localhost",
-            user="mic",
-            password="xxxx",
-            database="notes")
+        conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
         cur = conn.cursor()
         cur.execute(query)
         conn.commit()
@@ -87,9 +79,9 @@ def collect_data():
     except Error as e:
         print("Error while connecting to db", e)
     finally:
-        if(conn):
+        if conn:
             conn.close()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     collect_data()
