@@ -12,6 +12,7 @@ logger.add("spam.log", level="DEBUG", format=fmt)
 logger.add(sys.stderr, level="ERROR", format=fmt)
 
 
+@logger.catch
 def add():
     titulo = input(click.style(" Title? » ", fg="magenta", bold=True))
     kwd1 = input(click.style(" Choose a keyword » ", fg="magenta", bold=True))
@@ -22,6 +23,7 @@ def add():
     time.sleep(0.2)
     nota = click.edit().rstrip()
     answers = [titulo, kwd1, kwd2, kwd3, nota]
+    logger.info(answers)
     # Na apresentação da db, havia uma linha vazia entre os campos note e time.
     # rstrip elimina essa linha.
     try:
@@ -29,6 +31,7 @@ def add():
         cur = conn.cursor()
         query = """INSERT INTO notes (title, k1, k2, k3, note)
                 VALUES (%s, %s, %s, %s, %s)"""
+        logger.info(query)
         cur.execute(query, answers)
         conn.commit()
     except Error as e:

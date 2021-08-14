@@ -7,20 +7,22 @@ from loguru import logger
 
 
 fmt = "{time} - {name} - {level} - {message}"
-logger.add("spam.log", level="DEBUG", format=fmt)
-logger.add(sys.stderr, level="ERROR", format=fmt)
+logger.add("search.log", level="INFO", format=fmt)
+logger.add("search.log", level="ERROR", format=fmt)
 
 
 def search():
     try:
         busca = input(color(" What are you searching for? ", fore="#40afb8"))
+        logger.info(busca)
         conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
         cur = conn.cursor()
         query = (
             " SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('"
             + busca
-            + "' IN NATURAL LANGUAGE MODE)"
+            + "' )"
         )
+        logger.info(query)
         cur.execute(query)
         records = cur.fetchall()
         for row in records:

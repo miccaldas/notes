@@ -7,22 +7,25 @@ from loguru import logger
 
 
 fmt = "{time} - {name} - {level} - {message}"
-logger.add("spam.log", level="DEBUG", format=fmt)
-logger.add(sys.stderr, level="ERROR", format=fmt)
+logger.add("info.log", level="INFO", format=fmt)
+logger.add("info.log", level="ERROR", format=fmt)
 
 
+@logger.catch
 def update():
     coluna = input(click.style(" Column? » ", fg="magenta", bold=True))
     ident = input(click.style(" ID? » ", fg="magenta", bold=True))
-    print(click.style(" Write your update", fg="magenta", bold=True))
+    update = print(click.style(" Write your update", fg="magenta", bold=True))
     time.sleep(0.3)
     update = click.edit()
     vari = [coluna, update, ident]
+    logger.info(vari)
 
     try:
         conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
         cur = conn.cursor()
         query = """ UPDATE notes SET %s = %s WHERE id = %s """
+        logger.info(query)
         cur.execute(query, vari)
         conn.commit()
     except Error as e:

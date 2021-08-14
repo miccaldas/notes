@@ -6,10 +6,11 @@ from loguru import logger
 
 
 fmt = "{time} - {name} - {level} - {message}"
-logger.add("spam.log", level="DEBUG", format=fmt)
-logger.add(sys.stderr, level="ERROR", format=fmt)
+logger.add("see.log", level="INFO", format=fmt)
+logger.add("see.log", level="ERROR", format=fmt)
 
 
+@logger.catch
 def see():
     """Connect to db, get all the lines and present it with colr."""
     try:

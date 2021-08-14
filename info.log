@@ -1,0 +1,45 @@
+2021-08-13T19:04:15.445945+0100 - __main__ - INFO - ('id', ['int', 'AUTO_INCREMENT'])
+2021-08-13T19:04:15.446689+0100 - __main__ - INFO - ['id', ['int', 'AUTO_INCREMENT']]
+2021-08-13T19:04:15.447079+0100 - __main__ - INFO - ['id']
+2021-08-13T19:04:15.447421+0100 - __main__ - INFO - ['int', 'AUTO_INCREMENT']
+2021-08-13T19:04:15.447738+0100 - __main__ - INFO - ['int' 'AUTO_INCREMENT']
+2021-08-13T19:04:15.448039+0100 - __main__ - INFO - ('title', ['VARCHAR(255)'])
+2021-08-13T19:04:15.448342+0100 - __main__ - INFO - ['title', ['VARCHAR(255)']]
+2021-08-13T19:04:15.448640+0100 - __main__ - INFO - ['id', "['int' 'AUTO_INCREMENT']", 'title']
+2021-08-13T19:04:15.448939+0100 - __main__ - INFO - ['VARCHAR(255)']
+2021-08-13T19:04:15.449225+0100 - __main__ - INFO - ['VARCHAR(255)']
+2021-08-13T19:04:15.449510+0100 - __main__ - INFO - ('link', ['VARCHAR(255)'])
+2021-08-13T19:04:15.449799+0100 - __main__ - INFO - ['link', ['VARCHAR(255)']]
+2021-08-13T19:04:15.450113+0100 - __main__ - INFO - ['id', "['int' 'AUTO_INCREMENT']", 'title', "['VARCHAR(255)']", 'link']
+2021-08-13T19:04:15.450406+0100 - __main__ - INFO - ['VARCHAR(255)']
+2021-08-13T19:04:15.450686+0100 - __main__ - INFO - ['VARCHAR(255)']
+2021-08-13T19:04:15.450963+0100 - __main__ - INFO - ['id', "['int' 'AUTO_INCREMENT']", 'title', "['VARCHAR(255)']", 'link', "['VARCHAR(255)']"]
+2021-08-13T19:04:15.451257+0100 - __main__ - INFO - ['id', "['int' 'AUTO_INCREMENT']", 'title', "['VARCHAR(255)']", 'link', "['VARCHAR(255)']"]
+2021-08-13T19:04:15.451557+0100 - __main__ - INFO - 'id', 'int' 'AUTO_INCREMENT', 'title', 'VARCHAR(255)', 'link', 'VARCHAR(255)'
+2021-08-13T19:04:15.451847+0100 - __main__ - INFO - id, int AUTO_INCREMENT, title, VARCHAR(255), link, VARCHAR(255)
+2021-08-13T19:04:15.451998+0100 - __main__ - INFO - <callable_iterator object at 0x7f02ddb09ac0>
+2021-08-13T19:04:15.452101+0100 - __main__ - INFO - [2, 22, 29, 43, 49]
+2021-08-13T19:04:15.452196+0100 - __main__ - INFO - [2, 29, 49]
+2021-08-13T19:04:15.452255+0100 - __main__ - INFO - oc1 = 
+2021-08-13T19:04:15.452315+0100 - __main__ - INFO - ['i', 'd', ',', ' ', 'i', 'n', 't', ' ', 'A', 'U', 'T', 'O', '_', 'I', 'N', 'C', 'R', 'E', 'M', 'E', 'N', 'T', ',', ' ', 't', 'i', 't', 'l', 'e', ',', ' ', 'V', 'A', 'R', 'C', 'H', 'A', 'R', '(', '2', '5', '5', ')', ',', ' ', 'l', 'i', 'n', 'k', ',', ' ', 'V', 'A', 'R', 'C', 'H', 'A', 'R', '(', '2', '5', '5', ')']
+2021-08-13T19:04:15.452405+0100 - __main__ - INFO - id int AUTO_INCREMENT, title VARCHAR(255), link VARCHAR(255)
+2021-08-13T19:04:15.452497+0100 - __main__ - INFO - CREATE TABLE apagar(id int AUTO_INCREMENT, title VARCHAR(255), link VARCHAR(255))
+2021-08-13T19:18:33.008894+0100 - __main__ - INFO - ('id', ['int', 'AUTO_INCREMENT', 'PRIMARY KEY'])
+2021-08-13T19:18:33.009229+0100 - __main__ - INFO - ['id']
+2021-08-13T19:18:33.009412+0100 - __main__ - INFO - ['int', 'AUTO_INCREMENT', 'PRIMARY KEY']
+2021-08-13T19:18:33.009566+0100 - __main__ - INFO - ['int' 'AUTO_INCREMENT' 'PRIMARY KEY']
+2021-08-13T19:18:33.009698+0100 - __main__ - INFO - ('name', ['VARCHAR(255)'])
+2021-08-13T19:18:33.009849+0100 - __main__ - INFO - ['id', "['int' 'AUTO_INCREMENT' 'PRIMARY KEY']", 'name']
+2021-08-13T19:18:33.009979+0100 - __main__ - INFO - ['VARCHAR(255)']
+2021-08-13T19:18:33.010102+0100 - __main__ - INFO - ['VARCHAR(255)']
+2021-08-13T19:18:33.010223+0100 - __main__ - INFO - ['id', "['int' 'AUTO_INCREMENT' 'PRIMARY KEY']", 'name', "['VARCHAR(255)']"]
+2021-08-13T19:18:33.010351+0100 - __main__ - INFO - ['id', "['int' 'AUTO_INCREMENT' 'PRIMARY KEY']", 'name', "['VARCHAR(255)']"]
+2021-08-13T19:18:33.010482+0100 - __main__ - INFO - 'id', 'int' 'AUTO_INCREMENT' 'PRIMARY KEY', 'name', 'VARCHAR(255)'
+2021-08-13T19:18:33.010610+0100 - __main__ - INFO - id, int AUTO_INCREMENT PRIMARY KEY, name, VARCHAR(255)
+2021-08-13T19:18:33.010832+0100 - __main__ - INFO - <callable_iterator object at 0x7fb1cdc93820>
+2021-08-13T19:18:33.010977+0100 - __main__ - INFO - [2, 34, 40]
+2021-08-13T19:18:33.011106+0100 - __main__ - INFO - [2, 40]
+2021-08-13T19:18:33.011229+0100 - __main__ - INFO - oc1 = 
+2021-08-13T19:18:33.011353+0100 - __main__ - INFO - ['i', 'd', ',', ' ', 'i', 'n', 't', ' ', 'A', 'U', 'T', 'O', '_', 'I', 'N', 'C', 'R', 'E', 'M', 'E', 'N', 'T', ' ', 'P', 'R', 'I', 'M', 'A', 'R', 'Y', ' ', 'K', 'E', 'Y', ',', ' ', 'n', 'a', 'm', 'e', ',', ' ', 'V', 'A', 'R', 'C', 'H', 'A', 'R', '(', '2', '5', '5', ')']
+2021-08-13T19:18:33.011502+0100 - __main__ - INFO - id int AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255)
+2021-08-13T19:18:33.011628+0100 - __main__ - INFO - CREATE TABLE apagar(id int AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255))
