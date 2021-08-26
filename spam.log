@@ -70,3 +70,43 @@
 2021-08-26T23:26:59.684025+0100 - delete - INFO - 457
 2021-08-26T23:26:59.691350+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 457
 2021-08-26T23:26:59.691350+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 457
+2021-08-26T23:34:07.326289+0100 - add - INFO - ['Get a string up to a certain character in Python', 'python', 'character', 'string', '\n To extract a string up to a chosen character,\n do this:\n ----------------------------------------------\n <string>.split("<character>", "<substitution")\n ----------------------------------------------', 'http://localhost/notes/pages/html/Get_a_string_up_to_a_certain_character_in_Python.html']
+2021-08-26T23:34:07.326289+0100 - add - INFO - ['Get a string up to a certain character in Python', 'python', 'character', 'string', '\n To extract a string up to a chosen character,\n do this:\n ----------------------------------------------\n <string>.split("<character>", "<substitution")\n ----------------------------------------------', 'http://localhost/notes/pages/html/Get_a_string_up_to_a_certain_character_in_Python.html']
+2021-08-26T23:34:07.330611+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-26T23:34:07.330611+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-26T23:39:43.358273+0100 - add - INFO - ['Looping through multiple lists', 'python', 'lists', 'zip', "\n Use zip to loop through multiple lists without having\n them be in a:\n    for i in list a:\n        for i in list b:\n situation.\n ------------------------------------------------------\n for x, y in zip(a, b):\n    print x, y\n ------------------------------------------------------\n For a real example see use of this in the file in\n '/srv/http/notes/resources/id_links/build_csv.py'", 'http://localhost/notes/pages/html/Looping_through_multiple_lists.html']
+2021-08-26T23:39:43.358273+0100 - add - INFO - ['Looping through multiple lists', 'python', 'lists', 'zip', "\n Use zip to loop through multiple lists without having\n them be in a:\n    for i in list a:\n        for i in list b:\n situation.\n ------------------------------------------------------\n for x, y in zip(a, b):\n    print x, y\n ------------------------------------------------------\n For a real example see use of this in the file in\n '/srv/http/notes/resources/id_links/build_csv.py'", 'http://localhost/notes/pages/html/Looping_through_multiple_lists.html']
+2021-08-26T23:39:43.362369+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-26T23:39:43.362369+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-26T23:48:30.066518+0100 - search - INFO - cheatsheet
+2021-08-26T23:48:30.066518+0100 - search - INFO - cheatsheet
+2021-08-26T23:48:30.074031+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('cheatsheet' )
+2021-08-26T23:48:30.074031+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('cheatsheet' )
+2021-08-26T23:49:48.340533+0100 - search - INFO - index
+2021-08-26T23:49:48.340533+0100 - search - INFO - index
+2021-08-26T23:49:48.348024+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('index' )
+2021-08-26T23:49:48.348024+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('index' )
+2021-08-26T23:57:43.430647+0100 - search - INFO - fulltext
+2021-08-26T23:57:43.430647+0100 - search - INFO - fulltext
+2021-08-26T23:57:43.438278+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
+2021-08-26T23:57:43.438278+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
+2021-08-26T23:58:01.607793+0100 - search - INFO - full-text
+2021-08-26T23:58:01.607793+0100 - search - INFO - full-text
+2021-08-26T23:58:01.615329+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('full-text' )
+2021-08-26T23:58:01.615329+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('full-text' )
+2021-08-27T00:00:36.253699+0100 - search - INFO - fulltext
+2021-08-27T00:00:36.253699+0100 - search - INFO - fulltext
+2021-08-27T00:00:36.261115+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
+2021-08-27T00:00:36.261115+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
+2021-08-27T00:03:05.067825+0100 - search - INFO - fulltext
+2021-08-27T00:03:05.067825+0100 - search - INFO - fulltext
+2021-08-27T00:03:05.075419+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
+2021-08-27T00:03:05.075419+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
+2021-08-27T00:03:47.870766+0100 - search - INFO - fulltext
+2021-08-27T00:03:47.870766+0100 - search - INFO - fulltext
+2021-08-27T00:03:47.878320+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('fulltext' )
+2021-08-27T00:03:47.878320+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('fulltext' )
