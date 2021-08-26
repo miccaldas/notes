@@ -14,6 +14,7 @@ logger.add(sys.stderr, level="ERROR", format=fmt)
 
 @logger.catch
 def add():
+    """Collects the inputs and sends it to the db as a SQL query"""
     titulo = input(click.style(" Title? » ", fg="magenta", bold=True))
     kwd1 = input(click.style(" Choose a keyword » ", fg="magenta", bold=True))
     kwd2 = input(click.style(" Choose another... » ", fg="magenta", bold=True))
@@ -22,15 +23,17 @@ def add():
     print(click.style(" Write a note.", fg="magenta", bold=True))
     time.sleep(0.2)
     nota = click.edit().rstrip()
-    answers = [titulo, kwd1, kwd2, kwd3, nota]
+    tit = titulo.replace(" ", "_")
+    url = "http://localhost/notes/pages/html/" + tit + ".html"
+    answers = [titulo, kwd1, kwd2, kwd3, nota, url]
     logger.info(answers)
     # Na apresentação da db, havia uma linha vazia entre os campos note e time.
     # rstrip elimina essa linha.
     try:
         conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
         cur = conn.cursor()
-        query = """INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)"""
+        query = """INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)"""
         logger.info(query)
         cur.execute(query, answers)
         conn.commit()
