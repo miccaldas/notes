@@ -22,26 +22,26 @@ def see():
         )
         records = cur.fetchall()
         for row in records:
-            print(color("[0] ID » ", fore="#4c873a"), color(str(row[0]), fore="#fffb96"))
+            print(color("[0] ID » ", fore="#bfbfbf"), color(str(row[0]), fore="#ffffff"))
             print(
-                color("[1] TITLE » ", fore="#4c873a"),
-                color(str(row[1]), fore="#fffb96"),
+                color("[1] TITLE » ", fore="#bfbfbf"),
+                color(str(row[1]), fore="#ffffff"),
             )
             print(
-                color("[2] KEYWORD 1 » ", fore="#4c873a"),
-                color(str(row[2]), fore="#fffb96"),
+                color("[2] KEYWORD 1 » ", fore="#bfbfbf"),
+                color(str(row[2]), fore="#ffffff"),
             )
             print(
-                color("[3] KEYWORD 2 » ", fore="#4c873a"),
-                color(str(row[3]), fore="#fffb96"),
+                color("[3] KEYWORD 2 » ", fore="#bfbfbf"),
+                color(str(row[3]), fore="#ffffff"),
             )
             print(
-                color("[4] KEYWORD 3 » ", fore="#4c873a"),
-                color(str(row[4]), fore="#fffb96"),
+                color("[4] KEYWORD 3 » ", fore="#bfbfbf"),
+                color(str(row[4]), fore="#ffffff"),
             )
-            print(color("[5] NOTE : ", fore="#4c873a"), color(str(row[5]), fore="#ff6969"))
-            print(color("[6] URL » ", fore="#4c873a"), color(str(row[6]), fore="#fffb96"))
-            print(color("[7] TIME » ", fore="#4c873a"), color(str(row[7]), fore="#fffb96"))
+            print(color("[5] NOTE : ", fore="#bfbfbf"), color(str(row[5]), fore="#9f9989"))
+            print(color("[6] URL » ", fore="#bfbfbf"), color(str(row[6]), fore="#ffffff"))
+            print(color("[7] TIME » ", fore="#bfbfbf"), color(str(row[7]), fore="#ffffff"))
             print("\n")
     except Error as e:
         print("Error while connecting to db", e)

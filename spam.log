@@ -1,112 +1,28 @@
-2021-08-25T08:40:26.511600+0100 - add - INFO - ['Validate that object is file Python', 'isfile', 'python', 'file', "\n Validating that an object is a file can be useful,\n for example to make sure that in, a loop in a folder,\n you'll iterate only through files.\n This is how you do it:\n ------------------------------------------------------\n import os\n\n os.path.isfile(path)\n ------------------------------------------------------"]
-2021-08-25T08:40:26.511600+0100 - add - INFO - ['Validate that object is file Python', 'isfile', 'python', 'file', "\n Validating that an object is a file can be useful,\n for example to make sure that in, a loop in a folder,\n you'll iterate only through files.\n This is how you do it:\n ------------------------------------------------------\n import os\n\n os.path.isfile(path)\n ------------------------------------------------------"]
-2021-08-25T08:40:26.520241+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)
-2021-08-25T08:40:26.520241+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)
-2021-08-25T10:28:27.401462+0100 - add - INFO - ['Join several lists without duplicates', 'python', 'lists', 'duplicates', '\n To join several lists in a no duplicates super-list,\n do the following:\n ----------------------------------------------------\n set1 = set(list1)\n set2 = set(list2)\n set3 = set(list3)\n combined_list = list(set3 - set2 - set1)\n -----------------------------------------------------']
-2021-08-25T10:28:27.401462+0100 - add - INFO - ['Join several lists without duplicates', 'python', 'lists', 'duplicates', '\n To join several lists in a no duplicates super-list,\n do the following:\n ----------------------------------------------------\n set1 = set(list1)\n set2 = set(list2)\n set3 = set(list3)\n combined_list = list(set3 - set2 - set1)\n -----------------------------------------------------']
-2021-08-25T10:28:27.411336+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)
-2021-08-25T10:28:27.411336+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)
-2021-08-25T10:32:27.205246+0100 - add - INFO - ['Select non-duplicates items in MySQL', 'duplicates', 'mysql', 'repeats', ' \n To only get non-repeated results in your\n SQL query, write:\n -----------------------------------------\n SELECT DISTINCT <column> FROM <table>\n -----------------------------------------']
-2021-08-25T10:32:27.205246+0100 - add - INFO - ['Select non-duplicates items in MySQL', 'duplicates', 'mysql', 'repeats', ' \n To only get non-repeated results in your\n SQL query, write:\n -----------------------------------------\n SELECT DISTINCT <column> FROM <table>\n -----------------------------------------']
-2021-08-25T10:32:27.209212+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)
-2021-08-25T10:32:27.209212+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)
-2021-08-25T17:32:40.858863+0100 - search - INFO - dictionary
-2021-08-25T17:32:40.858863+0100 - search - INFO - dictionary
-2021-08-25T17:32:40.866919+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('dictionary' )
-2021-08-25T17:32:40.866919+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('dictionary' )
-2021-08-25T17:40:08.761102+0100 - add - INFO - ['Create a dictionary from two lists', 'dictionary', 'lists', 'python', "\n To create a dictionary from two lists, use the following\n dictionary comprehension:\n ---------------------------------------------------------\n list1 = ['Miguel', 'João', 'Mario']\n list2 = [1, 4, 5]\n\n new_dict = {list1[i]: list2[i] for i in range(len(list1))}\n ----------------------------------------------------------\n https://tinyurl.com/yh3kc2sg"]
-2021-08-25T17:40:08.761102+0100 - add - INFO - ['Create a dictionary from two lists', 'dictionary', 'lists', 'python', "\n To create a dictionary from two lists, use the following\n dictionary comprehension:\n ---------------------------------------------------------\n list1 = ['Miguel', 'João', 'Mario']\n list2 = [1, 4, 5]\n\n new_dict = {list1[i]: list2[i] for i in range(len(list1))}\n ----------------------------------------------------------\n https://tinyurl.com/yh3kc2sg"]
-2021-08-25T17:40:08.765166+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)
-2021-08-25T17:40:08.765166+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)
-2021-08-26T23:15:08.037722+0100 - search - INFO - cheatsheet
-2021-08-26T23:15:08.037722+0100 - search - INFO - cheatsheet
-2021-08-26T23:15:08.045391+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('cheatsheet' )
-2021-08-26T23:15:08.045391+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('cheatsheet' )
-2021-08-26T23:23:45.130819+0100 - add - INFO - ['Validate that object is file', 'isfile', 'python', 'file', "\n Validating that an object is a file can be useful,\n for example to make sure that in, a loop in a folder,\n you'll iterate only through files.\n This is how you do it:\n ------------------------------------------------------\n import os\n\n os.path.isfile(path)\n ------------------------------------------------------", 'http://localhost/notes/pages/html/Validate_that_object_is_file.html']
-2021-08-26T23:23:45.130819+0100 - add - INFO - ['Validate that object is file', 'isfile', 'python', 'file', "\n Validating that an object is a file can be useful,\n for example to make sure that in, a loop in a folder,\n you'll iterate only through files.\n This is how you do it:\n ------------------------------------------------------\n import os\n\n os.path.isfile(path)\n ------------------------------------------------------", 'http://localhost/notes/pages/html/Validate_that_object_is_file.html']
-2021-08-26T23:23:45.135039+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-31T01:11:38.986370+0100 - __main__ - INFO - ['hyper', 'hyper', 'hyper', 'hyper', '\nhyper\nhyper.', 'http://localhost/notes/pages/html/contact.html']
+2021-08-31T01:11:38.990374+0100 - __main__ - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:23:45.135039+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-31T01:16:52.128859+0100 - __main__ - INFO - ['uber', 'uber', 'uber', 'uber', 'uber\nuber', 'http://localhost/notes/pages/html/uber.html']
+2021-08-31T01:16:52.132517+0100 - __main__ - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:24:07.035953+0100 - delete - INFO - 454
-2021-08-26T23:24:07.035953+0100 - delete - INFO - 454
-2021-08-26T23:24:07.043029+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 454
-2021-08-26T23:24:07.043029+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 454
-2021-08-26T23:24:56.628925+0100 - add - INFO - ['Join several lists without duplicates', 'python', 'lists', 'duplicates', ' \n  To join several lists in a no duplicates super-list,\n do the following:\n ----------------------------------------------------\n set1 = set(list1)\n set2 = set(list2)\n set3 = set(list3)\n combined_list = list(set3 - set2 - set1)\n -----------------------------------------------------', 'http://localhost/notes/pages/html/Join_several_lists_without_duplicates.html']
-2021-08-26T23:24:56.628925+0100 - add - INFO - ['Join several lists without duplicates', 'python', 'lists', 'duplicates', ' \n  To join several lists in a no duplicates super-list,\n do the following:\n ----------------------------------------------------\n set1 = set(list1)\n set2 = set(list2)\n set3 = set(list3)\n combined_list = list(set3 - set2 - set1)\n -----------------------------------------------------', 'http://localhost/notes/pages/html/Join_several_lists_without_duplicates.html']
-2021-08-26T23:24:56.632972+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-31T01:16:52.135786+0100 - __main__ - INFO - pandoc --highlight-style=zenburn --metadata title=uber -s '/srv/http/notes/pages/markdown/uber.md' -ohttp://localhost/notes/pages/html/uber.html
+2021-08-31T01:20:56.617749+0100 - __main__ - INFO - ['uber', 'uber', 'uber', 'uber', 'uber\nuber', 'http://localhost/notes/pages/html/uber.html']
+2021-08-31T01:20:56.621512+0100 - __main__ - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:24:56.632972+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-31T01:20:56.630008+0100 - __main__ - INFO - pandoc --highlight-style=zenburn --metadata title=uber -s '/srv/http/notes/pages/markdown/uber.md' -o http://localhost/notes/pages/html/uber.html
+2021-08-31T01:22:30.527286+0100 - __main__ - INFO - ['newest', 'newest', 'newest', 'newest', 'This is the newest test.\nThe newest.', 'http://localhost/notes/pages/html/newest.html']
+2021-08-31T01:22:30.532183+0100 - __main__ - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:25:07.343932+0100 - delete - INFO - 455
-2021-08-26T23:25:07.343932+0100 - delete - INFO - 455
-2021-08-26T23:25:07.351525+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 455
-2021-08-26T23:25:07.351525+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 455
-2021-08-26T23:25:46.552878+0100 - add - INFO - ['Select non-duplicates items in MySQL', 'duplicates', 'mysql', 'repeats', ' \n  To only get non-repeated results in your\n SQL query, write:\n -----------------------------------------\n SELECT DISTINCT <column> FROM <table>\n -----------------------------------------', 'http://localhost/notes/pages/html/Select_non-duplicates_items_in_MySQL.html']
-2021-08-26T23:25:46.552878+0100 - add - INFO - ['Select non-duplicates items in MySQL', 'duplicates', 'mysql', 'repeats', ' \n  To only get non-repeated results in your\n SQL query, write:\n -----------------------------------------\n SELECT DISTINCT <column> FROM <table>\n -----------------------------------------', 'http://localhost/notes/pages/html/Select_non-duplicates_items_in_MySQL.html']
-2021-08-26T23:25:46.557197+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-31T01:22:30.539925+0100 - __main__ - INFO - pandoc --highlight-style=zenburn --metadata title=newest -s '/srv/http/notes/pages/markdown/newest.md' -o 'http://localhost/notes/pages/html/newest.html'
+2021-08-31T01:25:39.247832+0100 - __main__ - INFO - ['1', '1', '1', '1', '1\n1\n1', 'http://localhost/notes/pages/html/1.html']
+2021-08-31T01:25:39.251339+0100 - __main__ - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:25:46.557197+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-31T01:25:39.255369+0100 - __main__ - INFO - touch http://localhost/notes/pages/html/1.html
+2021-08-31T01:25:39.259387+0100 - __main__ - INFO - pandoc --highlight-style=zenburn --metadata title=1 -s '/srv/http/notes/pages/markdown/1.md' -o 'http://localhost/notes/pages/html/1.html'
+2021-08-31T01:30:33.005524+0100 - __main__ - INFO - ['new', 'bew', 'bew', 'bew', 'bew\nbew', 'http://localhost/notes/pages/html/new.html']
+2021-08-31T01:30:33.009133+0100 - __main__ - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:25:59.505962+0100 - delete - INFO - 456
-2021-08-26T23:25:59.505962+0100 - delete - INFO - 456
-2021-08-26T23:25:59.513395+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 456
-2021-08-26T23:25:59.513395+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 456
-2021-08-26T23:26:48.969814+0100 - add - INFO - ['Create a dictionary from two lists', 'dictionary', 'lists', 'python', "\n  To create a dictionary from two lists, use the following\n dictionary comprehension:\n ---------------------------------------------------------\n list1 = ['Miguel', 'João', 'Mario']\n list2 = [1, 4, 5]\n\n new_dict = {list1[i]: list2[i] for i in range(len(list1))}\n ----------------------------------------------------------\n https://tinyurl.com/yh3kc2sg", 'http://localhost/notes/pages/html/Create_a_dictionary_from_two_lists.html']
-2021-08-26T23:26:48.969814+0100 - add - INFO - ['Create a dictionary from two lists', 'dictionary', 'lists', 'python', "\n  To create a dictionary from two lists, use the following\n dictionary comprehension:\n ---------------------------------------------------------\n list1 = ['Miguel', 'João', 'Mario']\n list2 = [1, 4, 5]\n\n new_dict = {list1[i]: list2[i] for i in range(len(list1))}\n ----------------------------------------------------------\n https://tinyurl.com/yh3kc2sg", 'http://localhost/notes/pages/html/Create_a_dictionary_from_two_lists.html']
-2021-08-26T23:26:48.973989+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-31T01:30:33.012570+0100 - __main__ - INFO - pandoc --highlight-style=zenburn --metadata title=new -s '/srv/http/notes/pages/html/new.html' -o 'http://localhost/notes/pages/html/new.html'
+2021-08-31T01:34:11.005401+0100 - __main__ - INFO - ['se', 'se', 'se', 'se', 'ee\nse', 'http://localhost/notes/pages/html/se.html']
+2021-08-31T01:34:11.009083+0100 - __main__ - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:26:48.973989+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
-                VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:26:59.684025+0100 - delete - INFO - 457
-2021-08-26T23:26:59.684025+0100 - delete - INFO - 457
-2021-08-26T23:26:59.691350+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 457
-2021-08-26T23:26:59.691350+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 457
-2021-08-26T23:34:07.326289+0100 - add - INFO - ['Get a string up to a certain character in Python', 'python', 'character', 'string', '\n To extract a string up to a chosen character,\n do this:\n ----------------------------------------------\n <string>.split("<character>", "<substitution")\n ----------------------------------------------', 'http://localhost/notes/pages/html/Get_a_string_up_to_a_certain_character_in_Python.html']
-2021-08-26T23:34:07.326289+0100 - add - INFO - ['Get a string up to a certain character in Python', 'python', 'character', 'string', '\n To extract a string up to a chosen character,\n do this:\n ----------------------------------------------\n <string>.split("<character>", "<substitution")\n ----------------------------------------------', 'http://localhost/notes/pages/html/Get_a_string_up_to_a_certain_character_in_Python.html']
-2021-08-26T23:34:07.330611+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
-                VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:34:07.330611+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
-                VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:39:43.358273+0100 - add - INFO - ['Looping through multiple lists', 'python', 'lists', 'zip', "\n Use zip to loop through multiple lists without having\n them be in a:\n    for i in list a:\n        for i in list b:\n situation.\n ------------------------------------------------------\n for x, y in zip(a, b):\n    print x, y\n ------------------------------------------------------\n For a real example see use of this in the file in\n '/srv/http/notes/resources/id_links/build_csv.py'", 'http://localhost/notes/pages/html/Looping_through_multiple_lists.html']
-2021-08-26T23:39:43.358273+0100 - add - INFO - ['Looping through multiple lists', 'python', 'lists', 'zip', "\n Use zip to loop through multiple lists without having\n them be in a:\n    for i in list a:\n        for i in list b:\n situation.\n ------------------------------------------------------\n for x, y in zip(a, b):\n    print x, y\n ------------------------------------------------------\n For a real example see use of this in the file in\n '/srv/http/notes/resources/id_links/build_csv.py'", 'http://localhost/notes/pages/html/Looping_through_multiple_lists.html']
-2021-08-26T23:39:43.362369+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
-                VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:39:43.362369+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
-                VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:48:30.066518+0100 - search - INFO - cheatsheet
-2021-08-26T23:48:30.066518+0100 - search - INFO - cheatsheet
-2021-08-26T23:48:30.074031+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('cheatsheet' )
-2021-08-26T23:48:30.074031+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('cheatsheet' )
-2021-08-26T23:49:48.340533+0100 - search - INFO - index
-2021-08-26T23:49:48.340533+0100 - search - INFO - index
-2021-08-26T23:49:48.348024+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('index' )
-2021-08-26T23:49:48.348024+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('index' )
-2021-08-26T23:57:43.430647+0100 - search - INFO - fulltext
-2021-08-26T23:57:43.430647+0100 - search - INFO - fulltext
-2021-08-26T23:57:43.438278+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
-2021-08-26T23:57:43.438278+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
-2021-08-26T23:58:01.607793+0100 - search - INFO - full-text
-2021-08-26T23:58:01.607793+0100 - search - INFO - full-text
-2021-08-26T23:58:01.615329+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('full-text' )
-2021-08-26T23:58:01.615329+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('full-text' )
-2021-08-27T00:00:36.253699+0100 - search - INFO - fulltext
-2021-08-27T00:00:36.253699+0100 - search - INFO - fulltext
-2021-08-27T00:00:36.261115+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
-2021-08-27T00:00:36.261115+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
-2021-08-27T00:03:05.067825+0100 - search - INFO - fulltext
-2021-08-27T00:03:05.067825+0100 - search - INFO - fulltext
-2021-08-27T00:03:05.075419+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
-2021-08-27T00:03:05.075419+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
-2021-08-27T00:03:47.870766+0100 - search - INFO - fulltext
-2021-08-27T00:03:47.870766+0100 - search - INFO - fulltext
-2021-08-27T00:03:47.878320+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('fulltext' )
-2021-08-27T00:03:47.878320+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('fulltext' )
+2021-08-31T01:34:11.012002+0100 - __main__ - INFO - pandoc --highlight-style=zenburn --metadata title=se -s '/srv/http/notes/pages/markdown/se.md' -o '/srv/http/notes/pages/html/se.html'

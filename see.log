@@ -1,56 +1,645 @@
-2021-08-25T08:40:26.511600+0100 - add - INFO - ['Validate that object is file Python', 'isfile', 'python', 'file', "\n Validating that an object is a file can be useful,\n for example to make sure that in, a loop in a folder,\n you'll iterate only through files.\n This is how you do it:\n ------------------------------------------------------\n import os\n\n os.path.isfile(path)\n ------------------------------------------------------"]
-2021-08-25T08:40:26.520241+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)
-2021-08-25T10:28:27.401462+0100 - add - INFO - ['Join several lists without duplicates', 'python', 'lists', 'duplicates', '\n To join several lists in a no duplicates super-list,\n do the following:\n ----------------------------------------------------\n set1 = set(list1)\n set2 = set(list2)\n set3 = set(list3)\n combined_list = list(set3 - set2 - set1)\n -----------------------------------------------------']
-2021-08-25T10:28:27.411336+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)
-2021-08-25T10:32:27.205246+0100 - add - INFO - ['Select non-duplicates items in MySQL', 'duplicates', 'mysql', 'repeats', ' \n To only get non-repeated results in your\n SQL query, write:\n -----------------------------------------\n SELECT DISTINCT <column> FROM <table>\n -----------------------------------------']
-2021-08-25T10:32:27.209212+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)
-2021-08-25T17:32:40.858863+0100 - search - INFO - dictionary
-2021-08-25T17:32:40.866919+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('dictionary' )
-2021-08-25T17:40:08.761102+0100 - add - INFO - ['Create a dictionary from two lists', 'dictionary', 'lists', 'python', "\n To create a dictionary from two lists, use the following\n dictionary comprehension:\n ---------------------------------------------------------\n list1 = ['Miguel', 'João', 'Mario']\n list2 = [1, 4, 5]\n\n new_dict = {list1[i]: list2[i] for i in range(len(list1))}\n ----------------------------------------------------------\n https://tinyurl.com/yh3kc2sg"]
-2021-08-25T17:40:08.765166+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note)
-                VALUES (%s, %s, %s, %s, %s)
-2021-08-26T23:15:08.037722+0100 - search - INFO - cheatsheet
-2021-08-26T23:15:08.045391+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('cheatsheet' )
-2021-08-26T23:23:45.130819+0100 - add - INFO - ['Validate that object is file', 'isfile', 'python', 'file', "\n Validating that an object is a file can be useful,\n for example to make sure that in, a loop in a folder,\n you'll iterate only through files.\n This is how you do it:\n ------------------------------------------------------\n import os\n\n os.path.isfile(path)\n ------------------------------------------------------", 'http://localhost/notes/pages/html/Validate_that_object_is_file.html']
-2021-08-26T23:23:45.135039+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-27T17:47:21.882762+0100 - delete - INFO - 466
+2021-08-27T17:47:21.890456+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 466
+2021-08-27T17:47:28.274529+0100 - delete - INFO - 467
+2021-08-27T17:47:28.279667+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 467
+2021-08-27T19:00:33.052477+0100 - search - INFO - zip
+2021-08-27T19:00:33.066160+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('zip' )
+2021-08-27T19:27:08.443091+0100 - search - INFO - sed
+2021-08-27T19:27:08.450713+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-08-27T20:19:22.953677+0100 - add - INFO - ['Read file in Bash Script', 'file', 'bash', 'script', '\n To read a file in a bash script, do this:\n -----------------------------------------\n while IFS= read -r line; do\n     echo "a line: $line"\n done < file\n -----------------------------------------\n to read file content to a variable:\n -----------------------------------------\n foo=$(<file)\n -----------------------------------------\n https://tinyurl.com/yjtwesau', 'http://localhost/notes/pages/html/Read_file_in_Bash_Script.html']
+2021-08-27T20:19:22.958084+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:24:07.035953+0100 - delete - INFO - 454
-2021-08-26T23:24:07.043029+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 454
-2021-08-26T23:24:56.628925+0100 - add - INFO - ['Join several lists without duplicates', 'python', 'lists', 'duplicates', ' \n  To join several lists in a no duplicates super-list,\n do the following:\n ----------------------------------------------------\n set1 = set(list1)\n set2 = set(list2)\n set3 = set(list3)\n combined_list = list(set3 - set2 - set1)\n -----------------------------------------------------', 'http://localhost/notes/pages/html/Join_several_lists_without_duplicates.html']
-2021-08-26T23:24:56.632972+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-27T21:12:45.070436+0100 - search - INFO - zip
+2021-08-27T21:12:45.078091+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('zip' )
+2021-08-28T04:17:51.658661+0100 - search - INFO - sed
+2021-08-28T04:17:51.666489+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-08-28T05:06:52.912687+0100 - search - INFO - sed
+2021-08-28T05:06:52.920186+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-08-28T05:22:30.212820+0100 - add - INFO - ['Edit specific line in file in Python', 'python', 'file', 'edit', '\n To edit a specific line in a file, with Python,\n do the following;\n -----------------------------------------------\n with open(\'file_name\', \'r\') as f:\n lines = f.readlines()\n lines[1] = "<some text change>"\n\n with open(\'file_name\', \'w\') as f:\n f.writelines(lines)\n -----------------------------------------------\n https://tinyurl.com/yhp4ug42', 'http://localhost/notes/pages/html/Edit_specific_line_in_file_in_Python.html']
+2021-08-28T05:22:30.219974+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:25:07.343932+0100 - delete - INFO - 455
-2021-08-26T23:25:07.351525+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 455
-2021-08-26T23:25:46.552878+0100 - add - INFO - ['Select non-duplicates items in MySQL', 'duplicates', 'mysql', 'repeats', ' \n  To only get non-repeated results in your\n SQL query, write:\n -----------------------------------------\n SELECT DISTINCT <column> FROM <table>\n -----------------------------------------', 'http://localhost/notes/pages/html/Select_non-duplicates_items_in_MySQL.html']
-2021-08-26T23:25:46.557197+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-28T05:26:52.353693+0100 - add - INFO - ['Remove tuple from list', 'tuple', 'list', 'remove', '\n To remove a tuple from a list, use a list\n comprehension:\n --------------------------------------------------\n foo = [(\'Abbott\', \'Texas\'), (\'Abernathy\',\'Texas\'),\n         (\'Abilene\', \'Texas\'),(\'Ace\', \'Texas\'),\n        (\'Ackerly\', \'Texas\')]\n foo = [x for x in foo if x!= ("Abilene", "Texas")]\n --------------------------------------------------\n  https://tinyurl.com/yz2gt4sy:wq', 'http://localhost/notes/pages/html/Remove_tuple_from_list.html']
+2021-08-28T05:26:52.363068+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:25:59.505962+0100 - delete - INFO - 456
-2021-08-26T23:25:59.513395+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 456
-2021-08-26T23:26:48.969814+0100 - add - INFO - ['Create a dictionary from two lists', 'dictionary', 'lists', 'python', "\n  To create a dictionary from two lists, use the following\n dictionary comprehension:\n ---------------------------------------------------------\n list1 = ['Miguel', 'João', 'Mario']\n list2 = [1, 4, 5]\n\n new_dict = {list1[i]: list2[i] for i in range(len(list1))}\n ----------------------------------------------------------\n https://tinyurl.com/yh3kc2sg", 'http://localhost/notes/pages/html/Create_a_dictionary_from_two_lists.html']
-2021-08-26T23:26:48.973989+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-28T05:29:33.579074+0100 - add - INFO - ['Iterating over a sequence with range function', 'range', 'python', 'skip', "\n To skip over elements in a iteration, you\n can use range to indicate what steps will\n be affected:\n -----------------------------------------\n for i in range(1, 10, 2)\n     print(i, end='. ')\n -----------------------------------------", 'http://localhost/notes/pages/html/Iterating_over_a_sequence_with_range_function.html']
+2021-08-28T05:29:33.584569+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:26:59.684025+0100 - delete - INFO - 457
-2021-08-26T23:26:59.691350+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 457
-2021-08-26T23:34:07.326289+0100 - add - INFO - ['Get a string up to a certain character in Python', 'python', 'character', 'string', '\n To extract a string up to a chosen character,\n do this:\n ----------------------------------------------\n <string>.split("<character>", "<substitution")\n ----------------------------------------------', 'http://localhost/notes/pages/html/Get_a_string_up_to_a_certain_character_in_Python.html']
-2021-08-26T23:34:07.330611+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-28T05:32:31.134246+0100 - add - INFO - ['Find strings with a substring in it', 'string', 'substring', 'python', "\n To find a all events of a substring in a string,\n use the following list comprehension:\n ---------------------------------------------------\n test_list = ['GeeksforGeeks', 'Geeky', 'Computers']\n subs = 'Geek'\n res = [i for i in test_list if subs in i]\n ---------------------------------------------------\n https://tinyurl.com/vr443qf", 'http://localhost/notes/pages/html/Find_strings_with_a_substring_in_it.html']
+2021-08-28T05:32:31.138627+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:39:43.358273+0100 - add - INFO - ['Looping through multiple lists', 'python', 'lists', 'zip', "\n Use zip to loop through multiple lists without having\n them be in a:\n    for i in list a:\n        for i in list b:\n situation.\n ------------------------------------------------------\n for x, y in zip(a, b):\n    print x, y\n ------------------------------------------------------\n For a real example see use of this in the file in\n '/srv/http/notes/resources/id_links/build_csv.py'", 'http://localhost/notes/pages/html/Looping_through_multiple_lists.html']
-2021-08-26T23:39:43.362369+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+2021-08-28T05:34:14.956845+0100 - add - INFO - ['Convert string to tuple', 'tuple', 'string', 'convert', '\n To convert string to tuple, do:\n -------------------------------\n res = eval(test_str)\n ------------------------------\n https://www.geeksforgeeks.org/python-convert-string-to-tuple/', 'http://localhost/notes/pages/html/Convert_string_to_tuple.html']
+2021-08-28T05:34:14.961238+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)
-2021-08-26T23:48:30.066518+0100 - search - INFO - cheatsheet
-2021-08-26T23:48:30.074031+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('cheatsheet' )
-2021-08-26T23:49:48.340533+0100 - search - INFO - index
-2021-08-26T23:49:48.348024+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('index' )
-2021-08-26T23:57:43.430647+0100 - search - INFO - fulltext
-2021-08-26T23:57:43.438278+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
-2021-08-26T23:58:01.607793+0100 - search - INFO - full-text
-2021-08-26T23:58:01.615329+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('full-text' )
-2021-08-27T00:00:36.253699+0100 - search - INFO - fulltext
-2021-08-27T00:00:36.261115+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
-2021-08-27T00:03:05.067825+0100 - search - INFO - fulltext
-2021-08-27T00:03:05.075419+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note) AGAINST ('fulltext' )
-2021-08-27T00:03:47.870766+0100 - search - INFO - fulltext
-2021-08-27T00:03:47.878320+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('fulltext' )
+2021-08-28T05:35:55.944633+0100 - add - INFO - ['Access a value in a tuple that is in a list', 'tuple', 'list', 'python', '\n To access the second value of a tuple, that\n that is in a list, do this:\n --------------------------------------------\n [x[1] for x in L]\n --------------------------------------------', 'http://localhost/notes/pages/html/Access_a_value_in_a_tuple_that_is_in_a_list.html']
+2021-08-28T05:35:55.948762+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-28T05:37:52.412194+0100 - add - INFO - ['Get line number for file in Python', 'file', 'line number', 'python', "\n To get line numbers in python opened\n files, do the following:\n ----------------------------------------\n lookup = 'the dog barked'\n\n with open(filename) as myFile:\n    for num, line in enumerate(myFile, 1):\n        if lookup in line:\n            print 'found at line:', num\n -----------------------------------------", 'http://localhost/notes/pages/html/Get_line_number_for_file_in_Python.html']
+2021-08-28T05:37:52.417051+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-28T05:40:08.251477+0100 - add - INFO - ['Ipython profile config location', 'ipython', 'python shell', 'repl', '/home/mic/.ipython/profile_mic_profile/ipython_config.py', 'http://localhost/notes/pages/html/Ipython_profile_config_location.html']
+2021-08-28T05:40:08.255801+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-28T10:36:17.352683+0100 - search - INFO - sed
+2021-08-28T10:36:17.360611+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-08-28T12:05:59.290680+0100 - add - INFO - ['Characters to esscape in Sed', 'sed', 'escape', 'characters', '\n The characters in Sed you need to escape are:\n ---------------------------------------------\n ‘?’, ‘+’, parentheses, braces (‘{}’), and ‘|’\n ---------------------------------------------', 'http://localhost/notes/pages/html/Characters_to_esscape_in_Sed.html']
+2021-08-28T12:05:59.295364+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-28T12:08:25.228414+0100 - search - INFO - python
+2021-08-28T12:08:25.232161+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('python' )
+2021-08-28T12:09:30.160983+0100 - search - INFO - mysql
+2021-08-28T12:09:30.168648+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('mysql' )
+2021-08-28T12:12:27.994929+0100 - search - INFO - python
+2021-08-28T12:12:28.002831+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('python' )
+2021-08-28T12:13:40.468779+0100 - search - INFO - python
+2021-08-28T12:13:40.476543+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('python' )
+2021-08-28T12:51:59.810865+0100 - search - INFO - sed
+2021-08-28T12:51:59.818735+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-08-28T13:24:35.359555+0100 - search - INFO - sed
+2021-08-28T13:24:35.366938+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-08-28T13:26:01.345531+0100 - search - INFO - sed
+2021-08-28T13:26:01.353332+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-08-28T14:15:25.760447+0100 - add - INFO - ['Delete nth occurrence of a character in a line', 'delete', 'sed', 'line', '\n To delete the Nth occurrence of a character, on the\n same line, use this expression:\n -----------------------------------------------------\n sed "s/\'//2" lines_tags1.txt\n Where:\n   1 -  \'/.../\' is the space to put the expression to\n       delete. Notice that I didn\'t have to escape it.\n   2 - \'//\' represent that, instead of a normal\n       substitution operation, this pattern won\'t be\n       replaced by nothing, deleting it.\n   3 - \'2\' indicates the n of the occurrence. In this\n       case it was the second occurrence of the "\'"\n       character.\n -----------------------------------------------------\n https://tinyurl.com/ygj7d7dn', 'http://localhost/notes/pages/html/Delete_nth_occurrence_of_a_character_in_a_line.html']
+2021-08-28T14:15:25.764655+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-28T15:42:07.328496+0100 - search - INFO - bash
+2021-08-28T15:42:07.336029+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('bash' )
+2021-08-28T17:13:34.552542+0100 - search - INFO - sed
+2021-08-28T17:13:34.560183+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-08-28T21:25:25.674953+0100 - search - INFO - scrapy
+2021-08-28T21:25:25.682571+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('scrapy' )
+2021-08-28T21:26:02.460948+0100 - search - INFO - scrapy
+2021-08-28T21:26:02.468454+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('scrapy' )
+2021-08-28T21:26:14.801915+0100 - search - INFO - python
+2021-08-28T21:26:14.809613+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('python' )
+2021-08-29T00:09:07.204113+0100 - add - INFO - ['Simple use case of BeautifulSoup', 'beautifulsoup', 'beautiful soup', 'scraping', '\n I had the need to analyse a svg image that I already had in my\n computer. Since it was already downloaded, I didn\'t seem\n necessary to use Scrapy as such, but just use Beautiful Soup,\n as it seemed more appropriate.\n I had to extract from the document, the strings of the text\n tags in it. This is how it was done:\n -------------------------------------------------------------\n with open(\'file_to_analyse\', \'r\') as f:\n    soup = BeautifulSoup(fp, "xml", from_encoding="utf-8")\n texts = soup.find_all("text")\n for text in texts:\n     print(text.get_text())\n --------------------------------------------------------------\n That simple.\n https://linuxhint.com/parse_xml_python_beautifulsoup/', 'http://localhost/notes/pages/html/Simple_use_case_of_BeautifulSoup.html']
+2021-08-29T00:09:07.208528+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-29T02:46:57.343948+0100 - search - INFO - line
+2021-08-29T02:46:57.351817+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('line' )
+2021-08-29T02:47:11.824968+0100 - search - INFO - lines
+2021-08-29T02:47:11.832537+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('lines' )
+2021-08-29T02:47:37.885983+0100 - search - INFO - file
+2021-08-29T02:47:37.893104+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('file' )
+2021-08-29T02:47:53.523992+0100 - search - INFO - files
+2021-08-29T02:47:53.531787+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('files' )
+2021-08-29T02:53:06.421910+0100 - search - INFO - zip
+2021-08-29T02:53:06.437578+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('zip' )
+2021-08-29T03:20:11.051698+0100 - search - INFO - zip
+2021-08-29T03:20:11.059235+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('zip' )
+2021-08-29T03:50:21.230322+0100 - search - INFO - ps
+2021-08-29T03:50:21.238143+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('ps' )
+2021-08-29T04:45:03.422543+0100 - search - INFO - zip
+2021-08-29T04:45:03.430207+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('zip' )
+2021-08-29T09:47:58.224693+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (382121), thread 'MainThread' (140325566543680):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 30, in <module>
+    add()
+    └ <function add at 0x7fa01652d700>
+
+  File "/home/mic/python/notes/add.py", line 25, in add
+    nota = click.edit().rstrip()
+           │     └ <function edit at 0x7fa016597040>
+           └ <module 'click' from '/usr/lib/python3.9/site-packages/click/__init__.py'>
+
+AttributeError: 'NoneType' object has no attribute 'rstrip'
+2021-08-29T09:47:58.224693+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (382121), thread 'MainThread' (140325566543680):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 30, in <module>
+    add()
+    └ <function add at 0x7fa01652d700>
+
+  File "/home/mic/python/notes/add.py", line 25, in add
+    nota = click.edit().rstrip()
+           │     └ <function edit at 0x7fa016597040>
+           └ <module 'click' from '/usr/lib/python3.9/site-packages/click/__init__.py'>
+
+AttributeError: 'NoneType' object has no attribute 'rstrip'
+2021-08-29T09:50:25.943254+0100 - add - INFO - ['Add substring at the end of a line or in the beginning', 'sed', 'awk', 'file', " \n  You can use sed to add a string after a particular substring\n in a text.\n To add creating a new line under the substring:\n -------------------------------------------------------------\n sed  '/\\<substring>\\/a <text to insert>/' <file>\n Where:\n 1 - The '\\' is an escape character,\n 2 - '/a' indicates 'after match'.\n -------------------------------------------------------------\n If you wanted you insert before the match, use '/i'.\n If you want to insert in the same line as the substring, do\n this:\n -------------------------------------------------------------\n sed 's/<substring>/ <text to insert>/' <file>\n -------------------------------------------------------------\n https://tinyurl.com/yfbeoqrd\n https://tinyurl.com/yhywfg98", 'http://localhost/notes/pages/html/Add_substring_at_the_end_of_a_line_or_in_the_beginning.html']
+2021-08-29T09:50:25.949672+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-29T10:31:33.858061+0100 - search - INFO - zip
+2021-08-29T10:31:33.865793+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('zip' )
+2021-08-29T16:21:34.839616+0100 - search - INFO - zip
+2021-08-29T16:21:34.847241+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('zip' )
+2021-08-30T16:45:44.757766+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (449380), thread 'MainThread' (140255778895680):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f8fd6a7f700>
+
+  File "/home/mic/python/notes/add.py", line 26, in add
+    nota = click.edit(MARKER).rstrip()
+           │     │    └ '---\nid:\n'
+           │     └ <function edit at 0x7f8fd6a6b040>
+           └ <module 'click' from '/usr/lib/python3.9/site-packages/click/__init__.py'>
+
+AttributeError: 'NoneType' object has no attribute 'rstrip'
+2021-08-30T16:45:44.757766+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (449380), thread 'MainThread' (140255778895680):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f8fd6a7f700>
+
+  File "/home/mic/python/notes/add.py", line 26, in add
+    nota = click.edit(MARKER).rstrip()
+           │     │    └ '---\nid:\n'
+           │     └ <function edit at 0x7f8fd6a6b040>
+           └ <module 'click' from '/usr/lib/python3.9/site-packages/click/__init__.py'>
+
+AttributeError: 'NoneType' object has no attribute 'rstrip'
+2021-08-30T16:49:03.654907+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (449469), thread 'MainThread' (140533051209536):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7fd0655fb700>
+
+  File "/home/mic/python/notes/add.py", line 26, in add
+    nota = click.edit(marker).rstrip()
+           │     │    └ '---\nid:\ntitle:\ntime:\ntags:\n---\n\n\n'
+           │     └ <function edit at 0x7fd0655e7040>
+           └ <module 'click' from '/usr/lib/python3.9/site-packages/click/__init__.py'>
+
+AttributeError: 'NoneType' object has no attribute 'rstrip'
+2021-08-30T16:49:03.654907+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (449469), thread 'MainThread' (140533051209536):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7fd0655fb700>
+
+  File "/home/mic/python/notes/add.py", line 26, in add
+    nota = click.edit(marker).rstrip()
+           │     │    └ '---\nid:\ntitle:\ntime:\ntags:\n---\n\n\n'
+           │     └ <function edit at 0x7fd0655e7040>
+           └ <module 'click' from '/usr/lib/python3.9/site-packages/click/__init__.py'>
+
+AttributeError: 'NoneType' object has no attribute 'rstrip'
+2021-08-30T17:07:02.350691+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (449946), thread 'MainThread' (140331451541312):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7fa17518d670>
+
+  File "/home/mic/python/notes/add.py", line 28, in add
+    with open("'" + '/srv/http/notes/pagers/markdown/' + tit + "'.md, 'w'") as f:
+                                                         └ 'sadgf'
+
+FileNotFoundError: [Errno 2] No such file or directory: "'/srv/http/notes/pagers/markdown/sadgf'.md, 'w'"
+2021-08-30T17:07:02.350691+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (449946), thread 'MainThread' (140331451541312):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7fa17518d670>
+
+  File "/home/mic/python/notes/add.py", line 28, in add
+    with open("'" + '/srv/http/notes/pagers/markdown/' + tit + "'.md, 'w'") as f:
+                                                         └ 'sadgf'
+
+FileNotFoundError: [Errno 2] No such file or directory: "'/srv/http/notes/pagers/markdown/sadgf'.md, 'w'"
+2021-08-30T17:11:00.536853+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (450059), thread 'MainThread' (139652225288000):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f03500eb670>
+
+  File "/home/mic/python/notes/add.py", line 28, in add
+    with open('/srv/http/notes/pagers/markdown/' + tit + ".md'", "'w'") as f:
+                                                   └ 'aegfgf'
+
+ValueError: invalid mode: ''w''
+2021-08-30T17:11:00.536853+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (450059), thread 'MainThread' (139652225288000):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f03500eb670>
+
+  File "/home/mic/python/notes/add.py", line 28, in add
+    with open('/srv/http/notes/pagers/markdown/' + tit + ".md'", "'w'") as f:
+                                                   └ 'aegfgf'
+
+ValueError: invalid mode: ''w''
+2021-08-30T17:11:32.975199+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (450102), thread 'MainThread' (140049006442304):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f5fb20ea670>
+
+  File "/home/mic/python/notes/add.py", line 28, in add
+    with open('/srv/http/notes/pagers/markdown/' + tit + ".md'", "w") as f:
+                                                   └ 'xfg'
+
+FileNotFoundError: [Errno 2] No such file or directory: "/srv/http/notes/pagers/markdown/xfg.md'"
+2021-08-30T17:11:32.975199+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (450102), thread 'MainThread' (140049006442304):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f5fb20ea670>
+
+  File "/home/mic/python/notes/add.py", line 28, in add
+    with open('/srv/http/notes/pagers/markdown/' + tit + ".md'", "w") as f:
+                                                   └ 'xfg'
+
+FileNotFoundError: [Errno 2] No such file or directory: "/srv/http/notes/pagers/markdown/xfg.md'"
+2021-08-30T17:12:39.790771+0100 - add - INFO - ['xfg', 'xfgh', 'xfg', 'xfgh', '---:\ntitle:\ntime:\ntags:\n---', 'http://localhost/notes/pages/html/xfg.html']
+2021-08-30T17:12:39.796023+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T17:14:07.519997+0100 - add - INFO - ['dgsh', 'gch', 'gh', 'gh', '---:\ntitle:\ntime:\ntags:\n---', 'http://localhost/notes/pages/html/dgsh.html']
+2021-08-30T17:14:07.524494+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T17:17:47.622637+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (451645), thread 'MainThread' (139789295126336):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f233a0e7670>
+
+  File "/home/mic/python/notes/add.py", line 26, in add
+    nota = click.edit(marker).rstrip()
+           │     │    └ '\n ---:\n title:{{TITLE}}\n time:\n tags:\n---\n\n\n'
+           │     └ <function edit at 0x7f233a148f70>
+           └ <module 'click' from '/usr/lib/python3.9/site-packages/click/__init__.py'>
+
+AttributeError: 'NoneType' object has no attribute 'rstrip'
+2021-08-30T17:17:47.622637+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (451645), thread 'MainThread' (139789295126336):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f233a0e7670>
+
+  File "/home/mic/python/notes/add.py", line 26, in add
+    nota = click.edit(marker).rstrip()
+           │     │    └ '\n ---:\n title:{{TITLE}}\n time:\n tags:\n---\n\n\n'
+           │     └ <function edit at 0x7f233a148f70>
+           └ <module 'click' from '/usr/lib/python3.9/site-packages/click/__init__.py'>
+
+AttributeError: 'NoneType' object has no attribute 'rstrip'
+2021-08-30T17:33:57.517008+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (452090), thread 'MainThread' (140347127441216):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7fa51b742670>
+
+  File "/home/mic/python/notes/add.py", line 25, in add
+    nota = click.edit('/srv/http/notes/pages/markdown/note_write_file/last_note.note')
+           │     └ <function edit at 0x7fa51b7a2f70>
+           └ <module 'click' from '/usr/lib/python3.9/site-packages/click/__init__.py'>
+
+AttributeError: 'NoneType' object has no attribute 'rstrip'
+2021-08-30T17:33:57.517008+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (452090), thread 'MainThread' (140347127441216):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7fa51b742670>
+
+  File "/home/mic/python/notes/add.py", line 25, in add
+    nota = click.edit('/srv/http/notes/pages/markdown/note_write_file/last_note.note')
+           │     └ <function edit at 0x7fa51b7a2f70>
+           └ <module 'click' from '/usr/lib/python3.9/site-packages/click/__init__.py'>
+
+AttributeError: 'NoneType' object has no attribute 'rstrip'
+2021-08-30T17:34:40.804603+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (452164), thread 'MainThread' (140153768408896):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f78165b7670>
+
+  File "/home/mic/python/notes/add.py", line 27, in add
+    with open('/srv/http/notes/pages/markdown/note_write_file/last_note.note', 'r') as f:
+
+FileNotFoundError: [Errno 2] No such file or directory: '/srv/http/notes/pages/markdown/note_write_file/last_note.note'
+2021-08-30T17:34:40.804603+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (452164), thread 'MainThread' (140153768408896):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f78165b7670>
+
+  File "/home/mic/python/notes/add.py", line 27, in add
+    with open('/srv/http/notes/pages/markdown/note_write_file/last_note.note', 'r') as f:
+
+FileNotFoundError: [Errno 2] No such file or directory: '/srv/http/notes/pages/markdown/note_write_file/last_note.note'
+2021-08-30T17:35:30.249014+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (452200), thread 'MainThread' (140451761420096):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7fbd781ff670>
+
+  File "/home/mic/python/notes/add.py", line 27, in add
+    with open('/srv/http/notes/pages/markdown/note_write_file/last_note.note', 'r') as f:
+
+FileNotFoundError: [Errno 2] No such file or directory: '/srv/http/notes/pages/markdown/note_write_file/last_note.note'
+2021-08-30T17:35:30.249014+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (452200), thread 'MainThread' (140451761420096):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7fbd781ff670>
+
+  File "/home/mic/python/notes/add.py", line 27, in add
+    with open('/srv/http/notes/pages/markdown/note_write_file/last_note.note', 'r') as f:
+
+FileNotFoundError: [Errno 2] No such file or directory: '/srv/http/notes/pages/markdown/note_write_file/last_note.note'
+2021-08-30T17:52:59.755479+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (452766), thread 'MainThread' (140001562572608):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f54a6207280>
+
+  File "/home/mic/python/notes/add.py", line 29, in add
+    subprocess.run(cmd, cwd=path, shell=True)
+    │          │   │        └ '/srv/http/notes/markdown/'
+    │          │   └ 'vim md_title'
+    │          └ <function run at 0x7f54a6f65a60>
+    └ <module 'subprocess' from '/usr/lib/python3.9/subprocess.py'>
+
+  File "/usr/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+         │      │            └ {'cwd': '/srv/http/notes/markdown/', 'shell': True}
+         │      └ ('vim md_title',)
+         └ <class 'subprocess.Popen'>
+  File "/usr/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    │    │              │     │           │           └ True
+    │    │              │     │           └ None
+    │    │              │     └ None
+    │    │              └ 'vim md_title'
+    │    └ <function Popen._execute_child at 0x7f54a6f6b9d0>
+    └ <Popen: returncode: 255 args: 'vim md_title'>
+  File "/usr/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+          │                    │          │        └ '/srv/http/notes/markdown/'
+          │                    │          └ 'No such file or directory'
+          │                    └ 2
+          └ <class 'OSError'>
+
+FileNotFoundError: [Errno 2] No such file or directory: '/srv/http/notes/markdown/'
+2021-08-30T17:52:59.755479+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (452766), thread 'MainThread' (140001562572608):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f54a6207280>
+
+  File "/home/mic/python/notes/add.py", line 29, in add
+    subprocess.run(cmd, cwd=path, shell=True)
+    │          │   │        └ '/srv/http/notes/markdown/'
+    │          │   └ 'vim md_title'
+    │          └ <function run at 0x7f54a6f65a60>
+    └ <module 'subprocess' from '/usr/lib/python3.9/subprocess.py'>
+
+  File "/usr/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+         │      │            └ {'cwd': '/srv/http/notes/markdown/', 'shell': True}
+         │      └ ('vim md_title',)
+         └ <class 'subprocess.Popen'>
+  File "/usr/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    │    │              │     │           │           └ True
+    │    │              │     │           └ None
+    │    │              │     └ None
+    │    │              └ 'vim md_title'
+    │    └ <function Popen._execute_child at 0x7f54a6f6b9d0>
+    └ <Popen: returncode: 255 args: 'vim md_title'>
+  File "/usr/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+          │                    │          │        └ '/srv/http/notes/markdown/'
+          │                    │          └ 'No such file or directory'
+          │                    └ 2
+          └ <class 'OSError'>
+
+FileNotFoundError: [Errno 2] No such file or directory: '/srv/http/notes/markdown/'
+2021-08-30T17:54:12.274210+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (452813), thread 'MainThread' (139732045444928):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f15e5a78280>
+
+  File "/home/mic/python/notes/add.py", line 30, in add
+    with open('/srv/http/notes/pages/markdown/' + md_title, 'r') as f:
+                                                  └ 'sfagh.md'
+
+FileNotFoundError: [Errno 2] No such file or directory: '/srv/http/notes/pages/markdown/sfagh.md'
+2021-08-30T17:54:12.274210+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (452813), thread 'MainThread' (139732045444928):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f15e5a78280>
+
+  File "/home/mic/python/notes/add.py", line 30, in add
+    with open('/srv/http/notes/pages/markdown/' + md_title, 'r') as f:
+                                                  └ 'sfagh.md'
+
+FileNotFoundError: [Errno 2] No such file or directory: '/srv/http/notes/pages/markdown/sfagh.md'
+2021-08-30T17:55:55.131034+0100 - add - INFO - ['aszfdg', 'fhgxg', 'zfzg', 'xzfgb', '---\nauthor: mclds\ndate: 30/08/2021\ntitle: aszfdg\ntags:\n---\n\n', 'http://localhost/notes/pages/html/aszfdg.html']
+2021-08-30T17:55:55.135488+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T18:02:27.687541+0100 - add - INFO - ['teste', 'teste', 'teste', 'teste', '\n ---\n author: mclds\n date: 30/08/2021\n title: teste\n tags:\n ---\n teste\n', 'http://localhost/notes/pages/html/teste.html']
+2021-08-30T18:02:27.691637+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T18:10:19.700310+0100 - add - INFO - ['teste1', 'tste1', 'teste1', 'teste1', [' ---\n', ' teste1\n'], 'http://localhost/notes/pages/html/teste1.html']
+2021-08-30T18:10:19.705258+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T18:11:23.310543+0100 - add - INFO - ['teste2', 'teste2', 'teste2', 'teste2', "[' ---\\n', ' teste2\\n']", 'http://localhost/notes/pages/html/teste2.html']
+2021-08-30T18:11:23.315155+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T18:15:07.721479+0100 - add - INFO - [' ---\n', ' nota.\n', ' teste3\n']
+2021-08-30T18:15:07.721928+0100 - add - INFO - ['teste3', 'teste3', 'teste3', 'teste3', "[' ---\\n', ' nota.\\n', ' teste3\\n']", 'http://localhost/notes/pages/html/teste3.html']
+2021-08-30T18:15:07.726445+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T18:16:45.072450+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (453676), thread 'MainThread' (140146601678656):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f766b217280>
+
+  File "/home/mic/python/notes/add.py", line 32, in add
+    last_note = str(content[7:].rstrip('\n'))
+                    └ ['\n', ' ---\n', ' author: mclds\n', ' date: 30/08/2021\n', ' title: teste4\n', ' tags:\n', ' ---\n', ' nota\n', ' teste4\n']
+
+AttributeError: 'list' object has no attribute 'rstrip'
+2021-08-30T18:16:45.072450+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (453676), thread 'MainThread' (140146601678656):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f766b217280>
+
+  File "/home/mic/python/notes/add.py", line 32, in add
+    last_note = str(content[7:].rstrip('\n'))
+                    └ ['\n', ' ---\n', ' author: mclds\n', ' date: 30/08/2021\n', ' title: teste4\n', ' tags:\n', ' ---\n', ' nota\n', ' teste4\n']
+
+AttributeError: 'list' object has no attribute 'rstrip'
+2021-08-30T18:18:05.827071+0100 - add - INFO - [' nota\n', ' teste5\n']
+2021-08-30T18:18:05.827520+0100 - add - INFO - ['teste5', 'teste5', 'teste5', 'teste5', "[' nota\\n', ' teste5\\n']", 'http://localhost/notes/pages/html/teste5.html']
+2021-08-30T18:18:05.831355+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T18:29:39.656724+0100 - add - INFO - [' nota\n', ' teste6\n']
+2021-08-30T18:29:39.657212+0100 - add - INFO - ['teste6', 'teste6', 'teste6', 'teste6', "[' nota\\n', ' teste6\\n']", 'http://localhost/notes/pages/html/teste6.html']
+2021-08-30T18:29:39.661143+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T18:31:38.776591+0100 - add - INFO - [' teste7\n', ' nota\n']
+2021-08-30T18:31:38.776993+0100 - add - INFO - ['teste7', 'teste7', 'teste7', 'teste7', "[' teste7\\n', ' nota\\n']", 'http://localhost/notes/pages/html/teste7.html']
+2021-08-30T18:31:38.781049+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:10:05.063939+0100 - add - INFO - []
+2021-08-30T20:10:05.064369+0100 - add - INFO - ['sfg', 'fghh', 'xfhg', 'xfxg', [], 'http://localhost/notes/pages/html/sfg.html']
+2021-08-30T20:10:05.068345+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:12:10.631837+0100 - add - INFO - []
+2021-08-30T20:12:10.632743+0100 - add - INFO - ['teste10', 'teste10', 'teste10', 'teste10', '[]', 'http://localhost/notes/pages/html/teste10.html']
+2021-08-30T20:12:10.636587+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:18:24.119599+0100 - add - INFO - []
+2021-08-30T20:18:24.120002+0100 - add - INFO - ['teste11', 'teste11', 'teste11', 'teste11', '[]', 'http://localhost/notes/pages/html/teste11.html']
+2021-08-30T20:18:24.123629+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:22:03.581305+0100 - add - INFO - []
+2021-08-30T20:22:03.581805+0100 - add - INFO - ['1', '1', '1', '1', '[]', 'http://localhost/notes/pages/html/1.html']
+2021-08-30T20:22:03.585793+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:24:23.163627+0100 - add - INFO - [' 2\n']
+2021-08-30T20:24:23.164049+0100 - add - INFO - ['2', '2', '2', '2', "[' 2\\n']", 'http://localhost/notes/pages/html/2.html']
+2021-08-30T20:24:23.168522+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:25:59.620536+0100 - add - INFO - [' 3\n']
+2021-08-30T20:25:59.621024+0100 - add - INFO - ['3', '3', '3', '3', "[' 3\\n']", 'http://localhost/notes/pages/html/3.html']
+2021-08-30T20:25:59.625150+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:28:43.256114+0100 - add - INFO - ['  4\n', '  4\n', '\n']
+2021-08-30T20:28:43.256568+0100 - add - INFO - ['4', '4', '4', '4', "['  4\\n', '  4\\n', '\\n']", 'http://localhost/notes/pages/html/4.html']
+2021-08-30T20:28:43.259971+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:32:07.591063+0100 - add - INFO - [' 5\n']
+2021-08-30T20:32:07.591526+0100 - add - INFO - ['5', '5', '5', '5', "[' 5\\n']", 'http://localhost/notes/pages/html/5.html']
+2021-08-30T20:32:07.595235+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:35:26.517522+0100 - add - INFO - [' 6\n']
+2021-08-30T20:35:26.517914+0100 - add - INFO - ['6', '6', '6', '6', "[' 6\\n']", 'http://localhost/notes/pages/html/6.html']
+2021-08-30T20:35:26.521822+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:36:56.002080+0100 - add - INFO - [' 7\n']
+2021-08-30T20:36:56.002459+0100 - add - INFO - ['7', '7', '7', '7', ' 7\\n', 'http://localhost/notes/pages/html/7.html']
+2021-08-30T20:36:56.006807+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:38:33.559991+0100 - add - INFO - [' 8\n']
+2021-08-30T20:38:33.560389+0100 - add - INFO - ['8', '8', '8', '8', ' 8\\n', 'http://localhost/notes/pages/html/8.html']
+2021-08-30T20:38:33.564456+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:42:08.315877+0100 - add - INFO - [' aquilo\n']
+2021-08-30T20:42:08.316284+0100 - add - INFO - ['9', '9', '9', '9', ' aquilo\\n', 'http://localhost/notes/pages/html/9.html']
+2021-08-30T20:42:08.320208+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T20:47:52.113940+0100 - add - INFO - ['\n', ' ---\n', ' author: mclds\n', ' date: 30/08/2021\n', ' title: 12\n', ' tags:\n', ' ---\n']
+2021-08-30T20:47:52.114379+0100 - add - INFO - ['12', '12', '12', '12', "\\n', ' ---\\n', ' author: mclds\\n', ' date: 30/08/2021\\n', ' title: 12\\n', ' tags:\\n', ' ---\\n", 'http://localhost/notes/pages/html/12.html']
+2021-08-30T20:47:52.118708+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T21:08:00.120543+0100 - add - INFO - ['13', '14', '13', '13', [' ', '\\', 'n', "'", ',', ' ', "'", ' ', '1', '3', '\\', 'n', "'", ',', ' ', "'", ' ', '1', '3', '\\', 'n', "'", ',', ' ', "'", '\\', 'n'], 'http://localhost/notes/pages/html/13.html']
+2021-08-30T21:08:00.124662+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T21:09:01.647438+0100 - add - INFO - ['14', '14', '14', '14', [[' ', '\\', 'n', "'", ',', ' ', "'", ' ', '1', '4', '\\', 'n', "'", ',', ' ', "'", ' ', '1', '4', '\\', 'n']], 'http://localhost/notes/pages/html/14.html']
+2021-08-30T21:09:01.651481+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T21:11:42.012388+0100 - add - INFO - ['15', '15', '15', '15', '[\' \', \'\\\\\', \'n\', "\'", \',\', \' \', "\'", \' \', \'1\', \'5\', \'\\\\\', \'n\', "\'", \',\', \' \', "\'", \' \', \'1\', \'5\', \'\\\\\', \'n\']', 'http://localhost/notes/pages/html/15.html']
+2021-08-30T21:11:42.017600+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T21:16:55.924586+0100 - add - INFO - ['16', '16', '16', '16', '[\' \', \'1\', \'6\', \'\\\\\', \'n\', "\'", \',\', \' \', "\'", \' \', \'1\', \'6\', \'\\\\\', \'n\', "\'", \',\', \' \', "\'", \' \', \'1\', \'6\', \'\\\\\', \'n\']', 'http://localhost/notes/pages/html/16.html']
+2021-08-30T21:16:55.929029+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T21:22:53.699533+0100 - add - INFO - ['18', '18', '18', '18', " 18', ' 18', ' 18", 'http://localhost/notes/pages/html/18.html']
+2021-08-30T21:22:53.704009+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T22:33:08.607298+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (463254), thread 'MainThread' (140142154712896):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f7562123280>
+
+  File "/home/mic/python/notes/add.py", line 34, in add
+    subprocess.run(cmd, cwd=html_path, shell=True)                                         # And this creates the html version.
+    │          │   │        └ '/srv/http/pages/html/'
+    │          │   └ 'pandoc --highlight-style=zenburn -s/srv/http/notes/pages/markdown/Delete_range_of_records_in_MySQL.md-ohttp://localhost/note...
+    │          └ <function run at 0x7f7562e82a60>
+    └ <module 'subprocess' from '/usr/lib/python3.9/subprocess.py'>
+
+  File "/usr/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+         │      │            └ {'cwd': '/srv/http/pages/html/', 'shell': True}
+         │      └ ('pandoc --highlight-style=zenburn -s/srv/http/notes/pages/markdown/Delete_range_of_records_in_MySQL.md-ohttp://localhost/not...
+         └ <class 'subprocess.Popen'>
+  File "/usr/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    │    │              │     │           │           └ True
+    │    │              │     │           └ None
+    │    │              │     └ None
+    │    │              └ 'pandoc --highlight-style=zenburn -s/srv/http/notes/pages/markdown/Delete_range_of_records_in_MySQL.md-ohttp://localhost/note...
+    │    └ <function Popen._execute_child at 0x7f7562e889d0>
+    └ <Popen: returncode: 255 args: 'pandoc --highlight-style=zenburn -s/srv/http/...>
+  File "/usr/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+          │                    │          │        └ '/srv/http/pages/html/'
+          │                    │          └ 'No such file or directory'
+          │                    └ 2
+          └ <class 'OSError'>
+
+FileNotFoundError: [Errno 2] No such file or directory: '/srv/http/pages/html/'
+2021-08-30T22:33:08.607298+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (463254), thread 'MainThread' (140142154712896):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f7562123280>
+
+  File "/home/mic/python/notes/add.py", line 34, in add
+    subprocess.run(cmd, cwd=html_path, shell=True)                                         # And this creates the html version.
+    │          │   │        └ '/srv/http/pages/html/'
+    │          │   └ 'pandoc --highlight-style=zenburn -s/srv/http/notes/pages/markdown/Delete_range_of_records_in_MySQL.md-ohttp://localhost/note...
+    │          └ <function run at 0x7f7562e82a60>
+    └ <module 'subprocess' from '/usr/lib/python3.9/subprocess.py'>
+
+  File "/usr/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+         │      │            └ {'cwd': '/srv/http/pages/html/', 'shell': True}
+         │      └ ('pandoc --highlight-style=zenburn -s/srv/http/notes/pages/markdown/Delete_range_of_records_in_MySQL.md-ohttp://localhost/not...
+         └ <class 'subprocess.Popen'>
+  File "/usr/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    │    │              │     │           │           └ True
+    │    │              │     │           └ None
+    │    │              │     └ None
+    │    │              └ 'pandoc --highlight-style=zenburn -s/srv/http/notes/pages/markdown/Delete_range_of_records_in_MySQL.md-ohttp://localhost/note...
+    │    └ <function Popen._execute_child at 0x7f7562e889d0>
+    └ <Popen: returncode: 255 args: 'pandoc --highlight-style=zenburn -s/srv/http/...>
+  File "/usr/lib/python3.9/subprocess.py", line 1821, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+          │                    │          │        └ '/srv/http/pages/html/'
+          │                    │          └ 'No such file or directory'
+          │                    └ 2
+          └ <class 'OSError'>
+
+FileNotFoundError: [Errno 2] No such file or directory: '/srv/http/pages/html/'
+2021-08-30T22:35:27.309665+0100 - add - INFO - ['Delete a range of records in MySQL', 'mysql', 'delete', 'range', '\n To delete a range of records from a MySQL database, do this:\n ------------------------------------------------------------\n DELETE FROM <table> WHERE id BETWEEN <number> AND <number>\n ------------------------------------------------------------', 'http://localhost/notes/pages/html/Delete_a_range_of_records_in_MySQL.html']
+2021-08-30T22:35:27.314012+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-30T23:11:30.890902+0100 - search - INFO - last
+2021-08-30T23:11:30.898639+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('last' )

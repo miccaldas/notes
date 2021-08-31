@@ -1,0 +1,48 @@
+2021-08-30T22:52:45.781004+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (464207), thread 'MainThread' (140335139718976):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/add_md_page.py", line 17, in <module>
+    add_md_page()
+    └ <function add_md_page at 0x7fa2511a04c0>
+
+  File "/home/mic/python/notes/add_md_page.py", line 13, in add_md_page
+    print(add.tit)
+          └ <module 'add' from '/home/mic/python/notes/add.py'>
+
+AttributeError: module 'add' has no attribute 'tit'
+2021-08-30T22:53:27.299373+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (464218), thread 'MainThread' (139934953535296):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/add_md_page.py", line 17, in <module>
+    add_md_page()
+    └ <function add_md_page at 0x7f45242564c0>
+
+  File "/home/mic/python/notes/add_md_page.py", line 13, in add_md_page
+    print(add.titulo)
+          └ <module 'add' from '/home/mic/python/notes/add.py'>
+
+AttributeError: module 'add' has no attribute 'titulo'
+2021-08-30T22:53:43.283379+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (464244), thread 'MainThread' (139998646310720):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/add_md_page.py", line 17, in <module>
+    add_md_page()
+    └ <function add_md_page at 0x7f53f88804c0>
+
+  File "/home/mic/python/notes/add_md_page.py", line 13, in add_md_page
+    print(add.titulo())
+          └ <module 'add' from '/home/mic/python/notes/add.py'>
+
+AttributeError: module 'add' has no attribute 'titulo'
+2021-08-30T22:54:53.645351+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (464303), thread 'MainThread' (139892786030400):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/add_md_page.py", line 17, in <module>
+    add_md_page()
+    └ <function add_md_page at 0x7f3b52c454c0>
+
+  File "/home/mic/python/notes/add_md_page.py", line 13, in add_md_page
+    print(add.titulo())
+          └ <module 'add' from '/home/mic/python/notes/add.py'>
+
+AttributeError: module 'add' has no attribute 'titulo'
