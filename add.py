@@ -5,6 +5,7 @@ import time
 import click
 import subprocess
 from mysql.connector import connect, Error
+from colr import color
 from loguru import logger
 
 fmt = "{time} - {name} - {level} - {message}"
@@ -22,18 +23,16 @@ def add():
     print(click.style(" Write a note.", fg="magenta", bold=True))
     time.sleep(0.2)
     nota = click.edit().rstrip()
-    add.tit = add.titulo.replace(" ", "_")
+    add.tit = add.titulo.replace(" ", "_").replace("'", "")
     add.md_path = "/srv/http/notes/pages/markdown/" + add.tit + ".md"
     add.url = "http://localhost/notes/pages/html/" + add.tit + ".html"
     answers = [add.titulo, kwd1, kwd2, kwd3, nota, add.url]
-    logger.info(answers)
 
     try:
         conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
         cur = conn.cursor()
         query = """INSERT INTO notes (title, k1, k2, k3, note, url)
                 VALUES (%s, %s, %s, %s, %s, %s)"""
-        logger.info(query)
         cur.execute(query, answers)
         conn.commit()
     except Error as e:
@@ -41,6 +40,7 @@ def add():
     finally:
         if conn:
             conn.close()
+    print(color(f"[*] - The entry named: {add.titulo}, was added to the database.", fore="#acac87"))
 
 
 if __name__ == "__main__":
@@ -55,10 +55,12 @@ def add_md_page():
         conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
         cur = conn.cursor()
         query = "select * from notes order by ntid desc limit 1"
+        logger.info(query)
         cur.execute(
             query,
         )
         records = cur.fetchall()
+        logger.info(records)
     except Error as e:
         print("Error while connecting to db", e)
     finally:
@@ -67,11 +69,17 @@ def add_md_page():
 
     for row in records:
         id = row[0]
+
         titulo = row[1]
+
         time = row[7]
+
         k1 = row[2]
+
         k2 = row[3]
+
         k3 = row[4]
+
         nota = row[5]
 
     with open(add.md_path, "w") as f:
@@ -90,6 +98,7 @@ def add_md_page():
         f.write("---")
         f.write("\n")
         f.write(nota)
+    print(color(f"[*] - It was created the markdown file named, {add.md_path}.", fore="#acac87"))
 
 
 if __name__ == "__main__":
@@ -103,19 +112,21 @@ def add_html_page():
     put it in the html folder."""
 
     html_path = "/srv/http/notes/pages/html/" + add.tit + ".html"
+    cmd = "touch " + html_path
+    subprocess.run(cmd, shell=True)
 
     cmd = (
-        "pandoc --highlight-style=zenburn --metadata title="
+        "pandoc --highlight-style=zenburn --metadata title='"
         + add.titulo
-        + " -s '"
+        + "' -s '"
         + add.md_path
         + "' -o '"
         + html_path
         + "'"
     )
 
-    logger.info(cmd)
     subprocess.run(cmd, shell=True)
+    print(color(f"[*] - It was created the html file named, {add.url}.", fore="#acac87"))
 
 
 if __name__ == "__main__":

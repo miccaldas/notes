@@ -2,12 +2,11 @@ from __future__ import unicode_literals
 import sys
 import questionary
 from questionary import Style
-from add import add
-from delete import delete
+from add import add, add_md_page, add_html_page
+from delete import del_md_html_pages, delete
 from search import search
-from update import update
+from update import update, update_md_html_page
 from see import see
-from add_md_page import add_md_page
 from loguru import logger
 
 
@@ -43,13 +42,16 @@ resposta = questionary.select(
 if resposta == "Add a Note":
     add()
     add_md_page()
+    add_html_page()
 if resposta == "Search for a Note":
     search()
 if resposta == "See Notes ":
     see()
 if resposta == "Update a Note":
     update()
+    update_md_html_page()
 if resposta == "Delete a Note":
+    del_md_html_pages()
     delete()
 if resposta == "Exit":
     sys.exit()

@@ -1,0 +1,158 @@
+2021-08-31T02:43:48.324894+0100 - update - INFO - ['note', 'idem\nidem\n', '506']
+2021-08-31T02:43:48.329135+0100 - update - INFO - UPDATE notes SET %s = %s WHERE id = %s
+2021-08-31T02:45:38.186262+0100 - update - INFO - ['title', 'tlim\n', '506']
+2021-08-31T02:45:38.190345+0100 - update - INFO - UPDATE notes SET %s = %s WHERE id = %s
+2021-08-31T02:46:15.418576+0100 - search - INFO - mysql
+2021-08-31T02:46:15.425839+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('mysql' )
+2021-08-31T02:47:51.805780+0100 - update - INFO - ['title', 'tlim\n', '506']
+2021-08-31T02:47:51.810496+0100 - update - INFO - UPDATE notes SET %s = %s WHERE id = %s
+2021-08-31T05:34:10.886193+0100 - delete - INFO - 518
+2021-08-31T05:34:10.893779+0100 - delete - INFO - SELECT url FROM notes WHERE ntid = 518
+2021-08-31T05:34:10.894294+0100 - delete - INFO - ('http://localhost/notes/pages/html/1.html',)
+2021-08-31T05:34:10.894478+0100 - delete - INFO - http://localhost/notes/pages/html/1.html
+2021-08-31T05:34:10.894630+0100 - delete - INFO - 1.html
+2021-08-31T05:34:10.899682+0100 - delete - INFO - rm '/srv/http/notes/pages/html/1.html'; rm '/srv/http/notes/pages/markdown/1.md'
+2021-08-31T05:34:10.902452+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 518
+2021-08-31T05:34:34.931948+0100 - delete - INFO - 517
+2021-08-31T05:34:34.939768+0100 - delete - INFO - SELECT url FROM notes WHERE ntid = 517
+2021-08-31T05:34:34.940272+0100 - delete - INFO - ('http://localhost/notes/pages/html/newest.html',)
+2021-08-31T05:34:34.940430+0100 - delete - INFO - http://localhost/notes/pages/html/newest.html
+2021-08-31T05:34:34.940547+0100 - delete - INFO - newest.html
+2021-08-31T05:34:34.945382+0100 - delete - INFO - rm '/srv/http/notes/pages/html/newest.html'; rm '/srv/http/notes/pages/markdown/newest.md'
+2021-08-31T05:34:34.948266+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 517
+2021-08-31T05:34:56.488220+0100 - delete - INFO - 516
+2021-08-31T05:34:56.495801+0100 - delete - INFO - SELECT url FROM notes WHERE ntid = 516
+2021-08-31T05:34:56.496267+0100 - delete - INFO - ('http://localhost/notes/pages/html/uber.html',)
+2021-08-31T05:34:56.496411+0100 - delete - INFO - http://localhost/notes/pages/html/uber.html
+2021-08-31T05:34:56.496531+0100 - delete - INFO - uber.html
+2021-08-31T05:34:56.501076+0100 - delete - INFO - rm '/srv/http/notes/pages/html/uber.html'; rm '/srv/http/notes/pages/markdown/uber.md'
+2021-08-31T05:34:56.503673+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 516
+2021-08-31T05:42:38.026365+0100 - delete - INFO - SELECT url FROM notes WHERE ntid = 515
+2021-08-31T05:42:38.040319+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 515
+2021-08-31T05:44:06.610583+0100 - delete - INFO - SELECT url FROM notes WHERE ntid = 514
+2021-08-31T05:44:06.625248+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 514
+2021-08-31T05:49:20.319116+0100 - add - INFO - ['Extract a filename from a path', 'filename', 'extract', 'python', '\n To extract a filename from a path in Python,\n do this:\n --------------------------------------------\n import os\n\n filename = os.path.basename(<path/to/file>)\n print(filename)\n -------------------------------------------', 'http://localhost/notes/pages/html/Extract_a_filename_from_a_path.html']
+2021-08-31T05:49:20.324880+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-31T05:52:38.990659+0100 - add - INFO - ['Extract a filename from a path in Python', 'python', 'filename', 'extract', '\n To extract a filename from a path in Python, do this:\n -----------------------------------------------------\n import os\n\n filename = os.path.basename("path/to/file/sample.txt")\n print(filename)\n ------------------------------------------------------', 'http://localhost/notes/pages/html/Extract_a_filename_from_a_path_in_Python.html']
+2021-08-31T05:52:38.994666+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-31T05:52:38.999443+0100 - add - INFO - pandoc --highlight-style=zenburn --metadata title=Extract a filename from a path in Python -s '/srv/http/notes/pages/markdown/Extract_a_filename_from_a_path_in_Python.md' -o '/srv/http/notes/pages/html/Extract_a_filename_from_a_path_in_Python.html'
+2021-08-31T06:00:01.652131+0100 - add - INFO - ['Add just one item with mysql.connect', 'mysql', 'python', 'add one', "\n If you're extracting just one entry from the database, there is no\n need cur.fetchall(), use cur.fetchone().", 'http://localhost/notes/pages/html/Add_just_one_item_with_mysql.connect.html']
+2021-08-31T06:00:01.656085+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-31T06:00:01.666191+0100 - add - INFO - pandoc --highlight-style=zenburn --metadata title=Add just one item with mysql.connect -s '/srv/http/notes/pages/markdown/Add_just_one_item_with_mysql.connect.md' -o '/srv/http/notes/pages/html/Add_just_one_item_with_mysql.connect.html'
+2021-08-31T06:13:12.617498+0100 - add - INFO - ['Running multiple commands in Subprocess', 'subprocess', 'commands', 'python', "\n To run multiple commands in Subprocess, put a\n ';' between them. Like so:\n ---------------------------------------------\n cmd = 'rm <filename>'; rm <other filename>\n ---------------------------------------------", 'http://localhost/notes/pages/html/Running_multiple_commands_in_Subprocess.html']
+2021-08-31T06:13:12.622596+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-31T06:13:12.631223+0100 - add - INFO - pandoc --highlight-style=zenburn --metadata title='Running multiple commands in Subprocess' -s '/srv/http/notes/pages/markdown/Running_multiple_commands_in_Subprocess.md' -o '/srv/http/notes/pages/html/Running_multiple_commands_in_Subprocess.html'"
+2021-08-31T06:22:18.089352+0100 - delete - INFO - SELECT url FROM notes WHERE ntid = 526
+2021-08-31T06:22:18.103317+0100 - delete - INFO -  DELETE FROM notes WHERE ntid = 526
+2021-08-31T06:28:04.618514+0100 - update - INFO - UPDATE notes SET k2 = 'testinho
+' WHERE ntid = 525
+2021-08-31T06:28:04.639224+0100 - update - INFO - pandoc --highlight-style=zenburn --metadata title=teste -s '/srv/http/notes/pages/markdown/teste.md' -o '/srv/http/notes/pages/html/teste.html'
+2021-08-31T06:32:46.237421+0100 - update - INFO - UPDATE notes SET k2 = 'testito' WHERE ntid = 525
+2021-08-31T06:32:46.247180+0100 - update - INFO - pandoc --highlight-style=zenburn --metadata title=teste -s '/srv/http/notes/pages/markdown/teste.md' -o '/srv/http/notes/pages/html/teste.html'
+2021-08-31T06:41:51.469804+0100 - add - INFO - ['teste', 'teste', 'teste', 'teste', 'teste', 'http://localhost/notes/pages/html/teste.html']
+2021-08-31T06:41:51.473648+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-31T06:41:51.481691+0100 - add - INFO - pandoc --highlight-style=zenburn --metadata title='teste' -s '/srv/http/notes/pages/markdown/teste.md' -o '/srv/http/notes/pages/html/teste.html'
+2021-08-31T06:42:30.886218+0100 - update - INFO - UPDATE notes SET k1 = 'other' WHERE ntid = 524
+2021-08-31T06:42:30.895047+0100 - update - INFO - pandoc --highlight-style=zenburn --metadata title=Running multiple commands in Subprocess -s '/srv/http/notes/pages/markdown/Running_multiple_commands_in_Subprocess.md' -o '/srv/http/notes/pages/html/Running_multiple_commands_in_Subprocess.html'
+2021-08-31T07:05:47.436210+0100 - add - INFO - ['Import variables from another file.', 'python', 'import', 'variables', "\n Much to my surprise, it's possible to import\n a variable, and only that,if you want to,\n from another module.\n You just import it as you would a function:\n -------------------------------------------\n from <other_file> import <variable_name>\n ------------------------------------------\n or\n ------------------------------------------\n import <other_file>\n ------------------------------------------\n If you want access to everything.\n I've tested it and it works OK. It might\n need the creation of a __init__.py file, \n but I don't think that's a thing right now.\n ------------------------------------------\n https://tinyurl.com/yghg7v56", 'http://localhost/notes/pages/html/Import_variables_from_another_file..html']
+2021-08-31T07:05:47.440703+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-31T07:05:47.445002+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (485128), thread 'MainThread' (140336416106304):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 44, in <module>
+    add_md_page()
+    └ <function add_md_page at 0x7fa29cc22f70>
+
+  File "/home/mic/python/notes/add.py", line 95, in add_md_page
+    print(f"[*] - It was created the markdown file named, {add.md_path}.", fore="#acac87")
+
+TypeError: 'fore' is an invalid keyword argument for print()
+2021-08-31T07:05:47.445002+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (485128), thread 'MainThread' (140336416106304):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 44, in <module>
+    add_md_page()
+    └ <function add_md_page at 0x7fa29cc22f70>
+
+  File "/home/mic/python/notes/add.py", line 95, in add_md_page
+    print(f"[*] - It was created the markdown file named, {add.md_path}.", fore="#acac87")
+
+TypeError: 'fore' is an invalid keyword argument for print()
+2021-08-31T07:05:47.454269+0100 - add - INFO - pandoc --highlight-style=zenburn --metadata title='Import variables from another file.' -s '/srv/http/notes/pages/markdown/Import_variables_from_another_file..md' -o '/srv/http/notes/pages/html/Import_variables_from_another_file..html'
+2021-08-31T08:44:10.512394+0100 - search - INFO - vim
+2021-08-31T08:44:10.519814+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('vim' )
+2021-08-31T08:48:48.320867+0100 - add - INFO - ["Using Vim's Native Spellcheck", 'vim', 'spellcheck', 'spelling', "\n Vim has a efficient native spell checker.\n The two most import commands, are these:\n -----------------------------------------\n 'z=' - see suggestions of spelling.\n 'zg' - add to dictionary\n -----------------------------------------\n https://tinyurl.com/yg63tq6c", "http://localhost/notes/pages/html/Using_Vim's_Native_Spellcheck.html"]
+2021-08-31T08:48:48.324939+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-31T08:48:48.335150+0100 - add - INFO - pandoc --highlight-style=zenburn --metadata title='Using Vim's Native Spellcheck' -s '/srv/http/notes/pages/markdown/Using_Vim's_Native_Spellcheck.md' -o '/srv/http/notes/pages/html/Using_Vim's_Native_Spellcheck.html'
+2021-08-31T09:01:08.773773+0100 - add - INFO - ['Multi character replacement in strings', 'python', 'replace', 'characters', "\n To replace more than one character at a time in a Python\n string, use this form:\n ---------------------------------------------------------\n test_str.replace('a', '<').replace('b', 'a')\n ---------------------------------------------------------", 'http://localhost/notes/pages/html/Multi_character_replacement_in_strings.html']
+2021-08-31T09:01:08.780477+0100 - add - INFO - INSERT INTO notes (title, k1, k2, k3, note, url)
+                VALUES (%s, %s, %s, %s, %s, %s)
+2021-08-31T09:01:08.791127+0100 - add - INFO - pandoc --highlight-style=zenburn --metadata title='Multi character replacement in strings' -s '/srv/http/notes/pages/markdown/Multi_character_replacement_in_strings.md' -o '/srv/http/notes/pages/html/Multi_character_replacement_in_strings.html'
+2021-08-31T16:29:01.094256+0100 - search - INFO - sed
+2021-08-31T16:29:01.105602+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-08-31T17:29:34.941727+0100 - add - INFO - ['Sed commands sucessfully used', 'sed', 'commands', 'Sed', '\n I\'ll put here some successful examples of sed commands that\n ran without any problems.\n -----------------------------------------------------------\n \n sed -e "s/tag= \\(.*\\)\\">/\\1/" complete_lines.txt\n Added separated tag values to complete lines. The \'\\1\' \n symbol represents the content of the first \'/.../\' section,\n and, as the second \'/.../\' section on a replace command\n means the output, tells sed to output it.\n\n -----------------------------------------------------------\n \n sed \'s/php?/&, /\' lines_tags.txt\n Replaced the \'php?\' string with the \'&, \' string.\n\n -----------------------------------------------------------\n \n sed -ne "s/.*/\\\'&/p" lines_tags.txt\n This was used to add a character, "\'", to the beginning of\n the line. The e apparently means \'script\' and adds it to the\n command, but I don\'t see how that\'s relevant to this example.\n The pattern \'.*\' means, all characters except line-break\n (\'.\'), in all lines of the document (\'*\').\n The ampersand means  “the whole part of the input that was\n matched by the pattern”.\n The \'p\' in the end of the expression stands for \'print\'.\n\n -----------------------------------------------------------\n\n sed "s/php?/&\'/" lines_tags.txt\n Puts a "\'" in the end of the first element.\n\n -----------------------------------------------------------\n\n sed "s/, /&\'/" lines_tags.txt\n And this one puts another at the start of the second\n element.\n\n -----------------------------------------------------------', 'http://localhost/notes/pages/html/Sed_commands_sucessfully_used.html']
+2021-08-31T18:41:39.079189+0100 - search - INFO - environmentalvariables
+2021-08-31T18:41:39.087296+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('environmentalvariables' )
+2021-08-31T19:38:19.569401+0100 - search - INFO - sed
+2021-08-31T19:38:19.577656+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-08-31T19:51:07.580686+0100 - search - INFO - sed
+2021-08-31T19:51:07.588912+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-08-31T21:12:25.483528+0100 - search - INFO - zip
+2021-08-31T21:12:25.491635+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('zip' )
+2021-09-01T00:21:26.611545+0100 - search - INFO - sed
+2021-09-01T00:21:26.618883+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-09-01T00:57:38.592326+0100 - search - INFO - zip
+2021-09-01T00:57:38.600576+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('zip' )
+2021-09-01T01:25:59.961947+0100 - search - INFO - lines
+2021-09-01T01:25:59.969986+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('lines' )
+2021-09-01T04:59:10.412446+0100 - search - INFO - awk
+2021-09-01T04:59:10.420610+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('awk' )
+2021-09-01T06:45:37.402832+0100 - search - INFO - dictionary
+2021-09-01T06:45:37.416582+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('dictionary' )
+2021-09-01T09:47:20.272843+0100 - search - INFO - sed
+2021-09-01T09:47:20.286993+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-09-01T14:07:37.087465+0100 - search - INFO - zip
+2021-09-01T14:07:37.095492+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('zip' )
+2021-09-01T15:07:12.440706+0100 - search - INFO - zip
+2021-09-01T15:07:12.448973+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('zip' )
+2021-09-01T16:59:11.241247+0100 - search - INFO - write
+2021-09-01T16:59:11.249312+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('write' )
+2021-09-01T17:00:24.586226+0100 - search - INFO - writing
+2021-09-01T17:00:24.594096+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('writing' )
+2021-09-01T17:00:34.138249+0100 - search - INFO - file
+2021-09-01T17:00:34.146439+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('file' )
+2021-09-03T02:06:52.517321+0100 - search - INFO - sed
+2021-09-03T02:06:52.524846+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-09-03T02:16:45.529862+0100 - search - INFO - sed
+2021-09-03T02:16:45.538084+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('sed' )
+2021-09-03T02:56:55.099291+0100 - search - INFO - mysql
+2021-09-03T02:56:55.107404+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('mysql' )
+2021-09-03T02:59:36.307344+0100 - search - INFO - whitehouse
+2021-09-03T02:59:36.315104+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('whitehouse' )
+2021-09-03T03:58:33.599232+0100 - search - INFO - apache
+2021-09-03T03:58:33.606503+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('apache' )
+2021-09-03T04:08:03.741758+0100 - search - INFO - svg
+2021-09-03T04:08:03.749836+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('svg' )
+2021-09-03T05:31:36.994616+0100 - search - INFO - white
+2021-09-03T05:31:37.002720+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('white' )
+2021-09-03T08:35:11.850825+0100 - search - INFO - d environment
+2021-09-03T08:35:11.858029+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('d environment' )
+2021-09-03T08:45:27.853362+0100 - search - INFO - changedirectories
+2021-09-03T08:45:27.866777+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('changedirectories' )
+2021-09-03T12:08:36.075428+0100 - search - INFO - line
+2021-09-03T12:08:36.083370+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('line' )
+2021-09-03T13:23:56.870492+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-03T13:23:56.871175+0100 - add - INFO - [(547, 'Convert bytes to string', 'bytes', 'string', 'converter', "\n To convert bytes to string, do the following:\n ---------------------------------------------\n x = b'El ni\\xc3\\xb1o come camar\\xc3\\xb3n'\n s = x.decode()\n print(s)\n --------------------------------------------\n https://tinyurl.com/ygarcm8j", 'http://localhost/notes/pages/html/Convert_bytes_to_string.html', datetime.datetime(2021, 9, 3, 13, 23, 56))]
+2021-09-03T15:53:29.285608+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-03T15:53:29.286630+0100 - add - INFO - [(548, 'Define items with nested levels like tuples, dictionaries...', 'tuple', 'comprehension', 'list', "\n \n Sometimes its difficult to access a definition for something\n that is second or third level apart from regular objects.\n Things like tuple elements, list of lists, dictionaries, and\n the like.\n This definition is for a tuple, but it has some ideas to\n retain. First, when you don't define, or can't define, the\n level, represent it with a zero. I didn't know you could do\n that.\n Example from something I was doing for the notes, webapp:\n '/srv/http/notes/resources/homepage_tagging/auto_update/\n tag_is_new_msg.py' \n -------------------------------------------------------------\n frst_val = [i[0] for i in lnk_num]\n -------------------------------------------------------------\n https://tinyurl.com/y48wgcqm", 'http://localhost/notes/pages/html/Define_items_with_nested_levels_like_tuples,_dictionaries....html', datetime.datetime(2021, 9, 3, 15, 53, 29))]
+2021-09-03T16:14:07.514885+0100 - search - INFO - arch
+2021-09-03T16:14:07.522861+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('arch' )
+2021-09-03T22:16:52.480716+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-03T22:16:52.481483+0100 - add - INFO - [(549, 'Find tuple index', 'tuple', 'index', 'indexes', "\n To find the index of a tuple, use this  comprehension:\n ------------------------------------------------------\n idx = [i for i, tup in enumerate(<tuple_list>) \\\n if tup[0] == <tuple_you're_looking for>]\n ------------------------------------------------------\n https://tinyurl.com/yf7umkmu", 'http://localhost/notes/pages/html/Find_tuple_index.html', datetime.datetime(2021, 9, 3, 22, 16, 52))]
