@@ -7,6 +7,8 @@ import subprocess
 from mysql.connector import connect, Error
 from colr import color
 from loguru import logger
+from tag_management.new_msg import TagOutput
+
 
 fmt = "{time} - {name} - {level} - {message}"
 logger.add("spam.log", level="DEBUG", format=fmt)
@@ -20,6 +22,7 @@ def add():
     kwd1 = input(click.style(" Choose a keyword » ", fg="magenta", bold=True))
     kwd2 = input(click.style(" Choose another... » ", fg="magenta", bold=True))
     kwd3 = input(click.style(" And another... » ", fg="magenta", bold=True))
+    TagOutput.string_closeness
     print(click.style(" Write a note.", fg="magenta", bold=True))
     time.sleep(0.2)
     nota = click.edit().rstrip()

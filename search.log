@@ -156,3 +156,97 @@ TypeError: 'fore' is an invalid keyword argument for print()
 2021-09-03T16:14:07.522861+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('arch' )
 2021-09-03T22:16:52.480716+0100 - add - INFO - select * from notes order by ntid desc limit 1
 2021-09-03T22:16:52.481483+0100 - add - INFO - [(549, 'Find tuple index', 'tuple', 'index', 'indexes', "\n To find the index of a tuple, use this  comprehension:\n ------------------------------------------------------\n idx = [i for i, tup in enumerate(<tuple_list>) \\\n if tup[0] == <tuple_you're_looking for>]\n ------------------------------------------------------\n https://tinyurl.com/yf7umkmu", 'http://localhost/notes/pages/html/Find_tuple_index.html', datetime.datetime(2021, 9, 3, 22, 16, 52))]
+2021-09-04T18:35:36.639487+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-04T18:35:36.640158+0100 - add - INFO - [(550, 'Ignore an error in Python', 'errors', 'python', 'ignore', '\n To ignore an error in Python, use the following\n expression:\n -----------------------------------------------\n try:\n    <expression_causing_the_error>\n except:\n     pass\n -----------------------------------------------\n It will issue a warning but it will compile.', 'http://localhost/notes/pages/html/Ignore_an_error_in_Python.html', datetime.datetime(2021, 9, 4, 18, 35, 36))]
+2021-09-04T18:42:49.432872+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-04T18:42:49.433509+0100 - add - INFO - [(551, 'Analyze a Python object', 'python', 'analyze', 'object', '\n To look inside a Python object and see what is\n made of, we can use the following functions:\n ----------------------------------------------\n type()\n dir()\n id()\n getattr()\n hasattr()\n globals()\n locals()\n callable()\n ----------------------------------------------', 'http://localhost/notes/pages/html/Analyze_a_Python_object.html', datetime.datetime(2021, 9, 4, 18, 42, 49))]
+2021-09-04T20:57:06.711531+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-04T20:57:06.713943+0100 - add - INFO - [(552, 'Supress messages from an applcation', 'delete', 'supress', 'messages', "\n If you want to ignore messages sent to the terminal by\n overly chatty apps or just an error you don't care\n about, use one of these commands.\n This first suppresses output to STDOUT.\n The second to STDERR.\n The third, both.\n --------------------------------------------------------\n <command> 1>/dev/null\n <command> 2>/dev/null\n <command> &>/dev/null\n --------------------------------------------------------", 'http://localhost/notes/pages/html/Supress_messages_from_an_applcation.html', datetime.datetime(2021, 9, 4, 20, 57, 6))]
+2021-09-04T21:34:33.652021+0100 - search - INFO - pandic
+2021-09-04T21:34:33.660099+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('pandic' )
+2021-09-04T21:34:40.175120+0100 - search - INFO - pandoc
+2021-09-04T21:34:40.183083+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('pandoc' )
+2021-09-05T00:47:51.901826+0100 - add - ERROR - An error has been caught in function 'add', process 'MainProcess' (19399), thread 'MainThread' (140475815765824):
+Traceback (most recent call last):
+
+  File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7fc3119b48b0>
+
+> File "/home/mic/python/notes/add.py", line 28, in add
+    string_closeness()
+    └ <function string_closeness at 0x7fc3119b45e0>
+
+  File "/home/mic/python/notes/tag_management/string_closeness.py", line 17, in string_closeness
+    for k in [kwd1, kwd2, kwd3]:
+
+NameError: name 'kwd1' is not defined
+2021-09-05T00:47:51.901826+0100 - add - ERROR - An error has been caught in function 'add', process 'MainProcess' (19399), thread 'MainThread' (140475815765824):
+Traceback (most recent call last):
+
+  File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7fc3119b48b0>
+
+> File "/home/mic/python/notes/add.py", line 28, in add
+    string_closeness()
+    └ <function string_closeness at 0x7fc3119b45e0>
+
+  File "/home/mic/python/notes/tag_management/string_closeness.py", line 17, in string_closeness
+    for k in [kwd1, kwd2, kwd3]:
+
+NameError: name 'kwd1' is not defined
+2021-09-05T00:48:00.683136+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-05T00:48:00.683754+0100 - add - INFO - [(554, 'teste1', 'teste1', 'pythons', 'teste1', '\n teste1', 'http://localhost/notes/pages/html/teste1.html', datetime.datetime(2021, 9, 5, 0, 48))]
+2021-09-05T00:52:58.184930+0100 - add - ERROR - An error has been caught in function 'add', process 'MainProcess' (19561), thread 'MainThread' (140384275449664):
+Traceback (most recent call last):
+
+  File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7fadc160f8b0>
+
+> File "/home/mic/python/notes/add.py", line 28, in add
+    string_closeness()
+    └ <function string_closeness at 0x7fadc160f5e0>
+
+TypeError: string_closeness() missing 3 required positional arguments: 'kwd1', 'kwd2', and 'kwd3'
+2021-09-05T00:52:58.184930+0100 - add - ERROR - An error has been caught in function 'add', process 'MainProcess' (19561), thread 'MainThread' (140384275449664):
+Traceback (most recent call last):
+
+  File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7fadc160f8b0>
+
+> File "/home/mic/python/notes/add.py", line 28, in add
+    string_closeness()
+    └ <function string_closeness at 0x7fadc160f5e0>
+
+TypeError: string_closeness() missing 3 required positional arguments: 'kwd1', 'kwd2', and 'kwd3'
+2021-09-05T00:53:05.953353+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-05T00:53:05.956333+0100 - add - INFO - [(555, 'teste2', 'pythons', 'teste2', 'teste2', 'teste2', 'http://localhost/notes/pages/html/teste2.html', datetime.datetime(2021, 9, 5, 0, 53, 5))]
+2021-09-05T00:56:58.170950+0100 - add - ERROR - An error has been caught in function 'add', process 'MainProcess' (19909), thread 'MainThread' (140086795265856):
+Traceback (most recent call last):
+
+  File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f687e2d98b0>
+
+> File "/home/mic/python/notes/add.py", line 28, in add
+    string_closeness()
+    └ <function string_closeness at 0x7f687e2d95e0>
+
+TypeError: string_closeness() missing 3 required positional arguments: 'kwd1', 'kwd2', and 'kwd3'
+2021-09-05T00:56:58.170950+0100 - add - ERROR - An error has been caught in function 'add', process 'MainProcess' (19909), thread 'MainThread' (140086795265856):
+Traceback (most recent call last):
+
+  File "/home/mic/python/notes/main.py", line 43, in <module>
+    add()
+    └ <function add at 0x7f687e2d98b0>
+
+> File "/home/mic/python/notes/add.py", line 28, in add
+    string_closeness()
+    └ <function string_closeness at 0x7f687e2d95e0>
+
+TypeError: string_closeness() missing 3 required positional arguments: 'kwd1', 'kwd2', and 'kwd3'
+2021-09-05T00:57:04.059581+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-05T00:57:04.060279+0100 - add - INFO - [(556, 'xgfh', 'pythons', 'tezd', 'sfh', 'gasr', 'http://localhost/notes/pages/html/xgfh.html', datetime.datetime(2021, 9, 5, 0, 57, 4))]
