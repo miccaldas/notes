@@ -1,13 +1,14 @@
-""" Module to insert notes to database, create a markdown and html page
+""" Module to insert notes to database, check for similar keyworda and create a markdown and html page
     for the web version of app."""
 import sys
 import time
 import click
 import subprocess
-from mysql.connector import connect, Error
 from colr import color
 from loguru import logger
-from tag_management.new_msg import TagOutput
+from thefuzz import fuzz
+from thefuzz import process
+from mysql.connector import connect, Error
 
 
 fmt = "{time} - {name} - {level} - {message}"
@@ -22,15 +23,15 @@ def add():
     kwd1 = input(click.style(" Choose a keyword » ", fg="magenta", bold=True))
     kwd2 = input(click.style(" Choose another... » ", fg="magenta", bold=True))
     kwd3 = input(click.style(" And another... » ", fg="magenta", bold=True))
-    TagOutput.string_closeness
+
     print(click.style(" Write a note.", fg="magenta", bold=True))
     time.sleep(0.2)
     nota = click.edit().rstrip()
-    add.tit = add.titulo.replace(" ", "_").replace("'", "")
+    add.tit = add.titulo.replace(" ", "_").replace("'", "")  # Creates md and html title.
     add.md_path = "/srv/http/notes/pages/markdown/" + add.tit + ".md"
     add.url = "http://localhost/notes/pages/html/" + add.tit + ".html"
-    answers = [add.titulo, kwd1, kwd2, kwd3, nota, add.url]
 
+    answers = [add.titulo, kwd1, kwd2, kwd3, nota, add.url]
     try:
         conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
         cur = conn.cursor()
@@ -48,6 +49,115 @@ def add():
 
 if __name__ == "__main__":
     add()
+
+
+def similar_kwd():
+    """"""
+    queries = [
+        "SELECT k1, count(*) as links FROM notes GROUP BY k1",
+        "SELECT k2, count(*) as links FROM notes GROUP BY k2",
+        "SELECT k3, count(*) as links FROM notes GROUP BY k3",
+    ]
+    try:
+        for q in queries:
+            conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
+            cur = conn.cursor()
+            query = q
+            cur.execute(
+                query,
+            )
+        records = cur.fetchall()
+        # Records is a list and row is a tuple with the tag name and number of connections.
+    except Error as e:
+        print("Error while connecting to db", e)
+    finally:
+        if conn:
+            conn.close()
+
+    try:
+        conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
+        cur = conn.cursor()
+        query = "select ntid, k1, k2, k3 from notes order by ntid desc limit 1"
+        cur.execute(
+            query,
+        )
+        tup_keys = cur.fetchall()
+        keys = [i for t in tup_keys for i in t]  # Converts list of tuples to list.
+        keys1 = keys[1:]  # Excludes the ntid value that is not needed and causes error messages.
+    except Error as e:
+        print("Error while connecting to db", e)
+    finally:
+        if conn:
+            conn.close()
+
+        # Fuzzy string block.
+        rec = [i for t in records for i in t]
+        rec1 = rec[::2]  # It omits the integers relating to frequency. Otherwise generates an error.
+        tup_process = []
+        for k in keys1:
+            tup_process.append(
+                process.extract(k, rec1, limit=1)
+            )  # Thefuzz command to run through lists. Shows only one result.
+        tup_process = [i for sublist in tup_process for i in sublist]  # Flattens list of lists to a list.
+        for i in tup_process:
+            if i[1] > 80:
+                chg_tag_decision = input(
+                    color(
+                        f"We have noticed that you inputed a word that is very similar to the word {i}, that we already have as a keyword. Won't you use it instead? [y/n] ",
+                        fore="acac87",
+                    )
+                )
+                if chg_tag_decision == "y":
+                    for k in keys1:
+                        if k == keys1[0]:
+                            try:
+                                conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
+                                cur = conn.cursor()
+                                query = "UPDATE notes SET k1 = '" + i[0] + "' WHERE ntid = " + str(keys[0])
+                                cur.execute(
+                                    query,
+                                )
+                                conn.commit()
+                            except Error as e:
+                                print("Error while connecting to db", e)
+                            finally:
+                                if conn:
+                                    conn.close()
+                        if k == keys1[1]:
+                            try:
+                                conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
+                                cur = conn.cursor()
+                                query = "UPDATE notes SET k2 = '" + i[0] + "' WHERE ntid = " + str(keys[0])
+                                cur.execute(
+                                    query,
+                                )
+                                conn.commit()
+                            except Error as e:
+                                print("Error while connecting to db", e)
+                            finally:
+                                if conn:
+                                    conn.close()
+                        if k == keys1[2]:
+                            try:
+                                conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
+                                cur = conn.cursor()
+                                query = "UPDATE notes SET k3 = '" + i[0] + "' WHERE ntid = " + str(keys[0])
+                                cur.execute(
+                                    query,
+                                )
+                                conn.commit()
+                            except Error as e:
+                                print("Error while connecting to db", e)
+                            finally:
+                                if conn:
+                                    conn.close()
+
+            else:
+                pass
+
+
+if __name__ == "__main__":
+    similar_kwd()
 
 
 @logger.catch

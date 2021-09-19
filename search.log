@@ -250,3 +250,106 @@ Traceback (most recent call last):
 TypeError: string_closeness() missing 3 required positional arguments: 'kwd1', 'kwd2', and 'kwd3'
 2021-09-05T00:57:04.059581+0100 - add - INFO - select * from notes order by ntid desc limit 1
 2021-09-05T00:57:04.060279+0100 - add - INFO - [(556, 'xgfh', 'pythons', 'tezd', 'sfh', 'gasr', 'http://localhost/notes/pages/html/xgfh.html', datetime.datetime(2021, 9, 5, 0, 57, 4))]
+2021-09-07T14:01:55.719441+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T14:01:55.722176+0100 - add - INFO - [(559, 'cgb', 'fg', 'pythons', 'vgdsf', 'xfz', 'http://localhost/notes/pages/html/cgb.html', datetime.datetime(2021, 9, 7, 14, 1, 55))]
+2021-09-07T14:05:42.152847+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T14:05:42.153592+0100 - add - INFO - [(560, 'zxtgh', 'pythons', 'cc', 'ccc', 'ff', 'http://localhost/notes/pages/html/zxtgh.html', datetime.datetime(2021, 9, 7, 14, 5, 42))]
+2021-09-07T15:48:43.285975+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T15:48:43.288991+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T15:48:43.291858+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T15:48:43.301247+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T15:48:43.301935+0100 - add - INFO - [(561, 'sffd', 'pythons', 'safr', 'dzfv', 'rerr', 'http://localhost/notes/pages/html/sffd.html', datetime.datetime(2021, 9, 7, 15, 48, 43))]
+2021-09-07T15:54:14.748076+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T15:54:14.750814+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T15:54:14.753353+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T15:54:14.762498+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T15:54:14.763862+0100 - add - INFO - [(562, 'sgf', 'pythons', 'sf', 'fsdg', 'iiii', 'http://localhost/notes/pages/html/sgf.html', datetime.datetime(2021, 9, 7, 15, 54, 14))]
+2021-09-07T15:56:14.842293+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T15:56:14.845458+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T15:56:14.848363+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T15:56:14.859439+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T15:56:14.859975+0100 - add - INFO - [(563, 'wdthg', 'pythons', 'rsg', 'sxfsgh', 'iii', 'http://localhost/notes/pages/html/wdthg.html', datetime.datetime(2021, 9, 7, 15, 56, 14))]
+2021-09-07T16:01:36.840849+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T16:01:36.843357+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T16:01:36.845686+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T16:01:36.855821+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T16:01:36.856601+0100 - add - INFO - [(564, 'strh', 'pythons', 'fdsg', 'xf', 'iii', 'http://localhost/notes/pages/html/strh.html', datetime.datetime(2021, 9, 7, 16, 1, 36))]
+2021-09-07T16:05:02.275244+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T16:05:02.278113+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T16:05:02.280572+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T16:05:02.294278+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T16:05:02.294854+0100 - add - INFO - [(565, 'sdf', 'pythons', 'serdf', 'xfv', 'ii', 'http://localhost/notes/pages/html/sdf.html', datetime.datetime(2021, 9, 7, 16, 5, 2))]
+2021-09-07T16:25:05.957136+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T16:25:05.960084+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T16:25:05.962536+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T16:25:05.975552+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T16:25:05.976161+0100 - add - INFO - [(566, 'dfg', 'sfdgg', 'sdfg', 'sdf', 'iii', 'http://localhost/notes/pages/html/dfg.html', datetime.datetime(2021, 9, 7, 16, 25, 5))]
+2021-09-07T16:26:13.563137+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T16:26:13.566004+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T16:26:13.568472+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T16:26:13.582277+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T16:26:13.582841+0100 - add - INFO - [(567, 'dgcb', 'gvbb', 'fxbgb', 'xfg', 'ii', 'http://localhost/notes/pages/html/dgcb.html', datetime.datetime(2021, 9, 7, 16, 26, 13))]
+2021-09-07T16:35:09.912426+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T16:35:09.915187+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T16:35:09.917919+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T16:35:09.926768+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T16:35:09.927382+0100 - add - INFO - [(568, 'srfh', 'pythons', 'asd', 'df', 'iii', 'http://localhost/notes/pages/html/srfh.html', datetime.datetime(2021, 9, 7, 16, 35, 9))]
+2021-09-07T16:39:48.898703+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T16:39:48.901044+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T16:39:48.903448+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T16:39:48.912788+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T16:39:48.913378+0100 - add - INFO - [(569, 'hfj', 'pythons', 'dgb', 'gfb', 'iii', 'http://localhost/notes/pages/html/hfj.html', datetime.datetime(2021, 9, 7, 16, 39, 48))]
+2021-09-07T16:41:45.333923+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T16:41:45.336574+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T16:41:45.339196+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T16:41:55.752447+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T16:41:55.754561+0100 - add - INFO - [(570, 'fhj', 'pythons', 'sfg', 'fg', 'ii', 'http://localhost/notes/pages/html/fhj.html', datetime.datetime(2021, 9, 7, 16, 41, 55))]
+2021-09-07T16:43:09.838444+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T16:43:09.841391+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T16:43:09.843857+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T16:43:13.375068+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T16:43:13.377178+0100 - add - INFO - [(571, 'fryj', 'pythons', 'dfsg', 'sfdg', 'ii', 'http://localhost/notes/pages/html/fryj.html', datetime.datetime(2021, 9, 7, 16, 43, 13))]
+2021-09-07T16:45:19.129818+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T16:45:19.132559+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T16:45:19.135002+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T16:45:21.069592+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T16:45:21.071736+0100 - add - INFO - [(572, 'fbb', 'pythons', 'sf', 'fdg', 'iii', 'http://localhost/notes/pages/html/fbb.html', datetime.datetime(2021, 9, 7, 16, 45, 21))]
+2021-09-07T16:48:34.704187+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T16:48:34.706929+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T16:48:34.709222+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T16:48:36.890804+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T16:48:36.892969+0100 - add - INFO - [(573, 'xfg', 'pythons', 'sd', 'zdf', 'iii', 'http://localhost/notes/pages/html/xfg.html', datetime.datetime(2021, 9, 7, 16, 48, 36))]
+2021-09-07T17:07:09.168681+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T17:07:09.171553+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T17:07:09.174032+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T17:07:12.903495+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T17:07:12.905635+0100 - add - INFO - [(574, 'dst', '0', '0', '0', 'iii', 'http://localhost/notes/pages/html/dst.html', datetime.datetime(2021, 9, 7, 17, 7, 12))]
+2021-09-07T17:09:51.028537+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-07T17:09:51.031513+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-07T17:09:51.034122+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-07T17:09:53.339137+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T17:09:53.339797+0100 - add - INFO - [(575, 'gsrf', '0', '0', '1', 'iii', 'http://localhost/notes/pages/html/gsrf.html', datetime.datetime(2021, 9, 7, 17, 9, 53))]
+2021-09-07T18:12:09.229909+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-07T18:12:09.230619+0100 - add - INFO - [(576, 'xfgxg', 'pythons', 'ae', 'dz', 'dff', 'http://localhost/notes/pages/html/xfgxg.html', datetime.datetime(2021, 9, 7, 18, 12, 9))]
+2021-09-18T11:43:57.846933+0100 - search - INFO - tuple
+2021-09-18T11:43:57.862983+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('tuple' )
+2021-09-19T12:56:33.997816+0100 - search - INFO - tuple
+2021-09-19T12:56:34.005595+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('tuple' )
+2021-09-19T13:38:20.245900+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-19T13:38:20.246663+0100 - add - INFO - [(597, 'Convert list of tuples to list', 'tuples', 'list', 'tuple', "\n To change al list of tuples to a lists, do this:\n ------------------------------------------------\n lt = [('Geeks', 2), ('For', 4), ('geek', '6')]\n out = [item for t in lt for item in t]\n ------------------------------------------------\n https://tinyurl.com/yj3m2yw3", 'http://localhost/notes/pages/html/Convert_list_of_tuples_to_list.html', datetime.datetime(2021, 9, 19, 13, 38, 20))]
+2021-09-19T13:49:14.690978+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-19T13:49:14.691602+0100 - add - INFO - [(598, 'teste', 'pythons', 'teste', 'teste2', 'iii', 'http://localhost/notes/pages/html/teste.html', datetime.datetime(2021, 9, 19, 13, 49, 14))]
+2021-09-19T13:57:14.313736+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-19T13:57:14.315318+0100 - add - INFO - [(599, 'teste', 'pythonx', 'other', 'another', 'ii', 'http://localhost/notes/pages/html/teste.html', datetime.datetime(2021, 9, 19, 13, 57, 14))]
+2021-09-19T15:49:06.268468+0100 - search - INFO - update
+2021-09-19T15:49:06.276217+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('update' )
+2021-09-19T16:32:08.190416+0100 - search - INFO - gitignore
+2021-09-19T16:32:08.198021+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('gitignore' )
+2021-09-19T17:01:11.971409+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-19T17:01:11.972083+0100 - add - INFO - [(620, 'zdgjhhfmkkjh,,fsd,', 'pythons', 'gdfhsfdgj', 'cxgnmnmm', 'iii', 'http://localhost/notes/pages/html/zdgjhhfmkkjh,,fsd,.html', datetime.datetime(2021, 9, 19, 17, 1, 11))]
+2021-09-19T17:12:15.740423+0100 - search - INFO - list of lists
+2021-09-19T17:12:15.748157+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('list of lists' )
+2021-09-19T17:17:21.358336+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-19T17:17:21.359107+0100 - add - INFO - [(623, 'Turn list of lists to list', 'lists', 'list of lists', 'python', '\n To turn a list of lists into a list, do this:\n ------------------------------------------------\n regular_list = [[1, 2, 3, 4], [5, 6, 7], [8, 9]]\n flat_list = [item for sublist in regular_list \\\n for item in sublist]\n -------------------------------------------------\n https://tinyurl.com/yf57k6aj', 'http://localhost/notes/pages/html/Turn_list_of_lists_to_list.html', datetime.datetime(2021, 9, 19, 17, 17, 21))]
+2021-09-19T18:49:42.311975+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-19T18:49:42.312657+0100 - add - INFO - [(628, 'teste', 'this', 'mysqla', 'safdvxf', '\n\niii', 'http://localhost/notes/pages/html/teste.html', datetime.datetime(2021, 9, 19, 18, 49, 42))]

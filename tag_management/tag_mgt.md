@@ -81,3 +81,13 @@ I've been thinking a little more about it, and there's nothing we can add, at th
 
 ###############################################################################
 
+
+  date: 07/09/2021
+  title: Passed fuzzy function to 'add.py'
+
+  Because of import issues, I did what I didn't want to do, added the fuzzy function to add.py.  
+  This didn't solve anything as I am still unable to make it work, even inside the same file.  
+  It needs to be debugged.  
+  Another probable solution would be to turn add,py into a class. But that would certainly bring its own unknown quantity of problems.  
+
+################################################################################
