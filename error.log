@@ -401,3 +401,15 @@ Traceback (most recent call last):
     └ <class 'tag_management.new_msg.TagOutput'>
 
 TypeError: string_closeness() missing 1 required positional argument: 'self'
+2021-09-21T23:32:55.590820+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (72401), thread 'MainThread' (140398374573888):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 54, in <module>
+    del_md_html_pages()
+    └ <function del_md_html_pages at 0x7fb109beae50>
+
+  File "/home/mic/python/notes/delete.py", line 25, in del_md_html_pages
+    path = record[0]
+           └ None
+
+TypeError: 'NoneType' object is not subscriptable

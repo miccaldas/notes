@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 import sys
 import questionary
 from questionary import Style
-from add import add, add_md_page, add_html_page
+from add import Add
 from delete import del_md_html_pages, delete
 from search import search
 from update import update, update_md_html_page
@@ -40,9 +40,14 @@ resposta = questionary.select(
 
 
 if resposta == "Add a Note":
-    add()
-    add_md_page()
-    add_html_page()
+    add = Add()
+    add.input_data()
+    add.taglst()
+    add.tagfreq()
+    add.issimilar()
+    add.add_to_db()
+    add.add_md_page()
+    add.add_html_page()
 if resposta == "Search for a Note":
     search()
 if resposta == "See Notes ":

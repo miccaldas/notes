@@ -2007,3 +2007,83 @@ TypeError: string_closeness() missing 1 required positional argument: 'self'
 2021-09-19T18:49:42.311975+0100 - add - INFO - select * from notes order by ntid desc limit 1
 2021-09-19T18:49:42.312657+0100 - add - INFO - [(628, 'teste', 'this', 'mysqla', 'safdvxf', '\n\niii', 'http://localhost/notes/pages/html/teste.html', datetime.datetime(2021, 9, 19, 18, 49, 42))]
 2021-09-19T18:49:42.312657+0100 - add - INFO - [(628, 'teste', 'this', 'mysqla', 'safdvxf', '\n\niii', 'http://localhost/notes/pages/html/teste.html', datetime.datetime(2021, 9, 19, 18, 49, 42))]
+2021-09-19T20:54:15.359150+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-19T20:54:15.359150+0100 - add - INFO - select * from notes order by ntid desc limit 1
+2021-09-19T20:54:15.359814+0100 - add - INFO - [(629, 'Set column length in Vim', 'vim', 'column', '80', '\n To set the column length of a old md file,\n before setting the length in .vimrc, do this:\n ----------------------------------------------\n :set colorcolumn=80\n ----------------------------------------------', 'http://localhost/notes/pages/html/Set_column_length_in_Vim.html', datetime.datetime(2021, 9, 19, 20, 54, 15))]
+2021-09-19T20:54:15.359814+0100 - add - INFO - [(629, 'Set column length in Vim', 'vim', 'column', '80', '\n To set the column length of a old md file,\n before setting the length in .vimrc, do this:\n ----------------------------------------------\n :set colorcolumn=80\n ----------------------------------------------', 'http://localhost/notes/pages/html/Set_column_length_in_Vim.html', datetime.datetime(2021, 9, 19, 20, 54, 15))]
+2021-09-20T17:49:09.494937+0100 - search - INFO - white
+2021-09-20T17:49:09.494937+0100 - search - INFO - white
+2021-09-20T17:49:09.511924+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('white' )
+2021-09-20T17:49:09.511924+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('white' )
+2021-09-21T23:30:10.330841+0100 - search - INFO - html
+2021-09-21T23:30:10.330841+0100 - search - INFO - html
+2021-09-21T23:30:10.342696+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('html' )
+2021-09-21T23:30:10.342696+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('html' )
+2021-09-21T23:32:55.590820+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (72401), thread 'MainThread' (140398374573888):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 54, in <module>
+    del_md_html_pages()
+    └ <function del_md_html_pages at 0x7fb109beae50>
+
+  File "/home/mic/python/notes/delete.py", line 25, in del_md_html_pages
+    path = record[0]
+           └ None
+
+TypeError: 'NoneType' object is not subscriptable
+2021-09-21T23:32:55.590820+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (72401), thread 'MainThread' (140398374573888):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 54, in <module>
+    del_md_html_pages()
+    └ <function del_md_html_pages at 0x7fb109beae50>
+
+  File "/home/mic/python/notes/delete.py", line 25, in del_md_html_pages
+    path = record[0]
+           └ None
+
+TypeError: 'NoneType' object is not subscriptable
+2021-09-21T23:32:55.590820+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (72401), thread 'MainThread' (140398374573888):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/main.py", line 54, in <module>
+    del_md_html_pages()
+    └ <function del_md_html_pages at 0x7fb109beae50>
+
+  File "/home/mic/python/notes/delete.py", line 25, in del_md_html_pages
+    path = record[0]
+           └ None
+
+TypeError: 'NoneType' object is not subscriptable
+2021-09-21T23:35:28.146850+0100 - search - INFO - pandoc
+2021-09-21T23:35:28.146850+0100 - search - INFO - pandoc
+2021-09-21T23:35:28.154670+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('pandoc' )
+2021-09-21T23:35:28.154670+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('pandoc' )
+2021-09-21T23:58:47.555393+0100 - search - INFO - php
+2021-09-21T23:58:47.555393+0100 - search - INFO - php
+2021-09-21T23:58:47.569346+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('php' )
+2021-09-21T23:58:47.569346+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('php' )
+2021-09-23T14:34:41.906799+0100 - search - INFO - cc
+2021-09-23T14:34:41.906799+0100 - search - INFO - cc
+2021-09-23T14:34:41.920539+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('cc' )
+2021-09-23T14:34:41.920539+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('cc' )
+2021-09-23T14:34:48.113727+0100 - search - INFO - credit
+2021-09-23T14:34:48.113727+0100 - search - INFO - credit
+2021-09-23T14:34:48.127377+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('credit' )
+2021-09-23T14:34:48.127377+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('credit' )
+2021-09-27T14:30:40.857716+0100 - search - INFO - credit
+2021-09-27T14:30:40.857716+0100 - search - INFO - credit
+2021-09-27T14:30:40.873454+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('credit' )
+2021-09-27T14:30:40.873454+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('credit' )
+2021-09-29T08:30:08.397525+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T08:30:08.397525+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T08:30:08.397525+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T08:30:08.405431+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T08:30:08.405431+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T08:30:08.405431+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T08:30:08.408554+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T08:30:08.408554+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T08:30:08.408554+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T08:30:08.411729+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T08:30:08.411729+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T08:30:08.411729+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
