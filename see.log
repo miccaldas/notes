@@ -1042,3 +1042,13 @@ TypeError: 'NoneType' object is not subscriptable
 2021-09-29T08:30:08.405431+0100 - add - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
 2021-09-29T08:30:08.408554+0100 - add - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
 2021-09-29T08:30:08.411729+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T10:17:01.541859+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:19:39.647505+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:35:57.637572+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:36:23.347531+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:37:17.123223+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T15:48:15.409058+0100 - stats - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:48:15.412083+0100 - stats - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:48:15.414465+0100 - stats - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T17:51:47.742558+0100 - search - INFO - git
+2021-09-29T17:51:47.756118+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('git' )

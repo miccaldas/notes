@@ -66,9 +66,15 @@ class Add:
         self.keywords = [self.k1, self.k2, self.k3]
         for k in self.keywords:
             value = process.extractOne(k, self.records)
-            if value[1] > 80:
+            if (
+                80 < value[1] < 100
+            ):  # If we don't define it as less that 100, it will show message when inputing a old keyword.
                 chg_tag_decision = input(
-                    f"We have noticed that you inputed the word {k}, that is very similar to the word {value[0]}, that we already have as a keyword. Won't you use it instead? [y/n] "
+                    click.style(
+                        f"We have noticed that you inputed the word {k}, that is very similar to the word {value[0]}, that we already have as a keyword. Won't you use it instead? [y/n] ",
+                        fg="magenta",
+                        bold=True,
+                    )
                 )
                 if chg_tag_decision == "y":
                     if k == self.k1:

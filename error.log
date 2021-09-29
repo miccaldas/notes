@@ -413,3 +413,293 @@ Traceback (most recent call last):
            └ None
 
 TypeError: 'NoneType' object is not subscriptable
+2021-09-29T12:22:38.440844+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (88663), thread 'MainThread' (140019971577664):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 42, in <module>
+    tag_list()
+    └ <function tag_list at 0x7f58efaab940>
+
+TypeError: tag_list() missing 1 required positional argument: 'self'
+2021-09-29T12:58:01.380509+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (91815), thread 'MainThread' (140313186301760):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7f9d346bbc10>
+
+  File "/home/mic/python/notes/stats.py", line 36, in tag_list
+    print(color(i[0], fore="#acac87"))
+          │     └ 1
+          └ <bound method Colr.color of ''>
+
+TypeError: 'int' object is not subscriptable
+2021-09-29T12:58:42.165009+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (91841), thread 'MainThread' (140377099978560):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7fac15f91ca0>
+
+  File "/home/mic/python/notes/stats.py", line 36, in tag_list
+    print(color(str(i[0]), fore="#acac87"))
+          │         └ 1
+          └ <bound method Colr.color of ''>
+
+TypeError: 'int' object is not subscriptable
+2021-09-29T12:59:53.365981+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (91888), thread 'MainThread' (140596254820160):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7fdf1c9e8c10>
+
+  File "/home/mic/python/notes/stats.py", line 36, in tag_list
+    print(color(t[0], fore="#acac87"))
+          │     └ 1
+          └ <bound method Colr.color of ''>
+
+TypeError: 'int' object is not subscriptable
+2021-09-29T13:00:40.514474+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (91917), thread 'MainThread' (140286631565120):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7f9705a29c10>
+
+  File "/home/mic/python/notes/stats.py", line 36, in tag_list
+    print(color(t[0], fore="#acac87"))
+          │     └ 1
+          └ <bound method Colr.color of ''>
+
+TypeError: 'int' object is not subscriptable
+2021-09-29T13:01:47.252057+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (91958), thread 'MainThread' (140337175824192):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7fa2ca4edca0>
+
+  File "/home/mic/python/notes/stats.py", line 37, in tag_list
+    print(color(t[1], fore="#f18892"))
+          │     └ 1
+          └ <bound method Colr.color of ''>
+
+TypeError: 'int' object is not subscriptable
+2021-09-29T13:02:13.290528+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (91970), thread 'MainThread' (140529573816128):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7fcf961f3ca0>
+
+  File "/home/mic/python/notes/stats.py", line 37, in tag_list
+    print(color(str(t)[1], fore="#f18892"))
+          │         └ 1
+          └ <bound method Colr.color of ''>
+
+IndexError: string index out of range
+2021-09-29T13:05:15.581240+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (92077), thread 'MainThread' (139643179718464):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7f0134ea9c10>
+
+  File "/home/mic/python/notes/stats.py", line 36, in tag_list
+    print(color(t[0], fore="#acac87"))
+          │     └ 1
+          └ <bound method Colr.color of ''>
+
+TypeError: 'int' object is not subscriptable
+2021-09-29T13:17:42.326019+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (92718), thread 'MainThread' (139943849625408):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7f47363d5ca0>
+
+  File "/home/mic/python/notes/stats.py", line 37, in tag_list
+    print(color("  ", x, fore="#acac87")), print(color("  ", y, fore="#f18892"))
+          │           │                          │           └ 1
+          │           │                          └ <bound method Colr.color of ''>
+          │           └ '80'
+          └ <bound method Colr.color of ''>
+
+TypeError: color() got multiple values for argument 'fore'
+2021-09-29T13:20:24.978943+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (92807), thread 'MainThread' (140482890983232):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7fc4b79bbca0>
+
+  File "/home/mic/python/notes/stats.py", line 37, in tag_list
+    print(color("  " + x, fore="#acac87")), print(color("  " + y, fore="#f18892"))
+          │            │                          │            └ 1
+          │            │                          └ <bound method Colr.color of ''>
+          │            └ '80'
+          └ <bound method Colr.color of ''>
+
+TypeError: can only concatenate str (not "int") to str
+2021-09-29T14:07:49.358905+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (95301), thread 'MainThread' (139629061678912):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 70, in <module>
+    entries()
+    └ <function entries at 0x7efdeb6b2f70>
+
+  File "/home/mic/python/notes/stats.py", line 61, in entries
+    print(color("The number of database entries is ", records, fore="#f2b26d"))
+          │                                           └ [214]
+          └ <bound method Colr.color of ''>
+
+TypeError: color() got multiple values for argument 'fore'
+2021-09-29T14:23:26.492924+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (95811), thread 'MainThread' (140598063843136):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 74, in <module>
+    entries()
+    └ <function entries at 0x7fdf8872df70>
+
+  File "/home/mic/python/notes/stats.py", line 61, in entries
+    tag_num = int(records) * 3
+                  └ [214]
+
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2021-09-29T14:45:26.107348+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97096), thread 'MainThread' (140131432712000):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 106, in <module>
+    tags()
+    └ <function tags at 0x7f72e30ba430>
+
+  File "/home/mic/python/notes/stats.py", line 97, in tags
+    print(sum(records))
+              └ '133'
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2021-09-29T14:46:16.826513+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97123), thread 'MainThread' (139696795912000):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 106, in <module>
+    tags()
+    └ <function tags at 0x7f0db0ac6430>
+
+  File "/home/mic/python/notes/stats.py", line 97, in tags
+    print(sum(int(records)))
+                  └ '133'
+
+TypeError: 'int' object is not iterable
+2021-09-29T14:48:52.194205+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97305), thread 'MainThread' (140296012764992):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 107, in <module>
+    tags()
+    └ <function tags at 0x7f9934c7f430>
+
+  File "/home/mic/python/notes/stats.py", line 98, in tags
+    print(sum(records))
+              └ 133
+
+TypeError: 'int' object is not iterable
+2021-09-29T14:51:33.582412+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97386), thread 'MainThread' (140229691053888):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 108, in <module>
+    tags()
+    └ <function tags at 0x7f89c3b2f430>
+
+  File "/home/mic/python/notes/stats.py", line 98, in tags
+    for i in records:
+             └ 133
+
+TypeError: 'int' object is not iterable
+2021-09-29T14:51:47.991779+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97396), thread 'MainThread' (140552320956224):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 108, in <module>
+    tags()
+    └ <function tags at 0x7fd4e1f09430>
+
+  File "/home/mic/python/notes/stats.py", line 98, in tags
+    for i in records:
+             └ 133
+
+TypeError: 'int' object is not iterable
+2021-09-29T14:54:28.611852+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97612), thread 'MainThread' (139955198383936):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 107, in <module>
+    tags()
+    └ <function tags at 0x7f49daa93430>
+
+  File "/home/mic/python/notes/stats.py", line 98, in tags
+    print(sum(records))
+              └ ['133']
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2021-09-29T14:58:21.063248+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97848), thread 'MainThread' (140285365278528):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 107, in <module>
+    tags()
+    └ <function tags at 0x7f96ba243430>
+
+  File "/home/mic/python/notes/stats.py", line 98, in tags
+    print(records[1])
+          └ ['133']
+
+IndexError: list index out of range
+2021-09-29T15:24:59.632527+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (99066), thread 'MainThread' (140434447628096):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 100, in <module>
+    tags()
+    └ <function tags at 0x7fb9702453a0>
+
+  File "/home/mic/python/notes/stats.py", line 87, in tags
+    cur.execute(
+    │   └ <function MySQLCursor.execute at 0x7fb970277820>
+    └ <mysql.connector.cursor.MySQLCursor object at 0x7fb97028e850>
+
+  File "/usr/lib/python3.9/site-packages/mysql/connector/cursor.py", line 528, in execute
+    stmt = operation.encode(self._connection.python_charset)
+           │                │    └ <weakproxy at 0x7fb970225f90 to MySQLConnection at 0x7fb97028eac0>
+           │                └ <mysql.connector.cursor.MySQLCursor object at 0x7fb97028e850>
+           └ ('SELECT COUNT(DISTINCT k1) FROM notes',)
+
+AttributeError: 'tuple' object has no attribute 'encode'
+2021-09-29T15:25:46.023819+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (99092), thread 'MainThread' (140054228809536):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 100, in <module>
+    tags()
+    └ <function tags at 0x7f60e95593a0>
+
+  File "/home/mic/python/notes/stats.py", line 87, in tags
+    cur.execute(
+    │   └ <function MySQLCursor.execute at 0x7f60e958b820>
+    └ <mysql.connector.cursor.MySQLCursor object at 0x7f60e95a2850>
+
+  File "/usr/lib/python3.9/site-packages/mysql/connector/cursor.py", line 528, in execute
+    stmt = operation.encode(self._connection.python_charset)
+           │                │    └ <weakproxy at 0x7f60e9552220 to MySQLConnection at 0x7f60e95a2ac0>
+           │                └ <mysql.connector.cursor.MySQLCursor object at 0x7f60e95a2850>
+           └ ('SELECT COUNT(DISTINCT k1) FROM notes',)
+
+AttributeError: 'tuple' object has no attribute 'encode'
+2021-09-29T15:33:15.740848+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (99613), thread 'MainThread' (140191019562816):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 118, in <module>
+    tags()
+    └ <function tags at 0x7f80c2b2d3a0>
+
+  File "/home/mic/python/notes/stats.py", line 107, in tags
+    soma = tuple(map(sum(recordk1, recordk2, recordk3)))
+                         │         │         └ (153,)
+                         │         └ (147,)
+                         └ (133,)
+
+TypeError: sum() takes at most 2 arguments (3 given)

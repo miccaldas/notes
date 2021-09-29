@@ -7,6 +7,7 @@ from delete import del_md_html_pages, delete
 from search import search
 from update import update, update_md_html_page
 from see import see
+from stats import tag_list, entries, tags
 from loguru import logger
 
 
@@ -33,6 +34,7 @@ resposta = questionary.select(
         "See Notes ",
         "Update a Note",
         "Delete a Note",
+        "See Stats",
         "Exit",
     ],
     style=notes_style,
@@ -43,7 +45,6 @@ if resposta == "Add a Note":
     add = Add()
     add.input_data()
     add.taglst()
-    add.tagfreq()
     add.issimilar()
     add.add_to_db()
     add.add_md_page()
@@ -58,5 +59,9 @@ if resposta == "Update a Note":
 if resposta == "Delete a Note":
     del_md_html_pages()
     delete()
+if resposta == "See Stats":
+    tag_list()
+    entries()
+    tags()
 if resposta == "Exit":
     sys.exit()

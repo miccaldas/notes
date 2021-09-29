@@ -2087,3 +2087,514 @@ TypeError: 'NoneType' object is not subscriptable
 2021-09-29T08:30:08.411729+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
 2021-09-29T08:30:08.411729+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
 2021-09-29T08:30:08.411729+0100 - add - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T10:17:01.541859+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:17:01.541859+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:17:01.541859+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:19:39.647505+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:19:39.647505+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:19:39.647505+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:35:57.637572+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:35:57.637572+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:35:57.637572+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:36:23.347531+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:36:23.347531+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:36:23.347531+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:37:17.123223+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:37:17.123223+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T10:37:17.123223+0100 - add - INFO - SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes
+2021-09-29T12:22:38.440844+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (88663), thread 'MainThread' (140019971577664):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 42, in <module>
+    tag_list()
+    └ <function tag_list at 0x7f58efaab940>
+
+TypeError: tag_list() missing 1 required positional argument: 'self'
+2021-09-29T12:24:03.131058+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T12:24:03.133745+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T12:24:03.136514+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T12:25:36.285180+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T12:25:36.287557+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T12:25:36.290495+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T12:48:07.605801+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T12:48:07.608552+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T12:48:07.611427+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T12:50:36.682300+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T12:50:36.684466+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T12:50:36.687188+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T12:51:40.603818+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T12:51:40.605954+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T12:51:40.608141+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T12:58:01.373555+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T12:58:01.376221+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T12:58:01.378641+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T12:58:01.380509+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (91815), thread 'MainThread' (140313186301760):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7f9d346bbc10>
+
+  File "/home/mic/python/notes/stats.py", line 36, in tag_list
+    print(color(i[0], fore="#acac87"))
+          │     └ 1
+          └ <bound method Colr.color of ''>
+
+TypeError: 'int' object is not subscriptable
+2021-09-29T12:58:42.158674+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T12:58:42.161043+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T12:58:42.163451+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T12:58:42.165009+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (91841), thread 'MainThread' (140377099978560):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7fac15f91ca0>
+
+  File "/home/mic/python/notes/stats.py", line 36, in tag_list
+    print(color(str(i[0]), fore="#acac87"))
+          │         └ 1
+          └ <bound method Colr.color of ''>
+
+TypeError: 'int' object is not subscriptable
+2021-09-29T12:59:53.359621+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T12:59:53.362005+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T12:59:53.364323+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T12:59:53.365981+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (91888), thread 'MainThread' (140596254820160):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7fdf1c9e8c10>
+
+  File "/home/mic/python/notes/stats.py", line 36, in tag_list
+    print(color(t[0], fore="#acac87"))
+          │     └ 1
+          └ <bound method Colr.color of ''>
+
+TypeError: 'int' object is not subscriptable
+2021-09-29T13:00:40.507843+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T13:00:40.510276+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T13:00:40.512878+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T13:00:40.514474+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (91917), thread 'MainThread' (140286631565120):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7f9705a29c10>
+
+  File "/home/mic/python/notes/stats.py", line 36, in tag_list
+    print(color(t[0], fore="#acac87"))
+          │     └ 1
+          └ <bound method Colr.color of ''>
+
+TypeError: 'int' object is not subscriptable
+2021-09-29T13:01:47.245794+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T13:01:47.247811+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T13:01:47.250366+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T13:01:47.252057+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (91958), thread 'MainThread' (140337175824192):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7fa2ca4edca0>
+
+  File "/home/mic/python/notes/stats.py", line 37, in tag_list
+    print(color(t[1], fore="#f18892"))
+          │     └ 1
+          └ <bound method Colr.color of ''>
+
+TypeError: 'int' object is not subscriptable
+2021-09-29T13:02:13.283897+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T13:02:13.286404+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T13:02:13.288855+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T13:02:13.290528+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (91970), thread 'MainThread' (140529573816128):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7fcf961f3ca0>
+
+  File "/home/mic/python/notes/stats.py", line 37, in tag_list
+    print(color(str(t)[1], fore="#f18892"))
+          │         └ 1
+          └ <bound method Colr.color of ''>
+
+IndexError: string index out of range
+2021-09-29T13:05:15.574502+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T13:05:15.577072+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T13:05:15.579575+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T13:05:15.581240+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (92077), thread 'MainThread' (139643179718464):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7f0134ea9c10>
+
+  File "/home/mic/python/notes/stats.py", line 36, in tag_list
+    print(color(t[0], fore="#acac87"))
+          │     └ 1
+          └ <bound method Colr.color of ''>
+
+TypeError: 'int' object is not subscriptable
+2021-09-29T13:05:26.455215+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T13:05:26.457403+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T13:05:26.459961+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T13:11:33.255459+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T13:11:33.258096+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T13:11:33.260846+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T13:15:36.687432+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T13:15:36.689879+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T13:15:36.692202+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T13:17:42.319563+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T13:17:42.321941+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T13:17:42.324448+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T13:17:42.326019+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (92718), thread 'MainThread' (139943849625408):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7f47363d5ca0>
+
+  File "/home/mic/python/notes/stats.py", line 37, in tag_list
+    print(color("  ", x, fore="#acac87")), print(color("  ", y, fore="#f18892"))
+          │           │                          │           └ 1
+          │           │                          └ <bound method Colr.color of ''>
+          │           └ '80'
+          └ <bound method Colr.color of ''>
+
+TypeError: color() got multiple values for argument 'fore'
+2021-09-29T13:20:03.336497+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T13:20:03.338719+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T13:20:03.341366+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T13:20:24.972631+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T13:20:24.975035+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T13:20:24.977260+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T13:20:24.978943+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (92807), thread 'MainThread' (140482890983232):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 46, in <module>
+    tag_list()
+    └ <function tag_list at 0x7fc4b79bbca0>
+
+  File "/home/mic/python/notes/stats.py", line 37, in tag_list
+    print(color("  " + x, fore="#acac87")), print(color("  " + y, fore="#f18892"))
+          │            │                          │            └ 1
+          │            │                          └ <bound method Colr.color of ''>
+          │            └ '80'
+          └ <bound method Colr.color of ''>
+
+TypeError: can only concatenate str (not "int") to str
+2021-09-29T13:20:51.489561+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T13:20:51.491722+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T13:20:51.493803+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:07:49.345291+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:07:49.347784+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:07:49.350315+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:07:49.358905+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (95301), thread 'MainThread' (139629061678912):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 70, in <module>
+    entries()
+    └ <function entries at 0x7efdeb6b2f70>
+
+  File "/home/mic/python/notes/stats.py", line 61, in entries
+    print(color("The number of database entries is ", records, fore="#f2b26d"))
+          │                                           └ [214]
+          └ <bound method Colr.color of ''>
+
+TypeError: color() got multiple values for argument 'fore'
+2021-09-29T14:12:50.999281+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:12:51.001585+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:12:51.004183+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:13:35.441544+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:13:35.444048+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:13:35.446713+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:14:07.712369+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:14:07.714729+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:14:07.717110+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:14:34.536360+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:14:34.538625+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:14:34.541256+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:22:18.389130+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:22:18.391715+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:22:18.394226+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:23:26.479276+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:23:26.481407+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:23:26.484147+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:23:26.492924+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (95811), thread 'MainThread' (140598063843136):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 74, in <module>
+    entries()
+    └ <function entries at 0x7fdf8872df70>
+
+  File "/home/mic/python/notes/stats.py", line 61, in entries
+    tag_num = int(records) * 3
+                  └ [214]
+
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+2021-09-29T14:25:13.507600+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:25:13.509753+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:25:13.512455+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:39:27.252758+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:39:27.255323+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:39:27.257987+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:40:38.086795+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:40:38.089332+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:40:38.091737+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:40:38.101350+0100 - __main__ - INFO - SELECT COUNT(DISTINCT k1) FROM notes
+2021-09-29T14:40:38.103400+0100 - __main__ - INFO - SELECT COUNT(DISTINCT k2) FROM notes
+2021-09-29T14:40:38.105199+0100 - __main__ - INFO - SELECT COUNT(DISTINCT k3) FROM notes
+2021-09-29T14:42:13.192217+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:42:13.194541+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:42:13.197061+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:45:26.092448+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:45:26.094701+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:45:26.096998+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:45:26.107348+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97096), thread 'MainThread' (140131432712000):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 106, in <module>
+    tags()
+    └ <function tags at 0x7f72e30ba430>
+
+  File "/home/mic/python/notes/stats.py", line 97, in tags
+    print(sum(records))
+              └ '133'
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2021-09-29T14:46:16.811530+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:46:16.814048+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:46:16.816165+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:46:16.826513+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97123), thread 'MainThread' (139696795912000):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 106, in <module>
+    tags()
+    └ <function tags at 0x7f0db0ac6430>
+
+  File "/home/mic/python/notes/stats.py", line 97, in tags
+    print(sum(int(records)))
+                  └ '133'
+
+TypeError: 'int' object is not iterable
+2021-09-29T14:48:52.176738+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:48:52.179370+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:48:52.181912+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:48:52.194205+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97305), thread 'MainThread' (140296012764992):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 107, in <module>
+    tags()
+    └ <function tags at 0x7f9934c7f430>
+
+  File "/home/mic/python/notes/stats.py", line 98, in tags
+    print(sum(records))
+              └ 133
+
+TypeError: 'int' object is not iterable
+2021-09-29T14:50:24.027679+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:50:24.030090+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:50:24.032886+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:51:33.566063+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:51:33.568323+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:51:33.570540+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:51:33.582412+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97386), thread 'MainThread' (140229691053888):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 108, in <module>
+    tags()
+    └ <function tags at 0x7f89c3b2f430>
+
+  File "/home/mic/python/notes/stats.py", line 98, in tags
+    for i in records:
+             └ 133
+
+TypeError: 'int' object is not iterable
+2021-09-29T14:51:47.976686+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:51:47.978936+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:51:47.981502+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:51:47.991779+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97396), thread 'MainThread' (140552320956224):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 108, in <module>
+    tags()
+    └ <function tags at 0x7fd4e1f09430>
+
+  File "/home/mic/python/notes/stats.py", line 98, in tags
+    for i in records:
+             └ 133
+
+TypeError: 'int' object is not iterable
+2021-09-29T14:54:28.594167+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:54:28.596678+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:54:28.599423+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:54:28.611852+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97612), thread 'MainThread' (139955198383936):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 107, in <module>
+    tags()
+    └ <function tags at 0x7f49daa93430>
+
+  File "/home/mic/python/notes/stats.py", line 98, in tags
+    print(sum(records))
+              └ ['133']
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2021-09-29T14:55:12.447527+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:55:12.449701+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:55:12.452367+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:57:29.255825+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:57:29.257894+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:57:29.260343+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:58:21.048853+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T14:58:21.050787+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T14:58:21.052675+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T14:58:21.063248+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (97848), thread 'MainThread' (140285365278528):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 107, in <module>
+    tags()
+    └ <function tags at 0x7f96ba243430>
+
+  File "/home/mic/python/notes/stats.py", line 98, in tags
+    print(records[1])
+          └ ['133']
+
+IndexError: list index out of range
+2021-09-29T15:00:43.077905+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:00:43.080072+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:00:43.082691+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:01:05.020992+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:01:05.023607+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:01:05.026146+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:01:15.813273+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:01:15.815904+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:01:15.818257+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:13:03.351169+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:13:03.353986+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:13:03.356824+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:14:04.861899+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:14:04.864158+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:14:04.866555+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:15:17.970706+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:15:17.972967+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:15:17.974896+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:16:35.249397+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:16:35.251999+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:16:35.254166+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:18:31.830854+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:18:31.833306+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:18:31.835655+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:18:54.342455+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:18:54.344587+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:18:54.347445+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:24:59.615682+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:24:59.618515+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:24:59.621367+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:24:59.632527+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (99066), thread 'MainThread' (140434447628096):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 100, in <module>
+    tags()
+    └ <function tags at 0x7fb9702453a0>
+
+  File "/home/mic/python/notes/stats.py", line 87, in tags
+    cur.execute(
+    │   └ <function MySQLCursor.execute at 0x7fb970277820>
+    └ <mysql.connector.cursor.MySQLCursor object at 0x7fb97028e850>
+
+  File "/usr/lib/python3.9/site-packages/mysql/connector/cursor.py", line 528, in execute
+    stmt = operation.encode(self._connection.python_charset)
+           │                │    └ <weakproxy at 0x7fb970225f90 to MySQLConnection at 0x7fb97028eac0>
+           │                └ <mysql.connector.cursor.MySQLCursor object at 0x7fb97028e850>
+           └ ('SELECT COUNT(DISTINCT k1) FROM notes',)
+
+AttributeError: 'tuple' object has no attribute 'encode'
+2021-09-29T15:25:46.009209+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:25:46.011423+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:25:46.013495+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:25:46.023819+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (99092), thread 'MainThread' (140054228809536):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 100, in <module>
+    tags()
+    └ <function tags at 0x7f60e95593a0>
+
+  File "/home/mic/python/notes/stats.py", line 87, in tags
+    cur.execute(
+    │   └ <function MySQLCursor.execute at 0x7f60e958b820>
+    └ <mysql.connector.cursor.MySQLCursor object at 0x7f60e95a2850>
+
+  File "/usr/lib/python3.9/site-packages/mysql/connector/cursor.py", line 528, in execute
+    stmt = operation.encode(self._connection.python_charset)
+           │                │    └ <weakproxy at 0x7f60e9552220 to MySQLConnection at 0x7f60e95a2ac0>
+           │                └ <mysql.connector.cursor.MySQLCursor object at 0x7f60e95a2850>
+           └ ('SELECT COUNT(DISTINCT k1) FROM notes',)
+
+AttributeError: 'tuple' object has no attribute 'encode'
+2021-09-29T15:27:09.446362+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:27:09.448937+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:27:09.451127+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:28:09.718947+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:28:09.721282+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:28:09.723861+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:29:06.576761+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:29:06.579490+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:29:06.581906+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:33:15.722288+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:33:15.724485+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:33:15.726847+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:33:15.740848+0100 - __main__ - ERROR - An error has been caught in function '<module>', process 'MainProcess' (99613), thread 'MainThread' (140191019562816):
+Traceback (most recent call last):
+
+> File "/home/mic/python/notes/stats.py", line 118, in <module>
+    tags()
+    └ <function tags at 0x7f80c2b2d3a0>
+
+  File "/home/mic/python/notes/stats.py", line 107, in tags
+    soma = tuple(map(sum(recordk1, recordk2, recordk3)))
+                         │         │         └ (153,)
+                         │         └ (147,)
+                         └ (133,)
+
+TypeError: sum() takes at most 2 arguments (3 given)
+2021-09-29T15:33:59.783000+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:33:59.785612+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:33:59.788210+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:37:27.873554+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:37:27.876112+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:37:27.878462+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:38:08.263755+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:38:08.266225+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:38:08.268861+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:38:38.167268+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:38:38.169348+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:38:38.171796+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:40:40.604592+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:40:40.606970+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:40:40.609634+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:41:50.248116+0100 - __main__ - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:41:50.250542+0100 - __main__ - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:41:50.252926+0100 - __main__ - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:48:15.409058+0100 - stats - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:48:15.409058+0100 - stats - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:48:15.409058+0100 - stats - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:48:15.409058+0100 - stats - INFO - SELECT k1, count(*) as links FROM notes GROUP BY k1
+2021-09-29T15:48:15.412083+0100 - stats - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:48:15.412083+0100 - stats - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:48:15.412083+0100 - stats - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:48:15.412083+0100 - stats - INFO - SELECT k2, count(*) as links FROM notes GROUP BY k2
+2021-09-29T15:48:15.414465+0100 - stats - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:48:15.414465+0100 - stats - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:48:15.414465+0100 - stats - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T15:48:15.414465+0100 - stats - INFO - SELECT k3, count(*) as links FROM notes GROUP BY k3
+2021-09-29T17:51:47.742558+0100 - search - INFO - git
+2021-09-29T17:51:47.742558+0100 - search - INFO - git
+2021-09-29T17:51:47.742558+0100 - search - INFO - git
+2021-09-29T17:51:47.742558+0100 - search - INFO - git
+2021-09-29T17:51:47.756118+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('git' )
+2021-09-29T17:51:47.756118+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('git' )
+2021-09-29T17:51:47.756118+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('git' )
+2021-09-29T17:51:47.756118+0100 - search - INFO -  SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('git' )
