@@ -1,7 +1,2 @@
 __pycache__
-delete.log
-error.log
-info.log
-search.log
-see.log
-spam.log
+*.log
