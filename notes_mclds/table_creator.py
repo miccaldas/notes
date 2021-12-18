@@ -7,8 +7,8 @@ from icecream import ic
 from loguru import logger
 
 fmt = "{time} - {name} - {level} - {message}"
-logger.add("info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)
-logger.add("info.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)
+logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)
+logger.add("../logs/info.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)
 
 db_name = input(color("What name do you want for the database? ", fore="#585a47"))
 

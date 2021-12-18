@@ -1,13 +1,12 @@
 """ Module that prints the content of the databse."""
-import sys
 from mysql.connector import connect, Error
 from colr import color
 from loguru import logger
 
 
 fmt = "{time} - {name} - {level} - {message}"
-logger.add("see.log", level="INFO", format=fmt)
-logger.add("see.log", level="ERROR", format=fmt)
+logger.add("../logs/see.log", level="INFO", format=fmt)
+logger.add("../logs/see.log", level="ERROR", format=fmt)
 
 
 @logger.catch

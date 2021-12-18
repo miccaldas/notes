@@ -4,8 +4,8 @@ from colr import color
 from mysql.connector import connect, Error
 
 fmt = "{time} - {name} - {level} - {message}"
-logger.add("info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)
-logger.add("error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)
+logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)
+logger.add("../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)
 
 
 @logger.catch
