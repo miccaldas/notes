@@ -71,9 +71,7 @@ class Add:
                 )
             self.links = cur.fetchall()
             # Records is a list and row is a tuple with the tag name and number of connections.
-            self.links.sort(
-                key=lambda x: x[1]
-            )  # This sorts the list by the value of the second element. https://tinyurl.com/yfn9alt7
+            self.links.sort(key=lambda x: x[1])  # This sorts the list by the value of the second element. https://tinyurl.com/yfn9alt7
             conn.close()
         except Error as e:
             print("Error while connecting to db", e)
@@ -95,9 +93,7 @@ class Add:
         self.keywords = [self.k1, self.k2, self.k3]
         for k in self.keywords:
             value = process.extractOne(k, self.records)
-            if (
-                80 < value[1] < 100
-            ):  # If we don't define it as less that 100, it will show message when inputing a old keyword.
+            if 80 < value[1] < 100:  # If we don't define it as less that 100, it will show message when inputing a old keyword.
                 chg_tag_decision = input(
                     click.style(
                         f"You inputed the word {k}, that is similar to the word {value[0]}, that already is a keyword. Won't you use it instead? [y/n] ",
