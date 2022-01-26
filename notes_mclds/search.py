@@ -15,11 +15,7 @@ def search():
         logger.info(busca)
         conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
         cur = conn.cursor()
-        query = (
-            " SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('"
-            + busca
-            + "' )"
-        )
+        query = " SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('" + busca + "' ) ORDER BY time"
         logger.info(query)
         cur.execute(query)
         records = cur.fetchall()
