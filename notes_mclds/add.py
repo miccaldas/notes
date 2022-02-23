@@ -24,11 +24,11 @@ class Add:
     @logger.catch
     def input_data(self):
         """All the user inputs needed to create a new entry are located here."""
-        self.title = input(click.style(" Title? » ", fg="magenta", bold=True))
-        self.k1 = input(click.style(" Choose a keyword » ", fg="magenta", bold=True))
-        self.k2 = input(click.style(" Choose another... » ", fg="magenta", bold=True))
-        self.k3 = input(click.style(" And another... » ", fg="magenta", bold=True))
-        print(click.style(" Write a note.", fg="magenta", bold=True))
+        self.title = input(click.style(" Title? » ", fg="bright_blue", bold=True))
+        self.k1 = input(click.style(" Choose a keyword » ", fg="bright_blue", bold=True))
+        self.k2 = input(click.style(" Choose another... » ", fg="bright_blue", bold=True))
+        self.k3 = input(click.style(" And another... » ", fg="bright_blue", bold=True))
+        print(click.style(" Write a note.", fg="bright_blue", bold=True))
         time.sleep(0.2)
         self.note = click.edit().rstrip()
 
@@ -97,7 +97,7 @@ class Add:
                 chg_tag_decision = input(
                     click.style(
                         f"You inputed the word {k}, that is similar to the word {value[0]}, that already is a keyword. Won't you use it instead? [y/n] ",
-                        fg="magenta",
+                        fg="bright_blue",
                         bold=True,
                     )
                 )
@@ -122,7 +122,7 @@ class Add:
         for k in self.keywords:
             res = any(k in i for i in self.records)
             if not res:
-                print(color(f"[*] - The keyword {k} is new in the database.", fore="#f18892"))
+                print(color(f"[*] - The keyword {k} is new in the database.", fore="#ffdabf"))
             else:
                 pass
 
@@ -151,15 +151,15 @@ class Add:
             if i[0] == self.k1:
                 new_i = list(i)
                 new_val = [new_i[0], (new_i[1] + 1)]
-                print(color(f"[*] - The updated value of the keyword links is {new_val}", fore="#c6f188"))
+                print(color(f" [*] - The updated value of the keyword links is {new_val}", fore="#ffdabf"))
             if i[0] == self.k2:
                 new_i = list(i)
                 new_val = [new_i[0], (new_i[1] + 1)]
-                print(color(f"[*] - The updated value of the keyword links is {new_val}", fore="#c6f188"))
+                print(color(f" [*] - The updated value of the keyword links is {new_val}", fore="#ffdabf"))
             if i[0] == self.k3:
                 new_i = list(i)
                 new_val = [new_i[0], (new_i[1] + 1)]
-                print(color(f"[*] - The updated value of the keyword links is {new_val}", fore="#c6f188"))
+                print(color(f" [*] - The updated value of the keyword links is {new_val}", fore="#ffdabf"))
 
     if __name__ == "__main__":
         count_links()
@@ -179,7 +179,7 @@ class Add:
         finally:
             if conn:
                 conn.close()
-        print(color(f"[*] - The entry named: {self.title}, was added to the database.", fore="#acac87"))
+        print(color(f"[*] - The entry named: {self.title}, was added to the database.", fore="#ffdabf"))
 
     if __name__ == "__main__":
         add_to_db()
