@@ -96,7 +96,7 @@ class Add:
             if 80 < value[1] < 100:  # If we don't define it as less that 100, it will show message when inputing a old keyword.
                 chg_tag_decision = input(
                     click.style(
-                        f"You inputed the word {k}, that is similar to the word {value[0]}, that already is a keyword. Won't you use it instead? [y/n] ",
+                        f" You inputed the word {k}, that is similar to the word {value[0]}, that already is a keyword. Won't you use it instead? [y/n] ",
                         fg="bright_blue",
                         bold=True,
                     )
@@ -122,7 +122,7 @@ class Add:
         for k in self.keywords:
             res = any(k in i for i in self.records)
             if not res:
-                print(color(f"[*] - The keyword {k} is new in the database.", fore="#ffdabf"))
+                print(color(f" [*] - The keyword {k} is new in the database.", fore="#ffdabf"))
             else:
                 pass
 
@@ -151,15 +151,15 @@ class Add:
             if i[0] == self.k1:
                 new_i = list(i)
                 new_val = [new_i[0], (new_i[1] + 1)]
-                print(color(f" [*] - The updated value of the keyword links is {new_val}", fore="#ffdabf"))
+                print(color(f"[*] - The updated value of the keyword links is {new_val}", fore="#ffdabf"))
             if i[0] == self.k2:
                 new_i = list(i)
                 new_val = [new_i[0], (new_i[1] + 1)]
-                print(color(f" [*] - The updated value of the keyword links is {new_val}", fore="#ffdabf"))
+                print(color(f"[*] - The updated value of the keyword links is {new_val}", fore="#ffdabf"))
             if i[0] == self.k3:
                 new_i = list(i)
                 new_val = [new_i[0], (new_i[1] + 1)]
-                print(color(f" [*] - The updated value of the keyword links is {new_val}", fore="#ffdabf"))
+                print(color(f"[*] - The updated value of the keyword links is {new_val}", fore="#ffdabf"))
 
     if __name__ == "__main__":
         count_links()
@@ -179,7 +179,7 @@ class Add:
         finally:
             if conn:
                 conn.close()
-        print(color(f"[*] - The entry named: {self.title}, was added to the database.", fore="#ffdabf"))
+        print(color(f" [*] - The entry named: {self.title}, was added to the database.", fore="#ffdabf"))
 
     if __name__ == "__main__":
         add_to_db()
