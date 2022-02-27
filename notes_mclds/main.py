@@ -1,15 +1,17 @@
 from __future__ import unicode_literals
+
 import sys
+
 import questionary
+from loguru import logger
 from questionary import Style
+
 from add import Add
 from delete import delete
 from search import search
-from update import update
 from see import see
-from stats import tag_list, entries, tags
-from loguru import logger
-
+from stats import entries, tag_list, tags
+from update import update
 
 fmt = "{time} - {name} - {level} - {message}"
 logger.add("spam.log", level="DEBUG", format=fmt)
@@ -27,17 +29,7 @@ notes_style = Style(
 )
 
 resposta = questionary.select(
-    "What do you want to do?",
-    choices=[
-        "Add a Note",
-        "Search for a Note",
-        "See Notes ",
-        "Update a Note",
-        "Delete a Note",
-        "See Stats",
-        "Exit",
-    ],
-    style=notes_style,
+    "What do you want to do?", style=notes_style, choices=["Add a Note", "Search for a Note", "See Notes ", "Update a Note", "Delete a Note", "See Stats", "Exit"]
 ).ask()
 
 

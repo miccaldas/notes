@@ -1,8 +1,10 @@
 """ Module that prints the content of the databse."""
-from mysql.connector import connect, Error
 from colr import color
 from loguru import logger
-
+from mysql.connector import Error, connect
+from pygments import highlight
+from pygments.formatters import TerminalTrueColorFormatter
+from pygments.lexers import get_lexer_by_name, guess_lexer  # noqa: F401
 
 fmt = "{time} - {name} - {level} - {message}"
 logger.add("../logs/see.log", level="INFO", format=fmt)
@@ -12,6 +14,9 @@ logger.add("../logs/see.log", level="ERROR", format=fmt)
 @logger.catch
 def see():
     """Connect to db, get all the lines and present it with colr."""
+
+    lexer = get_lexer_by_name("brainfuck", stripall=True)
+    formatter = TerminalTrueColorFormatter(linenos=False, style="zenburn")
     try:
         conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
         cur = conn.cursor()
@@ -38,7 +43,7 @@ def see():
                 color(" [4] KEYWORD 3 » ", fore="#bfbfbf"),
                 color(str(row[4]), fore="#ffffff"),
             )
-            print(color(" [5] NOTE : ", fore="#bfbfbf"), color(str(row[5]), fore="#9f9989"))
+            print(color(" [5] NOTE : \n\n", fore="#bfbfbf"), highlight(row[5], lexer, formatter))
             print(color(" [6] URL » ", fore="#bfbfbf"), color(str(row[6]), fore="#ffffff"))
             print(color(" [7] TIME » ", fore="#bfbfbf"), color(str(row[7]), fore="#ffffff"))
             print("\n")

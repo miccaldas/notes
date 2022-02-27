@@ -3,6 +3,9 @@ import fire
 from colr import color
 from loguru import logger
 from mysql.connector import Error, connect
+from pygments import highlight
+from pygments.formatters import TerminalTrueColorFormatter
+from pygments.lexers import get_lexer_by_name, guess_lexer  # noqa: F401
 
 fmt = "{time} - {name} - {level} - {message}"
 logger.add("../logs/search.log", level="INFO", format=fmt)
@@ -10,6 +13,9 @@ logger.add("../logs/search.log", level="ERROR", format=fmt)
 
 
 def search():
+
+    lexer = get_lexer_by_name("brainfuck", stripall=True)
+    formatter = TerminalTrueColorFormatter(linenos=False, style="zenburn")
     try:
         busca = input(color(" What are you searching for? ", fore="#40afb8"))
         logger.info(busca)
@@ -38,13 +44,15 @@ def search():
                 color(str(row[4]), fore="#ffffff"),
             )
             print(
-                color(" [5] NOTE » ", fore="#bfbfbf"),
-                color(str(row[5]), fore="#9f9998"),
+                color(" [5] NOTE » \n\n", fore="#bfbfbf"),
+                highlight(row[5], lexer, formatter),
+                # color(str(row[5]), fore="#9f9998"),
+                # guess_lexer(row[5]),
             )
             print(color(" [6] URL » ", fore="#bfbfbf"), color(str(row[6]), fore="#ffffff"))
             print(
                 color(" [7] TIME » ", fore="#bfbfbf"),
-                color(str(row[7]), fore="#ffffff"),
+                color(str(row[7]), fore="#bfbfbf"),
             )
             print("\n")
     except Error as e:

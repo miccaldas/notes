@@ -3,15 +3,22 @@ Sends information to the database and creates the md and html pages."""
 import time
 
 import click
-from colr import color
+
+# from colr import color
 from loguru import logger
 from mysql.connector import Error, connect
 from thefuzz import fuzz  # noqa: F401
 from thefuzz import process
+from pygments import highlight
+from pygments.formatters import TerminalTrueColorFormatter
+from pygments.lexers import get_lexer_by_name, guess_lexer  # noqa: F401
 
 fmt = "{time} - {name} - {level} - {message}"
 logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)
 logger.add("../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)
+
+lexer = get_lexer_by_name("brainfuck", stripall=True)
+formatter = TerminalTrueColorFormatter(linenos=False, style="zenburn")
 
 
 class Add:
@@ -24,16 +31,13 @@ class Add:
     @logger.catch
     def input_data(self):
         """All the user inputs needed to create a new entry are located here."""
-        self.title = input(click.style(" Title? » ", fg="bright_blue", bold=True))
-        self.k1 = input(click.style(" Choose a keyword » ", fg="bright_blue", bold=True))
-        self.k2 = input(click.style(" Choose another... » ", fg="bright_blue", bold=True))
-        self.k3 = input(click.style(" And another... » ", fg="bright_blue", bold=True))
-        print(click.style(" Write a note.", fg="bright_blue", bold=True))
+        self.title = input(highlight(" Title? » ", lexer, formatter))
+        self.k1 = input(highlight(" Choose a keyword » ", lexer, formatter))
+        self.k2 = input(highlight(" Choose another... » ", lexer, formatter))
+        self.k3 = input(highlight(" And another... » ", lexer, formatter))
+        print(highlight(" Write a note.", lexer, formatter))
         time.sleep(0.2)
         self.note = click.edit().rstrip()
-
-    if __name__ == "__main__":
-        input_data()
 
     @logger.catch
     def taglst(self):
@@ -76,9 +80,6 @@ class Add:
         except Error as e:
             print("Error while connecting to db", e)
 
-    if __name__ == "__main__":
-        tag_links()
-
     @logger.catch
     def issimilar(self):
         """Uses Thefuzz library to compare keyword strings. If similarity is above 80%,
@@ -95,10 +96,8 @@ class Add:
             value = process.extractOne(k, self.records)
             if 80 < value[1] < 100:  # If we don't define it as less that 100, it will show message when inputing a old keyword.
                 chg_tag_decision = input(
-                    click.style(
+                    guess_lexer(
                         f" You inputed the word {k}, that is similar to the word {value[0]}, that already is a keyword. Won't you use it instead? [y/n] ",
-                        fg="bright_blue",
-                        bold=True,
                     )
                 )
                 if chg_tag_decision == "y":
@@ -111,9 +110,6 @@ class Add:
             else:
                 pass
 
-    if __name__ == "__main__":
-        issimilar()
-
     @logger.catch
     def new_tag(self):
         """Will check the keyword names against the db records. If it doesn't find a
@@ -122,12 +118,9 @@ class Add:
         for k in self.keywords:
             res = any(k in i for i in self.records)
             if not res:
-                print(color(f" [*] - The keyword {k} is new in the database.", fore="#ffdabf"))
+                print(highlight(f" [*] - The keyword {k} is new in the database.", lexer, formatter))
             else:
                 pass
-
-    if __name__ == "__main__":
-        new_tag()
 
     @logger.catch
     def count_links(self):
@@ -151,18 +144,15 @@ class Add:
             if i[0] == self.k1:
                 new_i = list(i)
                 new_val = [new_i[0], (new_i[1] + 1)]
-                print(color(f"[*] - The updated value of the keyword links is {new_val}", fore="#ffdabf"))
+                print(highlight(f"[*] - The updated value of the keyword links is {new_val}", lexer, formatter))
             if i[0] == self.k2:
                 new_i = list(i)
                 new_val = [new_i[0], (new_i[1] + 1)]
-                print(color(f"[*] - The updated value of the keyword links is {new_val}", fore="#ffdabf"))
+                print(highlight(f"[*] - The updated value of the keyword links is {new_val}", lexer, formatter))
             if i[0] == self.k3:
                 new_i = list(i)
                 new_val = [new_i[0], (new_i[1] + 1)]
-                print(color(f"[*] - The updated value of the keyword links is {new_val}", fore="#ffdabf"))
-
-    if __name__ == "__main__":
-        count_links()
+                print(highlight(f"[*] - The updated value of the keyword links is {new_val}", lexer, formatter))
 
     @logger.catch
     def add_to_db(self):
@@ -179,7 +169,8 @@ class Add:
         finally:
             if conn:
                 conn.close()
-        print(color(f" [*] - The entry named: {self.title}, was added to the database.", fore="#ffdabf"))
+        print(highlight(f" [*] - The entry named: {self.title}, was added to the database.", lexer, formatter))
 
-    if __name__ == "__main__":
-        add_to_db()
+
+if __name__ == "__main__":
+    Add()
