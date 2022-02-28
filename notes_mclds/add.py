@@ -7,11 +7,11 @@ import click
 # from colr import color
 from loguru import logger
 from mysql.connector import Error, connect
-from thefuzz import fuzz  # noqa: F401
-from thefuzz import process
 from pygments import highlight
 from pygments.formatters import TerminalTrueColorFormatter
 from pygments.lexers import get_lexer_by_name, guess_lexer  # noqa: F401
+from thefuzz import fuzz  # noqa: F401
+from thefuzz import process
 
 fmt = "{time} - {name} - {level} - {message}"
 logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)
@@ -96,9 +96,7 @@ class Add:
             value = process.extractOne(k, self.records)
             if 80 < value[1] < 100:  # If we don't define it as less that 100, it will show message when inputing a old keyword.
                 chg_tag_decision = input(
-                    guess_lexer(
-                        f" You inputed the word {k}, that is similar to the word {value[0]}, that already is a keyword. Won't you use it instead? [y/n] ",
-                    )
+                    highlight(f" You inputed the word {k}, that is similar to the word {value[0]}, that already is a keyword. Won't you use it instead? [y/n] ", lexer, formatter)
                 )
                 if chg_tag_decision == "y":
                     if k == self.k1:
