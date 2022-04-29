@@ -1,18 +1,20 @@
 """Collects user input, checks keywords for similarity, if they're new and their frequency.
 Sends information to the database and creates the md and html pages."""
 import time
-from time import sleep
 
 import click
-import snoop
-import yake
+
+from loguru import logger
 from mysql.connector import Error, connect
 from pygments import highlight
 from pygments.formatters import TerminalTrueColorFormatter
 from pygments.lexers import get_lexer_by_name, guess_lexer  # noqa: F401
-from snoop import pp
 from thefuzz import fuzz  # noqa: F401
 from thefuzz import process
+
+fmt = "{time} - {name} - {level} - {message}"
+logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)
+logger.add("../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)
 
 lexer = get_lexer_by_name("brainfuck", stripall=True)
 formatter = TerminalTrueColorFormatter(linenos=False, style="zenburn")
@@ -25,65 +27,18 @@ class Add:
     After this is done we'll send the information to the database and create the
     md and html files."""
 
-    # @snoop
+    @logger.catch
     def input_data(self):
         """All the user inputs needed to create a new entry are located here."""
         self.title = input(highlight(" Title? » ", lexer, formatter))
+        self.k1 = input(highlight(" Choose a keyword » ", lexer, formatter))
+        self.k2 = input(highlight(" Choose another... » ", lexer, formatter))
+        self.k3 = input(highlight(" And another... » ", lexer, formatter))
         print(highlight(" Write a note.", lexer, formatter))
-        sleep(1)
+        time.sleep(0.2)
         self.note = click.edit().rstrip()
 
-    # @snoop
-    def suggest_tags(self):
-        """
-        We'll use Yake to suggest keywords to the user. He may choose all, some
-        or opt for writing them himself.
-        """
-        kw_extractor = yake.KeywordExtractor()
-        text = self.note
-        language = "en"
-        max_ngram_size = 1
-        deduplication_threshold = 0.9
-        numOfKeywords = 10
-        custom_kw_extractor = yake.KeywordExtractor(lan=language, n=max_ngram_size, dedupLim=deduplication_threshold, top=numOfKeywords, features=None)
-        keywords = custom_kw_extractor.extract_keywords(text)
-        kwds = []
-        for kw in keywords:
-            kwds.append(kw[0])
-        for idx, kwd in enumerate(kwds):
-            print(idx, kwd)
-        kwdcho = input(highlight("If you want to keep any of three keywords, type their number. ", lexer, formatter))
-        if kwdcho != "":
-            kwdchoi = kwdcho.split(" ")
-            kwd_choice = []
-            for num in kwdchoi:
-                kwd_choice.append(int(num))
-            choices = []
-            for i in kwd_choice:
-                choice = [(idx, val) for (idx, val) in enumerate(kwds) if idx == i]
-                choices.append(choice)
-            flatter_choices = [i for sublist in choices for i in sublist]
-            kwd_names = []
-            for f in flatter_choices:
-                kwd_names.append(f[1])
-            if len(kwd_names) == 1:
-                self.k1 = kwd_names[0]
-                self.k2 = input(highlight(" Choose a keyword » ", lexer, formatter))
-                self.k3 = input(highlight(" Choose another... » ", lexer, formatter))
-            if len(kwd_names) == 2:
-                self.k1 = kwd_names[0]
-                self.k2 = kwd_names[1]
-                self.k3 = input(highlight(" Choose a keyword » ", lexer, formatter))
-            if len(kwd_names) == 3:
-                self.k1 = kwd_names[0]
-                self.k2 = kwd_names[1]
-                self.k3 = kwd_names[2]
-        else:
-            self.k1 = input(highlight(" Choose a keyword » ", lexer, formatter))
-            self.k2 = input(highlight(" Choose another... » ", lexer, formatter))
-            self.k3 = input(highlight(" And another... » ", lexer, formatter))
-
-    # @snoop
+    @logger.catch
     def taglst(self):
         """Union allows to combine two or more sets of results into one, but,
         the number and order of columns that appear in the SELECT statement
@@ -101,7 +56,7 @@ class Add:
         except Error as e:
             print("Error while connecting to db", e)
 
-    # @snoop
+    @logger.catch
     def tag_links(self):
         """I'll join the three lists and order them by number of connections."""
         queries = [
@@ -124,7 +79,7 @@ class Add:
         except Error as e:
             print("Error while connecting to db", e)
 
-    # @snoop
+    @logger.catch
     def issimilar(self):
         """Uses Thefuzz library to compare keyword strings. If similarity is above 80%,
         it prints a mesage asking if the user wants to change it."""
@@ -152,7 +107,7 @@ class Add:
             else:
                 pass
 
-    # @snoop
+    @logger.catch
     def new_tag(self):
         """Will check the keyword names against the db records. If it doesn't find a
         match, it will produce a message saying the tag is new."""
@@ -164,7 +119,7 @@ class Add:
             else:
                 pass
 
-    # @snoop
+    @logger.catch
     def count_links(self):
         """Will check the new keywords, see how many links they'll have, and return that
         information."""
@@ -196,7 +151,7 @@ class Add:
                 new_val = [new_i[0], (new_i[1] + 1)]
                 print(highlight(f"[*] - The updated value of the keyword links is {new_val}", lexer, formatter))
 
-    # @snoop
+    @logger.catch
     def add_to_db(self):
         """Sends the data to the database"""
         answers = [self.title, self.k1, self.k2, self.k3, self.note]
@@ -212,3 +167,7 @@ class Add:
             if conn:
                 conn.close()
         print(highlight(f" [*] - The entry named: {self.title}, was added to the database.", lexer, formatter))
+
+
+if __name__ == "__main__":
+    Add()

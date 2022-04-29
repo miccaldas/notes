@@ -36,6 +36,7 @@ resposta = questionary.select(
 if resposta == "Add a Note":
     add = Add()
     add.input_data()
+    add.suggest_tags()
     add.taglst()
     add.tag_links()
     add.issimilar()
