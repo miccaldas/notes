@@ -51,7 +51,7 @@ class Add:
         for kw in keywords:
             kwds.append(kw[0])
         for idx, kwd in enumerate(kwds):
-            print(idx, kwd)
+            print(highlight(f" {idx, kwd}", lexer, formatter))
         kwdcho = input(highlight("If you want to keep any of three keywords, type their number. ", lexer, formatter))
         if kwdcho != "":
             kwdchoi = kwdcho.split(" ")
