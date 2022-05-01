@@ -39,7 +39,6 @@ if resposta == "Add a Note":
     add.suggest_tags()
     add.taglst()
     add.tag_links()
-    add.issimilar()
     add.new_tag()
     add.count_links()
     add.add_to_db()

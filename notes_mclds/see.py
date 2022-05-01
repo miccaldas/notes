@@ -15,7 +15,7 @@ logger.add("../logs/see.log", level="ERROR", format=fmt)
 def see():
     """Connect to db, get all the lines and present it with colr."""
 
-    lexer = get_lexer_by_name("brainfuck", stripall=True)
+    lexer = get_lexer_by_name("toml")
     formatter = TerminalTrueColorFormatter(linenos=False, style="zenburn")
     try:
         conn = connect(host="localhost", user="mic", password="xxxx", database="notes")

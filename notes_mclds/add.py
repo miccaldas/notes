@@ -14,7 +14,7 @@ from snoop import pp
 from thefuzz import fuzz  # noqa: F401
 from thefuzz import process
 
-lexer = get_lexer_by_name("brainfuck", stripall=True)
+lexer = get_lexer_by_name("toml")
 formatter = TerminalTrueColorFormatter(linenos=False, style="zenburn")
 
 
@@ -52,20 +52,16 @@ class Add:
             kwds.append(kw[0])
         for idx, kwd in enumerate(kwds):
             print(highlight(f" {idx, kwd}", lexer, formatter))
-        kwdcho = input(highlight("If you want to keep any of three keywords, type their number. ", lexer, formatter))
+        kwdcho = input(highlight(" If you want to keep any of three keywords, type their number. ", lexer, formatter))
         if kwdcho != "":
             kwdchoi = kwdcho.split(" ")
-            kwd_choice = []
-            for num in kwdchoi:
-                kwd_choice.append(int(num))
+            kwd_choice = [int(i) for i in kwdchoi]
             choices = []
             for i in kwd_choice:
                 choice = [(idx, val) for (idx, val) in enumerate(kwds) if idx == i]
                 choices.append(choice)
             flatter_choices = [i for sublist in choices for i in sublist]
-            kwd_names = []
-            for f in flatter_choices:
-                kwd_names.append(f[1])
+            kwd_names = [f[1] for f in flatter_choices]
             if len(kwd_names) == 1:
                 self.k1 = kwd_names[0]
                 self.k2 = input(highlight(" Choose a keyword » ", lexer, formatter))
@@ -152,11 +148,13 @@ class Add:
             else:
                 pass
 
+        return self.k1, self.k2, self.k3
+
     # @snoop
     def new_tag(self):
         """Will check the keyword names against the db records. If it doesn't find a
         match, it will produce a message saying the tag is new."""
-        self.keywords = [self.k1, self.k2, self.k3]
+        self.keywords = self.issimilar()
         for k in self.keywords:
             res = any(k in i for i in self.records)
             if not res:
@@ -186,15 +184,15 @@ class Add:
             if i[0] == self.k1:
                 new_i = list(i)
                 new_val = [new_i[0], (new_i[1] + 1)]
-                print(highlight(f"[*] - The updated value of the keyword links is {new_val}", lexer, formatter))
+                print(highlight(f" [*] - The updated value of the keyword links is {new_val}", lexer, formatter))
             if i[0] == self.k2:
                 new_i = list(i)
                 new_val = [new_i[0], (new_i[1] + 1)]
-                print(highlight(f"[*] - The updated value of the keyword links is {new_val}", lexer, formatter))
+                print(highlight(f" [*] - The updated value of the keyword links is {new_val}", lexer, formatter))
             if i[0] == self.k3:
                 new_i = list(i)
                 new_val = [new_i[0], (new_i[1] + 1)]
-                print(highlight(f"[*] - The updated value of the keyword links is {new_val}", lexer, formatter))
+                print(highlight(f" [*] - The updated value of the keyword links is {new_val}", lexer, formatter))
 
     # @snoop
     def add_to_db(self):
