@@ -12,6 +12,7 @@ from search import search
 from see import see
 from stats import entries, tag_list, tags
 from update import update
+from see_favorites import see_favorites
 
 fmt = "{time} - {name} - {level} - {message}"
 logger.add("spam.log", level="DEBUG", format=fmt)
@@ -29,7 +30,7 @@ notes_style = Style(
 )
 
 resposta = questionary.select(
-    "What do you want to do?", style=notes_style, choices=["Add a Note", "Search for a Note", "See Notes ", "Update a Note", "Delete a Note", "See Stats", "Exit"]
+    "What do you want to do?", style=notes_style, choices=["Add a Note", "Search for a Note", "See Notes ", "Update a Note", "Delete a Note", "See Stats", "See Favorites", "Exit"]
 ).ask()
 
 
@@ -54,5 +55,7 @@ if resposta == "See Stats":
     tag_list()
     entries()
     tags()
+if resposta == "See Favorites":
+    see_favorites()
 if resposta == "Exit":
     sys.exit()
