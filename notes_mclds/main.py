@@ -43,6 +43,7 @@ if resposta == "Add a Note":
     add.new_tag()
     add.count_links()
     add.add_to_db()
+    add.kwd_clean()
 if resposta == "Search for a Note":
     search()
 if resposta == "See Notes ":

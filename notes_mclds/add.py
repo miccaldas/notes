@@ -210,3 +210,46 @@ class Add:
             if conn:
                 conn.close()
         print(highlight(f" [*] - The entry named: {self.title}, was added to the database.", lexer, formatter))
+
+    # @snoop
+    def kwd_clean(self):
+        """
+        Takes a list of all keywords, checks if there are
+        plural versions of them, stores these cases in a
+        list and updates them to the plural version.
+        """
+        try:
+            conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
+            cur = conn.cursor()
+            query = "SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes"
+            cur.execute(query)
+            records = cur.fetchall()  # Results come as one-element tuples. It's needed to turn it to list.
+            records = [i for t in records for i in t]
+            conn.close()
+        except Error as e:
+            print("Error while connecting to db", e)
+        records.sort()
+
+        reps = []
+        for i in records:
+            plural = f"{i}s"
+            if plural in records:
+                reps.append((i, plural))
+
+        if reps != []:
+            try:
+                conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
+                cur = conn.cursor()
+                for rep in reps:
+                    query1 = f"UPDATE notes SET k1 = '{rep[1]}' WHERE k1 = '{rep[0]}'"
+                    cur.execute(query1)
+                    conn.commit()
+                    query2 = f"UPDATE notes SET k2 = '{rep[1]}' WHERE k2 = '{rep[0]}'"
+                    cur.execute(query2)
+                    conn.commit()
+                    query3 = f"UPDATE notes SET k3 = '{rep[1]}' WHERE k3 = '{rep[0]}'"
+                    cur.execute(query1)
+                    conn.commit()
+                conn.close()
+            except Error as e:
+                print("Error connecting to the database", e)
