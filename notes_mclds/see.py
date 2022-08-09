@@ -49,9 +49,6 @@ def see():
             print("\n")
     except Error as e:
         print("Error while connecting to db", e)
-    finally:
-        if conn:
-            conn.close()
 
 
 if __name__ == "__main__":
