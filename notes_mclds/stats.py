@@ -1,14 +1,11 @@
 """Module will aggregate disparate statisitcs about the app."""
-from loguru import logger
+
 from colr import color
 from mysql.connector import connect, Error
 
-fmt = "{time} - {name} - {level} - {message}"
-logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)
-logger.add("../logs/error.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)
 
 
-@logger.catch
+
 def tag_list():
     """I'll join the three lists and order them by number of connections."""
     queries = [
@@ -21,7 +18,7 @@ def tag_list():
             conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
             cur = conn.cursor()
             query = q
-            logger.info(query)
+           
             cur.execute(
                 query,
             )
@@ -46,7 +43,7 @@ if __name__ == "__main__":
     tag_list()
 
 
-@logger.catch
+
 def entries():
     """Returns the number of entries in the database"""
     try:
@@ -74,7 +71,7 @@ if __name__ == "__main__":
     entries()
 
 
-@logger.catch
+
 def tags():
     """Counts all keywords without duplications"""
     queryk1 = "SELECT COUNT(DISTINCT k1) FROM notes"

@@ -4,15 +4,13 @@ import time
 
 import click
 from colr import color
-from loguru import logger
+
 from mysql.connector import Error, connect
 
-fmt = "{time} - {name} - {level} - {message}"
-logger.add("../logs/info.log", level="INFO", format=fmt)
-logger.add("../logs/info.log", level="ERROR", format=fmt)
 
 
-@logger.catch
+
+
 def update():
     coluna = input(click.style(" Column? » ", fg="magenta", bold=True))
     update_ident = input(click.style(" ID? » ", fg="magenta", bold=True))

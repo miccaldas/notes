@@ -1,15 +1,13 @@
 """ Module to see all of the database """
 import fire
 from colr import color
-from loguru import logger
+
 from mysql.connector import Error, connect
 from pygments import highlight
 from pygments.formatters import TerminalTrueColorFormatter
 from pygments.lexers import get_lexer_by_name
 
-fmt = "{time} - {name} - {level} - {message}"
-logger.add("../logs/search.log", level="INFO", format=fmt)
-logger.add("../logs/search.log", level="ERROR", format=fmt)
+
 
 
 def search():
@@ -18,11 +16,11 @@ def search():
     formatter = TerminalTrueColorFormatter(linenos=False, style="zenburn")
     try:
         busca = input(highlight(" What are you searching for? ", lexer, formatter))
-        logger.info(busca)
+     
         conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
         cur = conn.cursor()
         query = " SELECT ntid, title, k1, k2, k3, note, url, time FROM notes WHERE MATCH(title, k1, k2, k3, note, url) AGAINST ('" + busca + "' ) ORDER BY time"
-        logger.info(query)
+     
         cur.execute(query)
         records = cur.fetchall()
         for row in records:

@@ -4,13 +4,13 @@ import time
 from time import sleep
 
 import click
-import snoop
+# import snoop
 import yake
 from mysql.connector import Error, connect
 from pygments import highlight
 from pygments.formatters import TerminalTrueColorFormatter
 from pygments.lexers import get_lexer_by_name, guess_lexer  # noqa: F401
-from snoop import pp
+# from snoop import pp
 from thefuzz import fuzz  # noqa: F401
 from thefuzz import process
 

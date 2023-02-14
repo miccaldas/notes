@@ -1,21 +1,17 @@
 """
 Shows content of table 'favorites'.
 """
-import isort
-import snoop
-from snoop import pp
+
+# import snoop
+# from snoop import pp
 from colr import color
 from mysql.connector import Error, connect
 from pygments import highlight
 from pygments.formatters import TerminalTrueColorFormatter
 from pygments.lexers import get_lexer_by_name
 
-
-def type_watch(source, value):
-    return "type({})".format(source), type(value)
-
-
-snoop.install(watch_extras=[type_watch])
+# def type_watch(source, value):
+#   return "type({})".format(source), type(value)
 
 
 # @snoop
@@ -36,7 +32,9 @@ def see_favorites():
         )
         records = cur.fetchall()
         for row in records:
-            print(color(" [0] ID » ", fore="#bfbfbf"), color(str(row[0]), fore="#ffffff"))
+            print(
+                color(" [0] ID » ", fore="#bfbfbf"), color(str(row[0]), fore="#ffffff")
+            )
             print(
                 color(" [1] TITLE » ", fore="#bfbfbf"),
                 color(str(row[1]), fore="#ffffff"),
@@ -53,7 +51,10 @@ def see_favorites():
                 color(" [4] KEYWORD 3 » ", fore="#bfbfbf"),
                 color(str(row[4]), fore="#ffffff"),
             )
-            print(color(" [5] NOTE : \n\n", fore="#bfbfbf"), highlight(row[5], lexer, formatter))
+            print(
+                color(" [5] NOTE : \n\n", fore="#bfbfbf"),
+                highlight(row[5], lexer, formatter),
+            )
             print("\n")
     except Error as e:
         print("Error while connecting to db", e)

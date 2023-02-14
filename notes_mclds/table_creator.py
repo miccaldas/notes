@@ -4,11 +4,9 @@ import collections
 import re
 from colr import color
 from icecream import ic
-from loguru import logger
 
-fmt = "{time} - {name} - {level} - {message}"
-logger.add("../logs/info.log", level="INFO", format=fmt, backtrace=True, diagnose=True)
-logger.add("../logs/info.log", level="ERROR", format=fmt, backtrace=True, diagnose=True)
+
+
 
 db_name = input(color("What name do you want for the database? ", fore="#585a47"))
 
@@ -49,40 +47,39 @@ def collect_data():
     new = []
     for i in a:
         b = (i, a[i])
-        logger.info(b)
+    
         c = list(b)
-        logger.info(c)
+    
         new.append(str(c[0]))
-        logger.info(new)
+     
         d = str(c[1])
-        logger.info(d)
+    
         e = d.replace(",", "")
-        logger.info(e)
+  
         new.append(e)
-    logger.info(new)
+  
     corda = str(new)
-    logger.info(corda)
+ 
     cor1 = corda.translate({ord(i): None for i in '[]""'})
-    logger.info(cor1)
+ 
     cor2 = cor1.translate({ord(i): None for i in "'"})
-    logger.info(cor2)
+
     sub = ","
     matches = re.finditer(sub, cor2)
-    logger.info(matches)
+
     matches_positions = [match.start() for match in matches]
     oc = matches_positions
-    logger.info(oc)
+
     oc1 = oc[0::2]
-    logger.info(oc1)
-    logger.info("oc1 = ", oc1)
+
     cor3 = list(cor2)
-    logger.info(cor3)
+
     for idx in oc1:
         cor3[idx] = ""
     cor4 = "".join(cor3)
-    logger.info(cor4)
+
     query = "CREATE TABLE " + table_name + "(" + cor4 + ")"
-    logger.info(query)
+
 
     try:
         conn = connect(host="localhost", user="mic", password="xxxx", database="notes")

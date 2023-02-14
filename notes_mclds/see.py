@@ -1,17 +1,14 @@
 """ Module that prints the content of the databse."""
 from colr import color
-from loguru import logger
+
 from mysql.connector import Error, connect
 from pygments import highlight
 from pygments.formatters import TerminalTrueColorFormatter
 from pygments.lexers import get_lexer_by_name, guess_lexer  # noqa: F401
 
-fmt = "{time} - {name} - {level} - {message}"
-logger.add("../logs/see.log", level="INFO", format=fmt)
-logger.add("../logs/see.log", level="ERROR", format=fmt)
 
 
-@logger.catch
+
 def see():
     """Connect to db, get all the lines and present it with colr."""
 
