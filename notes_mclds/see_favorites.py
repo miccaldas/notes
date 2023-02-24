@@ -9,12 +9,13 @@ from mysql.connector import Error, connect
 from pygments import highlight
 from pygments.formatters import TerminalTrueColorFormatter
 from pygments.lexers import get_lexer_by_name
-
+from db_decorator.db_information import db_information
 # def type_watch(source, value):
 #   return "type({})".format(source), type(value)
 
 
 # @snoop
+@db_information
 def see_favorites():
     """
     Uses MySQL query that selects all in

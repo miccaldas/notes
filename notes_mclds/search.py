@@ -1,7 +1,7 @@
 """ Module to see all of the database """
 import fire
 from colr import color
-
+from db_decorator.db_information import db_information
 from mysql.connector import Error, connect
 from pygments import highlight
 from pygments.formatters import TerminalTrueColorFormatter
@@ -9,7 +9,7 @@ from pygments.lexers import get_lexer_by_name
 
 
 
-
+@db_information
 def search():
 
     lexer = get_lexer_by_name("toml")

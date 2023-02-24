@@ -2,10 +2,10 @@
 
 from colr import color
 from mysql.connector import connect, Error
+from db_decorator.db_information import db_information
 
 
-
-
+@db_information
 def tag_list():
     """I'll join the three lists and order them by number of connections."""
     queries = [

@@ -3,7 +3,7 @@ Permits saving an entry in favorites table.
 For ease of access.
 """
 import click
-
+from db_decorator.db_information import db_information
 # import snoop
 from mysql.connector import Error, connect
 # from snoop import pp
@@ -19,6 +19,7 @@ from mysql.connector import Error, connect
 @click.option("-d", "--delete", type=int)
 @click.option("--delete_all/--no_delete_all", default=False)
 # @snoop
+@db_information
 def favorites(add, delete, delete_all):
     """
     To create a favorite entry, the user inputs an id, and

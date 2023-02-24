@@ -1,6 +1,6 @@
 """ Module that prints the content of the databse."""
 from colr import color
-
+from db_decorator.db_information import db_information
 from mysql.connector import Error, connect
 from pygments import highlight
 from pygments.formatters import TerminalTrueColorFormatter
@@ -8,7 +8,7 @@ from pygments.lexers import get_lexer_by_name, guess_lexer  # noqa: F401
 
 
 
-
+@db_information
 def see():
     """Connect to db, get all the lines and present it with colr."""
 

@@ -6,11 +6,11 @@ import click
 from colr import color
 
 from mysql.connector import Error, connect
+from db_decorator.db_information import db_information
 
 
 
-
-
+@db_information
 def update():
     coluna = input(click.style(" Column? » ", fg="magenta", bold=True))
     update_ident = input(click.style(" ID? » ", fg="magenta", bold=True))

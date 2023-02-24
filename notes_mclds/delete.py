@@ -2,9 +2,7 @@
 
 from mysql.connector import connect, Error
 from colr import color
-
-
-
+from db_decorator.db_information import db_information
 
 
 def del_md_html_pages():
@@ -12,7 +10,7 @@ def del_md_html_pages():
     because it must know the id field before its deleted."""
 
 
-
+@db_information
 def delete():
     """After deleting the files, we can finally delete the database entry"""
     del_md_html_pages.ident = input("ID to delete? ")

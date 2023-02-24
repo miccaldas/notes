@@ -2,7 +2,7 @@
 Sends information to the database and creates the md and html pages."""
 import time
 from time import sleep
-
+from db_decorator.db_information import db_information
 import click
 # import snoop
 import yake
@@ -80,6 +80,7 @@ class Add:
             self.k3 = input(highlight(" And another... » ", lexer, formatter))
 
     # @snoop
+    @db_information
     def taglst(self):
         """Union allows to combine two or more sets of results into one, but,
         the number and order of columns that appear in the SELECT statement
@@ -98,6 +99,7 @@ class Add:
             print("Error while connecting to db", e)
 
     # @snoop
+    @db_information
     def tag_links(self):
         """I'll join the three lists and order them by number of connections."""
         queries = [
@@ -163,6 +165,7 @@ class Add:
                 pass
 
     # @snoop
+    @db_information
     def count_links(self):
         """Will check the new keywords, see how many links they'll have, and return that
         information."""
@@ -195,6 +198,7 @@ class Add:
                 print(highlight(f" [*] - The updated value of the keyword links is {new_val}", lexer, formatter))
 
     # @snoop
+    @db_information
     def add_to_db(self):
         """Sends the data to the database"""
         answers = [self.title, self.k1, self.k2, self.k3, self.note]
@@ -212,6 +216,7 @@ class Add:
         print(highlight(f" [*] - The entry named: {self.title}, was added to the database.", lexer, formatter))
 
     # @snoop
+    @db_information
     def kwd_clean(self):
         """
         Takes a list of all keywords, checks if there are
