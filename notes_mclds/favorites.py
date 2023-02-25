@@ -63,12 +63,15 @@ def favorites(add, delete, delete_all):
             cur.execute(query)
             conn.commit()
         except Error as e:
+            err_msg = "Error while connecting to the db", e
             print("Error while connecting to the db", e)
+            if err_msg:
+                return query, e
         finally:
             if conn:
                 conn.close()
-        print(click.style(" [*] - All notes in favorites were deleted.", fg="bright_white", bold=True))
-
+            print(click.style(" [*] - All notes in favorites were deleted.", fg="bright_white", bold=True))
+            return query
 
 if __name__ == "__main__":
     favorites()

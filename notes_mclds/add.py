@@ -2,14 +2,17 @@
 Sends information to the database and creates the md and html pages."""
 import time
 from time import sleep
-from db_decorator.db_information import db_information
+
 import click
+
 # import snoop
 import yake
+from db_decorator.db_information import db_information
 from mysql.connector import Error, connect
 from pygments import highlight
 from pygments.formatters import TerminalTrueColorFormatter
 from pygments.lexers import get_lexer_by_name, guess_lexer  # noqa: F401
+
 # from snoop import pp
 from thefuzz import fuzz  # noqa: F401
 from thefuzz import process
@@ -45,14 +48,26 @@ class Add:
         max_ngram_size = 1
         deduplication_threshold = 0.9
         numOfKeywords = 10
-        custom_kw_extractor = yake.KeywordExtractor(lan=language, n=max_ngram_size, dedupLim=deduplication_threshold, top=numOfKeywords, features=None)
+        custom_kw_extractor = yake.KeywordExtractor(
+            lan=language,
+            n=max_ngram_size,
+            dedupLim=deduplication_threshold,
+            top=numOfKeywords,
+            features=None,
+        )
         keywords = custom_kw_extractor.extract_keywords(text)
         kwds = []
         for kw in keywords:
             kwds.append(kw[0])
         for idx, kwd in enumerate(kwds):
             print(highlight(f" {idx, kwd}", lexer, formatter))
-        kwdcho = input(highlight(" If you want to keep any of three keywords, type their number. ", lexer, formatter))
+        kwdcho = input(
+            highlight(
+                " If you want to keep any of three keywords, type their number. ",
+                lexer,
+                formatter,
+            )
+        )
         if kwdcho != "":
             kwdchoi = kwdcho.split(" ")
             kwd_choice = [int(i) for i in kwdchoi]
@@ -79,8 +94,8 @@ class Add:
             self.k2 = input(highlight(" Choose another... » ", lexer, formatter))
             self.k3 = input(highlight(" And another... » ", lexer, formatter))
 
-    # @snoop
     @db_information
+    # @snoop
     def taglst(self):
         """Union allows to combine two or more sets of results into one, but,
         the number and order of columns that appear in the SELECT statement
@@ -88,18 +103,29 @@ class Add:
         Union removes duplicates.
         """
         try:
-            conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
+            conn = connect(
+                host="localhost", user="mic", password="xxxx", database="notes"
+            )
             cur = conn.cursor()
             query = "SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes"
             cur.execute(query)
-            records = cur.fetchall()  # Results come as one-element tuples. It's needed to turn it to list.
+            records = (
+                cur.fetchall()
+            )  # Results come as one-element tuples. It's needed to turn it to list.
             self.records = [i for t in records for i in t]
-            conn.close()
         except Error as e:
+            err_msg = "Error while connecting to db", e
             print("Error while connecting to db", e)
+            if err_msg:
+                return query, err_msg
+            return query, err_msg
+        finally:
+            if conn:
+                conn.close()
+            return query
 
-    # @snoop
     @db_information
+    # @snoop
     def tag_links(self):
         """I'll join the three lists and order them by number of connections."""
         queries = [
@@ -109,7 +135,9 @@ class Add:
         ]
         try:
             for q in queries:
-                conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
+                conn = connect(
+                    host="localhost", user="mic", password="xxxx", database="notes"
+                )
                 cur = conn.cursor()
                 query = q
                 cur.execute(
@@ -117,10 +145,18 @@ class Add:
                 )
             self.links = cur.fetchall()
             # Records is a list and row is a tuple with the tag name and number of connections.
-            self.links.sort(key=lambda x: x[1])  # This sorts the list by the value of the second element. https://tinyurl.com/yfn9alt7
-            conn.close()
+            self.links.sort(
+                key=lambda x: x[1]
+            )  # This sorts the list by the value of the second element. https://tinyurl.com/yfn9alt7
         except Error as e:
+            err_msg = "Error while connecting to db", e
             print("Error while connecting to db", e)
+            if err_msg:
+                return query, err_msg
+        finally:
+            if conn:
+                conn.close()
+            return query
 
     # @snoop
     def issimilar(self):
@@ -128,17 +164,27 @@ class Add:
         it prints a mesage asking if the user wants to change it."""
         conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
         cur = conn.cursor()
-        query = "SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes"
+        query = (
+            "SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes"
+        )
         cur.execute(query)
-        records = cur.fetchall()  # Results come as one-element tuples. It's needed to turn it to list.
+        records = (
+            cur.fetchall()
+        )  # Results come as one-element tuples. It's needed to turn it to list.
         self.records = [i for t in records for i in t]
 
         self.keywords = [self.k1, self.k2, self.k3]
         for k in self.keywords:
             value = process.extractOne(k, self.records)
-            if 80 < value[1] < 100:  # If we don't define it as less that 100, it will show message when inputing a old keyword.
+            if (
+                80 < value[1] < 100
+            ):  # If we don't define it as less that 100, it will show message when inputing a old keyword.
                 chg_tag_decision = input(
-                    highlight(f" You inputed the word {k}, that is similar to the word {value[0]}, that already is a keyword. Won't you use it instead? [y/n] ", lexer, formatter)
+                    highlight(
+                        f" You inputed the word {k}, that is similar to the word {value[0]}, that already is a keyword. Won't you use it instead? [y/n] ",
+                        lexer,
+                        formatter,
+                    )
                 )
                 if chg_tag_decision == "y":
                     if k == self.k1:
@@ -160,60 +206,108 @@ class Add:
         for k in self.keywords:
             res = any(k in i for i in self.records)
             if not res:
-                print(highlight(f" [*] - The keyword {k} is new in the database.", lexer, formatter))
+                print(
+                    highlight(
+                        f" [*] - The keyword {k} is new in the database.",
+                        lexer,
+                        formatter,
+                    )
+                )
             else:
                 pass
 
-    # @snoop
     @db_information
+    # @snoop
     def count_links(self):
-        """Will check the new keywords, see how many links they'll have, and return that
-        information."""
-        queries = [
-            "SELECT k1, count(*) as links FROM notes GROUP BY k1",
-            "SELECT k2, count(*) as links FROM notes GROUP BY k2",
-            "SELECT k3, count(*) as links FROM notes GROUP BY k3",
-        ]
-        for q in queries:
-            conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
-            cur = conn.cursor()
-            query = q
-            cur.execute(
-                query,
-            )
-        self.links = cur.fetchall()
+        try:
+            """Will check the new keywords, see how many links they'll have, and return that
+            information."""
+            queries = [
+                "SELECT k1, count(*) as links FROM notes GROUP BY k1",
+                "SELECT k2, count(*) as links FROM notes GROUP BY k2",
+                "SELECT k3, count(*) as links FROM notes GROUP BY k3",
+            ]
+            for q in queries:
+                conn = connect(
+                    host="localhost", user="mic", password="xxxx", database="notes"
+                )
+                cur = conn.cursor()
+                query = q
+                cur.execute(
+                    query,
+                )
+            self.links = cur.fetchall()
 
-        for i in self.links:
-            if i[0] == self.k1:
-                new_i = list(i)
-                new_val = [new_i[0], (new_i[1] + 1)]
-                print(highlight(f" [*] - The updated value of the keyword links is {new_val}", lexer, formatter))
-            if i[0] == self.k2:
-                new_i = list(i)
-                new_val = [new_i[0], (new_i[1] + 1)]
-                print(highlight(f" [*] - The updated value of the keyword links is {new_val}", lexer, formatter))
-            if i[0] == self.k3:
-                new_i = list(i)
-                new_val = [new_i[0], (new_i[1] + 1)]
-                print(highlight(f" [*] - The updated value of the keyword links is {new_val}", lexer, formatter))
+            for i in self.links:
+                if i[0] == self.k1:
+                    new_i = list(i)
+                    new_val = [new_i[0], (new_i[1] + 1)]
+                    print(
+                        highlight(
+                            f" [*] - The updated value of the keyword links is {new_val}",
+                            lexer,
+                            formatter,
+                        )
+                    )
+                if i[0] == self.k2:
+                    new_i = list(i)
+                    new_val = [new_i[0], (new_i[1] + 1)]
+                    print(
+                        highlight(
+                            f" [*] - The updated value of the keyword links is {new_val}",
+                            lexer,
+                            formatter,
+                        )
+                    )
+                if i[0] == self.k3:
+                    new_i = list(i)
+                    new_val = [new_i[0], (new_i[1] + 1)]
+                    print(
+                        highlight(
+                            f" [*] - The updated value of the keyword links is {new_val}",
+                            lexer,
+                            formatter,
+                        )
+                    )
+        except Error as e:
+            err_msg = "Error while connecting to db", e
+            print("Error while connecting to db", e)
+            if err_msg:
+                return queries, err_msg
+        finally:
+            if conn:
+                conn.close()
+            return queries
 
-    # @snoop
     @db_information
+    # @snoop
     def add_to_db(self):
         """Sends the data to the database"""
         answers = [self.title, self.k1, self.k2, self.k3, self.note]
         try:
-            conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
+            conn = connect(
+                host="localhost", user="mic", password="xxxx", database="notes"
+            )
             cur = conn.cursor()
-            query = "INSERT INTO notes (title, k1, k2, k3, note) VALUES (%s, %s, %s, %s, %s)"
-            cur.execute(query, answers)
+            query = f"INSERT INTO notes (title, k1, k2, k3, note) VALUES ('{self.title}', '{self.k1}', '{self.k2}', '{self.k3}', '{self.note}')"
+            cur.execute(query)
             conn.commit()
         except Error as e:
+            err_msg = "Error while connecting to db", e
             print("Error while connecting to db", e)
+            if err_msg:
+                return query, err_msg
         finally:
             if conn:
                 conn.close()
-        print(highlight(f" [*] - The entry named: {self.title}, was added to the database.", lexer, formatter))
+            print(
+                highlight(
+                    f" [*] - The entry named: {self.title}, was added to the database.",
+                    lexer,
+                    formatter,
+                )
+            )
+            return query
 
     # @snoop
     @db_information
@@ -224,15 +318,23 @@ class Add:
         list and updates them to the plural version.
         """
         try:
-            conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
+            conn = connect(
+                host="localhost", user="mic", password="xxxx", database="notes"
+            )
             cur = conn.cursor()
             query = "SELECT k1 FROM notes UNION SELECT k2 FROM notes UNION SELECT k3 FROM notes"
             cur.execute(query)
-            records = cur.fetchall()  # Results come as one-element tuples. It's needed to turn it to list.
+            records = (
+                cur.fetchall()
+            )  # Results come as one-element tuples. It's needed to turn it to list.
             records = [i for t in records for i in t]
             conn.close()
         except Error as e:
+            err_msg = "Error while connecting to db", e
             print("Error while connecting to db", e)
+            if err_msg:
+                return query, err_msg
+
         records.sort()
 
         reps = []
@@ -243,7 +345,9 @@ class Add:
 
         if reps != []:
             try:
-                conn = connect(host="localhost", user="mic", password="xxxx", database="notes")
+                conn = connect(
+                    host="localhost", user="mic", password="xxxx", database="notes"
+                )
                 cur = conn.cursor()
                 for rep in reps:
                     query1 = f"UPDATE notes SET k1 = '{rep[1]}' WHERE k1 = '{rep[0]}'"
@@ -257,4 +361,9 @@ class Add:
                     conn.commit()
                 conn.close()
             except Error as e:
-                print("Error connecting to the database", e)
+                err_msg = "Error while connecting to db", e
+                print("Error while connecting to db", e)
+                if err_msg:
+                    return query, err_msg
+
+                return query

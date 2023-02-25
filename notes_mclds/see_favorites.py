@@ -58,11 +58,14 @@ def see_favorites():
             )
             print("\n")
     except Error as e:
+        err_msg = "Error while connecting to db", e
         print("Error while connecting to db", e)
+        if err_msg:
+            return query, e
     finally:
         if conn:
             conn.close()
-
+        return query
 
 if __name__ == "__main__":
     see_favorites()

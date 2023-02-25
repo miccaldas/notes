@@ -45,7 +45,12 @@ def see():
             print(color(" [7] TIME » ", fore="#bfbfbf"), color(str(row[7]), fore="#ffffff"))
             print("\n")
     except Error as e:
+        err_msg = "Error while connecting to db", e
         print("Error while connecting to db", e)
+        if err_msg:
+            return query, e
+        return query
+
 
 
 if __name__ == "__main__":

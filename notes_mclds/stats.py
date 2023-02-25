@@ -33,10 +33,14 @@ def tag_list():
         for x, y in zip(it, it):
             print(color("  " + x, fore="#acac87")), print(color("  " + str(y), fore="#f18892"))
     except Error as e:
+        err_msg = "Error while connecting to db", e
         print("Error while connecting to db", e)
+        if err_msg:
+            return query, e
     finally:
         if conn:
             conn.close()
+        return query
 
 
 if __name__ == "__main__":

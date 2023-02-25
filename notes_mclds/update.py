@@ -27,11 +27,16 @@ def update():
         )
         conn.commit()
     except Error as e:
+        err_msg = "Error while connecting to db", e
         print("Error while connecting to db", e)
+        if err_msg:
+            return query, e
     finally:
         if conn:
             conn.close()
-    print(color(f'[*] - The update, "{updt}", was inserted on the database, with the id {update.ident}.', fore="#acac87"))
+        print(color(f'[*] - The update, "{updt}", was inserted on the database, with the id {update.ident}.', fore="#acac87"))
+
+        return query
 
 
 if __name__ == "__main__":
