@@ -289,14 +289,17 @@ class Add:
                 host="localhost", user="mic", password="xxxx", database="notes"
             )
             cur = conn.cursor()
-            query = f"INSERT INTO notes (title, k1, k2, k3, note) VALUES ('{self.title}', '{self.k1}', '{self.k2}', '{self.k3}', '{self.note}')"
-            cur.execute(query)
+            query = "INSERT INTO notes (title, k1, k2, k3, note) VALUES (%s, %s, %s, %s, %s)"
+            cur.execute(query, answers)
             conn.commit()
+            # This was necessary because if I feed self.note directly to the query, MySQL will evaluate it as code not text.
+            # Because 'db_information' can't decode '%s' contents, I needed to send query content in another way.
+            nquery = f"INSERT INTO notes (title, k1, k2, k3, note) VALUES ({self.title}, {self.k1}, {self.k2}, {self.k3}, {self.note})"
         except Error as e:
             err_msg = "Error while connecting to db", e
             print("Error while connecting to db", e)
             if err_msg:
-                return query, err_msg
+                return nquery, err_msg
         finally:
             if conn:
                 conn.close()
@@ -307,7 +310,7 @@ class Add:
                     formatter,
                 )
             )
-            return query
+            return nquery
 
     # @snoop
     @db_information
