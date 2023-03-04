@@ -34,7 +34,7 @@ def update():
     finally:
         if conn:
             conn.close()
-        print(color(f'[*] - The update, "{updt}", was inserted on the database, with the id {update.ident}.', fore="#acac87"))
+        print(color(f'[*] - The update, "{updt}", was inserted on the database, with the id {update_ident}.', fore="#acac87"))
 
         return query
 
