@@ -1,0 +1,4 @@
+Para enviar um mail de uma das apps minimais de mail da linux
+o modelo é simples. One-liner:
+-------------------------------------------------------------
+echo 'message-body'

@@ -1,0 +1,8 @@
+To see Matplotlib plots in the terminal, initialize
+matplotlib like this:
+----------------------------------------------------
+import matplotlib
+matplotlib.use('module://matplotlib-backend-kitty')
+import matplotlib.pyplot as plt
+----------------------------------------------------
+https://github.com/jktr/matplotlib-backend-kitty

@@ -1,0 +1,39 @@
+To use jinja2 in python files, see this example that, although
+an HTML file, works for any text file, and I imagine that if
+you mark it as '.txt' file as you manipulate it with jinja,
+and, after jinja created the updated page, turn it to a 'sh'
+file, for example, there won't be a problem.
+--------------------------------------------------------------
+import jinja2
+
+def render_html(row):
+    
+    Render html page using jinja
+    
+   template_loader = jinja2.FileSystemLoader(searchpath="./")
+   template_env = jinja2.Environment(loader=template_loader)
+   template_file = "layout.html
+   template = template_env.get_template(template_file)
+   output_text = template.render(
+         name=row.Name,
+         address=row.Address,
+         date=get_date(),
+         invoice=row.Invoice,
+         item=row.Item,
+         amount=row.Cost
+         )
+   html_path = f'{row.Name}.html'
+   html_file = open(html_path, 'w')
+   html_file.write(output_text)
+   html_file.close()
+--------------------------------------------------------------
+In this code, the jinja2 module is imported, and the
+render_html function is defined.
+The render_html function takes a row as an argument and renders
+an HTML page using Jinja2.
+The FileSystemLoader is used to load the HTML template file,
+and the Environment is used to create a Jinja2 environment.
+The get_template method is used to load the HTML template file,
+and the render method is used to pass values to the placeholders
+in the template when rendering.
+Finally, the rendered HTML is saved to a file.

@@ -1,0 +1,4 @@
+To add a patch to dwm, do:
+--------------------------
+git patch <patch_name>
+--------------------------

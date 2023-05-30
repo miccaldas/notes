@@ -1,0 +1,11 @@
+If you want to ignore messages sent to the terminal by
+overly chatty apps or just an error you don't care
+about, use one of these commands.
+This first suppresses output to STDOUT.
+The second to STDERR.
+The third, both.
+--------------------------------------------------------
+<command> 1>/dev/null
+<command> 2>/dev/null
+<command> &>/dev/null
+--------------------------------------------------------

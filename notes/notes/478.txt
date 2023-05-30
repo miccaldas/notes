@@ -1,0 +1,4 @@
+The characters in Sed you need to escape are:
+---------------------------------------------
+‘?’, ‘+’, parentheses, braces (‘{}’), and ‘|’
+---------------------------------------------

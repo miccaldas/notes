@@ -1,0 +1,9 @@
+To remove a tuple from a list, use a list
+comprehension:
+--------------------------------------------------
+foo = [('Abbott', 'Texas'), ('Abernathy','Texas'),
+        ('Abilene', 'Texas'),('Ace', 'Texas'),
+       ('Ackerly', 'Texas')]
+foo = [x for x in foo if x!= ("Abilene", "Texas")]
+--------------------------------------------------
+ https://tinyurl.com/yz2gt4sy:wq

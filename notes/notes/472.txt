@@ -1,0 +1,7 @@
+To skip over elements in a iteration, you
+can use range to indicate what steps will
+be affected:
+-----------------------------------------
+for i in range(1, 10, 2)
+    print(i, end='. ')
+-----------------------------------------

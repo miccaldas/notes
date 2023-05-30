@@ -1,0 +1,7 @@
+----------------------------------------------
+with open('C:/path/numbers.txt') as f:
+    lines = f.read().splitlines()
+---------------------------------------------
+this will give you a list of values (strings)
+you had in your file, with newlines stripped.
+https://bit.ly/38TxQ4y

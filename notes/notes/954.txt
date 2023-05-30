@@ -1,0 +1,9 @@
+To use 'pynput' or other libraries that need to identify keyboard keys, it's
+needed to know the codes by which they are known. As we're using a Xorg system,
+it's the Xorg's keycodes that we need. To get them use this command:
+------------------------------------------------------------------------------------
+xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+------------------------------------------------------------------------------------
+This will, unfortunately, open a gui window, but all the interaction will be in the
+terminal. Just press the key that you need to know the code, and Xev will output it's
+name and numerical code.

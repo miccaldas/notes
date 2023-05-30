@@ -1,0 +1,6 @@
+If you're trying to get your bearings on a vim file. 
+that you want to keep it at a certain length. you
+can use a length marker to highlight the limit:
+---------------------------------------------------
+:set colorcolumn=90
+---------------------------------------------------

@@ -1,0 +1,5 @@
+   
+   To number output of apps or logs,
+   you can use the nl linux app:
+   ---------------------------------
+   sudo journalctl

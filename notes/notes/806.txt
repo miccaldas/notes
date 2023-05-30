@@ -1,0 +1,7 @@
+If you want to receive just the error message
+without the traceback in Python, do this:
+---------------------------------------------
+import sys
+
+sys.tracebacklimit=0
+----------------------------------------------

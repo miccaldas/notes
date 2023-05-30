@@ -1,0 +1,8 @@
+The error "indentation error unindent does not match any
+outer indentation level", is hard to solve because a lot
+of times the error is found on the first line of the
+file, not on the offendind line. To solve this, there is
+this handy python function:
+--------------------------------------------------------
+python -tt <file name>
+--------------------------------------------------------

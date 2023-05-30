@@ -1,0 +1,6 @@
+To insert a link in a icon, see the present example:
+--------------------------------------------------------------
+ <p><a href='<?php echo $user["link"]; ?>' target="_blank"> \
+ <img src='http://localhost/bkmks/images/seo.png'>\
+ </a></div></p>
+ -------------------------------------------------------------

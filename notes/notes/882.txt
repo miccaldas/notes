@@ -1,0 +1,7 @@
+To count occurences of a certain character
+in a string, do this:
+-----------------------------------------
+a = 'some_string'
+a.count('s')
+2
+----------------------------------------

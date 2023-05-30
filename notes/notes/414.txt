@@ -1,0 +1,12 @@
+This is an example taken from a first excperience with the notes site,
+to access a element inside a list of lists:
+----------------------------------------------------------------------
+for <inner_list> in <outer_list>:
+       <inner_list>[<index_number>] = <code of the alteration>
+-----------------------------------------------------------------------
+Example of adding substring to beginnig and end of a list element:
+-----------------------------------------------------------------------
+   for lst in null_list:
+       lst[5] = lst[5][:0] + "<?php require '" + lst[5][0:]
+       lst[5] = lst[5][:-1] + "' ?>
+-----------------------------------------------------------------------

@@ -1,0 +1,13 @@
+The Sphinx, documentation builder for Python, tool, has, am ong other things a
+command to update your HTML files with documentation. As Sphinx is prone to get
+attached to old versions of your documents, due to relentless caching, your
+update command should be able to circumvent that. So this is how you should
+update your HTML Sphinx files:
+--------------------------------------------------------------------------------
+sphinx-build -a -E -b html . _build/html
+--------------------------------------------------------------------------------
+Where:
+-a  Writes all files, not just what Sphinx thinks is new or changed. As it can't
+    be trusted to make that assumption.
+-E  Don't use saved environment. Always use the files.
+-b  Defines the builder to use. In this case, HTML.

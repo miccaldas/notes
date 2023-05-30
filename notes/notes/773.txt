@@ -1,0 +1,8 @@
+As a lot of sed commands fail when sent through subprocess,
+I discovered that if you wrap it in a sh file, it will run
+as it should. For example:
+-----------------------------------------------------------
+Instead of: subprocess.run('sed ...', shell=True),
+do:
+    subprocess.run('./file_with_cmd_inside.sh', shell=True)
+------------------------------------------------------------

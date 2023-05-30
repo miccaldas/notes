@@ -1,0 +1,11 @@
+Marker is an app that stores commands for future reference.
+You retrieve them through a fuzzy finder.
+Important commands:
+-----------------------------------------------------------
+Ctrl-space - searches commands similar to the one you just
+wrote.
+Ctrl-k - Bookmark a command
+Ctrl-t - place cursor on next placeholder
+'marker remove' - remove bookmark
+------------------------------------------------------------
+https://github.com/pindexis/marker

@@ -1,0 +1,6 @@
+It's possible, with Kitty terminal, to have all links on a
+page highlighted and numerated. To follow one, you just have
+to punch its number.
+-------------------------------------------------------------
+ctrl + shift + e
+-------------------------------------------------------------

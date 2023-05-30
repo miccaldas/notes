@@ -1,0 +1,52 @@
+The Multiprocessing library in Python lets you accelerate code that has the
+following characteristics:
+1. It's repetitive. You'll be doing the same operation several, only with
+   different inputs. Like a 'for' loop, for example.
+2. There's no concern regarding the order of completion of the loops. If it's
+   indifferent if you do line 3 now and line 456 next, this thing's for you.
+   If not, not so much.
+3. It's CPU expensive. Creating several new processes to deal with a task also
+   increases complexity. If the task is so envolved that this overhead won't be
+   a problem, this is for you.
+As far as I understand up till now, this allows to create several concurring
+processes that speed a loop process.
+But the functions used have to comply with a certain structure:
+1. There must be a function that's applied to data to power the loop. In other
+   words, there must have a function who expects an external input to make it work.
+   Something like this:
+   --------------------------------------------------------------------------------
+   def example(names_list):
+       for name in name_list:
+           new_name = name.lower()
+   --------------------------------------------------------------------------------
+   This function does nothing by itself. IT needs to be provided data, that'll make
+   it work. This is the format for functions in multiprocessing.
+2. Data must be external and fed to the function. This will be made available
+   when running it. Let's look at a real example, taken from 'cli_apps'. This
+   runs the Scrapy command to start a spider, on several spider files. Since
+   it's a repetitive task, and it's not important which of the spiders
+   starts/ends first, it's a gerat candidate for multiprocessing.
+   ---------------------------------------------------------------------------------
+    def run_spider(lstfls):
+        cmd = f"scrapy crawl {lstfls[:-3]}"
+        subprocess.run(cmd, cwd=f"{os.getcwd()}/paralel/", shell=True)
+
+
+    if __name__ == "__main__":
+        fldr = f"{os.getcwd()}/paralel/paralel/spiders"
+        lstfls = os.listdir(fldr)
+        with Pool() as pool:
+            pool.map(run_spider, lstfls)
+    ---------------------------------------------------------------------------------
+    There's several things to take note here:
+    * The function expects a list('lstfls') and for each memeber of the list,
+      it'll truncate the last 3 characters, create a new name and use it to feed
+      the Scrapy command.
+    * All of the multiprocessing logic and data are outside the function. We
+      define the list outside and create several worker processes to
+      concurrently run the function. We use 'Pool', that creates one worker per
+      cpu, and uses Python's function 'map', to iterate through them.
+    Although in most cases multiprocessing doesn not bring apreciable speed
+    increases, especially if the tasks are computationally light, in this and
+    other Scrapy related uses, it demonstrated to be very useful.
+

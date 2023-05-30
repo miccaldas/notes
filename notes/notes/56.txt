@@ -1,0 +1,5 @@
+If you get an error saying that are missing default
+values, input this line in a mysql session:
+----------------------------------------------------
+SET GLOBAL sql_mode = 'ONLY_FULL_GROUP_BY';
+----------------------------------------------------

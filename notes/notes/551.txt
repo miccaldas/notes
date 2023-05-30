@@ -1,0 +1,12 @@
+To look inside a Python object and see what is
+made of, we can use the following functions:
+----------------------------------------------
+type()
+dir()
+id()
+getattr()
+hasattr()
+globals()
+locals()
+callable()
+----------------------------------------------

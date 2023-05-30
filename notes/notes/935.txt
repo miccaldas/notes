@@ -1,0 +1,7 @@
+Litecli and Mycli share the same system of adding favorite queries in memory:
+-----------------------------------------------------------------------------
+\fs <name> <command>;   Saves a command in favorites with the given name.
+\f <name>;   Invokes favorite query by name.
+\f;   List all favorite queries.
+\fd <name>;   Delete a favorite query.
+------------------------------------------------------------------------------

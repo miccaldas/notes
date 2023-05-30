@@ -1,0 +1,5 @@
+https://tortoise-orm.readthedocs.io/en/latest/
+https://storm-orm.readthedocs.io/en/latest/
+http://sqlobject.org
+https://ponyorm.org
+https://www.sqlalchemy.org

@@ -1,0 +1,39 @@
+I'll put here some successful examples of sed commands that
+ran without any problems.
+-----------------------------------------------------------
+
+sed -e "s/tag= \(.*\)\">/\1/" complete_lines.txt
+Added separated tag values to complete lines. The '\1' 
+symbol represents the content of the first '/.../' section,
+and, as the second '/.../' section on a replace command
+means the output, tells sed to output it.
+
+-----------------------------------------------------------
+
+sed 's/php?/&, /' lines_tags.txt
+Replaced the 'php?' string with the '&, ' string.
+
+-----------------------------------------------------------
+
+sed -ne "s/.*/\'&/p" lines_tags.txt
+This was used to add a character, "'", to the beginning of
+the line. The e apparently means 'script' and adds it to the
+command, but I don't see how that's relevant to this example.
+The pattern '.*' means, all characters except line-break
+('.'), in all lines of the document ('*').
+The ampersand means  “the whole part of the input that was
+matched by the pattern”.
+The 'p' in the end of the expression stands for 'print'.
+
+-----------------------------------------------------------
+
+sed "s/php?/&'/" lines_tags.txt
+Puts a "'" in the end of the first element.
+
+-----------------------------------------------------------
+
+sed "s/, /&'/" lines_tags.txt
+And this one puts another at the start of the second
+element.
+
+-----------------------------------------------------------

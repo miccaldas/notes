@@ -1,0 +1,6 @@
+To delete x number of characters with sed, you can just signal
+how many you want with dots.
+In this case, I deleted 6 characters from the end of the line.
+--------------------------------------------------------------
+sed -r "s/......$//g"  apagar
+--------------------------------------------------------------

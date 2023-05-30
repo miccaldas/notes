@@ -1,0 +1,18 @@
+This works for header and footer alike. When you have a always visible
+header/footer in a site, with the position set on 'fixed', This makes
+these elements invisible to the rest of the page and they will scroll
+over it as if not there. To avoid that you should do the following:
+1 - Your header should have this characteristics:
+   1.1 - position fixed;
+   1.2 - top: 0;
+   1.3 - define a background-color or image;
+   1.4 - give a padding-top value to the element beneath the header
+   also create another like this:
+-----------------------------------------------------------------------
+   header + preceding_element {
+       padding-top: Xpx;
+   }
+-----------------------------------------------------------------------
+   1.5 - Define 'z-index' values so as to guarantee that the elements
+   that we want on top have the higher numbers. The higher, the more
+   visible.

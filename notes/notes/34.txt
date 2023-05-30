@@ -1,0 +1,15 @@
+You need to open the file and read its contents in memory,
+then open the file again write the line to it but without
+the line you wish to omit
+Example:
+---------------------------------------------------------
+with open('yourfile.txt', 'r') as f:
+    lines = f.readlines()
+with open('yourfile.txt', 'w') as f:
+    for line in lines:
+            if line.strip('
+') != 'nickname_to_delete':
+                f.write(line)'
+--------------------------------------------------------
+https://bit.ly/3nUlzRp
+

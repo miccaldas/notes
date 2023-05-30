@@ -1,0 +1,8 @@
+If you would like to load a python file into Ipython, you can
+do it with ipython magic method '%load'. It loads from a file
+or url, among others alternatives. You can choose to load
+only a snippet of the file, a mthod or function.
+---------------------------------------------------------------
+%load <file_name>
+---------------------------------------------------------------
+https://ipython.readthedocs.io/en/stable/interactive/magics.html

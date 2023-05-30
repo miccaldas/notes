@@ -1,0 +1,16 @@
+When debugging programs like Curses or other programs that take
+ownership of the terminal window, when entering pdbr, its
+window it's all jumbled up. I found this that may help, although
+I haven't tried it yet.
+The idea is to send the output to another terminal session, in
+our case, in another dwm tag. You'll have to find the where the
+tty session is hosted in /dev. To know this, go to the terminal
+you want to send the output to, and call this linux command:
+----------------------------------------------------------------
+tty
+----------------------------------------------------------------
+Invoke the program in this manner:
+----------------------------------------------------------------
+python <file_you_want.py> 2><dev_path_you_got_from_tty>
+----------------------------------------------------------------
+https://tinyurl.com/2ndt9v2n

@@ -1,0 +1,13 @@
+MySQL's generated columns, allow you to create
+columns that are the result of an arithmetical
+calculation. For example:
+-----------------------------------------------
+ALTER TABLE products
+ADD COLUMN stockValue
+GENERATED ALWAYS AS (buyprice*stock) STORED;
+-----------------------------------------------
+STORED refers if you create a normal column or
+use a virtual one. Keep in mind the default is
+virtual. So you have to put STORED.
+------------------------------------------------
+https://tinyurl.com/yhdmfsj2

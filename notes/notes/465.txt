@@ -1,0 +1,12 @@
+To replace the whole line where a match
+was found, do this:
+----------------------------------------
+pattern to find in line - 'six'
+substitution pattern - 'fault'
+
+check all lines:
+sed 's/.*six.*/fault/' file
+matched lines -> then remove:
+sed '/six/s/.*/fault/' file
+----------------------------------------
+https://tinyurl.com/ye8j3s8z

@@ -1,0 +1,17 @@
+Para alterar uma table que não possa ser alterada por
+sqlite-utils,podemos usar este modelo. É também mais seguro,
+que o sqlite-utils também faz alguma merda.
+-------------------------------------------------------------
+PRAGMA foreign_keys=off;
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS new_table(
+   column_definition,
+);
+INSERT INTO new_table(column_list)
+SELECT column_list
+FROM table;
+DROP TABLE table;
+ALTER TABLE new_table RENAME TO table;
+COMMIT;
+PRAGMA foreign_keys=on;
+-------------------------------------------------------------

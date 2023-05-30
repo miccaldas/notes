@@ -1,0 +1,4 @@
+Example of how to convert date into
+unix epoch time:
+------------------------------------
+date -d '2021-06-11 00:32:30 GMT' +%s

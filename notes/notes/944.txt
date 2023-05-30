@@ -1,0 +1,6 @@
+I always felt that it was a bit of overkill, to import 'sys', just so I can use sys.exit().
+It turns out, you don't have to. Where you would put the sys.exit() statement, write:
+-------------------------------------------------------------------------------------------
+raise SystemExit
+-------------------------------------------------------------------------------------------
+and you're done!

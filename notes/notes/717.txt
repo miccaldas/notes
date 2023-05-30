@@ -1,0 +1,10 @@
+To prevent a PHP/HTML form from resubmitting when refreshing the page,
+put this JavaScript code before the </body> tag:
+----------------------------------------------------------------------
+<script>
+   if ( window.history.replaceState ) {
+       window.history.replaceState( null, null, window.location.href );
+   }
+</script>
+-----------------------------------------------------------------------
+https://tinyurl.com/tonwks2

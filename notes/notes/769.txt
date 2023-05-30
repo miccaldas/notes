@@ -1,0 +1,10 @@
+To concatenate two variables:
+-----------------------------
+var3 = "$var1$var2
+-----------------------------
+Concatenate variables and
+strings:
+-----------------------------
+var2="${var1}string
+-----------------------------
+https://tinyurl.com/yc4jj8xo

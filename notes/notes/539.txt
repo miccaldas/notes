@@ -1,0 +1,5 @@
+To delete all empty lines in a file, do:
+----------------------------------------
+sed "/^$/d" <file>
+----------------------------------------
+https://tinyurl.com/ygzdkgb4

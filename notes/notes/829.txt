@@ -1,0 +1,5 @@
+As Vim replaces '\p' with '$' as eol symbol, it's sometimes
+difficult to know if we have a dos or a unix document.
+To see symbol by symbol what is there, use this:
+-------------------------------------------------------------
+od -ctx1 <name_of_the_document>

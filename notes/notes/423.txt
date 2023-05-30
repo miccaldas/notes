@@ -1,0 +1,18 @@
+To find and replace text in Vim, do the following:
+Search entire file and replace immediately:
+---------------------------------------------------
+:%s/foo/bar/g
+---------------------------------------------------
+To confirm each substitution, use the c flag:
+---------------------------------------------------
+:%s/foo/bar/gc
+---------------------------------------------------
+Press y to replace the match or l to replace the
+match and quit. Press n to skip the match and q
+or Esc to quit substitution. The a option
+substitutes the match and all remaining occurrences
+of the match. To scroll the screen down, use
+CTRL+Y, and to scroll up, use CTRL+E.
+----------------------------------------------------
+replace with bar (y/n/a/q/l/^E/^Y)?
+----------------------------------------------------

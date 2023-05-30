@@ -1,0 +1,19 @@
+For reasons That I know not, python when importing strings from
+a file, converts them to lists, which is very upsetting, since
+there were good reasons you were keeping them as strings in the
+first place.
+This a practical example where I was in the situation just
+described, and to undo what python had done.
+But I noticed that, although python had introduced the '[]' of
+a list, its type was in fact string. And if its string, its
+manipulation methods apply. So this is what I did:
+--------------------------------------------------------------
+flst = original list of tuples, with one element being a list.
+fflst = Empty list.
+
+for i in flst:
+    fflst.append((i[0], i[1][2:-5]))
+--------------------------------------------------------------
+Since its a string, I used slice notation to remove the
+rectangular parenthesis, line breaks, and the double quotes
+that made it look like a list.

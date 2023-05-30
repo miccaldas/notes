@@ -1,0 +1,5 @@
+After downloading the patch file to dwm's folder do:
+----------------------------------------------------
+patch -i <patch_file>
+----------------------------------------------------
+reinsatall and restart dwm.

@@ -1,0 +1,5 @@
+If a Fulltext index is not working,
+Se if this is enabled:
+-----------------------------------
+ALTER TABLE table name ENABLE KEYS;
+-----------------------------------

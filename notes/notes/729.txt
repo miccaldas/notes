@@ -1,0 +1,5 @@
+To ignore a error message just for one line of code, write in
+the line that generates the error:
+--------------------------------------------------------------
+# noqa: <error_id>
+--------------------------------------------------------------

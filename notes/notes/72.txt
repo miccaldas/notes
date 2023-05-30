@@ -1,0 +1,17 @@
+Fabric is a high level Python library designed to execute
+shell commands remotely over SSH.
+Example taken from a script written to alter folder
+permissions when updating content on the hugo blog server:
+-----------------------------------------------------------
+from fabric import Connection
+c = Connection(
+    host = 'constantconstipation.club',
+    user = 'root',
+    connect_kwargs={
+        'key_filename': '/home/mic/.ssh/id_rsa'
+    }
+)
+c.run('cd /var/www/constantconstipation.club/html/ &&
+chown -R www-data:www-data public')
+-----------------------------------------------------------
+http://www.fabfile.org/

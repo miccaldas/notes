@@ -1,0 +1,19 @@
+In Vim, this is the commands to comment
+and uncomment a series of lines.
+----------------------------------------
+UNCOMMENT:
+- Put cursor in first '#',
+- Press 'Ctrl-v',
+- Go down to the last commented line,
+- Press 'x',
+- Press 'Esc'.
+----------------------------------------
+COMMENT:
+- Go to first line you want to comment,
+- Press 'Ctrl-v',
+- Select until last line to comment,
+- Press 'Shift-i',
+- Press '#',
+- Press 'Esc'.
+----------------------------------------
+ https://tinyurl.com/2j5xglu7

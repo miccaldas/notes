@@ -1,0 +1,23 @@
+In order to have a virtual table in Sqlite, to use for full text search, you need it to
+stay in sync with the main table. For this, we'll create three triggers that'll mirror
+changes made by an insertion, a deletion and an update, in the 'pwd' to 'pwd_fts'.
+----------------------------------------------------------------------------------------
+CREATE TRIGGER aft_insert AFTER INSERT ON pwd
+BEGIN
+INSERT INTO pwd_fts(pwdid, site, username, pwd, comment, time, context)
+VALUES(new.pwdid, new.site, new.username, new.pwd, new.comment, new.time, new.context);
+END;
+
+CREATE TRIGGER aft_del AFTER DELETE ON pwd
+FOR EACH ROW
+BEGIN
+DELETE FROM pwd_fts WHERE (old.pwdid = pwdid); END;
+
+CREATE TRIGGER aft_updt AFTER UPDATE ON pwd
+FOR EACH ROW
+BEGIN
+DELETE FROM pwd_fts WHERE (old.pwdid = pwdid);
+INSERT INTO pwd_fts(pwdid, site, username, pwd, comment, time, context)
+VALUES(new.pwdid, new.site, new.username, new.pwd, new.comment, new.time, new.context);
+END;
+----------------------------------------------------------------------------------------

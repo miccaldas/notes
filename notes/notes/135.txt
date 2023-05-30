@@ -1,0 +1,15 @@
+To open a port for a application in linux,
+do the following:
+-----------------------------------------------
+iptables -A INPUT -p tcp --dport 4000 -j ACCEPT
+sudo systemctl restart iptables
+------------------------------------------------
+To test it, do this:
+------------------------------------------------
+ls | nc -l -p 4000
+------------------------------------------------
+and now in another terminal:
+------------------------------------------------
+telnet localhost <port number>
+------------------------------------------------
+ https://tinyurl.com/yjjk4n8v

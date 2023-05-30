@@ -1,0 +1,8 @@
+To get the dimensions of current terminal, do:
+----------------------------------------------
+import os
+
+terminal_size = os.get_terminal_size()
+height = terminal_size.lines
+width = terminal_size.columns
+-----------------------------------------------

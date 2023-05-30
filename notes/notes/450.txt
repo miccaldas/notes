@@ -1,0 +1,6 @@
+To configure and prettify your docstrings,
+use the following command:
+------------------------------------------
+pyment -w <file_name>
+------------------------------------------
+https://github.com/dadadel/pyment

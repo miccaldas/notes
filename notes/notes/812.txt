@@ -1,0 +1,8 @@
+To send information from a table to another
+on the same database, do this:
+---------------------------------------------
+INSERT INTO table2 (column 1, column 2, ...)
+SELECT column 1, column 2 ...
+FROM table1
+WHERE id = <some_number>
+---------------------------------------------

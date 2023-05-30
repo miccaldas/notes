@@ -1,0 +1,10 @@
+To access the alphabet, punctuation and numerals
+in Python, do the following:
+-------------------------------------------------
+import string
+
+print(string.ascii_letters)
+print(string.digits)
+print(string.punctuation)
+--------------------------------------------------
+https://tinyurl.com/y7339t85

@@ -1,0 +1,10 @@
+The program that serves the icons by folder/files in the "ls
+command is "ls-icons". To alter the colors being used its
+necessary to recompile the program. Here are the needed steps:
+--------------------------------------------------------------
+./bootstrap
+export CC=clang CXX=clang++
+./configure --prefix=/opt/coreutils
+make
+sudo make install
+--------------------------------------------------------------

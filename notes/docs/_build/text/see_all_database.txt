@@ -1,0 +1,82 @@
+See All
+*******
+
+
+All
+===
+
+Module to show content from the db, using note files.
+
+notes.all.all(*args: Any, **kwargs: Any) -> Any
+
+      Called with 'ntall'. When called without options, collects and
+      shows the db's content.
+
+   Parameters:
+      **-n** -- Integer defining how many of the more recent entries
+      will be displayed. For example:
+
+   'ntall -n 5',
+
+   Returns:
+      five latest entries in the database.
+
+
+Delete
+======
+
+Command line version of Notes' delete function.
+
+notes.delete.delete(*args: Any, **kwargs: Any) -> Any
+
+   Function that deletes one, several or range of entries in the
+   'notes' database.
+
+   You can call it with 'ntdlt' in the following forms:
+
+   1. Delete non sequential entries. Surround the ids with quotation
+      marks and separate them with a comma:
+
+      ntdlt '435,436'
+
+   2. Delete sequential entries. Envelop first and last ids with
+      quotation marks and separate them with a dash:
+
+      ntdlt '437-439'
+
+   3. Delete single entry.
+
+      ntdlt 66
+
+
+Search
+======
+
+Module to do searches in db, but present the notes from files.
+
+notes.search.search(*args: Any, **kwargs: Any) -> Any
+
+   Receives search query, looks in db, and outputs to terminal with
+   Blessed.
+
+   Called with 'ntsrch'.
+
+
+Update
+======
+
+Command line implementation of the update funtion on Notes.
+
+notes.update.update(*args: Any, **kwargs: Any) -> Any
+
+   Updates the value of some column in a given id.
+
+   Parameters:
+      * **-n** -- Integer of the ntid value.
+
+      * **-c** -- Column to update.
+
+      * **-u** -- String with the update. If you chosen 'note' in
+        'column', it'll open a Vim page for you to edit it.
+
+   Called with 'ntupdt'.

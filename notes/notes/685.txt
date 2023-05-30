@@ -1,0 +1,5 @@
+To upload a SQL dump file to a Django database, do this:
+--------------------------------------------------------
+cat filename.sql | python manage.py dbshell
+--------------------------------------------------------
+https://tinyurl.com/yjjv587h

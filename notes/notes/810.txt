@@ -1,0 +1,12 @@
+With Seuptools it's possible to access a function in a script by a given name. In the
+'setup.cfg' file, on the 'entry points' part, write:
+--------------------------------------------------------------------------------------------
+[options.entry_points]
+console_scripts =
+   <script_name> = <name_of_package>.<name_of_directory>.<name_of_file>.<name_of_function>
+--------------------------------------------------------------------------------------------
+After that, stay in the level where setup.cfg is and input this command:
+---------------------------------------------------------------------------------------------
+pip install --editable .
+---------------------------------------------------------------------------------------------
+Now you can access the function inputting only the chosen <script_name>.

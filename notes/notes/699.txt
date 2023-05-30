@@ -1,0 +1,15 @@
+Although the subject is extensive and I don't grok it completely,
+here's first impressions on how you can use full-text search in
+postgres:
+-------------------------------------------------------------------
+SELECT <column>
+FROM <table>
+WHERE to_tsvector(<another_column>) @@ to_tsquery('<query string>');
+As an example:
+Select all title entries from the bookmark table, in lines where the
+comment column had this particular query string.
+The '@@' symbol means text search.
+There is more to this, but, as a starter, this intro
+will do.
+---------------------------------------------------------------------
+https://tinyurl.com/yjqy69lo

@@ -1,0 +1,8 @@
+To connect to nordvpn do this:
+---------------------------------------
+cd /etc/openvpn/ovpn_udp
+sudo openvpn se492.nordvpn.com.udp.ovpn
+user: micaldas@mailfence.com
+pwd: $Gfip9oR;H}u
+----------------------------------------
+https://tinyurl.com/y92dmaod

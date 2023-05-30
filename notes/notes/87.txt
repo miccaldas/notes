@@ -1,0 +1,16 @@
+To use an arithmetical operation on
+MySQL db's you can do the following:
+example with subtraction:
+------------------------------------
+UPDATE <table_name>
+SET <column_to_be_altered> = \
+<column_to_be_altered> - <value>
+-------------------------------------
+Although this is interesting, if
+possible use generated columns, like
+this example taken from the adventure
+game:
+--------------------------------------
+ALTER TABLE mana ADD COLUMN total \
+GENERATED ALWAYS AS (value+damage) \
+STORED;

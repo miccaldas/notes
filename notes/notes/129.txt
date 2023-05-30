@@ -1,0 +1,7 @@
+To install a aur package manually, do the this:
+-----------------------------------------------------
+Download the package,
+Uncompress with "unzstd <name of com+pressed package>
+check the PKGBUILD to see what could be changed,
+makepkg -si
+------------------------------------------------------

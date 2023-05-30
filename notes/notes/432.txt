@@ -1,0 +1,7 @@
+ This is an example of how to put text on beginning of
+ file. No exemplo o text a inserir é 'task goes here.'
+ ------------------------------------------------------
+ echo 'task goes here' | cat - todo.txt > temp && mv \
+ temp todo.txt
+ ------------------------------------------------------
+  https://tinyurl.com/yyhvrcaj

@@ -1,0 +1,29 @@
+When using csv files, the Pandas library has better support for the
+format than the official csv library.
+This is an example of how it can be used to select columns on a set.
+--------------------------------------------------------------------
+"dept.csv
++----------------------+
+| Name    | Department |
++----------------------+
++----------------------+
+| John    |     IT     |
++----------------------+
+| Jane    |     HR     |
++----------------------+
+| Jack    | Accounting |
++----------------------+
+
+df = pd.read_csv('dept.csv', sep='|')
+print(df['Name'])
+
++------------+
+|    IT      |
++------------+
+|    HR      |
++------------+
+| Accounting |
++------------+
+-----------------------------------------------------------------------------
+https://tinyurl.com/yg72h6xq
+https://tinyurl.com/yzd3235u

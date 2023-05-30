@@ -1,0 +1,11 @@
+To add clipboard functionality to vim running
+on a server has several steps.
+---------------------------------------------
+1 - Install Xorg
+2 - Select a 'huge' distribution from vim
+3 - Verify that ~/.ssh/config exists on your
+    local computer and add this:
+    Host myserver
+       ForwardX11 yes
+       ForwardX11Trusted yes
+---------------------------------------------

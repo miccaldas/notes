@@ -1,0 +1,13 @@
+To iterate through files in a folder, use the
+following formulation to create a list of
+complete URLS for all the files, as an example:
+------------------------------------------------
+import os
+
+paths = []
+folder = '/path/to/folder'
+for filename in os.listdir(folder):
+    paths.append(os.path.join(folder, filename))
+print(paths)
+-------------------------------------------------
+https://tinyurl.com/yeqvybpx

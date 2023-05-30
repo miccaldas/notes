@@ -1,0 +1,6 @@
+To get a list, dictionary ... expunged of repeated
+values do the following:
+--------------------------------------------------
+set(<iterator_to_be_cleaned>)
+--------------------------------------------------
+https://www.geeksforgeeks.org/python-set-method/

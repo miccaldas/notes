@@ -1,0 +1,12 @@
+I created two commands in ranger that allow you to extract a
+compresssed file, through atool, or create a compressed file
+in tar format.
+In both cases to select the file put the cursor over the file
+you want but don't click on it.
+For extracting write:
+------------------------------------------------------------
+:extract
+------------------------------------------------------------
+For compressing write:
+------------------------------------------------------------
+:compress

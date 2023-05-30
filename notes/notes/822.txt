@@ -1,0 +1,22 @@
+ I've created this note so as to have all the information about
+ Ripgrep in the same place. There are some moving parts and the
+ app is deep when it comes to functionality.
+ My first link is to Ripgrep's Github page, that gives a good
+ presentation on how to work with the app...
+ ---------------------------------------------------------------
+ https://github.com/BurntSushi/ripgrep#ripgrep-rg
+ ---------------------------------------------------------------
+ but lacks some information on all the functionalities it offers.
+ For that we have this good man page:
+ ----------------------------------------------------------------
+ https://www.mankier.com/1/rg
+ ----------------------------------------------------------------
+ As Ripgrep doesn't cover a lot of byte file formats, it was
+ needed to get Ripgrep-all, that works as wrapper for the former
+ ----------------------------------------------------------------
+ https://github.com/phiresky/ripgrep-all
+ ----------------------------------------------------------------
+ And, finally, we need to brush up on Rust's version of Regex,
+ since that it's what is used to make the queries.
+ -----------------------------------------------------------------
+ https://docs.rs/regex/1.7.1/regex/#syntax

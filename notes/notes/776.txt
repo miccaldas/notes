@@ -1,0 +1,7 @@
+When python is not finding your modules, you can use
+the sys.path() method:
+-----------------------------------------------------
+'sys.path' - Shows paths kept in sys.path()
+'sys.path.append('some_path') - Appends to sys.path(),
+'some_path'
+------------------------------------------------------

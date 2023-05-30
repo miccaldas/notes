@@ -1,0 +1,6 @@
+If you have two columns with the same name but in different tables, and if you
+want to copy from one to another, do this:
+------------------------------------------------------------------------------
+UPDATE [table1] SET [column_name]=(SELECT [column_name] FROM [table2])
+------------------------------------------------------------------------------
+Works in Sqlite3, don't if it works in MySQL.

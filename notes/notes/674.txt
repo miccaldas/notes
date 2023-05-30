@@ -1,0 +1,11 @@
+After having exported the sql file containing the db,
+this can be imported to another server by creating a
+new database. It is only needed the command:
+-----------------------------------------------------
+CREATE DATABASE <bd_name>
+-----------------------------------------------------
+After use this cli command:
+-----------------------------------------------------
+mysql -u <username> -p <new_db_name> < file.sql
+-----------------------------------------------------
+Nothing more is needed. The process is automatic.

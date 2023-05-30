@@ -1,0 +1,81 @@
+In what appears to be a simpler option to Celery or Huey,
+Systemd has created 'Timers', for creating periodical
+tasks based in Systemd Services.
+First you have to create the service file and copy it to:
+---------------------------------------------------------
+/usr/lib/systemd/system/
+---------------------------------------------------------
+What follows is an example of service that runs git:
+add, commit and push. It starts after the network service,
+has a working directory that specifies where are the files
+that'll be used in command set on 'ExecStart', defines a
+user/group and a type. We're using 'simple' that's the
+default, but is a good idea to consult the documentation
+on:
+-----------------------------------------------------------
+https://tinyurl.com/y85fobz5
+-----------------------------------------------------------
+to see if there i not a type that is better suited to your
+task. A reminder, although processes like Celery and Huey
+are better suited to be type 'forking', there is the fact
+that, until the main process forks to child processes,
+Systemd does not consider it successfully started. And two
+things may happen:
+   1 - Systemd closes the process because it took to long
+       to start. This is default behaviour and can be
+       modified by setting the 'TimeOutStartSec' variable
+       in the '[Service]' unit, to a timespan longer than
+       its periodic tasks loop.
+   2 - Even with 'TimeOutStartSec' hack, the process will
+       be a start limbo until its, finally, called.
+And that is why we use the type, 'simple'.
+What follows is an already implemented example of a
+service file:
+-----------------------------------------------------------
+[Unit]
+Description=Celery Task for Yay Updating.
+After=network.target
+
+[Service]
+WorkingDirectory=/home/mic/python/cli_apps/cli_apps/yay_querying/celery
+ExecStart=/usr/bin/celery -A celery worker -E --loglevel=INFO
+TimeOutStartSec=10200min
+User=mic
+Group=mic
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+------------------------------------------------------------
+The timer file is housed in the folder than the service,
+shares with the service file, the same 'Description' variable
+and uses the service name in the 'Require' variable of the
+'[Unit]' field and on the 'Unit' variable of the '[Timer]'
+file.
+It also has several types, but, generally, you're safe to
+choose the 'OnCalendar' option. This uses a cron like syntax
+to define the periodicity. The other types count time from
+an event in the service; like started, stopped, inactivity
+and others. More information on:
+------------------------------------------------------------
+https://tinyurl.com/yg6qgzwq
+------------------------------------------------------------
+And now, for an example of a timer file:
+------------------------------------------------------------
+[Unit]
+Description=Updates Git Status.
+Requires=home_git_updt.service
+
+[Timer]
+Unit=home_git_updt.service
+OnCalendar=Weekly
+
+[Install]
+WantedBy=timers.target
+-------------------------------------------------------------
+And lastly, remember to run:
+-------------------------------------------------------------
+sudo systemctl daemon-reload
+-------------------------------------------------------------
+every time you alter a service or a timer.

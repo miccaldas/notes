@@ -1,0 +1,6 @@
+Sometimes I import 'sys' just to use the sys.byteorder value, when creating a
+bytes object. This is, obviously I know, not needed. Just use:
+------------------------------------------------------------------------------
+'little'
+------------------------------------------------------------------------------
+That's the sys.byteorder value in your machine.

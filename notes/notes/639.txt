@@ -1,0 +1,12 @@
+In case that your repository already has uploads
+like pycache or log files, you can block these
+files in .gitignore, but these won't remove them
+from the repository.
+To do this, first commit all changes to git and 
+then use these commands:
+-------------------------------------------------
+git rm -rf --cached .
+git add .
+git commit ...
+-------------------------------------------------
+https://tinyurl.com/yeomtda2

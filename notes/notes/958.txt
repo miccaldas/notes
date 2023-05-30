@@ -1,0 +1,2 @@
+When searching in the pwd_encrypted app, use only the site's name without the domain.
+For instance, to look for google.com, use only google.

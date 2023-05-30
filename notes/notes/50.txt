@@ -1,0 +1,10 @@
+If a error pops up that says that you have more
+values than columns, check that the table
+<name of your table>.fts_content, is not repeating
+the id value in the c0 column.
+If it is, delete your fts table and your triggers,
+and use this command:
+--------------------------------------------------
+sqlite-utils enable-fts --fts5 --create-triggers 
+<path/to/db> <table_name> <list of columns to use>
+--------------------------------------------------

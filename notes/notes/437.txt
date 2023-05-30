@@ -1,0 +1,15 @@
+To hide files/folders from Git, create a .gitignore file,
+we have a app called 'add-gitignore' that does it for you,
+if give input about what language you are using:
+----------------------------------------------------------
+add-gitignore python
+----------------------------------------------------------
+This command, when inside the folder where you want to 
+create a git repository, will create a .gitignore file with
+most of the things covered. But if you want to protect
+specific files or folders, open the .gitignore file and:
+-----------------------------------------------------------
+(add folder) -> folder_name/
+(add file)   -> .file_name
+-----------------------------------------------------------
+https://www.pluralsight.com/guides/how-to-use-gitignore-file

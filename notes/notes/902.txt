@@ -1,0 +1,13 @@
+To set an encrypted file with a passphrase in GPG
+you first need to encrypt it:
+------------------------------------------------
+gpg -c <file_name>
+------------------------------------------------
+It'll open a floating window ad ask for a
+passphrase. Input it, and it'll generate a file
+with the name of your original file plus a
+'.gpg' prefix. To decrypt it, do:
+-----------------------------------------------
+gpg -d <encrypted_file.gpg> > <output_file>
+-----------------------------------------------
+It'll ask you for passphrase and decrypt.

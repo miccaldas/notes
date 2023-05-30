@@ -1,0 +1,16 @@
+To replace substrings in a file that are at the beginning of a line,
+do this:
+-----------------------------------------------------------------------
+sed -i 's/^a\tb.*$/<replacement text>/g' <file>
+Where:
+^ - Represents beginning of file/input,
+\t - Represents tab symbol,
+. - Any character,
+* - Zero or more of the preceding expression
+$ - End of input
+-----------------------------------------------------------------------
+In a real life case, it was used like this:
+-----------------------------------------------------------------------
+sed 's/.*<expression to look for>.*/<substitution pattern>/g' file_name
+-----------------------------------------------------------------------
+https://tinyurl.com/ygfk75nc

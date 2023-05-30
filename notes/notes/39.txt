@@ -1,0 +1,9 @@
+Example:
+------------------------------------------------------------
+CREATE VIRTUAL TABLE BookSearch USING fts5(ID, Title, Desc);
+INSERT INTO BookSearch SELECT ID, Title, Desc FROM Book;
+------------------------------------------------------------
+Search like this:
+------------------------------------------------------------
+SELECT Title FROM BookSearch WHERE BookSearch MATCH 'cat';
+------------------------------------------------------------

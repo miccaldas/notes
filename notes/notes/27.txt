@@ -1,0 +1,5 @@
+To send the script output to journalctl,
+you do the following:
+----------------------------------------
+sudo systemd-cat ./path/to/script
+----------------------------------------

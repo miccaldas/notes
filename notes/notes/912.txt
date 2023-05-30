@@ -1,0 +1,3 @@
+To use truecolors in Click, do:
+----------------------------------------------------
+click.style('<somestr>', fg=(122, 12, 34), bold=True)

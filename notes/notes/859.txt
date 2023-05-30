@@ -1,0 +1,11 @@
+Because the 'KeyboardInterrupt' message can be annyoing,
+specially if the only thng you're doing is using 'Ctrl-c'
+To silence it, but maintain the functionality, do this:
+--------------------------------------------------------
+import sys
+
+try:
+   <code_that_is_causing_the_nessage>
+except KeyboardInterrupt:
+   sys.exit()
+--------------------------------------------------------

@@ -1,0 +1,6 @@
+To use Twzer, a command line URL shortener and
+expander, do the following:
+Shorten a link using Bitly with --bitly or -b:
+'twzer sh -b https://example.com'
+Expand a link using Google with --google or -g:
+'twzer ex -g https://goo.gl/F0pE'

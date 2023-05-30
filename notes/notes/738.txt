@@ -1,0 +1,5 @@
+To run a javascript file in the terminal,
+simply use:
+-----------------------------------------
+node name_of_file.js
+-----------------------------------------

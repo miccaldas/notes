@@ -1,0 +1,19 @@
+To update a MySQL column based on the value of another column,
+use the statement "CASE":
+--------------------------------------------------------------
+mysql> update employees
+    set first_name = (CASE
+                          WHEN id = 1
+                            THEN 'Tim'
+                          WHEN id = 2
+                            THEN 'Dave'
+                          END);
+mysql> select * from employees;
++------+------------+-----------+
+| id   | first_name | last_name |
++------+------------+-----------+
+|    1 | Tim        | Doe       |
+|    2 | Dave       | Doe       |
++------+------------+-----------+
+----------------------------------------------------------------
+https://tinyurl.com/yfr76qxp

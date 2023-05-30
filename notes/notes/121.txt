@@ -1,0 +1,5 @@
+To know the content of http respone header,
+just do this:
+-------------------------------------------
+wget -S <url of page>
+-------------------------------------------

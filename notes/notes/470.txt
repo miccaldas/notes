@@ -1,0 +1,11 @@
+To edit a specific line in a file, with Python,
+do the following;
+-----------------------------------------------
+with open('file_name', 'r') as f:
+lines = f.readlines()
+lines[1] = "<some text change>
+
+with open('file_name', 'w') as f:
+f.writelines(lines)
+-----------------------------------------------
+https://tinyurl.com/yhp4ug42

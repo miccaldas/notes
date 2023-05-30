@@ -1,0 +1,7 @@
+To get the result of a subprocess operation into a
+variable, do:
+---------------------------------------------------
+cmd=['ls']
+proc1 = subprocess.run(cmd, stdout=subprocess.PIPE)
+print(proc1.stdout)
+---------------------------------------------------

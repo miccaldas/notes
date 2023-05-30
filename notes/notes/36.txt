@@ -1,0 +1,22 @@
+Here's one example of the three trigger you must create:
+---------------------------------------------------------------------------
+CREATE TRIGGER aft_insert AFTER INSERT ON pwd
+BEGIN
+INSERT INTO pwd_fts(pwdid, site, username, passwd, comment, time)
+VALUES(new.pwdid, new.site, new.username, new.passwd, new.comment, new.time);
+END;
+---------------------------------------------------------------------------
+CREATE TRIGGER aft_del AFTER DELETE ON pwd
+BEGIN
+INSERT INTO pwd_fts(pwdid, site, username, passwd, comment, time)
+VALUES ('delete', old.pwdid, old.site, old.username, old.passwd, old.comment, old.time);
+END;
+--------------------------------------------------------------------------
+CREATE TRIGGER aft_updt AFTER UPDATE ON pwd
+BEGIN
+INSERT INTO pwd_fts(pwdid, site, username, passwd, comment, time)
+VALUES ('delete', old.pwdid, old.site, old.username, old.passwd, old.comment, old.time);
+INSERT INTO pwd_fts(pwdid, site, username, passwd, comment, time)
+VALUES(new.pwdid, new.site, new.username, new.passwd, new.comment, new.time);
+END;
+--------------------------------------------------------------------------

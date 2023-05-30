@@ -1,0 +1,5 @@
+ So we just verified that Powerline doesn't respect changes done in ~/.config. So here's the
+link for the root configurations:
+---------------------------------------------------------------------------------------------
+/usr/lib/python3.10/site-packages/powerline_status-2.8.3b11-py3.10.egg/powerline/config_files
+----------------------------------------------------------------------------------------------

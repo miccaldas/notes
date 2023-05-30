@@ -1,0 +1,5 @@
+If you want to see/compare the tim
+of execution of a process, just do:
+------------------------------------
+time <command_you_want_to_time>
+------------------------------------

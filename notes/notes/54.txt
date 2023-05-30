@@ -1,0 +1,8 @@
+To rebuild your fts service, do this in the console:
+------------------------------------------------------  
+sqlite-utils rebuild-fts <path/to/db> <fts_table_name>
+-------------------------------------------------------
+Mais informação ver:
+-------------------------------------------------------
+sqlite-utils rebuild-fts --help
+-------------------------------------------------------

@@ -1,0 +1,7 @@
+Vim has a efficient native spell checker.
+The two most import commands, are these:
+-----------------------------------------
+'z=' - see suggestions of spelling.
+'zg' - add to dictionary
+-----------------------------------------
+https://tinyurl.com/yg63tq6c

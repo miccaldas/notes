@@ -1,0 +1,12 @@
+If the MySQL's fulltext search is ending with a 
+"Can't find fulltext index matching column list",
+It may be because the matching fields of the
+search must be exactly like all the columns that 
+have fulltext index and must be shown in exactly 
+the same order.
+Example:
+------------------------------------------------------
+"SELECT title FROM db WHERE MATCH(todos os campos que \
+têm fulltext e na ordem que aparecem na base de dados)\
+AGAINST ('query')
+-------------------------------------------------------

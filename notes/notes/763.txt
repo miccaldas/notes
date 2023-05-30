@@ -1,0 +1,6 @@
+To convert Windows line breaks, '^M', to Unix ones, '\n',
+do the following:
+---------------------------------------------------------
+:e ++ff=dos
+:set ff=unix
+---------------------------------------------------------

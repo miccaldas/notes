@@ -1,0 +1,24 @@
+If you need to write to a pickle file more than once, do:
+---------------------------------------------------------
+import pickle
+
+<lst_of items_to_put_in_pickle> = [1, 2, 3, ...]
+with open ('<file>', 'wb') as f:
+   pickle.dump(<lst_of_items_to _put_in_pickle>, f)
+---------------------------------------------------------
+If you just do 'pickle.load' you'll receive only one 
+entry. You'll have to iterate through the entries:
+---------------------------------------------------------
+import pickle
+
+with open('<some_file>.bin', 'rb') as f:
+   entries = []
+   while True:
+       try:
+           emtries.append(pickle.load(f))
+       except EOFError:
+           break
+---------------------------------------------------------
+Notice the try/except block, it's needed because if you
+exceed the number of entries in your load attempts, it'll
+produce that error message. This silences it.

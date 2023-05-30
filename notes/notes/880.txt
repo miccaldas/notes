@@ -1,0 +1,5 @@
+In ~/python/reusable_files, there are 'txt' documents
+that can be inserted into python files using this command:
+-----------------------------------------------------------
+:r <path_to_file>
+-----------------------------------------------------------

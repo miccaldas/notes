@@ -1,0 +1,9 @@
+To delete all empty files in a folder, do:
+------------------------------------------
+fd -tf -S 0b -x rm
+------------------------------------------
+'-t' means file type, the 'f' that follows
+signifies 'file', '-S' is for 'file size',
+'0b' means '0 bytes', '-x' means that what
+comes after is a command. In this case
+it's the 'rm' command, to delete the files.

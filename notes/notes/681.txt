@@ -1,0 +1,5 @@
+To get an output from mysql without the table decoration,
+ask in this manner:
+---------------------------------------------------------
+mysql -B --user=mic --password='xxxx' -D bkmks --execute "select link from bkmks
+---------------------------------------------------------

@@ -1,0 +1,11 @@
+I installed an app called Trash that deletes files or
+folders but keeps a version in a 'Trash' folder.
+These are the commands I aliased:
+-------------------------------------------------------
+t_put - put file/folder in Trash
+tempty - empties trashcans
+tlist - list trashed files
+trestore - restore chosen trash file
+trm - remove specific files from trashcan
+-------------------------------------------------------
+https://tinyurl.com/y2fafmp5

@@ -1,0 +1,33 @@
+There are a couple of ways to add values to key, and to create a list
+if one isn't already there. I'll show one such method in little steps.
+----------------------------------------------------------------------
+key = somekey
+a.setdefault(key, [])
+a[key].append(1)
+----------------------------------------------------------------------
+Results:
+----------------------------------------------------------------------
+>>> a
+{'somekey': [1]}
+Next, try:
+key ='somekey'
+a.setdefault(key, [])
+a[key].append(2)
+-----------------------------------------------------------------------
+Results:
+-----------------------------------------------------------------------
+>>> a
+{'somekey': [1, 2]}
+------------------------------------------------------------------------
+The magic of setdefault is that it initializes the value for that key
+if that key is not defined, otherwise it does nothing. Now, noting
+that setdefault returns the key you can combine these into a single line:
+-------------------------------------------------------------------------
+a.setdefault('somekey',[]).append('bob')
+-------------------------------------------------------------------------
+Results:
+-------------------------------------------------------------------------
+>>> a
+{'somekey': [1, 2, 'bob']}
+-------------------------------------------------------------------------
+https://bit.ly/3p3h2O4

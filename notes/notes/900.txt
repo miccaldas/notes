@@ -1,0 +1,11 @@
+In order to convert a bytes object to an integer, do:
+---------------------------------------------------------
+import sys
+
+int.from_bytes(<byes_object_to_convert>, sys.byteorder())
+---------------------------------------------------------
+The second argument represents 'byteorder', or the order
+of where to put the most significant byte:
+'little' - Byte goes to the ned of the array.
+'big' - Byte goes to the start of the array.
+'sys.byteorder()' - Native byte order of the host system.

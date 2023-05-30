@@ -1,0 +1,5 @@
+There's nothing simpler than
+joining two Python lists:
+---------------------------
+lst3 = lst1 + lst2
+---------------------------

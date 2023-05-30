@@ -1,0 +1,14 @@
+Calibre Web is a web ebook reader service.
+It's self-hosted and shows all the 
+Calibre's library.
+You can start it with:
+--------------------------------------------
+sudo python3 cps.py # or,
+sudo nohup python3 cps.py
+--------------------------------------------
+Github - https://tinyurl.com/hz6f7fy
+Link - http://localhost:8083
+---------------------------------------------
+Username: admin
+Password: admin123
+---------------------------------------------

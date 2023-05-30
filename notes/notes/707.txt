@@ -1,0 +1,5 @@
+To pass a list of arguments to python fire,
+write the list like this:
+-------------------------------------------
+"[one, two]
+-------------------------------------------

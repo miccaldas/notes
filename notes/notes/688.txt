@@ -1,0 +1,22 @@
+To use in subprocess a piped expression such as:
+"cat index.rst | grep ".. include" | cut -f 3 -d
+do this:
+-------------------------------------------------
+cat = subprocess.Popen(['cat', 'index.rst'], 
+                       stdout=subprocess.PIPE,
+                       )
+
+grep = subprocess.Popen(['grep', '.. include::'],
+                       stdin=cat.stdout,
+                       stdout=subprocess.PIPE,
+                       )
+
+cut = subprocess.Popen(['cut', '-f', '3', '-d:'],
+                       stdin=grep.stdout,
+                       stdout=subprocess.PIPE,
+                       )
+
+end_of_pipe = cut.stdout
+print(end_of_pipe)
+----------------------------------------------------
+https://tinyurl.com/y57vk97m

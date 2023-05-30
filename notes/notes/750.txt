@@ -1,0 +1,7 @@
+To replace just the nth occurrence of a pattern, in
+this example, the second occurrence, we use the
+command (g) for global and the number of the
+occurrence we want to replacewe want to replace:
+----------------------------------------------------
+sed -nre 's/"pattern to find"/"substitute pattern/g2'
+----------------------------------------------------

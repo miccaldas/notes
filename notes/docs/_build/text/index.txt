@@ -1,0 +1,34 @@
+Welcome to Notes's documentation!
+*********************************
+
+
+Indices and tables
+******************
+
+* Index
+
+* Module Index
+
+* Search Page
+
+
+Contents
+========
+
+* See All
+
+  * All
+
+    * "all()"
+
+  * Delete
+
+    * "delete()"
+
+  * Search
+
+    * "search()"
+
+  * Update
+
+    * "update()"

@@ -1,0 +1,12 @@
+If you have abc on a line by itself,
+go to that line and, in normal mode:
+------------------------------------
+dd50gP
+------------------------------------
+That is, delete line, set 50 as
+repetition count, paste before
+cursor and move cursor to just after
+the new text (which has an empty
+line that you may or may not want to
+delete).
+-------------------------------------

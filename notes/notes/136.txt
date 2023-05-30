@@ -1,0 +1,9 @@
+To make a selection based in name, use the following
+structure:
+-----------------------------------------------------
+Element-name[name=<name of the element>]
+Example:
+input[name="goButton"] {
+ background: red;
+}
+-----------------------------------------------------

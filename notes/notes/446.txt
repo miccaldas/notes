@@ -1,0 +1,26 @@
+Vim has a builtin spelling command. This is how to use it.
+1 - To set a particularly dictionary as default, only for
+markdown and txt files, put this in .vimrc:
+-----------------------------------------------------------
+autocmd FileType txt,text,md,markdown setlocal spell
+-----------------------------------------------------------
+2 - To turn off spell, input:
+-----------------------------------------------------------
+:set nospell
+-----------------------------------------------------------
+3 - For auto-suggest use:
+-----------------------------------------------------------
+z=
+Input enter to exit without changes or input the suggestion
+number.
+-----------------------------------------------------------
+4 - If spell is wrong and the word is correct:
+-----------------------------------------------------------
+zg
+-----------------------------------------------------------
+5 - If you want to mark a word as incorrect:
+-----------------------------------------------------------
+zw
+-----------------------------------------------------------
+https://tinyurl.com/yhgbo57z
+https://tinyurl.com/yg63tq6c

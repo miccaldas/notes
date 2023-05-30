@@ -1,0 +1,6 @@
+To represent a shell variable or command inside a string, try
+this model that envelops the 'git status' command line
+command.
+--------------------------------------------------------------
+"echo $(git status) &> status_results.txt
+--------------------------------------------------------------

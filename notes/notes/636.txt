@@ -1,0 +1,5 @@
+To define a value in Python that is greater than x
+but less than y, write it like this:
+--------------------------------------------------
+x < value < y
+--------------------------------------------------

@@ -1,0 +1,5 @@
+You can use Awk to print the lines between two patterns. Between
+it and Sed, Awk's syntax is simpler and cleaner.
+----------------------------------------------------------------
+awk '/StartPattern/,/EndPattern/' FileName
+----------------------------------------------------------------

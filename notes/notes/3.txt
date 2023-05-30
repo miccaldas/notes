@@ -1,0 +1,5 @@
+To copy/paste in nano, use the following commands:
+ALt-a to set mark
+Ctl-k to cut
+Ctl-u to uncut in the same place
+Ctl-u to uncut to new location

@@ -1,0 +1,19 @@
+To be honest, this, until now hasn't worked very well.
+But is such a great thing, I'm willing to delve deeper
+into this. Let's say you have a bash script with the
+following content:
+------------------------------------------------------
+#!/usr/env/bin bash
+
+test1 = "hello
+------------------------------------------------------
+Supposedly you would need to just do this to make it 
+accessible to os.environ:
+------------------------------------------------------
+export text1
+or maybe,
+export = TEXT1='hello'
+or place it in 'zshenv', I don't know. But I would like
+know more.
+-----------------------------------------------------
+https://tinyurl.com/2hruzs55

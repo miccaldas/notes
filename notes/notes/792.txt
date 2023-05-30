@@ -1,0 +1,7 @@
+To convert a list to a string do the following:
+-----------------------------------------------
+> Initialize an empty string:
+new_string = ' '
+> Convert to string:
+new_string.join(list_name)
+------------------------------------------------

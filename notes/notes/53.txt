@@ -1,0 +1,31 @@
+ Para não me esquecer, vou por aqui, os projectos de coisas que
+ acho interessante, e depois não as faço porque nunca mais me
+ lembro delas.
+ ---------------------------------------------------------------
+ 1 - Livro 'Data Science in the Command Line':
+ This book is about doing data science at the command line.
+ Our aim is to make you a more efficient and productive
+ data scientist by teaching you how to leverage the power of
+ the command line.
+ https://bit.ly/3sHiub0
+ --------------------------------------------------------------
+ 2 - 'Let's Build a Simple Interpreter':
+ If you don’t know how compilers work, then you don’t know
+ how computers work. If you’re not 100% sure whether you
+ know how compilers work, then you don’t know how they work.
+ https://ruslanspivak.com/lsbasi-part1/
+ --------------------------------------------------------------
+ 3 - Instalar Papis:
+'Papis is a command-line based document and
+ bibliography manager. Its command-line interface (CLI)
+ is heavily tailored after Git.'
+ https://papis.readthedocs.io/en/latest/index.html
+ --------------------------------------------------------------
+ 4 - Criar um blog self-hosted para por os meus musings sobre
+ linux, o que estou a fazer em termos de projectos ...
+ Pode ser uma coisa com piada.
+ --------------------------------------------------------------
+ 5 - Estudar o SQLAlchemy
+ https://www.sqlalchemy.org/
+ --------------------------------------------------------------
+ 

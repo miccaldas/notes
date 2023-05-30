@@ -1,0 +1,6 @@
+To replace several characters at once, in a list or string,
+do as in this example:
+-----------------------------------------------------------
+res = test_str.replace('a', '%temp%').replace('b', 'a') \
+.replace('%temp%', 'b')
+-----------------------------------------------------------

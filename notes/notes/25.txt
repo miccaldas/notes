@@ -1,0 +1,6 @@
+To search for a text pattern in a given area, use grep:
+-------------------------------------------------------
+'grep -r <pattern> </path>'
+-------------------------------------------------------
+As you used the '-r' flag, it will look recursively.
+https://bit.ly/3c91pRq

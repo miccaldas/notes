@@ -1,0 +1,1 @@
+gh repo create repository_name --disable-issues --disable-wiki --public --remote=origin_github --source=. --push

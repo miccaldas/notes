@@ -1,0 +1,17 @@
+This is an example of the correct way to initiate a MySQL table, with
+primary key, time stamp and full-text index.
+This example was done with the notes database:
+----------------------------------------------------------------------
+CREATE TABLE notes (
+   ntid INT AUTO_INCREMENT,
+   title VARCHAR(255),
+   k1 VARCHAR(255),
+   k2 VARCHAR(255),
+   k3 VARCHAR(255),
+   note TEXT,
+   url VARCHAR(255),
+   time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+   PRIMARY KEY(ntid),
+   FULLTEXT(title, k1, k2, k3, note, url)
+   );
+------------------------------------------------------------------------

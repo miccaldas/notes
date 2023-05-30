@@ -1,0 +1,11 @@
+This is a way to print all the elements of an array contained in a
+GET OR POST method. It translates all the html special characters,
+and presents them as a key : value series:
+-------------------------------------------------------------------
+if ($_GET) {
+   echo "<pre>";
+   echo htmlspecialchars(print_r($_GET, true));
+   echo "</pre>";
+}
+-------------------------------------------------------------------
+https://tinyurl.com/yyt3n7us

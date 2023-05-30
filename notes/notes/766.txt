@@ -1,0 +1,6 @@
+To remove lines that are smaller than 'n' characters,
+write this Sed expression:
+-----------------------------------------------------
+sed -r '/^.{,3}$/d' filename
+-----------------------------------------------------
+This would remove all lines shorter than 3 characters.

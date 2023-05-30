@@ -1,0 +1,13 @@
+If you're getting this error message:
+“mysql.connector.errors.ProgrammingError: 1698 (28000):
+Access denied for user 'root'@'localhost'”
+I solved it doing what I show below.
+Don't ask me what it does. I don't know either.
+------------------------------------------------------------------
+mysql -u root -p
+USE mysql;
+UPDATE user SET plugin='mysql_native_password' WHERE User ='root';
+FLUSH PRIVILEGES;
+exit;
+systemctl restart mysql
+-------------------------------------------------------------------

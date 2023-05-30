@@ -1,0 +1,21 @@
+In order to have a better experience in documenting my
+code, I'm going to use the formulation of Google's 
+Style Guide that, among other things, has pointers on
+how to comment and how to write docstrings.
+In short, the docstring structure is the following:
+------------------------------------------------------
+
+One-line summary
+<blank line>
+Extended summary (optional)
+<blank line>
+Args:
+   name: type, description
+<blank line>
+Returns:
+   name: type, description
+Raises:
+   Error Name: Error Message
+
+------------------------------------------------------
+https://tinyurl.com/yfpzlqoy

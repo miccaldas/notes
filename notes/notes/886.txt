@@ -1,0 +1,17 @@
+The 'map' function in Python iterates through a iterable with a
+function. This can be helpful when you don't want to create a
+loop and there's no drawbacks to creating an extra function.
+Example:
+----------------------------------------------------------------
+def myfunc(n):
+ return len(n)
+
+x = map(myfunc, ('apple', 'banana', 'cherry'))def myfunc(n):
+ return len(n)
+
+x = map(myfunc, ('apple', 'banana', 'cherry'))
+---------------------------------------------------------------
+It returns:
+---------------------------------------------------------------
+[5, 6, 6]
+---------------------------------------------------------------

@@ -1,0 +1,14 @@
+These are the ports that must be open to use mail
+in a server:
+--------------------------------------------------
+SMTP (sending mail)	Encrypted - TLS/STARTTLS 465
+SMTP (sending mail)	Encrypted - SSL	465
+SMTP (sending mail)	Unencrypted	25* (or 26)
+POP3 (receiving mail)	Encrypted - TLS	995
+POP3 (receiving mail)	Encrypted - SSL	995
+POP3 (receiving mail)	Unencrypted	110
+IMAP (receiving mail)	Encrypted - TLS	993
+IMAP (receiving mail)	Encrypted - SSL	993
+IMAP (receiving mail)	Unencrypted	143
+--------------------------------------------------
+https://tinyurl.com/yzpzuj57

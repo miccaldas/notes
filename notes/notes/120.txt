@@ -1,0 +1,14 @@
+If a repository is initiated with the default branch as "main",
+it generates the following error, when doing "git clone":
+---------------------------------------------------------------
+Remote HEAD refers to nonexistent ref, unable to checkout
+---------------------------------------------------------------
+In this case, and contrary to what you'd expect to happen, the
+solution is to revert to calling the default branch, "master".
+This can be done in this fashion:
+---------------------------------------------------------------
+git branch -m main master
+git push -u origin master
+git push origin --delete main
+---------------------------------------------------------------
+https://tinyurl.com/yg8jepvb

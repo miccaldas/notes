@@ -1,0 +1,11 @@
+ To change a specific line in a python file,
+do the following:
+-------------------------------------------
+f = open("sample.txt", "r")
+lines = f.readlines()
+lines[13] = "text to insert
+
+f = open("sample.txt", "w")
+f.writelines(lines)
+f.close()
+-------------------------------------------

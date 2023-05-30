@@ -1,0 +1,6 @@
+To create a requirements.txt file, explaining
+all the used libraries and their versions,
+do the following:
+-----------------------------------------------
+pipreqs </path/to/project>
+------------------------------------------------

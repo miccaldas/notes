@@ -1,0 +1,32 @@
+Here are some string manipulation that proved useful.
+Split method:
+------------------------------------------------------
+s = "Username: How are you today?
+ s.split(':')
+ ['Username', ' How are you today?']
+ s.split(':')[0]
+ 'Username'
+ https://bit.ly/3pC2uFi
+ -----------------------------------------------------
+ Python String upper():
+ -----------------------------------------------------
+ text = 'geeKs For geEkS'
+ print(text.upper())
+ GEEKS FOR GEEKS
+ https://bit.ly/3coDs8R
+ -----------------------------------------------------
+ How to get the part of a string before a specific
+ character in Python:
+ -----------------------------------------------------
+ a_string = "docs.python.org
+ partitioned_string = a_string.partition('.')
+ print(partitioned_string)
+ Output: ('docs', '.', 'python.org')
+ before_first_period = partitioned_string[0]
+ print(before_first_period)
+ Output: docs
+ https://bit.ly/3oBMBgS
+ -----------------------------------------------------
+ Several methods to remove characters from a string,
+ can be seen here: https://bit.ly/2MEM4xi
+ 

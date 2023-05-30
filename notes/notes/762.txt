@@ -1,0 +1,12 @@
+Here is an example of getting only the first occurrence of
+a given pattern:
+----------------------------------------------------------
+sed -nre '/^The aim of the*/,/\./{p}; /\./{q}' results.csv
+----------------------------------------------------------
+As I understand it, this has two components, the first,
+which is a common pattern for finding patterns between two
+other patterns, and the second one, that repeats the end
+pattern, with the {q} symbol, that means quit, that is
+what makes it stop at that point.
+Note that p and q are between {}, for what reason, I don't
+know. But it works.

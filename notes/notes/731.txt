@@ -1,0 +1,5 @@
+To order randomly the results of a query, add to your 
+command, in the end:
+------------------------------------------------------
+ORDER BY RAND()
+------------------------------------------------------

@@ -1,0 +1,8 @@
+To see configured triggers in the database:
+-----------------------------------------------
+sqlite-utils -t <path/to/db> <table_name>
+-----------------------------------------------
+More information through:
+-----------------------------------------------
+sqlite.utils triggers --help
+----------------------------------------------- 

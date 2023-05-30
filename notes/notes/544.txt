@@ -1,0 +1,6 @@
+SELECT FirstName AS First_Name
+    , LastName AS Last_Name
+    , ContactPhoneAreaCode1
+    , ContactPhoneNumber1
+    , COALESCE(ContactPhoneAreaCode1, ContactPhoneNumber1) AS Contact_Phone 
+ FROM TABLE1

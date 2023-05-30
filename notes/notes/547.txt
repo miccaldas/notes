@@ -1,0 +1,7 @@
+To convert bytes to string, do the following:
+---------------------------------------------
+x = b'El ni\xc3\xb1o come camar\xc3\xb3n'
+s = x.decode()
+print(s)
+--------------------------------------------
+https://tinyurl.com/ygarcm8j

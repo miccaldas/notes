@@ -1,0 +1,8 @@
+To open a zst file, now that all arch packages come
+compressed with it, can be done thusly:
+---------------------------------------------------
+unzstd yourfilename.zst
+---------------------------------------------------
+This will create a tar file that you need to
+uncompress in the usual manner.
+---------------------------------------------------

@@ -1,0 +1,17 @@
+To send an email through the cli app 'mail',
+this is what you have to do:
+---------------------------------------------
+mail destination@email.com
+Subject: Hello World
+Email Body.
+.
+<ctl+d>
+--------------------------------------------
+To end the mail it is needed to put a dot in
+a clean line, and then press Control-D, to
+exit.
+To send an attachment:
+---------------------------------------------
+mail -A /opt/backup.sql -s Backup File 
+user@example.com < /dev/null
+---------------------------------------------

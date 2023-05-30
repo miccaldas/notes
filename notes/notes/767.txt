@@ -1,0 +1,8 @@
+If you have a lot of files that you want to make the same,
+partial, modification, use this one line script:
+----------------------------------------------------------------
+for filename in ./*; do mv "./$filename" "./$(echo "$filename" /
+| sed -e 's/_trans4//g')";  done
+----------------------------------------------------------------
+In this instance '_trans4' was the pattern to delete. All the
+rest stays the same.

@@ -1,0 +1,12 @@
+I installed a new markdown plugin that has
+support for github-flavored-markdown that,
+I hope, will give more degrees of liberty
+than the current version. I have it to
+start the html page viewer only when I
+give a command. The command are these:
+------------------------------------------
+:InstantMarkdownPreview
+   to start it.
+:InstantMarkdownStop
+   to stop it.
+------------------------------------------

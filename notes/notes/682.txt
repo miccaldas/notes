@@ -1,0 +1,8 @@
+When it's needed to use a virtual environment to shield the
+computer and the program from each other, we create a virtual
+environment this way:
+--------------------------------------------------------------
+python3 -m venv myvenv
+source venv/bin/activate
+deactivate - Para abandonar o ambiente
+---------------------------------------------------------------

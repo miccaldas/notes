@@ -1,0 +1,14 @@
+To know how many times the values of a given column repeat
+themselves, use the function COUNT. I'm using a example
+from the database notes. Real data.
+----------------------------------------------------------
+SELECT COUNT(k1) AS repeats FROM notes GROUP BY k1;
+
+Output excerpt:
++-------------------------*---------*
+| k1                      | Repeats |
++-------------------------+---------+
+| arch                    |       1 |
+| backblaze               |       2 |
++-------------------------+---------+
+----------------------------------------------------------

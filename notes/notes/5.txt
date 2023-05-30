@@ -1,0 +1,4 @@
+Append date to a file name:
+echo 'export now=$(date +"%m_%d_%Y")' >> /home/mic/.zshenv
+source /home/mic/.zshenv
+touch ~/log-$now.log

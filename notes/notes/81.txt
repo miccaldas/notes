@@ -1,0 +1,5 @@
+To see a markdown file you're editing,
+use the following command:
+---------------------------------------
+pandoc <file_name.md> | lynx -stdin
+---------------------------------------

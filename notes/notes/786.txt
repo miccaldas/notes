@@ -1,0 +1,4 @@
+To format json in Vim, do:
+--------------------------
+:%!python -m json.tool
+--------------------------

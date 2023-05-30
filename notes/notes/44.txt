@@ -1,0 +1,13 @@
+Converting the values of a dictionary to a list creates a new list
+where each element is a value from the dictionary. For example,
+converting the values of {a:1,b:2} to a list results in [1,2].
+Call dict.values() to create a view of the dictionary's values.
+Use list(item) with the view of dictionary values as item to return
+a list.
+Example:
+a_dictionary = {a: 1, b: 2}
+values = a_dictionary.values()
+Retrieve dictionary values
+values_list = list(values)
+Convert to list
+print(values_list)

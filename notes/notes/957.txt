@@ -1,0 +1,6 @@
+The 'Rich' library lets you create clickable links to files in the computer.
+This has the following structure:
+-----------------------------------------------------------------------------
+print("<some_string> [link=file:///<path_to_file>][/link]")
+-----------------------------------------------------------------------------
+To see one of these 'in the wild', go to ~/python/cli_diary/cli_diary/search.py

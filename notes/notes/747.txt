@@ -1,0 +1,4 @@
+To find the indexes of a given character in a string, do:
+------------------------------------------------------------------------------------
+print([idx for idx, char in enumerate('list_name') if char == 'character_you_want'])
+------------------------------------------------------------------------------------

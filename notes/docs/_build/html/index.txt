@@ -1,0 +1,16 @@
+Welcome to Notes's documentation!
+*********************************
+
+Note:
+
+  This project is under development.
+
+
+Indices and tables
+******************
+
+* Index
+
+* Module Index
+
+* Search Page

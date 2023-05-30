@@ -1,0 +1,6 @@
+To start Gunicorn in the server,
+go to /usr/share/nginx/html/microblog
+and insert the following command:
+--------------------------------------
+gunicorn --workers=2 microblog:app
+--------------------------------------

@@ -1,0 +1,6 @@
+To change al list of tuples to a lists, do this:
+------------------------------------------------
+lt = [('Geeks', 2), ('For', 4), ('geek', '6')]
+out = [item for t in lt for item in t]
+------------------------------------------------
+https://tinyurl.com/yj3m2yw3

@@ -1,0 +1,8 @@
+I'll start by saying that this is very frowned upon,
+and the preferred solution is a dictionary, but,
+when needs must, we can use this.
+----------------------------------------------------
+var1 = 'somestring'
+exec(var1 + = 'someotherstring')
+----------------------------------------------------
+https://tinyurl.com/y9jmpqa7

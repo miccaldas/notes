@@ -1,0 +1,14 @@
+To add values to previous values in a list, use the
+following formulation:
+----------------------------------------------------
+a_list = [0, 0, 0]
+integers_to_add = [1, 2, 3]
+
+for index, integer in enumerate(integers_to_add):
+   a_list[index] += integer
+
+print(a_list)
+OUTPUT
+[1, 2, 3]
+-----------------------------------------------------
+https://tinyurl.com/yekxf6fc

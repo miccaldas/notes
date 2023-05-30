@@ -1,0 +1,8 @@
+To extract a filename from a path in Python,
+do this:
+--------------------------------------------
+import os
+
+filename = os.path.basename(<path/to/file>)
+print(filename)
+-------------------------------------------

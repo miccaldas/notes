@@ -1,0 +1,16 @@
+Pickletools are some commandline Pickle commands that
+give information on how the pickle was formed. This is
+very useful when debugging.
+If a pickle file exists, you can check its info with:
+-----------------------------------------------------
+python -m pickletools <some_pickle_file>
+
+Options:
+-a, Provides descriptions of the opcodes. Use it.
+-o, File name to put the output.
+-l, Number of blanks to indent MARK level.
+-m, Preserve memo between objects disassemblies.
+-p, When more than one file is used, write preamble
+    before disassemblies.
+-----------------------------------------------------
+https://tinyurl.com/ycpbes2r

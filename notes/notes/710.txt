@@ -1,0 +1,11 @@
+This is JavaScript, more exactly JQuery, that hides an element and shows it at the press
+of a button.
+----------------------------------------------------------------------------------------
+This goes on the <head> tag:
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+this goes at end of the <body> tag:
+$("#id_of_submitbutton").click(function()
+{ alert("Button code executed.");
+});
+-----------------------------------------------------------------------------------------
+https://tinyurl.com/yhxr8cjn

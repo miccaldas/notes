@@ -1,0 +1,8 @@
+LOAD DATA INFILE '/var/lib/mysql/<name_of_file>'
+INTO TABLE <table_name>
+FIELDS TERMINATED BY '<character that is used to
+separate the input fields>
+ENCLOSED BY '<If the strings are enclosed by any
+symbol, ' or ", indicate that here>
+LINES TERMINATED BY '
+'

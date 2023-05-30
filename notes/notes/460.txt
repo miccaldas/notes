@@ -1,0 +1,5 @@
+ To only get non-repeated results in your
+SQL query, write:
+-----------------------------------------
+SELECT DISTINCT <column> FROM <table>
+-----------------------------------------

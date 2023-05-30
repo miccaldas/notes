@@ -1,0 +1,9 @@
+Sometimes is necessary to keep a password, secret key
+in a environmental variable, for added security.
+For this, do the following:
+------------------------------------------------------
+import os
+export ENVIRONMENT_VARIABLE='<some_long_password>'
+<variable> = os.environ.get('<ENVIRONMENT_VARIABLE>')
+-------------------------------------------------------
+https://tinyurl.com/y47p4wp7

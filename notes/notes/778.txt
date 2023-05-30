@@ -1,0 +1,11 @@
+As is notoriously difficult to import any module that is not inside
+the current directory; this one way to circle around the problem.
+Let's say you want a module that is located in 'subdir/module':
+you can do:
+-------------------------------------------------------------------
+import sys
+sys.path.append('full/path/to/subdir/module')
+import subdir.module
+-------------------------------------------------------------------
+What you're doing is adding to sys.path(), briefly and only in the
+context of the present module, the 'subdir/module' path.

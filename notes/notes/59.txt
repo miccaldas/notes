@@ -1,0 +1,10 @@
+For creating a range of variables with numbers, (something
+like this: 'var0', or 'var_0') you do the following:
+----------------------------------------------------------
+for key in range(9):
+   globals()['key_{}'.format(key)] = 'a'
+----------------------------------------------------------
+This will produce a set of variables, name thusly, 'key_0,
+'key_1' and so on, that will all have the value 'a'. But
+that can be easily changed.
+https://bit.ly/3oBeANz

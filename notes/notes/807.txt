@@ -1,0 +1,12 @@
+If you want to hide error messages from being printed,
+write the following class at the beginning of your
+module:
+------------------------------------------------------
+import sys
+
+class DevNull:
+   def write(self, msg):
+       pass
+
+sys.stderror = DevNull()
+-------------------------------------------------------

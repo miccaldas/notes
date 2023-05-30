@@ -1,0 +1,11 @@
+If everytime that you save a python file, appears a black error message complaining
+about 'unexpected keyword argument preview...', this is most likely result of a old
+version of Pip in use in the Black Vim plugin. The plugin doesn't use the system's Pip,
+it has its own installation. Because of that, you need to update it thusly:
+---------------------------------------------------------------------------------------
+~/.vim/black/bin/python3 -m pip install --upgrade pip
+---------------------------------------------------------------------------------------
+Off course It doesn't hurt to update Black and system Pip also, but this, for me, did
+the trick.
+---------------------------------------------------------------------------------------
+https://github.com/psf/black/issues/3318

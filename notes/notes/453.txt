@@ -1,0 +1,6 @@
+To extract a filename from a path in Python,
+write the following:
+--------------------------------------------
+filename = os.path.basename('/path/to/use')
+--------------------------------------------
+https://tinyurl.com/yf3wkbtk

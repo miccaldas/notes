@@ -1,0 +1,42 @@
+Because of Pip, I have a lot of packages without updates for a long
+time. Add to this, the fact that 'yay' only installs for the 'mic'
+user and won't work with sudo. This means that I have a lot of old
+packages that I can't escalate to root, when I need them.
+I'm revisiting 'Pacman', that solves some of these problems. From
+now on, I'll start looking for packages through it, and if I have
+to download something from a URL, I'll do it with 'Pacman' also.
+Here are some Pacman's commands that seem interesting.
+
+# --- Installing ---
+Downloading a package but not installing it: 'pacman -Sw <package_name>'
+Install package not from PAcman's db's: 'pacman -U /path/to/file.zst'
+Install remote file: 'pacman -U https://site.com/example.pkg.tar.zst'
+
+# --- Removing ---
+Remove package/dependencies, not required by another package: 'pacman -Rsu'
+Remove packages/dependencies/other_packages_that_depend_on_it: 'pacman -Rsc'
+
+# --- Updating ---
+Sync repos databases and update all packages: 'pacman -Syu'
+
+# --- Querying Package db's ---
+Search for the package name only: 'pacman -Ss "^vim-"'
+Search for installed packages: 'pacman -Qs <package_name>'
+Search in remote db's: 'pacman -F <package_name>'
+Show information on a package: 'pacman -Si <package_name>'
+Show information only for local packages: 'pacman -Qi <package_name>'
+See list of files installed by a package: 'pacman -Ql <package_name>'
+Verify presence of files installed by a package: 'pacman -Qk <package_name>'
+Verify to what package a file belongs: 'pacman -Qo /path/to/file'
+List packages who are not required as dependecies: 'pacman -Qdt'   # ATTENTION TO FALSE POSITIVES ON THIS COMMAND!
+View dependecy tree of package: 'pactree <package_name>'
+Search for package that contains a given file:
+   1. Sync the files database: 'pacman -Fy'
+   2. Search for package containing file: 'pacman -F <some_file>'
+
+# --- Cleaning Package Cache ---
+Delete all packages in cache: 'paccache -r'
+Keep 'n' number of versions of a package: 'paccache -rk<n>'
+
+
+More information here: https://tinyurl.com/yffrmrv3

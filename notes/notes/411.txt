@@ -1,0 +1,5 @@
+ To convert a sass file, just do:
+-----------------------------------
+sass file.scss destination_file.css
+------------------------------------
+https://sass-lang.com/guide

@@ -1,0 +1,5 @@
+To install a Pip package with extras, we have to, in Zsh, to escape the
+brackets, otherwise the shell won't accept the command:
+-----------------------------------------------------------------------
+python -m pip install --upgrade <package_name>\[<extra_name>\]
+-----------------------------------------------------------------------

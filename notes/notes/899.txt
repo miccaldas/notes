@@ -1,0 +1,4 @@
+In Python, to flatten a list of lists, do:
+--------------------------------------------------------
+flat_lst = [i for sublst in lst_of_lsts for i in sublst]
+--------------------------------------------------------

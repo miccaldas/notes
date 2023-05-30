@@ -1,0 +1,11 @@
+To choose only the elements of a list that have a specific
+prefix, use this list comprehension:
+-----------------------------------------------------------
+with_s = [x for x in test_list if x.startswith(prefix)
+-----------------------------------------------------------
+If it's a list of tuples, you can use it like this: (suppose
+the value in question is in the second element of the tuple):
+-------------------------------------------------------------
+with_s = [x for x in test_list if x[1].startswith(prefix)
+-------------------------------------------------------------
+https://tinyurl.com/y92quef6

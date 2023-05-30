@@ -1,0 +1,19 @@
+ Here are some cmus commands:
+ ------------------------------
+ 1 - Library
+ 3 - Playlist
+ 4 - Queue
+ 5 - File browser
+ 7 - Settings
+ a - next line down
+ b - next track
+ z - previous track
+ c - pause/unpause
+ s - shuffle
+ y - add selection to playlist
+ v - stop
+ -  decrease volume
+ + - increase volume
+ 4 - View/edit queue
+ -----------------------------
+ 

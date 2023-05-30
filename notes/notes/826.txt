@@ -1,0 +1,5 @@
+To send a process to the background and dettaching it
+from the console, so as to be able to keep using it.
+write:
+------------------------------------------------------
+nohup <your_shell_command> &

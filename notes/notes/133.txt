@@ -1,0 +1,10 @@
+To comment/uncomment chunks of text in Vim,
+go to visual mode, select what you want to
+comment/uncomment, and press:
+-------------------------------------------
+gc
+-------------------------------------------
+The command toggles, so you just have to
+repeat it to revert your action.
+-------------------------------------------
+https://tinyurl.com/3bss57y

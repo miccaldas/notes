@@ -1,0 +1,4 @@
+To replace all occurrences of a sub-string inside a given MySQL column, do this:
+--------------------------------------------------------------------------------
+UPDATE table SET column = REPLACE(column, original_string, new_string);
+--------------------------------------------------------------------------------

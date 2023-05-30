@@ -1,0 +1,11 @@
+If for some reason, tput doesn't
+respect the distances between
+lines that you gave them, for
+instance put one line in height
+4 and another in line 6 an
+they appear next to each other,
+just write where you want the
+space:
+--------------------------------
+echo " 
+-------------------------------_

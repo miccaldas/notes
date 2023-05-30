@@ -1,0 +1,11 @@
+If you need to use another method, from the same class,
+in another method, do this:
+-------------------------------------------------------
+   class Example:
+       
+       def method1(self):
+           'some_code...'
+
+       def method2(self):
+           self.method1()
+-------------------------------------------------------

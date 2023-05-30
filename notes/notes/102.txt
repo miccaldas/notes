@@ -1,0 +1,8 @@
+If the suggestions from zsh-autosuggestions
+is too dark, as it often is, you can change
+the color with:
+-------------------------------------------
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=value'
+------------------------------------------
+Por isto no .zshrc.
+https://tinyurl.com/yfebtxta

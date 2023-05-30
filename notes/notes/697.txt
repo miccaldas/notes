@@ -1,0 +1,5 @@
+I dowmloaded an alternative shell for Django that already
+uploads all your data to the shell. You call it, thusly:
+---------------------------------------------------------
+python manage.py shell_plus
+---------------------------------------------------------

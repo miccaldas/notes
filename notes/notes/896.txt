@@ -1,0 +1,14 @@
+The variables available through
+tput_config are:
+-------------------------------
+termsize = os.get_terminal_size()
+width = termsize.columns
+height = termsize.lines
+init_height = int(height / 4)
+init_width = int(width / 4)
+lines = termsize.lines
+init_pos = f"{init_height} {init_width}
+separator_height = int(init_height + 3)
+separator = "------------------------------ [X] ------------------------------
+title_color = 1   # Red
+ -------------------------------

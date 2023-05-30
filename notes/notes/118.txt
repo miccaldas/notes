@@ -1,0 +1,5 @@
+When you need a web server soley to develop,
+you can go to the folder where the content is
+and write:
+---------------------------------------------
+php -S localhost:8000

@@ -1,0 +1,13 @@
+To replace various indices in a string,
+do the following:
+----------------------------------------
+test_str = 'geeksforgeeks is best'
+indices = [2, 4, 7, 10]
+repl_char = '*'   # replacement_character
+temp = list(test_str)
+for idx in indices:
+   temp[idx] = repl_char
+res = ''.join(temp)
+print(res)
+Output: 'ge*k*fo*ge*ks is best'
+-----------------------------------------

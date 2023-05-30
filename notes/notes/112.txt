@@ -1,0 +1,11 @@
+Use autoexpect thusly:
+----------------------
+sudo autoexpect
+----------------------
+This starts the shell
+where the app will log
+the commands.
+To stop do:
+----------------------
+Ctrl-d
+----------------------

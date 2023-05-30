@@ -1,0 +1,5 @@
+To remove several white spaces
+for just one with sed, do:
+-------------------------------
+sed 's/ */ /g' 'file_name'
+-------------------------------

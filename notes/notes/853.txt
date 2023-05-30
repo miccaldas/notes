@@ -1,0 +1,10 @@
+If you want to collect input from stdout, do this:
+--------------------------------------------------
+import io
+import contextlib
+from contextlib import redirect_stdout
+
+with redirect_stdout(io.StringIO()) as f:
+   <the_command_that_produces_the_output>
+s = f.getvalue()
+---------------------------------------------------

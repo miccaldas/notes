@@ -1,0 +1,9 @@
+To ignore an error in Python, use the following
+expression:
+-----------------------------------------------
+try:
+   <expression_causing_the_error>
+except:
+    pass
+-----------------------------------------------
+It will issue a warning but it will compile.

@@ -1,0 +1,8 @@
+You can't add columns to an index, you have to destroy the old one
+and only then create a new one. This example pertains to full text
+indexes, since that is what I use.
+------------------------------------------------------------------
+ALTER TABLE <table_name> DROP INDEX <index_name>;
+ALTER TABLE <table_name> ADD FULLTEXT INDEX <new_index_name>  \
+(<list_of_columns_to_add)
+------------------------------------------------------------------

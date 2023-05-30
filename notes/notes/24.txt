@@ -1,0 +1,14 @@
+1 - Create new group:
+-------------------------------------------------
+sudo groupadd <new_group>
+-------------------------------------------------
+2 - Add users to it:
+-------------------------------------------------
+sudo usermod -a -G <new_group> <user1>
+sudo usermod -a -G <new_group> <user2>
+-------------------------------------------------
+3 - Set new permissions:
+-------------------------------------------------
+sudo chgrp -R <new_group> /path/to/the/directory
+sudo chmod -R 770 /path/to/the/directory
+-------------------------------------------------

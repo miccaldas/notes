@@ -1,0 +1,11 @@
+To read a file in a bash script, do this:
+-----------------------------------------
+while IFS= read -r line; do
+    echo "a line: $line
+done < file
+-----------------------------------------
+to read file content to a variable:
+-----------------------------------------
+foo=$(<file)
+-----------------------------------------
+https://tinyurl.com/yjtwesau

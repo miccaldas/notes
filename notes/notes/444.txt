@@ -1,0 +1,3 @@
+To access current file in python use the "__file__
+structure, the outputs as a complete path to your
+file.

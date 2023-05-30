@@ -1,0 +1,25 @@
+ To bind a key to a preset command or a command of your own, we first
+ need to know what is the code of the key that you intend on using.
+ Let's say I want to use the F2 key;
+ ------------------------------------------------------------------------------
+ 1 - 'showkey -a'
+ ------------------------------------------------------------------------------
+	After opening the session, just click on the key you want:
+ ------------------------------------------------------------------------------
+ 2 - 'F2'
+ 3 - ^[OQ 	 27 0033 0x1b
+ 	 		 79 0117 0x4f
+ 	         81 0121 0x51
+ ------------------------------------------------------------------------------
+ The code to use is '^[OQ'. Then it can be as simple as:
+ ------------------------------------------------------------------------------
+ bindkey ^[OQ 'ls -la'
+ ------------------------------------------------------------------------------
+ or more complex as the case of the one that opens a file in the right
+ side of current window, as a scratchpad:
+ ------------------------------------------------------------------------------
+ bindkey -s '^[OQ tilix -a session-add-right -x '
+ micro /home/mic/scratchpad'<simbolo de acento circumflexo>M
+ -------------------------------------------------------------------------------
+ https://bit.ly/3c9doyn
+ 

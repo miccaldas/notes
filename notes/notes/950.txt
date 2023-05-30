@@ -1,0 +1,14 @@
+Stopping the creation of '__pycache__' folders should be something that was
+solved with adding this envirnmental variable to '~/.zshenv':
+-------------------------------------------------------------------------------
+PYTHONDONTWRITEBYTECODE = 1
+------------------------------------------------------------------------------
+But it doesn't work in all folders. It wasn't working in 'cli_apps', for
+example. To solve this on project by project basis, write this before all other
+imports, as are the imports that trigger the creation of 'pycache':
+-------------------------------------------------------------------------------
+import sys
+sys.dont_write_bytecode = True
+-------------------------------------------------------------------------------
+Ideally you would put it on a 'main' file and that would be that. If the project
+doesn't have a 'main' file, it'll have to be written in all the modules.

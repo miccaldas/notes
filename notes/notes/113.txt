@@ -1,0 +1,13 @@
+Para criar um ambiente virtual em python
+fazer o seguinte:
+----------------------------------------
+python -m venv <nome do folder a usar>
+----------------------------------------
+Entrar no folder e escrever:
+-----------------------------------------
+source bin/activate
+-----------------------------------------
+Para sair escrever:
+-----------------------------------------
+deactivate
+-----------------------------------------

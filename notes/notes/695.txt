@@ -1,0 +1,8 @@
+I installed a plugin that helps with commenting and
+uncommenting in Vim. The commands are:
+---------------------------------------------------
+gcc - comment a line
+gc - in visual mode, comments out a section
+gcgc - uncomments adjacent lines
+----------------------------------------------------
+https://tinyurl.com/3bss57y

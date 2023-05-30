@@ -1,0 +1,8 @@
+We can create ordered dictionary using OrderedDict
+function in collections.
+---------------------------------------------------
+ordered_d = collections.OrderedDict(one=1, two=2)
+---------------------------------------------------
+or if you want a empty dictionary:
+---------------------------------------------------
+ordered_d = collections.OrderedDict()

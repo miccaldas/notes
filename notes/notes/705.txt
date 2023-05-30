@@ -1,0 +1,7 @@
+To create a breakpoint in a Python file, near the point where
+you wan your breakpoint, write:
+-------------------------------------------------------------
+import pdb
+brekpoint()
+-------------------------------------------------------------
+https://tinyurl.com/yeqfmxhc

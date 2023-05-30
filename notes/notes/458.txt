@@ -1,0 +1,9 @@
+Validating that an object is a file can be useful,
+for example to make sure that in, a loop in a folder,
+you'll iterate only through files.
+This is how you do it:
+------------------------------------------------------
+import os
+
+os.path.isfile(path)
+------------------------------------------------------

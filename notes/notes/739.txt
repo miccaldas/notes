@@ -1,0 +1,11 @@
+To call a method from another method and not get a error message saying that
+the name is undefined, import in this manner:
+-----------------------------------------------------------------------------
+class Example:
+
+   def abc(self):
+       pass
+
+   def def(self):
+       import = self.abc()
+------------------------------------------------------------------------------

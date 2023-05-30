@@ -1,0 +1,58 @@
+   # ---- Access ----
+   Access monitor: mysql -u [username] -p; (will prompt for password)
+   Access database: mysql -u [username] -p [database]
+   Create new database: create database [database];
+   Select database: use [database];
+   logout: exit;
+
+
+   # ---- Information ----
+   Show all databases: show databases;
+   Determine what database is in use: select database();
+   Show all tables: show tables;
+   Show table structure: desc [table];
+   List all indexes on a table: show index from [table];
+   Explain records: EXPLAIN SELECT * FROM [table];
+
+   # ---- Adding/Inserting ----
+   Adding a column: ALTER TABLE [table] ADD COLUMN [column] VARCHAR(120);
+   Adding a column with an unique, auto-incrementing ID: ALTER TABLE [table] \
+   ADD COLUMN [column] int NOT NULL AUTO_INCREMENT PRIMARY KEY;
+   Inserting a record: INSERT INTO [table] ([column], [column]) VALUES ('[value]', '[value]');
+   MySQL function for datetime input: NOW()
+   Selecting records: SELECT * FROM [table];
+   Adding a default value to column: ALTER TABLE [table] ALTER COLUMN [column] SET DEFAULT [something]
+
+   # ---- Selecting ----
+   (Selectors: <, >, !=; combine multiple selectors with AND, OR)
+   Selecting parts of records: SELECT [column], [another-column] FROM [table];
+   Selecting specific records: SELECT * FROM [table] WHERE [column] = [value];
+   Selecting records where column is empty: SELECT * FROM [table] WHERE [column] IS NULL;
+   Select records containing [value]: SELECT * FROM [table] WHERE [column] LIKE '%[value]%';
+   Select records starting with [value]: SELECT * FROM [table] WHERE [column] LIKE '[value]%';
+   Select records starting with val and ending with ue: SELECT * FROM [table] WHERE [column] LIKE '[val_ue]';
+   Select a range: SELECT * FROM [table] WHERE [column] BETWEEN [value1] and [value2];
+   Select records with a list of choices: SELECT * FROM [table] WHERE [column] IN ('value1', 'value2');
+   Select with custom order and only limit: SELECT * FROM [table] WHERE [column]ORDER BY [column] ASC LIMIT [value]; (Order: DESC, ASC)
+
+   # ---- Deleting ----
+   Deleting records: DELETE FROM [table] WHERE [column] = [value];
+   Delete a range of records: DELETE FROM [table] WHERE id BETWEEN ... AND ...
+   Delete all records from a table (without dropping the table itself): DELETE FROM [table];
+   Delete all records in a table: truncate table [table];
+   Delete a index: DROP INDEX index_name ON table_name;
+   Removing table columns: ALTER TABLE [table] DROP COLUMN [column];
+   Deleting tables: DROP TABLE [table];
+   Deleting databases: DROP DATABASE [database];
+
+   # ---- Order ----
+   Order output randomly: SELECT * FROM [table] ORDER BY RAND()
+
+   # ---- Updating ----
+   Updating records: UPDATE [table] SET [column] = '[updated-value]' WHERE [column] = [value];
+   Modifying Column: ALTER TABLE [table] MODIFY [column_name] [column_definitions] optionally: [FIRST | AFTER column_name]
+   Deleting Trailing Whitespace: UPDATE [table] SET [column] = TRIM(TRAILING '\n' FROM [column])
+
+   # ---- Import/Export Databases ----
+   Export a database dump (more info here): mysqldump -u [username] -p [database] > db_backup.sql
+   Import a database dump (more info here): mysql -u [username] -

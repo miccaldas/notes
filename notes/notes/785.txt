@@ -1,0 +1,7 @@
+To get the last part of a path in Python, do:
+-----------------------------------------------  
+import os
+
+path = "path/to/wherever/" 
+tail = os.path.basename(os.path.normpath(path))
+-----------------------------------------------

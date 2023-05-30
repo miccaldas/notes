@@ -1,0 +1,12 @@
+To insert a new line in a specific location,
+in this case in line 2, do this:
+---------------------------------------------
+with open('filename', 'r') as f:
+   contents = f.readlines()
+
+contents.insert(2, 'string_to_insert\n')
+
+with open('filename', 'w') as f:
+   contents = ''.join(contents)
+   f.write(contents)
+----------------------------------------------

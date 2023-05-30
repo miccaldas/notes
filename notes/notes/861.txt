@@ -1,0 +1,6 @@
+When working with tools that enable movement in the screen has a rule, definition of width
+value should be always: the initial width plus half the length of the preceding string
+minus half the length of the string that you're currently inserting.
+------------------------------------------------------------------------------------------
+str_width = int(init_width + (len(<string_above>) / 2) - int(len(<actual_string>) / 2))
+------------------------------------------------------------------------------------------

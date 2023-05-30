@@ -1,0 +1,7 @@
+To delete every nth lines in a file,
+write this:
+------------------------------------
+sed "1~3d" <file>
+------------------------------------
+Deletes very third line, starting
+at 1.

@@ -1,0 +1,5 @@
+A quick way of knowing what is the current date and time
+in Unix epoch notation, is to write in the shell:
+--------------------------------------------------------
+date +%s
+--------------------------------------------------------

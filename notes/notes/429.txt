@@ -1,0 +1,21 @@
+To access a variable inside a function from another function,
+it must be assigned to the function object. Once that happens
+the variable can be used inside and outside the function.
+--------------------------------------------------------------
+def function_1():
+   # assigning a string as a member of the function object
+   # instead of var = "variable inside function_1",
+   # we do:
+   function_1.var = "variable inside function_1
+
+   print("function_1 has been called")
+
+def function_2():
+   print("function_2 has been called")
+   print(function_1.var)
+
+function_1()
+function_2()
+----------------------------------------------------------------
+https://tinyurl.com/yh8jjz98
+https://tinyurl.com/yxc9mwod

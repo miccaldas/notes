@@ -1,0 +1,8 @@
+Needed to remove beep from the backtrace
+key.
+To remove the beeps that system pc does,
+do the folowing: go to /etc/inputrc and
+write:
+---------------------------------------
+set bell-style none
+---------------------------------------

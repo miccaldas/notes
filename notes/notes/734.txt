@@ -1,0 +1,17 @@
+This is an example of changing several characters in list entries in python. This
+was done to turn common titles in file names; meaning that we don't spaces, some
+characters. Specifically in this case, we replaced all apostrophes with nothing -
+this can be used as an eraser - , erased the double-quotes, erased question-marks
+and replaced all spaces with underscores.
+----------------------------------------------------------------------------------
+path = "/var/www/html/corteousquestions/support_files/html_conversion/note_files/
+clean_titles = []
+for row in self.records:
+   low = row[1].lower()
+   termination = low + '.md'
+   clean_title1 = termination.replace("'", "")
+   clean_title2 = clean_title1.replace('"', "")
+   clean_title3 = clean_title2.replace("?", "")
+   clean_title = clean_title3.replace(" ", "_")
+   clean_titles.append(clean_title)
+------------------------------------------------------------------------------------

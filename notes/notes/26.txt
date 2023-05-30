@@ -1,0 +1,35 @@
+ This subject came to me, when I needed to connect with a mail
+ server that had ssl encryptation. To link to it you do the
+ following:
+ --------------------------------------------------------------
+ openssl s_client --connect <server name:port>
+ --------------------------------------------------------------
+ After that it will probably be needed login information, which
+ can be inputted in the following manner:
+ --------------------------------------------------------------
+ a1 login <username> <password>
+  -------------------------------------------------------------
+ Notice the 'a1' tag. It can be anything you like, but it must
+ be consistent. For instances, after 'a1' must come 'a2', and
+ so on.
+ --------------------------------------------------------------
+ a2 list '' '*'
+ --------------------------------------------------------------
+ Shows a list of your mailboxes.
+ -------------------------------------------------------------
+ a3 examine <mailbox name>
+ -------------------------------------------------------------
+ Gives you metadata about the mailbox.
+ -------------------------------------------------------------
+ a4 select <mailbox name>
+ -------------------------------------------------------------
+ Selects a particular mailbox
+ -------------------------------------------------------------
+ a5 fetch 1 body[]
+ -------------------------------------------------------------
+ Fetches the first email in the mailbox.
+ -------------------------------------------------------------
+ For more information see:
+ https://bit.ly/38HrK76
+ https://tools.ietf.org/html/rfc3501#page-27
+ 

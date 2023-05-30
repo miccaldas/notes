@@ -1,0 +1,7 @@
+To generate a new symetric key, if there's a need,
+is just creating a variable form the key generating
+function and runnig this line of code, and it's done!
+I stored it in a pickle file in ~/themis_key.
+-----------------------------------------------------
+symmetric_key = GenerateSymmetricKey()
+------------------------------------------------------

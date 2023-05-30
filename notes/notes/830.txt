@@ -1,0 +1,8 @@
+To be able to see the output of the shell commands sent through
+ranger, write:
+----------------------------------------------------------------
+:shell -w <your_command>
+----------------------------------------------------------------
+To send a command as root, write:
+----------------------------------------------------------------
+:shell -r <your_command>

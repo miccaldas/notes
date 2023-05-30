@@ -1,0 +1,120 @@
+This is a list of successful Sed commands, that is meant to prevent
+me to rethink solutions all over again:
+--------------------------------------------------------------------
+1 - Removes line breaks and its escape characters.
+sed -re "s/\\\\n/ /g
+
+2 - Removes escape characters that usually linger
+    after using the last Sed command.
+sed -re "s/\\\//g
+
+3 - Removes closing brackets.
+sed -re "s/]//g
+
+4 - Removes apostrophes that surround nothing and have a leading space.
+sed -re "s/ ''//g
+
+5 - Removes space before closing parenthesis.
+sed -re "s/ '\)/'\)/g
+
+6 - Removes two commas in a row.
+sed -re "s/,,/,/g
+
+7 - Removes double quotes before comma.
+sed -re 's/",/,/g'
+
+8 - Removes period before a comma.
+sed -re "s/.,/, /g
+
+9 - Removes comma after a period and replaces it with a space.
+sed -re "s/,./, /g
+
+10 - From a pattern of; a space followed by a comma, a period and
+     another coma, replace it with a comma and a space.
+sed -re "s/ ,.,/. /g
+
+11 - From a pattern of; a space, comma and double quotes, replace by
+     double quotes.
+sed -re 's/ ,"/"/g'
+
+12 - Remove double quotes.
+sed -re 's/"//g'
+
+13 - From a pattern of; space, comma, space; replace with; comma,
+     space.
+sed -re "s/ , /, /g
+
+14 - Replace pattern; opening parenthesis, space, comma, space,
+     apostrophe, double space, comma, space, apostrophe, space,
+     with nothing.
+sed -re "s/\( ,  '  ,  ' //g
+
+15 - Replace pattern; opening parenthesis, space, comma, space,
+     apostrophe, space, comma, space, apostrophe, space,
+     with nothing.
+sed -re "s/\(,  '  ,  ' //g
+
+16 - Substitute a pattern of; apostrophe, space, comma, space,
+     apostrophe; with a comma.
+sed -re "s/' , '/,/g
+
+17 - Substitute a pattern of; space, apostrophe, comma, space,
+     space; with comma, space.
+sed -re "s/ ',  /, /g
+
+18 - Substitute comma and double space, with comma, space.
+sed -re "s/,  /, /g
+
+19 - Substitute  space, comma, space, with comma, space.
+sed -re "s/ , /, /g
+
+20 - Removes apostrophes.
+sed -re "s/'//g
+
+21 - Remove a pattern of; space, period, comma, space.
+sed -re "s/ ., //g
+
+22 - Remove pattern of comma, space, comma.
+sed -re "s/, ,//g
+
+23 - Replace a pattern of; opening parenthesis at start of line,
+     comma, double space; with opening parenthesis.
+sed -re "s/^\(,   /\(/g
+
+24 - Replace dot, comma, comma, with comma, space.
+sed -re "s/.,,/, /g
+
+25 - Replace double space with space.
+sed -re "s/  / /g
+
+26 - Replace a comma, between two alphanumeric characters, by
+     a space.
+sed -re "s/([[:alpha:]]),([[:alpha:]])/\1, \2/g
+
+27 - In a pattern of; opening bracket, the word 'description',
+     space, comma, space; remove everything but the opening
+     bracket.
+sed -re "s/\[description , /\[/g
+
+28 - Replace space, comma, space, with space.
+sed -re "s/ , / /g
+
+29 - Put a space between a punctuation character and the word
+     'https'.
+sed -re 's/([[:punct:]])(https.*$)/\1 \2/g'
+
+30 - Put a comma between a punctuation character and the word
+     'https'.
+sed -re 's/([[:punct:]])( https.*$)/\1],\2/g'
+
+31 - Remove opening brackets.
+sed -re "s/\(//g
+
+32 - Remove closing brackets.
+sed -re "s/\)//g
+
+33 - Remove the equal sign that is between the beginning of
+     the line, some unknown type and quantity of characters,
+     and some unknown type and quantity of characters and
+     the end of line.
+sed -nre 's/(^.*)==(.*$)/\1/p'

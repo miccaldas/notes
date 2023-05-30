@@ -1,0 +1,2 @@
+To highlight a html tag content,
+put cursor on tag and input 'vat'.

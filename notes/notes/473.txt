@@ -1,0 +1,8 @@
+To find a all events of a substring in a string,
+use the following list comprehension:
+---------------------------------------------------
+test_list = ['GeeksforGeeks', 'Geeky', 'Computers']
+subs = 'Geek'
+res = [i for i in test_list if subs in i]
+---------------------------------------------------
+https://tinyurl.com/vr443qf

@@ -1,0 +1,15 @@
+I had the need to analyse a svg image that I already had in my
+computer. Since it was already downloaded, I didn't seem
+necessary to use Scrapy as such, but just use Beautiful Soup,
+as it seemed more appropriate.
+I had to extract from the document, the strings of the text
+tags in it. This is how it was done:
+-------------------------------------------------------------
+with open('file_to_analyse', 'r') as f:
+   soup = BeautifulSoup(fp, "xml", from_encoding="utf-8")
+texts = soup.find_all("text")
+for text in texts:
+    print(text.get_text())
+--------------------------------------------------------------
+That simple.
+https://linuxhint.com/parse_xml_python_beautifulsoup/

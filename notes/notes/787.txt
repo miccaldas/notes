@@ -1,0 +1,10 @@
+Snoop has a valence called 'pp', that if you envelop an expression,
+variable or whatever, it will open it up and show its steps and
+values. It's as simple as this:
+------------------------------------------------------------------
+import snoop
+from snoop import pp
+
+pp('expression_you_want_to_monitor')
+------------------------------------------------------------------
+https://pypi.org/project/snoop/#controlling-watch_explode

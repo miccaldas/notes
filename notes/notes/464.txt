@@ -1,0 +1,18 @@
+You can use sed to add a string after a particular substring
+in a text.
+To add creating a new line under the substring:
+-------------------------------------------------------------
+sed  '/\<substring>\/a <text to insert>/' <file>
+Where:
+1 - The '\' is an escape character,
+2 - '/a' indicates 'after match'.
+-------------------------------------------------------------
+If you wanted you insert before the match, use '/i'.
+If you want to insert in the same line as the substring, do
+this:
+-------------------------------------------------------------
+sed 's/<substring>/& <text to insert>/' <file>
+Where '/&' indicates that is inserted in the same line.
+-------------------------------------------------------------
+https://tinyurl.com/yfbeoqrd
+https://tinyurl.com/yhywfg98

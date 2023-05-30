@@ -1,0 +1,7 @@
+For this to work you must be root
+user. Sudo alone won't cut it.
+----------------------------------
+mysqldump -u <user> -p \
+<db_name> > /path/to/backups.sql
+----------------------------------
+https://tinyurl.com/yhr8hlyp

@@ -1,0 +1,7 @@
+When you need information regarding a window, there's
+some tools you can use:
+------------------------------------------------------
+Xprop - To know info like class, logos, etc
+Xwininfo - To know their dimensions
+------------------------------------------------------
+Xdotool is not working at the moment.

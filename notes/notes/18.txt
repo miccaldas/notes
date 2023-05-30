@@ -1,0 +1,26 @@
+Boolean mask is very useful and handy, when it comes to count, modify,
+extract or manipulate values in an array based on certain condition
+or criteria:
+--------------------------------------------------------------------
+arr([1,2,3,4,5,6,7,8,9])
+--------------------------------------------------------------------
+Now we create a boolean condition:
+--------------------------------------------------------------------
+bool_array = arr > 3
+print(bool_array)
+output: array([False,False,False,True,True,True,True,True,True])
+-------------------------------------------------------------------
+Now we create a boolean mask to filter all even numbers in 'arr':
+-------------------------------------------------------------------
+mask = 0 == arr % 2
+print(mask)
+output: array([False,True,False,True,False,True,False,True,False])
+------------------------------------------------------------------
+Now with our mask, 'mask', we index on 'arr', that will return a
+1D array with the values that satisfy the condition:
+------------------------------------------------------------------
+even_values = arr[mask]
+print(even_values)
+output: [2,4,6,8]
+------------------------------------------------------------------
+https://bit.ly/2MPWcUb

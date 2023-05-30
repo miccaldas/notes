@@ -1,0 +1,7 @@
+Systemd has some colorization, but when it's invoked from a script,
+the output is monochrome. To avoid this add the SYSTEMD_COLORS
+environmental variable to your command. Here's an example in a
+journalctl command:
+-------------------------------------------------------------------
+sudo SYSTEMD_COLORS=1 journalctl | grep 'some_query'
+-------------------------------------------------------------------

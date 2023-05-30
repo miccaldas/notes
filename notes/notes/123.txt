@@ -1,0 +1,6 @@
+I was forced to change my MySQL password, by circumstances
+beyond my control. But to not stray too far from the
+righteous path, the new one is:
+-----------------------------------------------------------
+'xxxxx'
+-----------------------------------------------------------

@@ -1,0 +1,5 @@
+To insert your password in a script, do the following:
+------------------------------------------------------
+echo '<password> | sudo -S < command to implemment>
+------------------------------------------------------
+https://tinyurl.com/yjwx2bzq

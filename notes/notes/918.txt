@@ -1,0 +1,17 @@
+I've created some command-line commands for some of Notes' functionalities. They are:
+----------------------------------------------------------------------------------------
+ntadd  Command to add entries to the database. It has these optional flags:
+       -t   Title of entry.
+       -k   Keywords. Accepts up to three values.
+       -n   Note. Opens Vim so you can write a note.
+ntdlt  Deletes one, several or range of entries. Call it in the following forms:
+       1. Delete non-sequential entries. Example:
+          ndlt '435,600'
+       2. Delete sequential entries. Example:
+          ndlt '437-439'
+       3. Delete one entry. Example:
+          ndlt '66'
+ntupdt  Updates a column value, given a certain id. Has the following options:
+        -n   Id of the entry. An integer.
+        -c   Column of the entry.
+        -u   Update content.

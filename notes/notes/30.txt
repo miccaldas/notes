@@ -1,0 +1,13 @@
+Suppose you are typing a very long command line:
+PATH='/home/alw/bin:/home/alw/bin:/home/alw/bin:
+/usr/local/sbin:/usr/local/bin:/usr/sbin:
+/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:
+/snap/bin'
+You discover a mistake before you hit Enter. Or
+you discover it later and call the line back in
+your history. You can edit on the command line,
+of course, but if you prefer your editor of
+choice press Control+X Control+E. Your default
+editor (usually set with $EDITOR or $VISUAL)
+will start with the command loaded.
+https://bit.ly/2Y96wc4

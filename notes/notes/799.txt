@@ -1,0 +1,6 @@
+You can return multiple values in a function.
+This is the format:
+---------------------------------------------
+return value1, value2
+---------------------------------------------
+It returns a tuple.

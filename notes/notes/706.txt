@@ -1,0 +1,4 @@
+To create a directory in Python, do:
+------------------------------------
+os.mkdir(<path_to_desired_location>)
+------------------------------------

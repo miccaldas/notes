@@ -1,0 +1,7 @@
+To use ascii codes in Sed, choose Hex codes and precede
+them by '\x'. For example:
+-------------------------------------------------------
+code for "!" = 21
+used in sed = \x21
+-------------------------------------------------------
+https://www.ascii-code.com

@@ -1,0 +1,6 @@
+To change directories through subprocess, do the following:
+-----------------------------------------------------------
+path = "/path/you/want
+cmd = "<your_command_here>
+subprocess.run(cmd, cwd=path, shell=True)
+------------------------------------------------------------

@@ -1,0 +1,16 @@
+To guarantee that the installation of Vim comes
+with clipboard and python3 support, do this:
+---------------------------------------------------------------
+1 - Install gtk4.
+   1.1 - Ubuntu: libgtk-4-dev
+   1.2 - Arch: gtk4
+2 - Configure with the following flags:
+   ./configure --with-features=huge \
+           --enable-multibyte \
+           --enable-python3interp=yes \
+           --with-python3-config-dir=/usr/bin/python3-config \
+           --enable-gui=gtk4 \
+           --enable-cscope \
+           --enable-fail-if-missing \
+           --prefix=/usr
+---------------------------------------------------------------

@@ -1,0 +1,5 @@
+To replace more than one character at a time in a Python
+string, use this form:
+---------------------------------------------------------
+test_str.replace('a', '<').replace('b', 'a')
+---------------------------------------------------------

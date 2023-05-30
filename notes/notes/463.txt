@@ -1,0 +1,11 @@
+Use zip to loop through multiple lists without having
+them be in a:
+   for i in list a:
+       for i in list b:
+situation.
+------------------------------------------------------
+for x, y in zip(a, b):
+   print x, y
+------------------------------------------------------
+For a real example see use of this in the file in
+'/srv/http/notes/resources/id_links/build_csv.py'

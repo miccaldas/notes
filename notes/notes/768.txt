@@ -1,0 +1,37 @@
+Vim has a mode that enables to make changes in all the files
+in a directory. It's called 'argument list', and, to define
+the files that you want to control, you can do this:
+-----------------------------------------------------------
+:args **/*.txt
+----------------------------------------------------------
+This allows you to be in contact with all the txt files in
+the directory. Or you can just open vim this way:
+----------------------------------------------------------
+vim **/*.txt
+----------------------------------------------------------
+You can even use a 'find' command to populate the argument
+list:
+----------------------------------------------------------
+:args `find . -type f`
+----------------------------------------------------------
+You can see how many files are in the list, with this
+command:
+---------------------------------------------------------
+:args
+--------------------------------------------------------
+To give an existing example, I needed to modify more
+than 150 files who had, in the beginning of the lines,
+several '^M' windows line break symbols, that were
+creating some leading white space.
+To remove them, I did a 'replace' command that was
+replicated to all files:
+--------------------------------------------------------
+:argdo %s/^M//g | update
+--------------------------------------------------------
+The 'update' command saves automatically all files that
+were changed.
+A last comment to tell that, the '^M' symbol, to work in
+this context, is not written with '^+M'; it's the result
+of doing 'Ctrl-v', 'Ctrl-m', sequentially.
+-------------------------------------------------------
+https://tinyurl.com/yaopvgqz

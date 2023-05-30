@@ -1,0 +1,20 @@
+If you need to repeat a character in a string, instead of
+having to do it manually, or if the number of repetitions
+is variable, you can use this with a number or a int
+variable. The example will be with a variable and the
+resulting string will have the characters printed without
+spaces:
+----------------------------------------------------------
+lengths = [len(i) for i in <some_list>]
+for lgth in lengths:
+    "".join('<some_character>' * lgth)
+----------------------------------------------------------
+A simpler example:
+----------------------------------------------------------
+"".join('-' * 3)
+
+Result: '---'
+----------------------------------------------------------
+You can also add instead of multiplying with the '+' value.
+But this, sometimes, is interpreted as concatenation of
+strings.

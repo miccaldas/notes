@@ -1,0 +1,4 @@
+If you ever need to revert to an older version of a package, go this url:
+https://github.com/miccaldas/<you_repository_name>/commits/master
+For some reason I just get access to it from the site, just through the
+url.

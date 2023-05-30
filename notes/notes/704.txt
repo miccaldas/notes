@@ -1,0 +1,10 @@
+To change all files in a folder extensions, from PHP
+to HTML for example, do this:
+----------------------------------------------------
+import os
+files = os.listdir(currentdir)
+for file in files:
+   if '.php' in file:
+       new_file = file.replace('.php', '.html')
+       os.rename(file, new_file)
+----------------------------------------------------

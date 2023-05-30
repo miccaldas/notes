@@ -1,0 +1,18 @@
+I've created some commands for Ranger, that can be accessed through
+writing ':<command_name>', in the command prompt.
+They are:
+-------------------------------------------------------------------
+':md' - Visualizes markdown files through a Rich command. Similar
+        to what's being used in 'cli-diary'.
+':yplay' - Opens 'mpv' as a background process. You can use standard
+           linux commands, and my own, to operate it:
+           ---------------------------------------------------------
+           Ctrl-z - to pause the process.
+           'kamv' - to stop it. An alias for 'killall mvp'.
+           ---------------------------------------------------------
+':extract' - Extracts compressed files. At the moment I don't know
+             if it's still working, but 'l1', no need to go to the
+             command prompt, would do the same thing.
+':compress' - Compresses files.
+':erase' - Erases files/folders using trsh-put.
+-------------------------------------------------------------------

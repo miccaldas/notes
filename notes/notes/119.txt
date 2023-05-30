@@ -1,0 +1,32 @@
+  1 - Create a new repository, if needed,
+ 2 - Change the current working directory
+     to your local project.
+ 3 - Initialize the local directory as a
+     Git repository:
+ ----------------------------------------
+ git init -b master
+ ----------------------------------------
+ 4 - Adds the files in the local
+     repository and stages them for
+     commit. To unstage a file, use 'git
+     reset HEAD YOUR-FILE':
+ -----------------------------------------
+ git add .
+ -----------------------------------------
+ 5 - Commit the files that you've staged
+     in your local repository.
+ -----------------------------------------
+ git commit -m "First commit
+ -----------------------------------------
+ 6 - copy the remote repository URL.
+ 7 - add the URL for the remote repository
+     where your local repository will be
+     pushed:
+ ------------------------------------------
+ git remote add origin  <REMOTE_URL>
+ ------------------------------------------
+ 8 - Push the changes in your local
+     repository to remote repository:
+ ------------------------------------------
+ git push origin main
+ ------------------------------------------

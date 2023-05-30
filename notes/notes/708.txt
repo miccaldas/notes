@@ -1,0 +1,8 @@
+For manual formatting of a file, in Vim you can do the following:
+-----------------------------------------------------------------
+1 - Select all the content,
+2 - Press '='.
+For HTML inside PHP, first change the filetype with:
+':set ft=html'
+then do the other steps.
+-----------------------------------------------------------------

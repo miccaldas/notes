@@ -1,0 +1,11 @@
+To use the Trepan3k (python 3 version of Trepan2), we can,as an
+example, construct the following command line expression:
+----------------------------------------------------------------
+trepan3k --highlight=light -o <somefile.txt> file_to_debugged.py
+----------------------------------------------------------------
+The flag '--highlight', colorizes the output. It can be light or
+dark.
+The flag '-o' defines to what file will go the output of the
+debugging. BEWARE, if you choose this, you wont see the output
+when running it from the terminal.
+https://python2-trepan.readthedocs.io

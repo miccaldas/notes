@@ -1,0 +1,5 @@
+To get all info in just one column, use awk:
+--------------------------------------------
+awk '{print $4}' python_list.txt
+--------------------------------------------
+Where the digit is the number of the column.

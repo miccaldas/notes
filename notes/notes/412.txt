@@ -1,0 +1,24 @@
+ To rename a bunch of files, we can use zmv, a zsh tool.
+zmv is not loaded by default, so remember to the this:
+-------------------------------------------------------
+autoload zmv
+-------------------------------------------------------
+Put it in .zshrc.
+I needed to change a lot of files, keeping the first 3
+characters and changing all the rest. This particular
+operation in zmv, looks like this:
+-------------------------------------------------------
+zmv -n '(?(#c3))*_clean '$1.php'
+-------------------------------------------------------
+The '-n' flag runs the app in a dry run, so you can see
+what it will do. In what I found out is a prudent thing
+to do.
+The '#c3' indicates the number of characters I want to
+keep in the beginning of the file name, '_clean' was the
+the suffix that the files had and I wanted to get rid of.
+'$1' represents the part that you kept from the original
+name and '.php' was the suffix I wanted to put on the
+files.
+--------------------------------------------------------
+https://tinyurl.com/yfo4svou
+https://filipe.kiss.ink/zmv-zsh-rename/

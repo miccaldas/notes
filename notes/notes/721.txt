@@ -1,0 +1,26 @@
+To make sure that your email server is running without the risk of being
+turned down by other mail providers and with a high grade of security, it
+is needed to follow the next security records:
+---------------------------------------------------------------------------
+1 - MX Records. Here you just have to find the 'Mail Settings' in 'Advanced
+DNS' in Namecheap, and just add '@' for 'Host', your domain for 'Value' and
+10 for setting the precedence.
+----------------------------------------------------------------------------
+2 - SPR Records or Reversed DNS. This is defined with your server provider.
+In the case of Vultr, is just a case of opening your server, going to
+settings, choosing 'IPV4', and there'll be already a value for reverse dns.
+Change it to <your_ip>.<your_domain>
+And it's done.
+----------------------------------------------------------------------------
+3 - DKIM Records. This one is complicated. So I'll just point you to this
+guide: https://tinyurl.com/yxunbp2v.
+Be very mindful that the guide is wrong when it gets to the 'Create DKIM DNS
+record' part. It is not correct in explaining what parts of the key are to be
+used in the DNS text record. The correct way is this:
+- 'default._domainkey' is the value that you will insert in the 'Host' field.
+- The value is the whole key, with no spaces or double quotes, starting from
+'k=rsa...' onwards until the end. Before that is to be ignored.
+------------------------------------------------------------------------------
+4 - DMARC Record. Just follow the online DMARC record creator form here,
+https://tinyurl.com/y2vb6aff, and everything will be easy.
+------------------------------------------------------------------------------

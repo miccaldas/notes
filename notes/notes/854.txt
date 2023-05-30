@@ -1,0 +1,2 @@
+To find out a character ascii code do 'ord(<character>)'.
+To find out the character of a ascii code, do 'chr(<ascii_code>)'.

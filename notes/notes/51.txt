@@ -1,0 +1,5 @@
+To enable full-text in a new table do this:
+------------------------------------------------
+sql-utils enable-fts <table name> <column list>
+------------------------------------------------
+https://bit.ly/3qNboQz

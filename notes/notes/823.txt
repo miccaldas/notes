@@ -1,0 +1,4 @@
+I'm writing this down because, although it's very simple information,
+I keep forgetting it. To see a list of all active aliases in zsh
+write, 'alias'.
+To delete an alias, write 'unalias <name_of_alias>'

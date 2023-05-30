@@ -1,0 +1,13 @@
+ To create a virtual environment through pyenv, do:
+--------------------------------------------------
+- See available versions:
+  pyenv version
+- Create a virtual environment:
+  pyenv virtualenv <version> <environment name>
+- Create file that identifies folder as a virtual
+  environment. Without it, it won't activate
+  automatically when entering the folder:
+  pyenv local <environment name>
+- Activate the environment manually:
+  pyenv shell <environment name>
+---------------------------------------------------

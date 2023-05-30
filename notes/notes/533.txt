@@ -1,0 +1,3 @@
+ To paste to outside of Vim, hold the "shift" key, select
+ the text you want, key 'Ctrl-c', and then press the 
+ mouse middle button to paste.

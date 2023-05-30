@@ -1,0 +1,4 @@
+To deal with the "cc1: all warnings being treated as errors",
+nuisance, search in Makefile for where it's defined the
+"Werror" variable and erase it.
+https://tinyurl.com/yeyhof9c

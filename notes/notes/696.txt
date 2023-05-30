@@ -1,0 +1,7 @@
+The Vim versions from aur or even the github one, are not
+what I want from Vim. To ensure that there is all I need.
+The only solution is to download from GitHub and configure
+with this flags:
+---------------------------------------------------------
+./configure --with-features=huge -enable-gui --with-x
+---------------------------------------------------------

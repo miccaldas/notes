@@ -1,0 +1,6 @@
+To replace characters in a MySQL database, as an example,
+you could do:
+---------------------------------------------------------
+UPDATE "table_name";
+SET "column_name" = REPLACE("column_name", '\n', '<br>')
+---------------------------------------------------------

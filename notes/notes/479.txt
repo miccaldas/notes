@@ -1,0 +1,15 @@
+To delete the Nth occurrence of a character, on the
+same line, use this expression:
+-----------------------------------------------------
+sed "s/'//2" lines_tags1.txt
+Where:
+  1 -  '/.../' is the space to put the expression to
+      delete. Notice that I didn't have to escape it.
+  2 - '//' represent that, instead of a normal
+      substitution operation, this pattern won't be
+      replaced by nothing, deleting it.
+  3 - '2' indicates the n of the occurrence. In this
+      case it was the second occurrence of the "'
+      character.
+-----------------------------------------------------
+https://tinyurl.com/ygj7d7dn

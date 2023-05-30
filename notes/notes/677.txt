@@ -1,0 +1,5 @@
+To see process owner name and port number
+input:
+-----------------------------------------
+ss -tulpwn
+-----------------------------------------

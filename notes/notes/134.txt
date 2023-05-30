@@ -1,0 +1,5 @@
+To use this PHP linter you need to do this:
+-------------------------------------------
+phpcs.phar /path/to/file/to/be/analyzed.php
+-------------------------------------------
+https://github.com/squizlabs/PHP_CodeSniffer

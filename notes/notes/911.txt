@@ -1,0 +1,7 @@
+These are some old cron jobs that I don't use anymore, but are still educational.
+
+# Backup of server sites
+@daily rsync -av --delete -e 'ssh -i /home/mic/.ssh/id_rsa' root@136.244.96.33:/var/www /home/mic/server_html_projects/sickly > /home/mic/cronlogs/sickly.txt 2>&1
+@daily rsync -av --delete -e 'ssh -i /home/mic/.ssh/id_rsa' root@70.34.205.44:/var/www/html /home/mic/server_html_projects/django > /home/mic/cronlogs/djgo.txt 2>& 
+# Refreshes poem list on poetry site menu
+@hourly /usr/bin/python3.10  /usr/share/nginx/html/poems_folding_menu/hp_menu/rand.py

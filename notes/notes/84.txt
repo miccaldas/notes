@@ -1,0 +1,31 @@
+In order to receive input from the user on a site
+and do something with it, do the following:
+--------------------------------------------------
+Here's a simple example:
+
+<!DOCTYPE html>
+<html>
+  <form method="GET" action="my_result.php">
+    <input type="text" name="my_value">
+    <input type="submit">
+  </form>
+</html>
+
+Your second page (the results page) should bear the
+name that you specified in the form's action
+attribute.
+This is the page which will need server-side code.
+So here is an example my_result.php:
+
+<!DOCTYPE html>
+<html>
+  <p><?php echo $_GET['my_value']; ?></p>
+</html>
+-------------------------------------------------------
+If you want the output somewhere else, you can always
+insert it in your HTML like this:
+-------------------------------------------------------
+<? include("results.php"); ?>
+-------------------------------------------------------
+https://bit.ly/3pYaNuu
+https://bit.ly/3kllc2k

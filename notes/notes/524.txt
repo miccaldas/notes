@@ -1,0 +1,5 @@
+To run multiple commands in Subprocess, put a
+';' between them. Like so:
+---------------------------------------------
+cmd = 'rm <filename>'; rm <other filename>
+---------------------------------------------

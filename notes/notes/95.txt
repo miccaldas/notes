@@ -1,0 +1,8 @@
+Here is an example of what I did to change default
+browser from Firefox to Vivaldi, in xdg:
+______________________________________________________
+xdg-mime dfefault vivaldi-stable.desktop browser/http
+xdg-mime dfefault vivaldi-stable.desktop browser/https
+xdg-mime dfefault vivaldi-stable.desktop browser/ftp
+-------------------------------------------------------
+https://tinyurl.com/ybyepetq

@@ -1,0 +1,12 @@
+To export a MySQL table with headers, to a csv file,
+do the following:
+----------------------------------------------------
+SELECT 'title', 'comment', 'k1', 'k2', 'k3', 'tempo'
+UNION ALL
+SELECT title, comment, k1, k2, k3, tempo
+FROM bkmks
+INTO OUTFILE '/var/lib/mysql/bkmks1.csv'
+FIELDS TERMINATED BY ';'
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+----------------------------------------------------

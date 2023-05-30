@@ -1,0 +1,6 @@
+Neste exemplo ir-se-à usar sed para colocar um caracter
+na posição 15 de cada linha. O código é este:
+--------------------------------------------------------
+sed -r -e 's/^.{15}/&#/' file
+--------------------------------------------------------
+ https://tinyurl.com/yz48plqs

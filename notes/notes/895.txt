@@ -1,0 +1,4 @@
+If the Github token fails because it's past its
+expiration date, in your github page go to
+'settings/developer settings/personal access tokens'
+and create a new one.

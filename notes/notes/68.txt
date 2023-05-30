@@ -1,0 +1,5 @@
+To remove every other entry in a list,
+do the following:
+--------------------------------------
+<new_list> = <old_list>[1::2]
+--------------------------------------

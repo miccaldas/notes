@@ -1,0 +1,6 @@
+If you delete something that you shouldn't have to,
+and there weren't any git commits after the deletion,
+you can recover the data inputting:
+------------------------------------------------------
+git checkout -f
+------------------------------------------------------

@@ -1,0 +1,28 @@
+To create a multi-column layout in Flexbox, do this
+in your html:
+----------------------------------------------------
+<div class="row">
+   <div class="col">
+       <h2>First Column</h2>
+       <p>Test content</p>
+   </div>
+   <div class="col">
+       <h2>Second Column</h2>
+       <p>Test content</p>
+   </div>
+   <div class="col">
+       <h2>Third Column</h2>                
+       <p>Test content</p>
+   </div>
+   <div class="col">
+       <h2>Fourth Column</h2>                
+       <p>Test content</p>
+   </div>
+</div>
+------------------------------------------------------
+In your css:
+.row {
+   display: flex;
+}
+------------------------------------------------------
+https://tinyurl.com/yfgjwqyf

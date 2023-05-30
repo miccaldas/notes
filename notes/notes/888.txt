@@ -1,0 +1,8 @@
+If you need to read an environment
+variable from inside python,
+let's say 'PATH', do:
+---------------------------------
+import os
+
+path = os.environ['PATH']
+---------------------------------

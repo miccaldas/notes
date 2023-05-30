@@ -1,0 +1,4 @@
+To delete a range of records from a MySQL database, do this:
+------------------------------------------------------------
+DELETE FROM <table> WHERE id BETWEEN <number> AND <number>
+------------------------------------------------------------

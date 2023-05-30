@@ -1,0 +1,6 @@
+I should already know this but, as I needed it and soon undertood that I had
+forgotten it, here's how to create a symbolic link. This example pressuposes
+that you're on the folder where the link will be:
+----------------------------------------------------------------------------
+ln -s <file/folder to link> <link_name>
+----------------------------------------------------------------------------

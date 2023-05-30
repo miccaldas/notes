@@ -1,0 +1,7 @@
+Create incremental backups with tar, in tar.gz format:
+------------------------------------------------------
+tar  --listed-incremental=<folder_name>-snapshot.file 
+-czf <folder_name>-$now.tar.gz /boot
+-------------------------------------------------------
+https://bit.ly/3qNYHVQ
+/home/mic/sripts/incremental_backup.sh

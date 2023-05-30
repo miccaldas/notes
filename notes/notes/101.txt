@@ -1,0 +1,20 @@
+To add an app, do the following:
+------------------------------------
+vi /etc/ufw/applications.d/nginx.ini
+Place this inside file
+
+[Nginx HTTP]
+title=Web Server 
+description=Enable NGINX HTTP traffic
+ports=80/tcp
+
+[Nginx HTTPS] \
+title=Web Server (HTTPS) \
+description=Enable NGINX HTTPS traffic
+ports=443/tcp
+
+[Nginx Full]
+title=Web Server (HTTP,HTTPS)
+description=Enable NGINX HTTP and HTTPS traffic
+ports=80,443/tcp
+--------------------------------------

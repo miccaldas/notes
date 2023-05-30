@@ -1,0 +1,17 @@
+Much to my surprise, it's possible to import
+a variable, and only that,if you want to,
+from another module.
+You just import it as you would a function:
+-------------------------------------------
+from <other_file> import <variable_name>
+------------------------------------------
+or
+------------------------------------------
+import <other_file>
+------------------------------------------
+If you want access to everything.
+I've tested it and it works OK. It might
+need the creation of a __init__.py file, 
+but I don't think that's a thing right now.
+------------------------------------------
+https://tinyurl.com/yghg7v56

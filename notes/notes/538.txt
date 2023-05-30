@@ -1,0 +1,13 @@
+To insert a line into a file every nth line,
+do the following:
+--------------------------------------------
+sed '0~3 s/$/<string>/g' <file>
+--------------------------------------------
+Where:
+   '0~3' - Every three lines.
+   '$' -  At the end of the line. If you want
+          in a new line, put '\n' before the
+          string.
+   'g' -  Replace all occurrences.
+--------------------------------------------
+ https://tinyurl.com/yeo52psw

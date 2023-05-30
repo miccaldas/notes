@@ -1,0 +1,12 @@
+To increment through an iterator, defining a starting point,
+you have these possibilities,
+To iterate through a list, starting at 8 and incrementing
+two by two, do:
+------------------------------------------------------------
+for i in range(8, len(lines), 2):
+-----------------------------------------------------------
+This can be summarized like this:
+-----------------------------------------------------------
+print(lines[8::2])
+-----------------------------------------------------------
+https://tinyurl.com/yhr6h37l

@@ -1,0 +1,5 @@
+To set the column length of a old md file,
+before setting the length in .vimrc, do this:
+----------------------------------------------
+:set colorcolumn=80
+----------------------------------------------

@@ -1,0 +1,9 @@
+In order to have a readable timestamp in Python do this:
+This will transform 'datetime' output to a 'day-month
+-year_hour_minutes' format.
+-------------------------------------------------------
+from datetime import datetime
+
+now = datetime.now()
+now = now_strftime("%d-%m_%Y_%H:%M")
+--------------------------------------------------------

@@ -1,0 +1,11 @@
+Example:
+------------------------------------------
+CREATE TABLE notes (
+id INTEGER PRIMARY KEY,
+title TEXT,
+k1 TEXT,
+k2 TEXT,
+k3 TEXT,
+note TEXT,
+time DATETIME DEFAULT CURRENT_TIMESTAMP);
+------------------------------------------

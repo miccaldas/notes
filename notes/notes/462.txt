@@ -1,0 +1,5 @@
+To extract a string up to a chosen character,
+do this:
+----------------------------------------------
+<string>.split("<character>", "<substitution")
+----------------------------------------------

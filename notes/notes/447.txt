@@ -1,0 +1,10 @@
+To create a space in html, write:
+---------------------------------
+&nbsp;
+---------------------------------
+For two spaces:
+---------------------------------
+&nbsp;&nbsp;
+---------------------------------
+https://tinyurl.com/yhumrjfx
+https://tinyurl.com/ygaqx9fm

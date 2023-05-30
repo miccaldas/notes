@@ -1,0 +1,6 @@
+For use in server 'machine'. Where the blog is.
+To use Goaccess, do the following:
+------------------------------------------------
+goaccess /var/log/apache2/access.log -c
+------------------------------------------------
+https://goaccess.io

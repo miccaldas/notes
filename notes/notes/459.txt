@@ -1,0 +1,8 @@
+To join several lists in a no duplicates super-list,
+do the following:
+----------------------------------------------------
+set1 = set(list1)
+set2 = set(list2)
+set3 = set(list3)
+combined_list = list(set3 - set2 - set1)
+-----------------------------------------------------

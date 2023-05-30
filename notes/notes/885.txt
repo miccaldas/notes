@@ -1,0 +1,6 @@
+To delete tables left by Django, or for any other reason,
+that give a 'foreign-key constraint' error message, do:
+--------------------------------------------------------
+SET FOREIGN_KEY_CHECKS=0; -- to disable them
+SET FOREIGN_KEY_CHECKS=1; -- to re-enable them
+--------------------------------------------------------

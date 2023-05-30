@@ -1,0 +1,30 @@
+ The best way to profile a module is to use this structure:
+----------------------------------------------------------
+python -m profile -o <file_name>.profile <module_name>
+----------------------------------------------------------
+This will create a file of '.profile' type that is a
+binary and Vim won't understand it. To do this you can use
+pstat's interactive console, that can be accessed thusly:
+----------------------------------------------------------
+python -m pstats <file_name>.profile
+----------------------------------------------------------
+Inside the console, write 'help' to see what commands are
+there. 
+If you want to check just part of a module, you can use
+this solution:
+---------------------------------------------------------
+import Profile, pstats
+from pstats import SortKey
+
+<code_starts>
+...
+p = Profile.Profile()
+p.enable()
+<code_that_you_want_to_check>
+p.disable()
+sort = SortKey.CUMULATIVE
+ps = pstats.Stats(p).sort_stats(sort)
+p.print_stats()
+---------------------------------------------------------
+For more information see the 'profiling' collection in
+the 'bkmks' app.

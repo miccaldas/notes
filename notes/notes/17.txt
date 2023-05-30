@@ -1,0 +1,20 @@
+Fancy indexing allows us to select entire rows or columns out of
+order.
+Fancy indexing allows us to grab any row using its index, let’s
+grab row 1, 2 and 3.
+We need to pass in a list of required rows in square brackets:
+Let's suppose a 2D array named 'arr':
+----------------------------------------------------------------
+arr[[1,2,3]]
+output: array([[1,1,1],
+               [2,2,2],
+               [3,3,3]])
+----------------------------------------------------------------
+Now with columns:
+---------------------------------------------------------------
+arr[:,[3,2]]
+output: array([[3,2],
+               [7,6],
+               [1,0],
+               [0,1]])
+-----------------------------------------------------------------

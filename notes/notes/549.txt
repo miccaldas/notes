@@ -1,0 +1,6 @@
+To find the index of a tuple, use this  comprehension:
+------------------------------------------------------
+idx = [i for i, tup in enumerate(<tuple_list>) \
+if tup[0] == <tuple_you're_looking for>]
+------------------------------------------------------
+https://tinyurl.com/yf7umkmu

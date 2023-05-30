@@ -1,0 +1,5 @@
+This is an economical way of using os.listdir and os.path.join:
+-------------------------------------------------------------------------
+directory = 'the_directory_you_want_to_study'
+paths = [os.path.join(directory, file) for file in os.listdir(directory)]
+-------------------------------------------------------------------------

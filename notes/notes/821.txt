@@ -1,0 +1,7 @@
+If you need to know what files are being open by a process
+you can use 'lsof', thusly:
+-----------------------------------------------------------
+lsof -p <pid_number>
+-----------------------------------------------------------
+It does a lot more. Read it here 
+https://lsof.readthedocs.io/en/latest/

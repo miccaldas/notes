@@ -1,0 +1,6 @@
+To refresh an HTML periodically, put this inside
+the head tag:
+"content" is a time period calculated in seconds
+------------------------------------------------
+<meta http-equiv="refresh" content="50
+------------------------------------------------

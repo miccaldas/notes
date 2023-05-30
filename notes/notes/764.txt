@@ -1,0 +1,5 @@
+To use bash variables in various shell apps,
+insert them in the expression surrounded by
+double quotes. The shell considers everything
+between apostrophes to be literal values, but
+with doubles quotes, it expands them.

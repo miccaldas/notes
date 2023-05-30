@@ -1,0 +1,7 @@
+To send notifications through cron (as done in the todo app),
+the command in the cron jobs need the following structure:
+-------------------------------------------------------------
+export DISPLAY=:0.0 && XDG_RUNTIME_DIR=/run/user/$(id -u) 
+/usr/bin/notify-send '<text for notifications>'
+-------------------------------------------------------------
+Remember it must be sent as root. 'sudo crontab -e'

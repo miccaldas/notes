@@ -1,0 +1,18 @@
+This is a Sed command to add two spaces at the
+beginning of every line that is between the
+'```python' and '```' patterns. This was needed to
+create a border between pandoc's code boxes, used in
+the 'diary' app, and their content.
+And if I don't understand it very well, I can at
+least describe it and hope it helps.
+------------------------------------------------------
+sed '/```python/,/```/{/```python/n;/```/!{s/^/  /g}}'
+------------------------------------------------------
+Where:
+1 - '/```python/,/```/' are the beginning and end of
+the range. Note that with this script they're exclusive,
+and that you need a comma separating them.
+2 - '{/```python/n;/```/!{s/^/  /g}}' defines a group,
+again the range limits separated by 'n;' and another
+group that encases the command. The '!' tells Sed to 
+execute the substitution on every line.

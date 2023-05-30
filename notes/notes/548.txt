@@ -1,0 +1,15 @@
+Sometimes its difficult to access a definition for something
+that is second or third level apart from regular objects.
+Things like tuple elements, list of lists, dictionaries, and
+the like.
+This definition is for a tuple, but it has some ideas to
+retain. First, when you don't define, or can't define, the
+level, represent it with a zero. I didn't know you could do
+that.
+Example from something I was doing for the notes, webapp:
+'/srv/http/notes/resources/homepage_tagging/auto_update/
+tag_is_new_msg.py' 
+-------------------------------------------------------------
+frst_val = [i[0] for i in lnk_num]
+-------------------------------------------------------------
+https://tinyurl.com/y48wgcqm

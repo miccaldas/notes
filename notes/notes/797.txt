@@ -1,0 +1,33 @@
+To delete a json object like this:
+-----------------------------------
+[
+  {
+     "ename": "mark",
+     "url": "Lennon.com
+  },
+  {
+     "ename": "egg",
+     "url": "Lennon.com
+  }
+]
+-----------------------------------
+Do this:
+-----------------------------------
+#!/usr/bin/python                                                               
+
+# Load the JSON module and use it to load your JSON file.                       
+# I'm assuming that the JSON file contains a list of objects.                   
+import json
+obj  = json.load(open("file.json"))
+
+# Iterate through the objects in the JSON and pop (remove)                      
+# the obj once we find it.                                                      
+for i in xrange(len(obj)):
+   if obj[i]["ename"] == "mark":
+       obj.pop(i)
+       break
+
+# Output the updated file with pretty JSON                                      
+open("updated-file.json", "w").write(
+    json.dumps(obj, sort_keys=True, indent=4, separators=(',', ': '))
+)

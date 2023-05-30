@@ -1,0 +1,10 @@
+To keep an HTML footer in the bottom of the page
+but still always visible, do the following:
+-------------------------------------------------
+.footer {
+   position: fixed; 
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+---------------------------------------------------

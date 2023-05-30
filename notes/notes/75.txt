@@ -1,0 +1,12 @@
+If you're getting several errors inputting commands,
+it might be that the cause is that the mysql_mode is
+defined with STRICT_TRANS_TABLES which comes by 
+default currently. To change this, do:
+-----------------------------------------------------
+SELECT @@GLOBAL.sql_mode global, \
+@@SESSION.sql_mode session;
+SET sql_mode = '';
+SET GLOBAL sql_mode = '';
+-----------------------------------------------------
+This turns sql_mode into a empty string.
+https://bit.ly/2LMtH9G

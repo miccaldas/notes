@@ -1,0 +1,16 @@
+  Call os.listdir(directory) to create a list of every file in directory.
+ Use a for-loop to iterate over the list, and inside the for-loop call
+ os.path.join(directory, filename) to build a full path to each filename
+ in the list, with directory from the previous step. Call command(path)
+ to execute command on the file.
+ ------------------------------------------------------------------------
+ def file_command(filepath):
+   f = open(filepath, "a+")
+   f.write("berry")
+
+ a_directory = "dir
+ for filename in os.listdir(a_directory):
+   filepath = os.path.join(a_directory, filename)
+   file_command(filepath)
+ -------------------------------------------------------------------------
+ https://tinyurl.com/yzrgezcj

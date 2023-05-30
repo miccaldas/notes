@@ -1,0 +1,9 @@
+any() returns True if an element of an iterable is True.
+As an example, in the 'notes' app, I had a list of tags
+that I wanted to know if they were already in the db.
+The keyword list is called 'keywords' and the db tag
+list is called 'records'.
+---------------------------------------------------------
+for k in keywords():
+    res = [k in i for i in records]
+----------------------------------------------------------

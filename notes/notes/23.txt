@@ -1,0 +1,5 @@
+To search journalctl by pid, say 2355,
+do the following:
+--------------------------------------
+'sudo journalctl _PID=2355'
+---------------------------------------

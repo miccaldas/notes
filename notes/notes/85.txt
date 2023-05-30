@@ -1,0 +1,26 @@
+ 
+ To show more than one image on the same
+ line, do the following in your HTML:
+ ---------------------------------------
+ <div id="banner">
+     <div class="inline-block">
+         <img src ="img1.jpg">
+     </div>
+
+     <div class="inline-block">
+         <img src ="img2.jpg">
+     </div>
+
+     <div class="inline-block">
+         <img src ="img3.jpg">
+     </div>
+ </div>
+ -----------------------------------------
+ and on your CSS:
+ -----------------------------------------
+ .inline-block {
+    display: inline-block;
+ }
+ ------------------------------------------
+ https://bit.ly/2MvaoSP
+ 

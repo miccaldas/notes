@@ -1,0 +1,2 @@
+For everything related to pwd encryption, follow in cli_diary
+the entry called 'pwd_db_encryption_process'.

@@ -1,0 +1,8 @@
+Try list(newdict.keys()).
+This will convert the dict_keys object to a list.
+-------------------------------------------------
+for key in newdict.keys():
+ print(key)
+ https://bit.ly/3j2w4Bw
+ -------------------------------------------------
+ 

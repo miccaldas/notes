@@ -1,0 +1,10 @@
+This is a python way of finding what content exists between
+two characters. In my experience this is simpler to get
+working than sed solutions to the same problem.
+------------------------------------------------------------
+text = "The text you want to examine.
+start = text.index('$')
+end = text.index('$',start+1)
+substring = text[start+1:end]
+------------------------------------------------------------
+https://tinyurl.com/yat3zg82

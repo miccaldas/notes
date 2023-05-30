@@ -1,0 +1,9 @@
+To add a line after a Sed match:
+--------------------------------------------------
+sed -re '/pattern_to_match/a substitution_pattern'
+--------------------------------------------------
+To add a line before a match:
+--------------------------------------------------
+sed -re '/pattern_to_match/i substitution_pattern'
+--------------------------------------------------
+https://tinyurl.com/yayuaqva

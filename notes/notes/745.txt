@@ -1,0 +1,16 @@
+To import a file from another folder when you're not on
+its path, do what is shown below, taken from a real use
+case. The flek8 noqa is there because it will generate
+an error message saying the import statement is not at
+top level.
+--------------------------------------------------------
+import sys
+sys.path.append("/home/mic/python/rss/rss")
+from rss import insert_db  # noqa: E402
+--------------------------------------------------------
+If the other file is your path, as python only accepts
+relative paths, make sure that the folder you're getting
+the file from, has a __init__.py file on it, and do this:
+---------------------------------------------------------
+from path.to.folder.separated.by.points import <file>
+---------------------------------------------------------

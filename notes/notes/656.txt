@@ -1,0 +1,10 @@
+To check if a string/substring is contained in a list
+of strings, use the following expression:
+------------------------------------------------------
+word = <word_to_check>
+lst = [list of strings]
+res = any(word in i for i in lst)
+-------------------------------------------------------
+This returns a boolean with value True if the string is
+found inside the list, or False if not.
+https://tinyurl.com/yzd2qjme

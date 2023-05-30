@@ -1,0 +1,11 @@
+To move through files and folders while on Vim, in
+your current directory, do:
+--------------------------------------------------
+:Explore
+--------------------------------------------------
+This opens 'netrw', Vim's native file explorer.
+If you want to go to a specific folder:
+--------------------------------------------------
+:e /path/to/folder
+--------------------------------------------------
+https://tinyurl.com/2je7hfk6
