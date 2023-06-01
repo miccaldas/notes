@@ -1,0 +1,15 @@
+This is as involved as it is useful. I've tried to use this to define 
+if some network sockets had content or not, and avoid the stress of
+using socket selectors, but the convolutedness of defining backspaces
+defeated me. Nevertheless, if you have the values of the IP and the 
+port number, and you want to know if this address has info to show, by
+seeing ss's Recv-Q value, Here is how it's done:
+----------------------------------------------------------------------
+ss -a | awk '$5 == "127.0.0.1:58910" {print $3}'
+
+Where:
+    ss -a -> 'ss' displays all sockets,
+    awk $5 -> 'Awk' searches the fifth column of ss' results to find
+    127.0.0.1:58910 -> this particular IP and Port web address.
+    {print $3} -> If condition is true, print the Recv-Q column value,
+                  that is the third one.
