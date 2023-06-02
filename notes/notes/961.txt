@@ -1,0 +1,31 @@
+This is an example of how to download information from a db to a Panda's dataframe.
+The 'use_pure' in the definition of conn, signifies that it's a Python implementation
+--------------------------------------------------------------------------------------
+import pandas as pd
+from mysql.connector import Error, connect
+
+def notes_to_pandas():
+    """
+    This code downloads db's information into a panda's dataframe
+    """
+    try:
+        conn = connect(
+            host="localhost",
+            user="mic",
+            password="xxxx",
+            database="notes",
+            use_pure=True,
+        )
+        cur = conn.cursor()
+        query = "SELECT ntid, title, k1, k2, k3 FROM notes"
+        result_dataframe = pd.read_sql(query, conn)
+    except Error as e:
+        print("Error while connecting to db", e)
+    finally:
+        if conn:
+            conn.close()
+
+
+if __name__ == "__main__":
+    notes_to_pandas()
+---------------------------------------------------------------------------------------------

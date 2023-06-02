@@ -34,6 +34,11 @@
    Select a range: SELECT * FROM [table] WHERE [column] BETWEEN [value1] and [value2];
    Select records with a list of choices: SELECT * FROM [table] WHERE [column] IN ('value1', 'value2');
    Select with custom order and only limit: SELECT * FROM [table] WHERE [column]ORDER BY [column] ASC LIMIT [value]; (Order: DESC, ASC)
+   Select 10 highest repeated values in three different columns. Example:
+        SELECT tag, COUNT(*) Total FROM
+        (SELECT k1 as tag FROM notes UNION All
+         SELECT k2 as tag FROM notes UNION ALL
+         SELECT k3 as tag FROM notes) d GROUP BY tag ORDER BY TOTAL DESC LIMIT 10
 
    # ---- Deleting ----
    Deleting records: DELETE FROM [table] WHERE [column] = [value];

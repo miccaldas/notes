@@ -1,0 +1,4 @@
+To determine a file's mime type in Linux, do:
+---------------------------------------------
+file --mime-type <file_name>
+---------------------------------------------
