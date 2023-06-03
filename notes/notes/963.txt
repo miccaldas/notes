@@ -1,0 +1,7 @@
+If you ever need to convert text files to image files,
+thqt can be done thusly:
+-------------------------------------------------------
+pango-view --dpi=120 -qo <filename>.svg <filename>.txt
+-------------------------------------------------------
+If you have ascii art on the text files, add a 
+'--font=mono' argument to the command.

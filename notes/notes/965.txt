@@ -1,0 +1,10 @@
+To turn a dictionary to a dataframe, do this:
+1 - Turn your dictionary to a string, so 'eval'
+    can work its magic on it.
+2 - Pass it through 'eval'
+3 - Turn it to a dataframe.
+--------------------------------------------------
+<string_dict> = str(<dict_name>)
+<evaL_dict> = eval(<eval_dict>)
+<new_dataframe> = pd.DataFrame(<eval_dict>)
+--------------------------------------------------

@@ -1,0 +1,5 @@
+To change one column entry in a Pandas Dataframe, find their dimension
+values, pandas index and column name, and allocate it a new value:
+----------------------------------------------------------------------------
+<dataframe_name>.at[<dataframe_index_number>, '<column_name>'] = <new_value>
+-----------------------------------------------------------------------------
