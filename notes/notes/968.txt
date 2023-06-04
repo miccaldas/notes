@@ -1,0 +1,5 @@
+If you need to output a json file to the terminal,
+use python's 'json.tool' to pretiffy the results:
+---------------------------------------------------
+python -m json.tool <filename>.json
+---------------------------------------------------

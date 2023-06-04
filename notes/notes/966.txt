@@ -1,0 +1,22 @@
+The Python Json module has four important commands that are
+named almost alike. They're commands to convert to and from
+json to python:
+------------------------------------------------------------
+json.dump():
+    Writes python dicctionary to json file.
+    with open('<some_file>.json', 'w') as f:
+        json.dump(<python_dict>, f)
+
+json.dumps():
+    Converts python object to json string.
+    <json_object> = json.dumps(<python_dict>, indent=4)
+
+json.load():
+    Converts json file to python.
+    with open(<json_file>, 'r') as f:
+        data = json.load(f)
+
+json.loads():
+    Converts json string to python.
+    json.loads({'foo': 'bar'})
+------------------------------------------------------------

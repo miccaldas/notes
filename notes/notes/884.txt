@@ -16,8 +16,7 @@
 
    # ---- Adding/Inserting ----
    Adding a column: ALTER TABLE [table] ADD COLUMN [column] VARCHAR(120);
-   Adding a column with an unique, auto-incrementing ID: ALTER TABLE [table] \
-   ADD COLUMN [column] int NOT NULL AUTO_INCREMENT PRIMARY KEY;
+   Adding a column with an unique, auto-incrementing id: ALTER TABLE [table] MODIFY COLUMN [column] INT AUTO_INCREMENT, ADD PRIMARY KEY([column]);
    Inserting a record: INSERT INTO [table] ([column], [column]) VALUES ('[value]', '[value]');
    MySQL function for datetime input: NOW()
    Selecting records: SELECT * FROM [table];
@@ -39,6 +38,8 @@
         (SELECT k1 as tag FROM notes UNION All
          SELECT k2 as tag FROM notes UNION ALL
          SELECT k3 as tag FROM notes) d GROUP BY tag ORDER BY TOTAL DESC LIMIT 10
+  Select entries with a multi-column condition ('OR', in this case): SELECT title FROM notes WHERE k1 = 'python' || k2 = 'python' || k3 = 'python'"
+
 
    # ---- Deleting ----
    Deleting records: DELETE FROM [table] WHERE [column] = [value];
@@ -55,7 +56,7 @@
 
    # ---- Updating ----
    Updating records: UPDATE [table] SET [column] = '[updated-value]' WHERE [column] = [value];
-   Modifying Column: ALTER TABLE [table] MODIFY [column_name] [column_definitions] optionally: [FIRST | AFTER column_name]
+   Modifying Column: ALTER TABLE [table] MODIFY [column_name] [column_definitions] optionally: FIRST (on column name needed)/AFTER [column_name]
    Deleting Trailing Whitespace: UPDATE [table] SET [column] = TRIM(TRAILING '\n' FROM [column])
 
    # ---- Import/Export Databases ----

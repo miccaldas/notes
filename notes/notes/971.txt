@@ -1,0 +1,13 @@
+If you need to create a column based on calculations on the values of another,
+you can use 'generatecd columns'. These can be virtual or persistent, created
+at the beginning or altered after. This is an example used in the 
+tags_streamlit' table in the 'notes' database. I needed to have a db index to
+compare to a dataframe index, so I could reliably indentify entries, in both
+environments by an integer. But dataframe's indexe's start at 0 and MySQL's
+start at 1, for a variety of good reasons, to make them match I created a new
+column that subtracted 1 from the value of the db's id (called 'idx'):
+------------------------------------------------------------------------------
+ALTER TABLE tags_streamlit ADD COLUMN id_comp INT AS (idx - 1)
+------------------------------------------------------------------------------
+MySQL's documentation - https://tinyurl.com/y5aeejcf
+Mariadb's documentation - https://mariadb.com/kb/en/generated-columns/

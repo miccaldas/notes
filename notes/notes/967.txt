@@ -1,0 +1,5 @@
+To see all rows in a Pandas dataframe, write this on a script
+ or write to shell, before opening a dataframe:
+ -------------------------------------------------------------
+ pandas.set_option('display.max_rows', None)
+ -------------------------------------------------------------

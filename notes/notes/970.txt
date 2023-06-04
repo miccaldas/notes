@@ -1,0 +1,8 @@
+If you're using the Pandas method of connecting to MySQL, there's the
+danger that it might produce an error when doing queries with several
+parts. As far as I understood it, they use lazy loading, which means 
+that sometimes they misplace information and, generally get very 
+confused. To prevent this, write thusly the 'cur' definition:
+-----------------------------------------------------------------------
+cur = conn.cursor(buffered=True)
+-----------------------------------------------------------------------

@@ -1,0 +1,5 @@
+If you get a json error message complaining of extra data,
+it's almost assuredly because the json's objects, formerly
+dictionaries, are not wrapped in a json array.
+In practice, this means that you have to envelop all json
+content in square brackets, and you're done!

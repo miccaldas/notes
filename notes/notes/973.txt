@@ -1,0 +1,8 @@
+You can change the name of a column in MySQL when you access information.
+This method won't change the column's name, but all the information that
+you download from it, will come with the new denomination. This is useful
+, for example, when passing data from the db to a json format that has
+strict name policy for its fields.
+-------------------------------------------------------------------------
+SELECT title AS content, note, k1 AS tags FROM notes
+-------------------------------------------------------------------------
