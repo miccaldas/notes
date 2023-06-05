@@ -1,0 +1,70 @@
+I created some new triggers for the 'tags_streamlit' table. Now it will synced with
+the 'notes' table. If there's a new entry, an update or deletion on 'notes', it will
+be reflected on 'tags_streamlit'. As these are multi-line processes that write
+several commands with the 'Enter' symbol in MySQL, ';', it's necessary to change it
+to something different whilst you're inputing the trigger. "DELIMITER $$", changes
+the 'Enter' symbol to "$$", so we can write commands with ';' without triggering it.
+The 'DELIMITER ;' line at the end, restores the usual symbol. You can use almost any
+characteristic of the SQL language as the 'body' of the trigger, the commands between
+the 'BEGIN', 'END' blocks. Because 'tags_streamlit' creates a entry for all new tags,
+means that we can't update the table. We need to first delete the updated entries and
+rewrite them, as if a new entry, now with updated values.
+To refer to the values before and after the triggers, it's used the 'OLD' and 'NEW'
+names, reffering to the values before the trigger and after, respectively.
+On the 'BEFORE/AFTER DELETE' triggers, note that only the 'OLD' nomenclatures works.
+If you want to reffer to an id that was recently deleted, it's 'NEW.id', but 'OLD.id'.
+The string between the '####' decorations, are titles and are not part of the triggers.
+There are now three new triggers:
+---------------------------------------------------------------------------------------
+##### AFTER INSERT #####
+
+DELIMITER $$
+
+CREATE TRIGGER after_notes_insert
+AFTER INSERT
+ON notes FOR EACH ROW
+BEGIN
+    INSERT INTO tags_streamlit(ntid, title, tags, time)
+        VALUES(new.ntid, new.title, new.k1, new.time);
+    INSERT INTO tags_streamlit(ntid, title, tags, time)
+        VALUES(new.ntid, new.title, new.k2, new.time);
+    INSERT INTO tags_streamlit(ntid, title, tags, time)
+        VALUES(new.ntid, new.title, new.k3, new.time);
+END;$$
+
+DELIMITER ;
+----------------------------------------------------------------------------------------
+#### AFTER UPDATE ####
+
+DELIMITER $$
+
+CREATE TRIGGER after_notes_update
+AFTER UPDATE
+ON notes
+FOR EACH ROW
+BEGIN
+    DELETE FROM tags_streamlit WHERE ntid = new.ntid;
+    INSERT INTO tags_streamlit(ntid, title, tags, time)
+    VALUES(new.ntid, new.title, new.k1, new.time);
+    INSERT INTO tags_streamlit(ntid, title, tags, time)
+    VALUES(new.ntid, new.title, new.k2, new.time);
+    INSERT INTO tags_streamlit(ntid, title, tags, time)
+    VALUES(new.ntid, new.title, new.k3, new.time);
+END;$$
+
+DELIMITER ;
+----------------------------------------------------------------------------------------
+#### AFTER DELETE ####
+
+DELIMITER $$
+
+CREATE TRIGGER after_notes_delete
+AFTER DELETE
+ON notes
+FOR EACH ROW
+BEGIN
+    DELETE FROM tags_streamlit WHERE ntid = old.ntid;
+END;$$
+
+DELIMITER ;
+-----------------------------------------------------------------------------------------

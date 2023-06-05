@@ -1,0 +1,17 @@
+To add a virtual column to a table that already exists, you'll have to use: the 'ALTER TABLE'
+formulation followed by, 'ADD COLUMN', with a description of its name and characteristics, the
+AS' expression, followed by the description of the column's content. Below goes an example of such
+a column. This one adds, at the end of the table, 'tags_streamlit', a column called 'newdate' with
+VARCHAR format and 20 characters limit. It's built with the values of month and year, joined by a
+dash, that were taken from a datetime column called 'time'.
+---------------------------------------------------------------------------------------------------
+ALTER TABLE tags_streamlit ADD COLUMN newdate VARCHAR(20) AS(CONCAT(MONTH(time), '-', YEAR(time)));
+---------------------------------------------------------------------------------------------------
+
+EDIT:
+Although the command above worked, it wrote the month values without leading zeros, which wreacked
+havock with the 'Streamlit-timeline' app that I'm using it for. So I'm currently using this
+formulation that has the added advantage of being simpler:
+---------------------------------------------------------------------------------------------------
+ALTER TABLE tags_streamlit ADD COLUMN newdate VARCHAR(20) AS(DATE_FORMAT(time,'%Y-%m'));
+---------------------------------------------------------------------------------------------------
