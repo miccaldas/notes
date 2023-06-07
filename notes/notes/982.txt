@@ -1,0 +1,4 @@
+To convert a dataframe column to numpy array, do:
+-------------------------------------------------
+array = <dataframe_name>['<column>'].to_numpy
+-------------------------------------------------

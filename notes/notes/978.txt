@@ -1,0 +1,23 @@
+To create a dataframe from several conditionss in different columns,
+use the query() method. The expression you use must be a string and
+if you want to change the current dataframe and not create a new one,
+use 'inplace=True'. I saw in examples that the column names were
+enveloped in backticks, but in my experience it works just as well
+without them.
+More info on this, here: https://tinyurl.com/2ej35oho
+---------------------------------------------------------------------
+<new_df> = <old_df>.query("<condition 1> & <condition 2>")
+
+Example:
+choice = tagpython.query("year == 2021 & month == 12")
+---------------------------------------------------------------------
+Another way to do it, and always 'inplace', is to use the 'filter'
+method:
+---------------------------------------------------------------------
+filterinDataframe = <df_name>[(<condition 1>) & (<condition 2>)]
+
+Example:
+ filterinDataframe = tagpandas[
+        (tagpandas["year"] == 2021) & (tagpandas["month"] == 6)
+    ]
+---------------------------------------------------------------------

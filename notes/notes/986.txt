@@ -1,0 +1,5 @@
+To create a dataframe from another, choosing only rows where the
+columns have a given value, use 'isin':
+-----------------------------------------------------------------
+<new_df> = <old_df>[<old_df['tags'].isin(['virtual', 'columns'])]
+-----------------------------------------------------------------

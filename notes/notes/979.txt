@@ -1,0 +1,14 @@
+If you need to create a new column with the sum of the values in another,
+you can use groupby() and size().
+size() will give you the number the rows in a given bin, wether they're
+empty or not. If this is important for you, use sum() instead.
+groupby() can split, apply a function or combine results, that, after,
+can be used to make calculations. For itself it doesn't do nothing.
+In this example, we use groupby() on a dataframe called 'tagpython', the
+criteria for the grouping are the columns 'tags' and 'time'. size() will
+count, for each row, the number of occurrences. The reset_index() will
+index the new dataframe through the size() values, and store them in a
+column called 'count'.
+-------------------------------------------------------------------------
+tm = tagpython.groupby(["tags", "time"]).size().reset_index(name="count")
+-------------------------------------------------------------------------

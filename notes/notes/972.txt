@@ -1,7 +1,7 @@
-To convert a Pandas dictionary to a Python dictionary
-you can use the following command:
+To convert a dataframe to a Python dictionary, you can
+use the following command:
 -------------------------------------------------------
-<new_dict_name>.<dataframe_name>.to_dict(<orient>)
+<new_dict_name> = <dataframe_name>.to_dict(<orient>)
 -------------------------------------------------------
 The 'orient' argument orders the dictionary and it's
 needed for it to work.

@@ -1,0 +1,5 @@
+To have Pandas present data in an ordered
+manner, based in a column, do:
+--------------------------------------------
+<df_name>.sort_values(by=['<column_name>'])
+--------------------------------------------

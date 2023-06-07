@@ -1,0 +1,6 @@
+To create a dataframe from a list, mention the list to use and the name of
+the columns you want to create.
+For other options, see bkmk with id = 460.
+--------------------------------------------------------------------------
+<new_dataframe> = pd.DataFrame(<list>, "<column_name>", <column_name> ...)
+--------------------------------------------------------------------------

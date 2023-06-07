@@ -1,0 +1,15 @@
+To serialize and deserialize python objects,
+you can use Pickle. To pickle into a file:
+---------------------------------------------
+import pickle
+
+with open('<pickle_file.bin>', 'wb') as f:
+    pickle.dump(<object_to_pickle>, f)
+---------------------------------------------
+To unpickle a file:
+---------------------------------------------
+import pickle
+
+with open('<pickle_file.bin>', 'rb') as f:
+    <new_object_name> = pickle.load(f)
+---------------------------------------------

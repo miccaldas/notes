@@ -1,0 +1,6 @@
+If you want to rename a dataframe column, use the rename() function, and indicate the old and new name
+of the column, in what axis is found ('0' for the y axis, '1' for the x axis), and if you want to
+change 'inplace' or not.
+--------------------------------------------------------------------------------------------------------
+<df_name> = <df_name>.rename({'<old_column_name>': '<new_column_name>'}, axis=<0 or 1>, inplace=<bool>)
+--------------------------------------------------------------------------------------------------------

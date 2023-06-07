@@ -1,0 +1,7 @@
+To create a dataframe column with only the year and month of a timestamp, do this:
+-------------------------------------------------------------------------------------------
+<dataframe_name>["year_month"] = <dataframe_name>["<timestamp_column>"].dt.to_period("M")"
+-------------------------------------------------------------------------------------------
+'M' here being month, year would've been 'Y' and so on.
+WARNING! This creates a 'period' tipe column, not 'datetime'! This might be a problem with
+other programs who are expecting 'datetime' when talking of dates.

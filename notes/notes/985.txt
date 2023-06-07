@@ -1,0 +1,5 @@
+If you want information regarding
+the structure of a dataframe, do:
+----------------------------------
+<df_name>.info(verbose=True)
+----------------------------------
