@@ -1,0 +1,5 @@
+To add a item to a tuple you have to turn it to a tuple
+or it will return an error:
+--------------------------------------------------------
+tuple = tuple + (item,)
+---------------------------------------------------------

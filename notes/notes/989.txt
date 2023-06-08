@@ -1,0 +1,20 @@
+MySQL has a command line command, not to be used in
+mycli, that checks, analyzes, optimizes and repairs
+tables.
+----------------------------------------------------
+CHECKS TABLE
+mysqlcheck -c <db_name> <table_name> -u <user> -p
+
+ANALYZES TABLE
+mysqlcheck -a <db_name> <table_name> -u <user> -p
+
+OPTIMIZES TABLE
+mysqlcheck -o <db_name> <table_name> -u <user> -p
+
+REPAIRS TABLE
+mysqlcheck -r <db_name> <table_name> -u <user> -p
+---------------------------------------------------
+https://www.thegeekstuff.com/2011/12/mysqlcheck/
+
+
+
