@@ -3,3 +3,8 @@ joining two Python lists:
 ---------------------------
 lst3 = lst1 + lst2
 ---------------------------
+This method preserves their
+internal structure, if they
+are bth lists of lists, the
+sublists will be appended to
+the new list, not merged.

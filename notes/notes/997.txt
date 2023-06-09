@@ -1,0 +1,17 @@
+To create a dataframe from data in another dataframe, that's inside an
+iterable, inside a value field, you'll have to apply a function to
+access the data. In this real life example, I had three columns,
+'tagscore1/2/3' that were tuples. I needed to access the first element
+of each tuple, check if it was equal to a value I was searching, and
+collect all rows where it was found, to create a new dataframe. This
+can be done by using the .apply() dataframe function that applies a
+function to dataframe data. Let's say I was searching for 'vim':
+-----------------------------------------------------------------------
+column1_data = <old_df>['tagscore1'].apply(lambda col: col[0] == 'vim')
+column2_data = <old_df>['tagscore2'].apply(lambda col: col[0] == 'vim')
+column3_data = <old_df>['tagscore3'].apply(lambda col: col[0] == 'vim')
+
+columns_data = column1_data | column2_data | column3_data
+
+<new_df> = <old_df>[columns_data]
+------------------------------------------------------------------------

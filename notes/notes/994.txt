@@ -1,6 +1,6 @@
 If you need to create a column based on calculations on the values of another,
 you can use 'generatecd columns'. These can be virtual or persistent, created
-at the beginning or altered after. This is an example used in the 
+at the beginning or altered after. This is an example used in the
 tags_streamlit' table in the 'notes' database. I needed to have a db index to
 compare to a dataframe index, so I could reliably indentify entries, in both
 environments by an integer. But dataframe's indexe's start at 0 and MySQL's

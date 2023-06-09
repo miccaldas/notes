@@ -1,0 +1,10 @@
+If you have a list of dictionaries and some are duplicates, and you
+want to remove them, create a new list from a dictionary comprehension,
+where the condition is the field you want to have only singular events.
+Suppose you're working with the 'tags_streamlit' table data and you
+want just one entry per 'ntid':
+-----------------------------------------------------------------------
+<new_dict_lst> = list({i['ntid']:i for i in <old_dict_list>}.values())
+-----------------------------------------------------------------------
+The dictionary comprehension: {v['ntid']:v for v in vg}, creates a list
+of singular 'ntid' values. '.values()' returnes a view of the new dict.

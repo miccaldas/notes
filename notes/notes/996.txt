@@ -1,0 +1,18 @@
+Python lambda functions are one liner functions that may have
+several arguments but just one expression.
+Their sctructure is:
+--------------------------------------------------------------
+lambda <arguments>: <expression>
+--------------------------------------------------------------
+Examples:
+--------------------------------------------------------------
+x = lambda a, b: a * b
+
+print(x(2, 2))  # Result = 4
+
+If this was a traditional function it would look like this:
+def x(a, b):
+    a * b
+
+x(2, 2)   # Result = 4
+---------------------------------------------------------------
