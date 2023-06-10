@@ -1,4 +1,5 @@
-To concatenate two variables:
+To concatenate two variables
+in Bash:
 -----------------------------
 var3 = "$var1$var2
 -----------------------------

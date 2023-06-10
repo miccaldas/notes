@@ -1,0 +1,18 @@
+There are two ways, that I know, of creating hourly time intervals
+in Pandas, and they have very different results. You can use the
+'to_period' to define the interval:
+-------------------------------------------------------------------
+df['hour'] = df['time'].dt.to_period('H')
+-------------------------------------------------------------------
+But be wary of the fact that, since all our db's time periods are
+Timestamps, that means it's a piece of information that can be
+drilled down from the 'year' period to 'minutes'! And that's what
+means to have an hourly interval defined by 'to_period', you have a
+distribution of hours spanning all the months/years that your data
+encompasses. If that's what you want, great. If it's not, see next
+example:
+--------------------------------------------------------------------
+df['hour'] = df['time'].dt.hour
+--------------------------------------------------------------------
+This will divide your data inside bins spanning 1 to 24. As much as
+hours in a day.

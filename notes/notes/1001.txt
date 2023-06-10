@@ -1,0 +1,5 @@
+To add a series as a column, to a dataframe, you can use
+.assign():
+---------------------------------------------------------
+<new_df> = <old_df>.assign(<new_column_name> = <series>)
+---------------------------------------------------------

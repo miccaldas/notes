@@ -3,5 +3,5 @@ the number into a 'd' it'll be
 days, if a 's', seconds. The
 example is with minutes.
 ------------------------------
-sudo journalctl -S -1m
+sudo journalctl --since -1m
 ------------------------------

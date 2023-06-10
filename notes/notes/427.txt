@@ -1,12 +1,12 @@
-  This is the best way to use Subprocess. Although it may have a
- intimidating semantycs, if your use profile is simple, as is
- generally my case, the tool is also simple.
- It should be used thusly:
- Define the command ahead of time. It simplifies the look of the
- code. Although that the all expression should be a string, you
- can interpolate with variables, as in the example below, taken
- from a real use case.
- ----------------------------------------------------------------
+This is the best way to use Subprocess. Although it may have a
+intimidating semantics, if your use profile is simple, as is
+generally my case, the tool is also simple.
+It should be used thusly:
+Define the command ahead of time. It simplifies the look of the
+code. Although that the all expression should be a string, you
+can interpolate with variables, as in the example below, taken
+from a real use case.
+----------------------------------------------------------------
 cmd = 'txt2html --infile ' + filepath + ' --outfile ' + \
 filepath + '.html'
 ----------------------------------------------------------------

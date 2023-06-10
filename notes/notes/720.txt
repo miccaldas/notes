@@ -1,11 +1,11 @@
-When using a GET method, the variable collected in the URL persists even after refreshing the
-page. This causes the page to act as if it had an input when it had none. To solve this, this
-JavaScript script strips the information from the URL after use.
-------------------------------------------------------------------------------------------------
+When using a GET method, the variable collected in the URL persists
+even after refreshing the page. This causes the page to act as if
+it had an input when it had none. To solve this, this JavaScript
+script strips the information from the URL after use.
+-------------------------------------------------------------------
 <script>
 if(typeof window.history.pushState == 'function') {
-   window.history.pushState({}, "Hide", "https://constantconstipation.club/pages/database.php");
+   window.history.pushState({}, "Hide", "https://your/path/here");
 }
 </script>
--------------------------------------------------------------------------------------------------
-
+---------------------------------------------------------------------

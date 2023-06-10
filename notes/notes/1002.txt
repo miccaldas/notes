@@ -1,0 +1,8 @@
+In a dataframe, if you define the index, or on a .groupby(),
+as some column, it stops being visible as a dataframe column.
+To avoid this, if you're using .reset_index(), write:
+--------------------------------------------------------------
+<df>.groupby(['<some_column>']).size().reset_index(drop=False)
+--------------------------------------------------------------
+'drop=False' statement makes it that you keep the column.
+

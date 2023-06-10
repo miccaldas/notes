@@ -1,0 +1,45 @@
+The function .apply() can be used to filter dataframe content and create new
+dataframes and columns. Although it exists to apply python functions to
+dataframe data, its versatility allows it to be useful in filtering. A first
+example, albeit not a good one as this can be done more easily with .query()
+for example, shows filtering column for values over 1000:
+--------------------------------------------------------------------------------
+<new_df> = <old_df>[<old_df>['<some_column>'].apply(lambda x: x > 1000)]
+---------------------------------------------------------------------------------
+Where it really shines is in getting information from iterables inside dataframe
+cells. Here it filters through a given column's, first tuple  element values,
+that are equal to some string:
+--------------------------------------------------------------------------------
+<new_df> = <old_df>[<old_df>['some_column'].apply(lambda x: x[0] == '<string'>)]
+---------------------------------------------------------------------------------
+Or something similar but through several columns. The '|' symbol means 'OR'.
+Let's say, 'col1', 'col2', 'col3':
+---------------------------------------------------------------------------------
+<col1_selection> = <df>['col1'].apply(lambda x: x[0] == <string>)
+<col2_selection> = <df>['col2'].apply(lambda x: x[0] == <string>)
+<col3_selection> = <df>['col3'].apply(lambda x: x[0] == <string>)
+
+<selections> = <col1_selection> | <col2_selection> | <col3_selection>
+
+<new_df> = <df>[<selections>]
+-----------------------------------------------------------------------------------
+Another example, with .apply(), but using a normal function. This searches through
+a list of columns for a first element tuple equal to a string, if it finds it,
+it returns its value, that's the tuple's second element. As you can see, the
+function is nested  inside another function, but it doesn't need to be.
+-----------------------------------------------------------------------------------
+def dictdata():
+    tg = "python"
+    vtg = select_by_tag(tg)
+
+    def tag_score(row):
+        tag = define_tag()
+        for col in ["tagscore1", "tagscore2", "tagscore3"]:
+            if row[col][0] == tag:
+                return row[col][1]
+            return None
+
+    vtg["tag_score"] = vtg.apply(tag_score, axis=1)
+    pd.set_option("display.max_rows", None)
+    print(vtg)
+-------------------------------------------------------------------------------------

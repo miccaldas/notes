@@ -1,6 +1,6 @@
-To make assure you'll be able to see the files in the folders
-on a web browser, instead of seeing 403 errors, write in your
+To make sure you'll be able to see the files in the folders
+on a server, instead of seeing 403 errors, write in your
 server configs:
---------------------------------------------------------------
+---------- -------------------------------------------------
 autoindex on
---------------------------------------------------------------
+-----------.------------------------------------------------

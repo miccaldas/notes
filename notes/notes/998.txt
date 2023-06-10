@@ -1,0 +1,8 @@
+To convert a Datetime object to a human-readable
+format, use .strftime(). Let's say you want a
+'day-month-year', string format:
+--------------------------------------------------
+from datetime import datetime
+
+<daetime_object>.strftime('%d-%m-%Y')
+---------------------------------------------------

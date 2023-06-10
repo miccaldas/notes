@@ -1,5 +1,0 @@
-Ctrl-v
-l
-shift + i
-write what you want.
-Esc
