@@ -1,0 +1,7 @@
+In Pandas, when you encounter an operation that is
+exclusive to dataframes and all you have is a
+series, remmeber that you can always reshape the
+series to a dataframe:
+---------------------------------------------------
+<new_dataframe> = <series>.to_frame()
+---------------------------------------------------

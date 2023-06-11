@@ -1,0 +1,10 @@
+You can do linear reggressions with sklearn and pandas
+dataframes. This will output the coefficient.
+----------------------------------------------------------
+from sklearn import linear_model
+import pandas as pd
+
+lin = linear_model.LinearRegression()
+lin.fit(<df>[["<column A>"]], <df>["<column B"])
+print(lin.score(<df>[["<column A>"]], <df>["<column B"]))
+-----------------------------------------------------------
