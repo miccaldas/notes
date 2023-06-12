@@ -1,0 +1,10 @@
+When writing for my blog or, for some reason, markdown files,
+I like to have a neat looking text. So I anally, set myself
+a row size limnit. Know now that what I'm telling you
+doesn't work for 'text' files. Tried it just now writing
+this and doesn't work. But it worked just now in a markdown
+file; so let's hope that is the reason. Input this command
+in Vim's code shell:
+------------------------------------------------------------
+highlight ColorColumn guibg=Red
+------------------------------------------------------------

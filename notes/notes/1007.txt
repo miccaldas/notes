@@ -1,0 +1,9 @@
+The simplest way is to call 'datetime' function .now()
+and run it to strftime. Like this:
+-------------------------------------------------------
+from datetime import datetime
+
+now = datetime.now().strftime('%d-%m-%Y')
+--------------------------------------------------------
+The date in strftime is, obviously, an example. Extend it
+or shorten it as you see fit.
