@@ -1,0 +1,14 @@
+This is a great idea to be used in most nested loops.
+When you're comparing two lists looking for matches,
+python will keep looking for matches even if it found
+one. If you know, or care, that there's only one
+element to find, you should put a break statement in
+the end of the inner loop. That'll stop it, but the
+outer loop will still be running. For example:
+------------------------------------------------------
+for i in range(len(<list1>)):
+   for g in range(len(<list2>)):
+       if <list1>[i] == <list2>[g]:
+           <list2>.pop(g)
+           break
+------------------------------------------------------

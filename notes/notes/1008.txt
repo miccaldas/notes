@@ -1,0 +1,10 @@
+It's common for csv in Python to complain about:
+" _csv.Error: field larger than field limit (131072)",
+this is due the field limit being smaller than the 
+content therein. The solution is this:
+--------------------------------------------------------
+import sys
+import csv
+
+csv.field_size_limit(sys.maxsize)
+---------------------------------------------------------

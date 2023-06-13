@@ -1,6 +1,8 @@
 As a simpler alternative to using 'try/except' blocks, you can use contextlib's
 'suppress' method. Mind you that, if it's indeed simpler, it means another
 import. So define its need as you see fit.
+In the example is what I use for hiding thoae stupid exceptions that show when
+using 'SystemExit'
 -------------------------------------------------------------------------------
 # With try/except:
     try:
@@ -11,6 +13,6 @@ import. So define its need as you see fit.
 # With contextlib:
 from contextlib import suppress
 
-    with suppress(FileNotFoundError):
-        os.remove(<file>)
+    with suppress(KeyboardInterrupt):
+        raise SystemExit()
 ------------------------------------------------------------------------------

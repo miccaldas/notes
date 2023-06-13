@@ -1,0 +1,9 @@
+As Pip's search function
+is forever in the fritz,
+I'm using a tool that
+does the same things,
+but prettier. You access
+it with:
+-------------------------
+pip_search <package_name>
+--------------------------

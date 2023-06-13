@@ -1,0 +1,10 @@
+Arch, and other, has forbid us to install Pip packages as available
+everywhere, so as not to interfere with packages from Pacman and AUR.
+You now should create a venv envirnment  and install there. As my
+computer is not infinite and fuck you very much, I still want to have
+them available everywhere. Now, to achieve this, you need to use the
+following command:
+----------------------------------------------------------------------
+python -m pip install --break-system-packages --upgrade <package_name>
+python -m pip uninstall --break-system-packages <package_name>
+-----------------------------------------------------------------------

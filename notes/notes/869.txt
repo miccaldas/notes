@@ -8,3 +8,21 @@ internal structure, if they
 are bth lists of lists, the
 sublists will be appended to
 the new list, not merged.
+
+Another, iterative method
+that preserves internal
+structure, is this one,
+where you have a 'list1'
+that is a list of lists,
+and a 'list2' that already
+has elements.
+This adds sublist/tuple in
+'list1' to 'list2'.
+If you don't put the
+brackets around 'l', it'll
+add the 'l' first, then
+all items of 'l', one by one.
+-----------------------------
+for l in lst1:
+    lst2 += [l]
+------------------------------
