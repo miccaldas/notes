@@ -1,0 +1,7 @@
+If you need to output Snoop's data to a file, add to the snoop.install line,
+located after snoop's "type_watch" function:
+---------------------------------------------------------------------------
+snoop.install(out="<file_path>", overwrite=True, watch_extras=[type_watch])
+---------------------------------------------------------------------------
+Where "out" defines the file name and path, and "overwrite=True" if you want
+to rewrite the file, instead of appending to it, everytime it runs.

@@ -1,3 +1,0 @@
-Juntar um timestamp a um comando:
-------------------------------------
-command
