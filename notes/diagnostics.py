@@ -1,5 +1,5 @@
 """
-Module that'll do some housekeeping on the bookmarks db.
+Module that'll do some housekeeping on the notes db.
 """
 # import snoop
 from mysql.connector import Error, connect

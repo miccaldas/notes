@@ -22,7 +22,7 @@ from mysql.connector import Error, connect
 @click.command()
 @click.option("-n", "--ntid", type=int)
 @click.option("-c", "--column")
-@click.option("-u", "--updt")
+@click.option("-u", "--updt", is_flag=False, flag_value="update", default="update")
 # @snoop
 def update(ntid, column, updt):
     """

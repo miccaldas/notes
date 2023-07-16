@@ -1,0 +1,3 @@
+To use other colours than the defaults in click.style, use this format:
+ click.style("<text>", fg=(228, 147, 147), bold=True,)
+

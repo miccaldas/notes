@@ -6,7 +6,6 @@ import os
 import click
 
 # import snoop
-from dotenv import load_dotenv
 from mysql.connector import Error, connect
 
 # from snoop import pp
@@ -17,7 +16,6 @@ from mysql.connector import Error, connect
 
 
 # snoop.install(watch_extras=[type_watch])
-load_dotenv()
 
 
 @click.command()
@@ -40,7 +38,7 @@ def delete(ntid):
 
            ntdlt 66
     """
-    npth = os.getenv("NOTE_PATH")
+    npth = "/home/mic/python/notes/notes/notes"
 
     split_lst = []
     if "," in ntid:

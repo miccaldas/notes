@@ -1,0 +1,2 @@
+You can find a good, modern, example of a Scrapy spider
+in ~/python/ebook_finder/ebook_finder/pdfdrive

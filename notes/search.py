@@ -1,5 +1,5 @@
 """
-Module to do searches in db, but present the notes from files.
+Module to do searches in db and present the notes from files.
 """
 import os
 import subprocess

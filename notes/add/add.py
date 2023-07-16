@@ -74,7 +74,7 @@ def add(title, keywords, note):
         if conn:
             conn.close()
 
-    # Update the file name.
+    # Update the file name with MySQL's id number.
     os.rename(
         tmp_title,
         f"{npth}/{record[0]}.txt",

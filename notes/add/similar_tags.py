@@ -26,7 +26,7 @@ def similar_tags(key1, key2, key3):
     """
     Uses Thefuzz library to compare keyword strings.
     If similarity is above 95%, it prints a mesage
-    asking the user iff he wants to change it.
+    asking the user if he wants to change it.
     """
 
     entries = []
