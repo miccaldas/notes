@@ -1,0 +1,15 @@
+To get the creation date of ext4 files, among others, you can use
+the 'stat' command:
+-----------------------------------------------------------------
+stat [file_path]
+-----------------------------------------------------------------
+To get only the birth date of the file, use:
+-----------------------------------------------------------------
+stat -c '%w' [file_path]
+----------------------------------------------------------------
+https://tinyurl.com/2j4ekeep
+
+There was a failed attempt at using these values in 'cli_diary'
+instead of MySQL timestamps, but they had less information than
+the latter. The file is stored in:
+~/python/old_alternative_projects/cli_diary/birth_data_file.py

@@ -1,17 +1,18 @@
    # ---- Access ----
    Access monitor: mysql -u [username] -p; (will prompt for password)
    Access database: mysql -u [username] -p [database]
-   Create new database: create database [database];
+   Create new database: CREATE DATABASE [database];
    Select database: use [database];
    logout: exit;
 
 
    # ---- Information ----
-   Show all databases: show databases;
-   Determine what database is in use: select database();
-   Show all tables: show tables;
+   Show all databases: SHOW DATABASES;
+   Determine what database is in use: SELECT database();
+   Show all tables: SHOW TABLES;
    Show table structure: desc [table];
-   List all indexes on a table: show index from [table];
+   See 'Create Table' command used: SHOW CREATE TABLE [table];
+   List all indexes on a table: SHOW INDEX FROM [table];
    Explain records: EXPLAIN SELECT * FROM [table];
 
    # ---- Adding/Inserting ----
@@ -32,12 +33,12 @@
    Select records starting with val and ending with ue: SELECT * FROM [table] WHERE [column] LIKE '[val_ue]';
    Select a range: SELECT * FROM [table] WHERE [column] BETWEEN [value1] and [value2];
    Select records with a list of choices: SELECT * FROM [table] WHERE [column] IN ('value1', 'value2');
-   Select with custom order and only limit: SELECT * FROM [table] WHERE [column]ORDER BY [column] ASC LIMIT [value]; (Order: DESC, ASC)
+   Select with custom order and only limit: SELECT * FROM [table] WHERE [column] ORDER BY [column] DESC/ASC LIMIT [value];
    Select 10 highest repeated values in three different columns. Example:
         SELECT tag, COUNT(*) Total FROM
         (SELECT k1 as tag FROM notes UNION All
          SELECT k2 as tag FROM notes UNION ALL
-         SELECT k3 as tag FROM notes) d GROUP BY tag ORDER BY TOTAL DESC LIMIT 10;
+         SELECT k3 as tag FROM notes) GROUP BY tag ORDER BY TOTAL DESC LIMIT 10;
   Select entries with a multi-column condition ('OR', in this case): SELECT title FROM notes WHERE k1 = 'python' || k2 = 'python' || k3 = 'python'";
   Select entries with various WHERE clauses: SELECT * FROM notes WHERE ntid = 54 OR ntid = 64 OR ntid = 480;
 
@@ -46,8 +47,8 @@
    Deleting records: DELETE FROM [table] WHERE [column] = [value];
    Delete a range of records: DELETE FROM [table] WHERE id BETWEEN ... AND ...
    Delete all records from a table (without dropping the table itself): DELETE FROM [table];
-   Delete all records in a table: truncate table [table];
-   Delete a index: DROP INDEX index_name ON table_name;
+   Delete all records in a table: TRUNCATE TABLE [table];
+   Delete a index: DROP INDEX [index] ON [table];
    Removing table columns: ALTER TABLE [table] DROP COLUMN [column];
    Deleting tables: DROP TABLE [table];
    Deleting databases: DROP DATABASE [database];
@@ -61,5 +62,5 @@
    Deleting Trailing Whitespace: UPDATE [table] SET [column] = TRIM(TRAILING '\n' FROM [column])
 
    # ---- Import/Export Databases ----
-   Export a database dump (more info here): mysqldump -u [username] -p [database] > db_backup.sql
-   Import a database dump (more info here): mysql -u [username] -
+   Export a database dump: mysqldump -u [username] -p [database] > db_backup.sql
+   Import a database dump: mysql -u [username] -
