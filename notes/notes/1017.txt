@@ -1,0 +1,21 @@
+I created some keybindings to control volume
+in my computer and, to make sure I don't
+forget, these are the controls:
+---------------------------------------------
+'F6' - Raise Volume
+'F7' - Lower Volume
+'F8' - Mute Sound
+---------------------------------------------
+The latter commands are universal. They're
+based in ALSA's Amixer, so all sound in Arch
+will depend on it. But there are some cool
+commands to use with the new player, that we
+should be more aware of them. Here are some
+of them:
+---------------------------------------------
+[space] - Pauses music.
+[>] - Next music.
+[<] - Previous music.
+[P] - Show Playback Progress.
+[F8] - Show Playlist.
+[q/ESC] - quit
