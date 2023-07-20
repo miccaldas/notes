@@ -1,0 +1,4 @@
+To simulate writing a sentende to Pynput, do:
+---------------------------------------------
+keyboard.type("[sentence]")
+---------------------------------------------

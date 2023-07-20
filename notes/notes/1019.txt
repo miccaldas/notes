@@ -1,0 +1,4 @@
+To convert a list to tuple, do:
+-------------------------------
+new_tuple = tuple([list])
+-------------------------------
