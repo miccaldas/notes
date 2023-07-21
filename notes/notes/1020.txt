@@ -1,0 +1,7 @@
+To pass the result of an expression to another in
+a shell script, envelop the expression you want to
+pass in backtics. The following example kills the
+last created Python process.
+---------------------------------------------------
+sudo kill -9 `pgrep -n python`
+---------------------------------------------------

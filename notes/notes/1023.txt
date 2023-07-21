@@ -1,0 +1,29 @@
+If, for some reason, we have the need to
+import all functions from a module, but
+don't want, or can't, call them explicitely,
+you can use the dir() function that retrieves
+the attributes of a module. Among them, and
+callable, will be the functions. 
+---------------------------------------------
+import [module]
+
+for i in dir([module]):
+    item = getattr([module], i)
+    if callable(item):
+        item()
+--------------------------------------------
+This example pressuposes that the functions
+won't take arguments. If you know that a
+function takes arguments, add to the
+'if callable' clause, something like:
+--------------------------------------------
+import [module]
+
+for i in dir([module]):
+    item = getattr([module], i)
+    if callable(item):
+        if item.startswith([some_string]):
+            item([argument])
+        else:
+            item()
+--------------------------------------------

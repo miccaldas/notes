@@ -1,0 +1,14 @@
+To get video, and maybe audio, although I haven't tried it yet,
+metadata, use python's 'ffmpeg' package. It has bindings that
+among other things, let you retrieve metadata. This example gets
+the duration of a video:
+-----------------------------------------------------------------
+ffmpeg.probe(<filename>)["streams"][0]["duration"]
+-----------------------------------------------------------------
+The metadata is kept, at least for mp4, which is what I have more
+of, in list called "streams", which houses one dictionary. So if
+you want to see all metadata write:
+------------------------------------------------------------------
+ffmpeg.probe(<filename>)["streams"]
+-----------------------------------------------------------------
+https://tinyurl.com/2jscddd8

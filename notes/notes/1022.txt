@@ -1,0 +1,10 @@
+If you want to know what processes a certain app
+is running, you can find out with 'pgrep'.
+Example to find all processes started by python:
+-------------------------------------------------
+pgrep python
+-------------------------------------------------
+Only the last created process:
+-------------------------------------------------
+pgrep -n python
+--------------------------------------------------

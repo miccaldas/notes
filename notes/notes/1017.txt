@@ -14,8 +14,18 @@ should be more aware of them. Here are some
 of them:
 ---------------------------------------------
 [space] - Pauses music.
-[>] - Next music.
-[<] - Previous music.
+[>] - Step forward.
+[<] - Step backwards.
 [P] - Show Playback Progress.
 [F8] - Show Playlist.
 [q/ESC] - quit
+----------------------------------------------
+Specifically only to the 'player' app, I
+created the following command to stop it:
+-----------------------------------------------
+'Ctrl-Alt-p'
+-----------------------------------------------
+In reality what it does is find the last
+process created by Python, and kill it. If I
+leave the player on during a long time, this may
+fail.
