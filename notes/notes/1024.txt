@@ -1,0 +1,14 @@
+If you want to change the color of a specific element of Vim, say its statusline, check
+the correct highlight group that you want to edit. To see a list of active highlight
+groups, write this vim command:
+----------------------------------------------------------------------------------------
+:so $VIMRUNTIME/syntax/hitest.vim
+----------------------------------------------------------------------------------------
+When you know the name, you can change colors by defining foreground and background
+colors for the gui version, with prefix 'gui', and terminal version, with prefix 'cterm'.
+'cterm' uses 250 colors and 'gui' uses rgb. You can also define styles (bold, italic...)
+with the 'cterm' and 'gui' argument. This is an example of my new statusline:
+------------------------------------------------------------------------------------------
+highlight StatusLine gui=bold guibg=#F4F2DE guifg=#4C4B16 cterm=bold ctermbg=32 ctermfg=39
+------------------------------------------------------------------------------------------
+

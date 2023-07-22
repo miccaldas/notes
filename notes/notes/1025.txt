@@ -1,0 +1,12 @@
+Python' has in its standard library, a module called
+'webbrowser', that opens hyperlinks or local files
+in a browser. Example of hyperlink usage:
+-----------------------------------------------------
+import webbrowser
+webbrowser.open('http://www.python.org')
+-----------------------------------------------------
+Example of local file usage:
+-----------------------------------------------------
+import webbrowser
+webbrowser.open('file://python/files/test.py')
+-----------------------------------------------------
