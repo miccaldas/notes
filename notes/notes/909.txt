@@ -1,13 +1,12 @@
-To install local packages as any other python
-package, use this command in the folder level
-where setup.cfg is:
----------------------------------------------
-pip3 install --editable . --verbose
-----------------------------------------------
-The 'editable' flag allows you to make further
-alterations and installations of the package,
-and 'verbose' is always good with Pip as it can
-be a little terse with its error messages.
-This is specially useful when you create a new
-command in setup.cfg, as it needs to to be built
-before you use it.
+To install local packages as any other python package, use
+this command in the folder level where setup.cfg is:
+-----------------------------------------------------------
+pip3 install --editable . --break-system-packages --verbose
+-----------------------------------------------------------
+The 'editable' flag allows you to make further alterations
+and installations of the package, and 'verbose' is always
+good with Pip as it can be a little terse with its error
+messages. This is specially useful when you create a new
+command in setup.cfg, as it needs to to be built before
+you use it.
+----------------------------------------------------------

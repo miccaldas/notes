@@ -1,0 +1,4 @@
+To update .vimrc without having to close it and open
+again, use this command:
+-----------------------------------------------------
+:source ~/.vimrc
