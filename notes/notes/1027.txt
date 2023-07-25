@@ -1,0 +1,8 @@
+To get file metadata in Python, use the 'os' module.
+For example, to get a file's size:
+----------------------------------------------------
+import os
+
+stt = os.stat([file_path])
+print(stt.st_size)
+----------------------------------------------------
