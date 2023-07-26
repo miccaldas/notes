@@ -22,13 +22,4 @@ append the current sublist to the result list
 and create a new empty sublist. If it is not, we
 append the element to the current sublist. After
 the for loop, we append the final sublist to the
-result list.First, we initialize the list and
-create an empty list to store the result. Then,
-we create a for loop to iterate through the
-elements in the list. Inside the for loop, we
-check if the current element is the particular
-value. If it is, we append the current sublist to
-the result list and create a new empty sublist.
-If it is not, we append the element to the
-current sublist. After the for loop, we append
-the final sublist to the result list.
+result list.

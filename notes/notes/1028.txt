@@ -1,0 +1,10 @@
+To get a timestamp with current time, do this:
+----------------------------------------------
+from datetime import datetime
+
+# Getting the current date and time
+dt = datetime.now()
+
+# getting the timestamp
+ts = datetime.timestamp(dt)
+-----------------------------------------------
