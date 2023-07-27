@@ -1,0 +1,16 @@
+When needing to gauge some data quality from the
+url's alone, (don't do it. It doesn't work.) I
+found out about 'urllib.parse' that is a library
+to break an url in components. Although it
+doesn't sound like much, when you need to automate
+web searches, this kind of things are very useful.
+Some examples:
+--------------------------------------------------
+from urllib.parse import urlparse
+
+urlparse('//www.cwi.nl:80/%7Eguido/Python.html')
+ParseResult(scheme='', netloc='www.cwi.nl:80', \
+path='/%7Eguido/Python.html',
+            params='', query='', fragment='')
+-------------------------------------------------
+https://docs.python.org/3/library/urllib.parse.html

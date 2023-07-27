@@ -1,0 +1,10 @@
+If you try to simply append a 
+dictionary into a list, it'll give
+weird results because the copy its
+still ties to the original, and
+when one moves, so doies the other.
+To avoid this, use this method, that
+only copies valus:
+----------------------------------
+[list].appen([dictionary.copy()])
+---------------------------------
