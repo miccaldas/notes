@@ -1,0 +1,20 @@
+If you're in Ipython and made a change to file that you
+have open, or accessed in ipython, you don't have to
+exit and enter again. Thse are the alternatives:
+If you just want to run a file in Ipython, do:
+--------------------------------------------------------
+%run [filename].py
+--------------------------------------------------------
+My expectation is that auto-reload is active, as I 
+already given the autoreload command. Here  are the
+commands, in case something goes wrong:
+--------------------------------------------------------
+%load_ext autoreload
+%autoreload 2
+--------------------------------------------------------
+If you want to reload manually, do this:
+--------------------------------------------------------
+import importlib
+importlib.reload([my_module])
+--------------------------------------------------------
+https://switowski.com/blog/ipython-autoreload/
