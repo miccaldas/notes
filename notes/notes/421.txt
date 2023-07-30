@@ -9,3 +9,4 @@ f = open("sample.txt", "w")
 f.writelines(lines)
 f.close()
 -------------------------------------------
+Remember, line count starts at 0.

@@ -1,0 +1,21 @@
+I just read that using sets instead of lists in iterations
+such as loops, makes it faster. It seems that using lists
+in loops is seen as something of a 'faux-pas'. This may be
+a bit much, but if it's faster, its a behaviour to learn.
+Because not all operations of lists are present in sets, it
+is best to restrain its use only for the loop. Something
+like this:
+------------------------------------------------------------
+for i in set([list]):
+    do ...
+
+or:
+
+newlst = [i for i in set([list])]
+-------------------------------------------------------------
+I've experimented with this code and using set() doesn't 
+interfere with the normal usage of the loop.
+NOTE: Doing set([list]) alone won't work as set() only accepts
+its, floats, tuples, strings... All hashable types.
+You'll always have to use: 'for i in ...', when 'i' is an
+hashable type.

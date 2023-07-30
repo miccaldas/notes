@@ -1,0 +1,18 @@
+If you're using subprocess and nedd to execute some code
+in case of failure of the commad, it has a function
+callled 'check_output', that collects and and shows the
+error. For example, I had a problem where I wanted to
+copy some files and then delete them. But they're
+important files and I didn't want to erase them lightly.
+I needed to stop the process in case of failure of the
+copy command. I used it like this:
+-------------------------------------------------------------
+import os
+
+cmd = "cp [file] [folder]"
+try:
+    subprocess.check_output(cmd, cwd=os.getcwd(), shell=True)
+except subprocess.CalledProcessError as e:
+    print('Unable to copy file ', e.output)
+    raise SystemExit
+--------------------------------------------------------------
