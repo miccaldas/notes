@@ -1,0 +1,8 @@
+If you want to make changes to elements inside a list of lists,
+and you don't want to ruin their structure, like what happens
+in flattening solutions, you define the change you want in the
+element inside a list:
+---------------------------------------------------------------
+[new_list] = [[i.strip() for i in sublist] for sublist in list]
+---------------------------------------------------------------
+This preserves the list of lists structure.

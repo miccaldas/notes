@@ -1,0 +1,23 @@
+It happened to me that I needed to reference a file that I didn't knew
+its name, but knew of it's title structure.
+To automate a function call it was necessary to change a dynamic title,
+listed the id's of the entries within it, to something more fixed that
+can be manipulated even if you don't know the original name. But I kno
+that the title has 3 areas, separated by undersocres:
+----------------------------------------------------------------------
+'urls_[lowest_id]_[highest_id].bin'
+----------------------------------------------------------------------
+If I split it by underscores, I'll have a list where I know that the
+second element is the beginning of the interval and the third, the end,
+plus the suffix '.bin'.
+As shutil only accepts strings, I recreated it like this:
+-----------------------------------------------------------------------
+filelst = os.listdir(die)
+for i in filelst:
+    if i.startswith("urls_"):
+        spl = i.split("_")
+        name = f"urls_{spl[1]}_{spl[2]}"
+        shutil.copy(name, "finalized.bin")
+------------------------------------------------------------------------
+It got me thinking that there's something here, in this thing of making
+stuff into strings so as to more easy manipulate them...
