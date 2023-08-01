@@ -1,0 +1,15 @@
+If you need to create new "key - value" elements in a dictionary(ies),  from a list(s), you can do a comprehension:
+---------------------------------------------------------------------------------------------------------------------
+[name] = [[dictionary].update({'[key]': f'{s[1]}') for s in [list]
+---------------------------------------------------------------------------------------------------------------------
+IMPORTANT = If you run '[somename]', it'll output 'None', as that's the default return for the update() function. But
+if you go and see '[dictionary]', you'll see that the new element was inserted. Now an example with a list of
+dictionaries and a list of lists:
+----------------------------------------------------------------------------------------------------------------------
+[name] = [a.update({'[key_name]': f'{s[1]}'}) for a in [list of dictionaries] for s in [list of lists]
+----------------------------------------------------------------------------------------------------------------------
+And one with all of the above and an 'if' clause:
+----------------------------------------------------------------------------------------------------------------------
+[name] = [a.update({'[key_name]': '{s[1]}'}) for a in [list of dictionaries] for s in [list of lists] if a[0] == s[0]]
+
+

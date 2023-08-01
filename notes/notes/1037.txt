@@ -1,0 +1,18 @@
+'Itertools' has a function that permits to iterate
+through several lists simultaneously:
+---------------------------------------------------
+import itertools
+
+[list1] = [1, 2, 3]
+[list2] = ['red', 'white', 'black']
+[ist3] = [255, 256]
+
+for (a, b, c) in zip([list1], [list2], [list3]):
+    print(a, b, c)
+
+    Output:
+        1 red 255
+        2 while 256
+----------------------------------------------------
+You can also use it with zip_longest().
+See more here: https://tinyurl.com/23onjk3e
