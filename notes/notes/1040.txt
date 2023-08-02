@@ -1,0 +1,16 @@
+To verify truth conditions on elements of an iterable,
+python has all() that, given a statement, checks if it
+is true or not. See the next example where I needed to
+know if a list was composed of tuples or dictionaries:
+-------------------------------------------------------
+if all(type(i) == tuple for i in [list]):
+    do something...
+
+if all(type(i) == dict for i in [list]):
+    do another...
+--------------------------------------------------------
+It has a sister command, any(), which checks if at least
+one element of an iterable is true given a condition. I
+don't have examples for this, but you can read more here:
+---------------------------------------------------------
+https://tinyurl.com/29a7wpk3

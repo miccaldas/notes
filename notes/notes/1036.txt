@@ -12,4 +12,18 @@ And one with all of the above and an 'if' clause:
 ----------------------------------------------------------------------------------------------------------------------
 [name] = [a.update({'[key_name]': '{s[1]}'}) for a in [list of dictionaries] for s in [list of lists] if a[0] == s[0]]
 
+Just to end this, some examples:
+1 - I had to add to create a dictionary entry with the value inside a list within a list:
+-----------------------------------------------------------------------------------------------------------------------
+ plnk = [c.update({"url": f"{s[2]}"}) for c in cleandata for s in spiders if c["name"] == s[0]]
+------------------------------------------------------------------------------------------------------------------------
+2 - Iterate through a list, deleting part of some elements strings while creating a dictionary:
+------------------------------------------------------------------------------------------------------------------------
+ for i, t in enumerate(cleandata):
+        cleandata[i].update({"content": cleandata[i]["content"].split(" - ")[1]})
+------------------------------------------------------------------------------------------------------------------------
+3 - Turning list to string.
+-------------------------------------------------------------------------------------------------------------------------
+for i, t in enumerate(cleandata):
+       cleandata[i].update({"content": " ".join(cleandata[i]["content"])})
 

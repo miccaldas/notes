@@ -1,0 +1,24 @@
+Two things of note when using 'print_template' or 'input_decision':
+
+1 - Don't put '[/]' before declaring a new style. As both functions have
+    default styles, it would make sense to stop it before including a new
+    one, as you would normally do. But not in these cases. Not only it's not
+    needed, it produces an error message and stops the program from running.
+-----------------------------------------------------------------------------
+WRONG
+"The epoch is [/][bold #FFC6AC]50-100")
+
+RIGHT
+"The epoch is [bold #FFC6AC]50-100")
+-------------------------------------------------------------------------------
+
+2 - If you have a style inserted in another, to terminate it don't write '[/]',
+    it won't work. Write '[/<style_definition>]'. Another thing that would work
+    in real life but not here. See an example:
+--------------------------------------------------------------------------------
+WRONG
+"There's [/][bold #FFC6AC]34[/] apps to process in this epoch"
+
+RIGHT
+"There's [bold #FFC6AC]34[/bold #FFC6AC] apps to process in this epoch"
+----------------------------------------------------------------------------------

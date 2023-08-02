@@ -1,0 +1,11 @@
+Python's 'os' module has a function that, aparently,
+does much of the things that subprocess does. I only
+tried it for simple things, and there must be reasons
+everybody suggests 'subprocess' and not os.system.
+However, it's great with simple stuff and you don't
+have to make another import.
+------------------------------------------------------
+import os
+
+os.system(cp [file] [directory])
+------------------------------------------------------
