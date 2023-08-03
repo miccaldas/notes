@@ -1,0 +1,10 @@
+If you want to find a substring, a method more reliable
+than 'in/not in', is find(). It looks for substring in a
+string and returns the first index where it found the
+substring. If it doesn't find anything, it'll output '-1'.
+This is an example of how you can use it to check for the
+existence of a string within a string:
+-----------------------------------------------------------
+if [string].find([substring]) != -1:
+    do_something...
+------------------------------------------------------------

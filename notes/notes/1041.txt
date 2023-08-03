@@ -1,0 +1,5 @@
+A simple way to get a lot of information on python's
+modules is to open ipython and write:
+-----------------------------------------------------
+help('[module name]')
+-----------------------------------------------------
