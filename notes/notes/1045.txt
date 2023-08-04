@@ -1,0 +1,8 @@
+Ifyou have a shell command that you need to have the
+stderr output  available,do this:
+-----------------------------------------------------
+mv [file] [folder] > results.txt 2> errors.txt
+-----------------------------------------------------
+This is also interesting inPython for os.system() as
+subprocess has other ways to get to error messages.
+
