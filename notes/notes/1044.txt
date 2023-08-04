@@ -1,0 +1,6 @@
+Python has a method that not only inserts a element
+at a given index, it doesn't destroy the last element
+at that index. It's called like this:
+------------------------------------------------------
+[list].insert([index], [object])
+------------------------------------------------------

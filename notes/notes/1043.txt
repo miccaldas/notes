@@ -1,0 +1,21 @@
+I created, by chance, some nested comprehensions, and they're an useful pattern.
+I had a lists of lists with this structure:
+
++-------------+
+| <main_list> |
++-------------+
+      |
+      |              +----------------------+
+      >--------------| Sublist composed by: |
+                     |    - string,         |
+                     |   -  another list    |
+                     +----------------------+
+
+I needed to get to innermost list to clean up the strings. So, I tried this:
+-----------------------------------------------------------------------------
+<newlist> = [[sub[0], [v for v in sub[1] if v != ""]] for sub in <main_list>]
+------------------------------------------------------------------------------
+The code here creates, for every sublist, a list composed of its index[0]
+element, plus index[1], a list, if its elements are not empty spaces.
+I didn't know you could do this, but apparently you can.
+
