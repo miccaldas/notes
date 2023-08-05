@@ -1,0 +1,24 @@
+I had a while loop running several functions and I
+wanted, for one of the functions, to give a
+different argument on the first run then on the all
+the others. To do this I started a counter, named
+'count' at 0.
+The counter is just here to help  you count, you can
+input another, real condition, with an 'add' function.
+------------------------------------------------------
+var = input('Do you want to run the project?[y/n]')
+
+count = 0
+while var == 'y':
+    count += 1
+
+    Proj_func_1()
+    proje_func2('yes')
+    proj_func_3()
+
+    if count == 1:
+        proj_func2('no')
+--------------------------------------------------------
+This will assure that in the first run, proj_func2 used
+he 'no' argument.
+https://bobbyhadz.com/blog/python-count-in-for-loop
