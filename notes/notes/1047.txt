@@ -1,0 +1,9 @@
+This asterisk method is to be used in 
+conjunction with print() and outputs
+the elements of the iterator in an
+horizontal line and sperated byspaces.
+This is how you write it:
+---------------------------------------
+print(*[list])
+---------------------------------------
+https://tinyurl.com/2da6l9ey

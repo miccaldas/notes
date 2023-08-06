@@ -1,0 +1,15 @@
+If you need a copy of a dictionary that has
+the same contant of another, copy them like
+this.
+--------------------------------------------
+[dict1] = [dict0]
+--------------------------------------------
+Now, whenever one of them, be it the
+original or the copy, is changed, the other
+is changed too. One can be outside a loop,
+and the other in, that won't matter at all.
+What we are doing, in reality, it's not a
+new dictionary, it's a new variable that 
+refferences the same dictionary.
+--------------------------------------------
+https://tinyurl.com/sgvzl4x

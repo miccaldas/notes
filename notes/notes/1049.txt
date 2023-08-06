@@ -1,0 +1,12 @@
+You can see a pickle file content with 'less'.
+Through the script 'lesspipe' that I installed
+and forgot about it, you can just open it and
+you'll see the content.
+It's important to note that you'll see only
+content, not the structure of the file. That
+means, you won't know by 'vim/less' if you're
+dealing with a list of lists or a list of tuples.
+-------------------------------------------------
+less [binary_name]
+vim [binary_name]
+-------------------------------------------------

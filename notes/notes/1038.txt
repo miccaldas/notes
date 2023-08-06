@@ -7,5 +7,12 @@ have to make another import.
 ------------------------------------------------------
 import os
 
-os.system(cp [file] [directory])
+os.system('cp [file] [directory]')
 ------------------------------------------------------
+If you have an executable, like a script, pointing to
+its path alone wont work. Use 'xdg-open':
+-------------------------------------------------------
+import os
+
+os.system('xdg-open [path_to_executable]')
+--------------------------------------------------------

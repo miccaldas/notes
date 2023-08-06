@@ -23,8 +23,9 @@ from mysql.connector import Error, connect
 
 @click.command()
 @click.argument("qry")
+@click.option("-bk", "--bkmk", is_flag=False, flag_value="bookmark", default="n")
 # @snoop
-def search(qry):
+def search(qry, bkmk):
     """
     Receives search query, looks in db, and outputs to terminal with Blessed.\n
     Called with **ntsrch**.
@@ -65,6 +66,9 @@ def search(qry):
             print("\n".join(term.wrap(line, width=160)))
         subprocess.run(cmd, shell=True)
         print("\n")
+
+    if bkmk == "y":
+        os.system(f"/home/mic/.local/bin/bksrch {qry}")
 
 
 if __name__ == "__main__":
