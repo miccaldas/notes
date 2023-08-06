@@ -66,6 +66,40 @@ def search(qry, bkmk):
         subprocess.run(cmd, shell=True)
         print("\n")
 
+    time.sleep(0.5)
+    if bkmk == "y":
+        try:
+            conn = connect(host="localhost", user="mic", password="xxxx", database="bkmks")
+            cur = conn.cursor()
+            query = "SELECT id, title, comment, link, k1, k2, k3, tempo FROM bkmks WHERE MATCH(title, comment, k1, k2, k3) AGAINST (%s) ORDER BY tempo"
+            cur.execute(query, answers)
+            recs = cur.fetchall()
+        except Error as e:
+            print("Error while connecting to db", e)
+        finally:
+            if conn:
+                conn.close()
+
+        for rec in recs:
+            rec = (
+                term.bold_lemonchiffon2(str(rec[0])),
+                term.bold_lemonchiffon2(rec[1]),
+                term.bold_lemonchiffon2(rec[2]),
+                term.bold_lemonchiffon2(rec[3]),
+                term.bold_tan1("@")
+                + term.bold_yellow4(f"{rec[4]}")
+                + term.bold_tan1(" @")
+                + term.bold_yellow4(f"{rec[5]}")
+                + term.bold_tan1(" @")
+                + term.bold_yellow4(f"{rec[6]}"),
+                term.bold_lemonchiffon2(rec[7].strftime("%d-%m-%Y_%H:%M")),
+            )
+            # print(term.bold_bisque4("  ############# BOOKMARKS ###############"))
+            for line in rec:
+                print("\n".join(term.wrap(line, width=160)))
+            subprocess.run(cmd, shell=True)
+            print("\n")
+
 
 if __name__ == "__main__":
     search()
