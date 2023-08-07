@@ -1,0 +1,8 @@
+It's painfully simple, taking a screenshot from the terminal
+in Linux. Use tool 'import' by givin it a name for a
+destination file, and it opens a session with a cursor you can
+use to choose what area you want to screenshot. When you
+release the mouse's button, the deed is done.
+---------------------------------------------------------------
+import [destination_file].png
+---------------------------------------------------------------

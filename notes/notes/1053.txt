@@ -1,0 +1,8 @@
+Just a reminder that Python has a 'trace' module.
+It produces inordinate amounts of output, so much
+so that almost invalidates its use. If you want to
+try it, the syntax is:
+---------------------------------------------------
+python -m trace -t [filename].py
+---------------------------------------------------
+https://tinyurl.com/h55nwhc

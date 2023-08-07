@@ -22,8 +22,8 @@ snoop.install(watch_extras=[type_watch])
 
 @click.command()
 @click.argument("qry")
-@click.option("-bk", "--bkmk", is_flag=False, flag_value="bookmark", default="n")
-@snoop
+@click.option("-bk", "--bkmk", is_flag=False, flag_value="bookmark", default="y")
+# @snoop
 def search(qry, bkmk):
     """
     Receives search query, looks in db, and outputs to terminal with Blessed.\n

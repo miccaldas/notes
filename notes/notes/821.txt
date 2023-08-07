@@ -1,7 +1,18 @@
 If you need to know what files are being open by a process
-you can use 'lsof', thusly:
+you can use 'lsof' thusly:
 -----------------------------------------------------------
 lsof -p <pid_number>
+lsof -c <app_name>
+-----------------------------------------------------------
+To exclude a result from the the output, from PID or name.
+-----------------------------------------------------------
+lsof -p ^<pid_number>
+lsof -c ^<app_name>
+-----------------------------------------------------------
+To see all open processes, and processes not your own. The
+'less' usage is optional.
+-----------------------------------------------------------
+sudo lsof | less
 -----------------------------------------------------------
 It does a lot more. Read it here 
 https://lsof.readthedocs.io/en/latest/

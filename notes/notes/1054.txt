@@ -1,0 +1,8 @@
+This is something I would've liked to know earlier.
+Apparently you can trace processes through 'htop'.
+Not only that, you have two types of tracing available
+1 - 'Strace' for usual tracing,
+2 - 'Ltrace' for library calls.
+The first is called with 's',
+the second with 'l'
+

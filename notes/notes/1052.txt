@@ -1,0 +1,6 @@
+Linux has a command called file(), that reads the
+header of images to get to metadata. IF you want
+the dimensions, just do:
+-------------------------------------------------
+file [filename].png
+-------------------------------------------------

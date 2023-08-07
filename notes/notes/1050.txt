@@ -1,0 +1,5 @@
+The correct sysntax to insert images to
+a Markdown file is:
+----------------------------------------
+![alt text](Isolated.png "Title")
+----------------------------------------
