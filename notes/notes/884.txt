@@ -28,8 +28,8 @@
    Selecting parts of records: SELECT [column], [another-column] FROM [table];
    Selecting specific records: SELECT * FROM [table] WHERE [column] = [value];
    Selecting records where column is empty: SELECT * FROM [table] WHERE [column] IS NULL;
-   Select records containing [value]: SELECT * FROM [table] WHERE [column] LIKE '%[value]%';
-   Select records starting with [value]: SELECT * FROM [table] WHERE [column] LIKE '[value]%';
+   Select records containing [value]: SELECT * FROM [table] WHERE [column] LIKE '%value%';
+   Select records starting with [value]: SELECT * FROM [table] WHERE [column] LIKE 'value%';
    Select records starting with val and ending with ue: SELECT * FROM [table] WHERE [column] LIKE '[val_ue]';
    Select a range: SELECT * FROM [table] WHERE [column] BETWEEN [value1] and [value2];
    Select records with a list of choices: SELECT * FROM [table] WHERE [column] IN ('value1', 'value2');

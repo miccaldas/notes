@@ -6,3 +6,13 @@ release the mouse's button, the deed is done.
 ---------------------------------------------------------------
 import [destination_file].png
 ---------------------------------------------------------------
+If you want to define the image's dimensions, write:
+---------------------------------------------------------------
+import -geometry 1000x500 [destination_file].png
+---------------------------------------------------------------
+This sizes are taken by 'Import' as max sizes. If you really
+want it in a specific dimension, say, height, put an exclamation
+point after it:
+----------------------------------------------------------------
+import -geometry 1000x500! [destination_file].png
+----------------------------------------------------------------
