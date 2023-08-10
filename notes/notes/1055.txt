@@ -1,0 +1,17 @@
+To represent user input in shell scripts,
+use '$' + 'integer', chosen by the
+arguments precendence. For example, if you
+have a script that's called like this:
+-------------------------------------------
+script.sh <argument>
+-------------------------------------------
+the argument, has it's only one, is
+represented by:
+-------------------------------------------
+$1
+-------------------------------------------
+If there were two arguments, they would be
+represented by:
+-------------------------------------------
+$1, $2
+-------------------------------------------
