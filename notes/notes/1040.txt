@@ -14,3 +14,30 @@ one element of an iterable is true given a condition. I
 don't have examples for this, but you can read more here:
 ---------------------------------------------------------
 https://tinyurl.com/29a7wpk3
+
+##########################################################
+
+A note on using 'all/any' to evaluate if element belongs in
+a iterable.
+I wanted an if statement that, if true that no string in a
+list,
+    let's call it 'bad_words_list',
+appeared as a substring in another string,
+    let's it 'test',
+that string would be added to another list.
+There are two ways to write this:
+-----------------------------------------------------------
+if all((i in 'test') is False for i in 'bad_words_list'):
+    do_something...
+
+or:
+
+if all(i not in 'test' for i in 'bad_words_list'):
+    do_something...
+------------------------------------------------------------
+In the end you have remind yourself that it has to evaluate
+to 'True'.
+What you don't do is write this, as my dumb self did:
+------------------------------------------------------------
+if all(i in string is False for i in bad_words_list)
+-------------------------------------------------------------
